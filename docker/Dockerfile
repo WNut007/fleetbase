@@ -92,8 +92,12 @@ RUN npm install -g chokidar pnpm ember-cli npm-cli-login
 # and skips its own Chrome download because Debian's chromium is used.
 RUN apt-get update \
   && apt-get install -y --no-install-recommends chromium fonts-thai-tlwg fontconfig \
-  && fc-cache -f \
   && rm -rf /var/lib/apt/lists/*
+# Bundled Thai fonts (SIL OFL 1.1, licences alongside): Sarabun, and Noto Sans Thai Looped as the
+# open stand-in for Apple's Thonburi, which may not be redistributed. Use them in templates with
+# font-family: 'Sarabun' or 'Noto Sans Thai Looped'.
+COPY docker/fonts/ /usr/share/fonts/truetype/thai/
+RUN fc-cache -f
 RUN mkdir -p /opt/pdf-renderer \
   && cd /opt/pdf-renderer \
   && PUPPETEER_SKIP_DOWNLOAD=true npm install --no-audit --no-fund puppeteer@24 \
