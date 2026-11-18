@@ -84,6 +84,26 @@ RUN sed -e 's/^expose_php.*/expose_php = Off/' "$PHP_INI_DIR/php.ini-production"
 # Install global node modules
 RUN npm install -g chokidar pnpm ember-cli npm-cli-login
 
+# PDF rendering: spatie/laravel-pdf 1.x (used by core-api TemplateRenderService) renders only through
+# Browsershot, which needs Chromium and Puppeteer. Neither was in the image, so template PDFs could not
+# render. Chromium also shapes and line-breaks Thai correctly, which dompdf does not.
+# fonts-thai-tlwg provides Thai fonts (Loma, Garuda, Laksaman ~ TH Sarabun, ...).
+# Puppeteer goes into a fixed directory so LARAVEL_PDF_NODE_MODULES_PATH never depends on npm's prefix,
+# and skips its own Chrome download because Debian's chromium is used.
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends chromium fonts-thai-tlwg fontconfig \
+  && fc-cache -f \
+  && rm -rf /var/lib/apt/lists/*
+RUN mkdir -p /opt/pdf-renderer \
+  && cd /opt/pdf-renderer \
+  && PUPPETEER_SKIP_DOWNLOAD=true npm install --no-audit --no-fund puppeteer@24 \
+  && chmod -R a+rX /opt/pdf-renderer
+# Read by spatie/laravel-pdf's config (laravel-pdf.browsershot.*). no_sandbox is needed because the
+# app runs Chromium as root inside the container.
+ENV LARAVEL_PDF_CHROME_PATH=/usr/bin/chromium
+ENV LARAVEL_PDF_NODE_MODULES_PATH=/opt/pdf-renderer/node_modules
+ENV LARAVEL_PDF_NO_SANDBOX=true
+
 # Install ssm-parent
 COPY --from=ghcr.io/springload/ssm-parent:1.8 /usr/bin/ssm-parent /sbin/ssm-parent
 
