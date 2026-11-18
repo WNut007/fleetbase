@@ -29,6 +29,20 @@ services:
       # TWILIO_TOKEN: your_twilio_token
       # TWILIO_FROM: your_twilio_phone
 
+  # queue and scheduler must use the same APP_KEY and DATABASE_URL as application.
+  # docker-compose.yml only gives them mysql://root@database/fleetbase; once the bundled
+  # MySQL has a root password, that login is refused and the queue crash-loops.
+  # scripts/docker-install.sh writes these for you.
+  queue:
+    environment:
+      APP_KEY: "base64:REPLACE_WITH_SAME_APP_KEY_AS_APPLICATION"
+      DATABASE_URL: "mysql://fleetbase:REPLACE_DB_PASSWORD@database/fleetbase"
+
+  scheduler:
+    environment:
+      APP_KEY: "base64:REPLACE_WITH_SAME_APP_KEY_AS_APPLICATION"
+      DATABASE_URL: "mysql://fleetbase:REPLACE_DB_PASSWORD@database/fleetbase"
+
   socket:
     environment:
       # Socket auth. Prefer putting SOCKETCLUSTER_AUTH_KEY in the project .env file (next to

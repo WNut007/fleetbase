@@ -498,6 +498,16 @@ YAML_HEADER
   env_line "TWILIO_TOKEN"        "$TWILIO_TOKEN"
   env_line "TWILIO_FROM"         "$TWILIO_FROM"
 
+  # queue and scheduler run the same API image but only get the defaults from
+  # docker-compose.yml (DATABASE_URL mysql://root@database/fleetbase, no APP_KEY).
+  # With the bundled database secured above, root without a password is refused, so
+  # without these lines both workers fail every job and the queue crash-loops.
+  for worker in queue scheduler; do
+    printf '\n  %s:\n    environment:\n' "$worker"
+    env_line "APP_KEY"      "$APP_KEY"
+    env_line "DATABASE_URL" "$DATABASE_URL"
+  done
+
   cat <<YAML_SOCKET
 
   socket:
