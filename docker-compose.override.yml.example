@@ -21,6 +21,9 @@ services:
       CONSOLE_HOST: http://localhost:4200
       # Add your environment-specific variables here
       MAIL_MAILER: smtp  # or ses, mailgun, postmark, sendgrid
+      # Tracking numbers end with the pickup's country code; this is the fallback when
+      # the pickup has none. Set it to the country you operate in.
+      FLEETOPS_TRACKING_NUMBER_DEFAULT_REGION: TH
       OSRM_HOST: https://router.project-osrm.org
       # IPINFO_API_KEY: your_api_key
       # GOOGLE_MAPS_API_KEY: your_api_key
