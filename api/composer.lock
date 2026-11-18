@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "710c92cf9fda78288e70222e2e4f18dc",
+    "content-hash": "3604c23bbcf827556a686a82632d1501",
     "packages": [
         {
             "name": "aaronfrancis/fast-paginate",
@@ -2374,16 +2374,16 @@
         },
         {
             "name": "fleetbase/fleetops-api",
-            "version": "0.7.1",
+            "version": "dev-feat/thai-labels",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fleetbase/fleetops.git",
-                "reference": "c844a12dd207c9e708737046d890ee628741ee03"
+                "url": "https://github.com/WNut007/fleetops.git",
+                "reference": "03be2bfdd3c05552aa44efa7ea358c4e16d67d6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fleetbase/fleetops/zipball/c844a12dd207c9e708737046d890ee628741ee03",
-                "reference": "c844a12dd207c9e708737046d890ee628741ee03",
+                "url": "https://api.github.com/repos/WNut007/fleetops/zipball/03be2bfdd3c05552aa44efa7ea358c4e16d67d6d",
+                "reference": "03be2bfdd3c05552aa44efa7ea358c4e16d67d6d",
                 "shasum": ""
             },
             "require": {
@@ -2401,6 +2401,7 @@
                 "psr/http-factory-implementation": "*",
                 "rlanvin/php-rrule": "^2.6",
                 "spatie/icalendar-generator": "^2.8",
+                "spatie/laravel-pdf": "^1.9",
                 "toin0u/geocoder-laravel": "^13.0",
                 "webit/eval-math": "^1.0"
             },
@@ -2437,7 +2438,47 @@
                     "Fleetbase\\FleetOps\\Seeders\\": "server/seeders/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Fleetbase\\Tests\\": "server/tests/"
+                }
+            },
+            "scripts": {
+                "coverage:baseline": [
+                    "@test:coverage:clover",
+                    "@coverage:summary"
+                ],
+                "coverage:check": [
+                    "@test:coverage:clover",
+                    "php scripts/coverage-summary.php coverage/clover.xml --fail-under=100"
+                ],
+                "coverage:summary": [
+                    "php scripts/coverage-summary.php coverage/clover.xml"
+                ],
+                "lint": [
+                    "php-cs-fixer fix -v"
+                ],
+                "test:lint": [
+                    "php-cs-fixer fix -v --dry-run"
+                ],
+                "test:coverage": [
+                    "php scripts/coverage-runner.php --coverage --coverage-text --colors=always"
+                ],
+                "test:coverage:clover": [
+                    "mkdir -p coverage && php scripts/coverage-file-runner.php --coverage-clover=coverage/clover.xml --colors=always"
+                ],
+                "test:types": [
+                    "phpstan analyse --ansi --memory-limit=4G"
+                ],
+                "test:unit": [
+                    "php scripts/pest-file-runner.php --colors=always"
+                ],
+                "test": [
+                    "@test:lint",
+                    "@test:types",
+                    "@test:unit"
+                ]
+            },
             "license": [
                 "AGPL-3.0-or-later"
             ],
@@ -2460,11 +2501,9 @@
                 "tms"
             ],
             "support": {
-                "issues": "https://github.com/fleetbase/fleetops/issues",
-                "source": "https://github.com/fleetbase/fleetops/tree/v0.7.1"
+                "source": "https://github.com/WNut007/fleetops/tree/feat/thai-labels"
             },
-            "time": "2026-11-18T04:36:11+00:00",
-            "published-time": "2026-11-18T04:36:33+00:00"
+            "time": "2026-11-18T16:59:39+00:00"
         },
         {
             "name": "fleetbase/laravel-mysql-spatial",
@@ -19700,9 +19739,18 @@
             "time": "2025-11-17T20:03:58+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "fleetbase/fleetops-api",
+            "version": "dev-feat/thai-labels",
+            "alias": "0.7.1",
+            "alias_normalized": "0.7.1.0"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": {},
+    "stability-flags": {
+        "fleetbase/fleetops-api": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
