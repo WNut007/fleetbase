@@ -98,8 +98,8 @@ module('Unit | Initializer | load-intl-polyfills | time zones and calendars', fu
         class FakeDateTimeFormat {
             static supportedLocalesOf = () => ['th'];
             constructor(locale, options = {}) {
-                if (locale === 'th' && !options.calendar) {
-                    throw new RangeError('Calendar "buddhist" is not supported.');
+                if (locale === 'th' && options.calendar !== 'gregory') {
+                    throw new RangeError(`Calendar "${options.calendar ?? 'buddhist'}" is not supported.`);
                 }
                 if (locale === 'bad') {
                     throw new RangeError('Incorrect locale information provided');
