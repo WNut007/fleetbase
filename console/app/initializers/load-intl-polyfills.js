@@ -17,7 +17,73 @@ async function loadBasePolyfills() {
     await import('@formatjs/intl-numberformat/polyfill-force');
     await import('@formatjs/intl-pluralrules/polyfill-force');
     await import('@formatjs/intl-datetimeformat/polyfill-force');
+    // Without time zone data the polyfill knows only UTC: every time zone, the device's and
+    // any explicit one such as Asia/Bangkok, formatted as UTC.
+    await import('@formatjs/intl-datetimeformat/add-all-tz');
     await import('@formatjs/intl-relativetimeformat/polyfill-force');
+}
+
+/**
+ * The device's time zone as the native Intl reports it. Read it before the polyfill replaces
+ * Intl.DateTimeFormat: the polyfill itself always starts at UTC.
+ */
+export function deviceTimeZone(intl = Intl) {
+    try {
+        return new intl.DateTimeFormat().resolvedOptions().timeZone;
+    } catch {
+        return undefined;
+    }
+}
+
+/**
+ * Give the polyfilled DateTimeFormat the device's time zone as its default, so times format in
+ * local time as they would natively. Returns whether it was applied; a native constructor (no
+ * __setDefaultTimeZone) or a zone the polyfill doesn't know is left alone.
+ */
+export function pinDefaultTimeZone(timeZone, intl = Intl) {
+    const setDefault = intl.DateTimeFormat?.__setDefaultTimeZone;
+    if (!timeZone || typeof setDefault !== 'function') {
+        return false;
+    }
+
+    try {
+        setDefault.call(intl.DateTimeFormat, timeZone);
+        return true;
+    } catch {
+        return false;
+    }
+}
+
+/**
+ * The DateTimeFormat polyfill supports only the gregorian calendar, so a locale whose default
+ * calendar is another one (Thai: buddhist) throws a RangeError, which broke every date on a
+ * Thai page. Retry such a call with calendar: 'gregory'. Statics such as supportedLocalesOf and
+ * __defaultLocale pass through to the polyfill unchanged.
+ */
+export function gregorianFallback(intl = Intl) {
+    const Original = intl.DateTimeFormat;
+    if (!Original || Original.__gregorianFallback) {
+        return;
+    }
+
+    const create = (args) => {
+        try {
+            return Reflect.construct(Original, args);
+        } catch (error) {
+            const [locales, options] = args;
+            if (error instanceof RangeError && /calendar/i.test(error.message) && !options?.calendar) {
+                return Reflect.construct(Original, [locales, { ...(options ?? {}), calendar: 'gregory' }]);
+            }
+
+            throw error;
+        }
+    };
+
+    intl.DateTimeFormat = new Proxy(Original, {
+        construct: (target, args) => create(args),
+        apply: (target, thisArg, args) => create(args),
+        get: (target, key, receiver) => (key === '__gregorianFallback' ? true : Reflect.get(target, key, receiver)),
+    });
 }
 
 /**
@@ -72,9 +138,12 @@ export function initialize(application) {
     application.deferReadiness();
 
     (async () => {
+        const timeZone = deviceTimeZone();
         await loadBasePolyfills();
         await all(langs.map(loadLocaleData));
         pinDefaultLocale(preferredLanguage(langs, window.navigator.languages));
+        pinDefaultTimeZone(timeZone);
+        gregorianFallback();
         application.advanceReadiness();
     })();
 }

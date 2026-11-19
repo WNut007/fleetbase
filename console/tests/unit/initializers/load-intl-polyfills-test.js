@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { initialize, pinDefaultLocale, preferredLanguage } from '@fleetbase/console/initializers/load-intl-polyfills';
+import { deviceTimeZone, gregorianFallback, initialize, pinDefaultLocale, pinDefaultTimeZone, preferredLanguage } from '@fleetbase/console/initializers/load-intl-polyfills';
 
 module('Unit | Initializer | load-intl-polyfills', function () {
     test('it defers readiness while the polyfills load and advances afterwards', async function (assert) {
@@ -69,5 +69,72 @@ module('Unit | Initializer | load-intl-polyfills | default locale', function () 
 
     test('with no browser languages it falls back to English', function (assert) {
         assert.strictEqual(preferredLanguage(['ar', 'en', 'mn']), 'en');
+    });
+});
+
+module('Unit | Initializer | load-intl-polyfills | time zones and calendars', function () {
+    test('the device time zone comes from the native constructor, or is undefined when it throws', function (assert) {
+        const native = { DateTimeFormat: class { resolvedOptions() { return { timeZone: 'Asia/Bangkok' }; } } };
+        const broken = { DateTimeFormat: class { constructor() { throw new Error('no Intl'); } } };
+
+        assert.strictEqual(deviceTimeZone(native), 'Asia/Bangkok');
+        assert.strictEqual(deviceTimeZone(broken), undefined);
+    });
+
+    test('the polyfill default time zone is pinned only when it can be', function (assert) {
+        const seen = [];
+        const polyfilled = { DateTimeFormat: { __setDefaultTimeZone(zone) { seen.push(zone); } } };
+        const rejects = { DateTimeFormat: { __setDefaultTimeZone() { throw new RangeError('Invalid timeZoneName'); } } };
+        const native = { DateTimeFormat: function NativeDateTimeFormat() {} };
+
+        assert.true(pinDefaultTimeZone('Asia/Bangkok', polyfilled));
+        assert.deepEqual(seen, ['Asia/Bangkok']);
+        assert.false(pinDefaultTimeZone(undefined, polyfilled), 'no zone, nothing to pin');
+        assert.false(pinDefaultTimeZone('Mars/Base', rejects), 'a zone the polyfill rejects is ignored');
+        assert.false(pinDefaultTimeZone('Asia/Bangkok', native), 'a native constructor is left alone');
+    });
+
+    test('a locale whose default calendar the polyfill lacks falls back to gregorian', function (assert) {
+        class FakeDateTimeFormat {
+            static supportedLocalesOf = () => ['th'];
+            constructor(locale, options = {}) {
+                if (locale === 'th' && !options.calendar) {
+                    throw new RangeError('Calendar "buddhist" is not supported.');
+                }
+                if (locale === 'bad') {
+                    throw new RangeError('Incorrect locale information provided');
+                }
+                this.options = { locale, ...options };
+            }
+        }
+        const intl = { DateTimeFormat: FakeDateTimeFormat };
+
+        gregorianFallback(intl);
+        const wrapped = intl.DateTimeFormat;
+        gregorianFallback(intl);
+
+        assert.strictEqual(intl.DateTimeFormat, wrapped, 'wrapping twice is a no-op');
+        assert.deepEqual(new intl.DateTimeFormat('th', { hour: 'numeric' }).options, { locale: 'th', hour: 'numeric', calendar: 'gregory' });
+        assert.deepEqual(intl.DateTimeFormat('th').options, { locale: 'th', calendar: 'gregory' }, 'calling without new works too');
+        assert.deepEqual(new intl.DateTimeFormat('en').options, { locale: 'en' });
+        assert.true(new intl.DateTimeFormat('en') instanceof intl.DateTimeFormat);
+        assert.deepEqual(intl.DateTimeFormat.supportedLocalesOf(), ['th'], 'statics pass through');
+        assert.throws(() => new intl.DateTimeFormat('th', { calendar: 'buddhist' }), /buddhist/, 'an explicit calendar is not overridden');
+        assert.throws(() => new intl.DateTimeFormat('bad'), /locale/, 'other errors still surface');
+        assert.strictEqual(gregorianFallback({}), undefined, 'nothing to wrap without a DateTimeFormat');
+    });
+
+    test('after loading, Thai dates format and explicit time zones are honoured', async function (assert) {
+        let advanced;
+        const didAdvance = new Promise((resolve) => (advanced = resolve));
+
+        initialize({ deferReadiness() {}, advanceReadiness: () => advanced() });
+        await didAdvance;
+
+        const noon = new Date('2026-11-19T05:00:00Z');
+        const bangkok = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', hour12: false, timeZone: 'Asia/Bangkok' }).format(noon);
+
+        assert.strictEqual(bangkok, '12:00', 'Asia/Bangkok is UTC+7, not UTC');
+        assert.ok(new Intl.DateTimeFormat('th-th', { hour: 'numeric', minute: '2-digit', timeZone: 'Asia/Bangkok' }).format(noon), 'a Thai format no longer throws');
     });
 });
