@@ -5569,7 +5569,12 @@ ember-ui:
                 deleted: ลบแล้ว
                 restored: กู้คืนแล้ว
                 updated: อัปเดตเมื่อ
+            aside-item-scroller:
+                directory: รายชื่อ
             chat-tray:
+                are-you-sure-you-wish-to: ยืนยันจบแชตนี้ ({title})?
+                conversation-row:
+                    untitled-chat: แชตไม่มีชื่อ
                 once-this-chat-is-ended-it: เมื่อจบแชตแล้ว จะไม่มีใครเข้าถึงได้อีก
             chat-window:
                 edit-chat-channel-name: แก้ไขชื่อช่องแชต
@@ -5586,6 +5591,9 @@ ember-ui:
             fleetbase-attribution:
                 done: เสร็จสิ้น
                 fleetbase-legal-notices: ประกาศทางกฎหมายของ Fleetbase
+            kanban:
+                column:
+                    untitled-column: คอลัมน์ไม่มีชื่อ
             layout:
                 header:
                     admin: ผู้ดูแล
@@ -5602,8 +5610,13 @@ ember-ui:
                     organization-settings: ตั้งค่าองค์กร
                     show-keyboard-shortcuts: แสดงคีย์ลัด
                     view-profile: ดูโปรไฟล์
+                sidebar:
+                    navigator:
+                        cmd-k: Cmd K
+                        ctrl-k: Ctrl K
             metadata-editor:
                 done: เสร็จสิ้น
+                metadata: Metadata
                 preview-metadata: ดูตัวอย่าง Metadata
             modals:
                 query-builder-computed-column-editor:
@@ -5642,6 +5655,7 @@ ember-ui:
                     is-one-of: อยู่ในรายการ
                     less-than: น้อยกว่า
                     less-than-or-equal: น้อยกว่าหรือเท่ากับ
+                    no-conditions: ไม่มีเงื่อนไข
                     not-between: ไม่อยู่ระหว่าง
                     not-between-dates: ไม่อยู่ระหว่างวันที่
                     not-equals: ไม่เท่ากับ
@@ -5657,10 +5671,13 @@ ember-ui:
                     count-distinct: นับแบบไม่ซ้ำ
                     maximum: ค่าสูงสุด
                     minimum: ค่าต่ำสุด
+                    no-non-aggregated-columns-available-for: ไม่มีคอลัมน์ที่ไม่ใช่ค่ารวมให้จัดกลุ่ม
+                    select-columns-first-to-enable-grouping: เลือกคอลัมน์ก่อนเพื่อเปิดการจัดกลุ่ม
                     sum: ผลรวม
                 sort-by:
                     ascending: น้อยไปมาก
                     descending: มากไปน้อย
+                    select-columns-first-to-enable-sorting: เลือกคอลัมน์ก่อนเพื่อเปิดการเรียงลำดับ
             report-builder:
                 configuration: การตั้งค่า
                 export-options:
@@ -5669,8 +5686,27 @@ ember-ui:
                     json: JSON
                 failed-to-load-data-sources: โหลดแหล่งข้อมูลไม่สำเร็จ
                 preview: ตัวอย่าง
+            signature-pad:
+                clear: ล้าง
+                done: เสร็จสิ้น
+                no-signature: ไม่มีลายเซ็น
+                sign-here: เซ็นที่นี่
+                undo: เลิกทำ
+            table:
+                empty-state:
+                    documentation: เอกสาร
+                    no-records-yet: ยังไม่มีข้อมูล
+                    read-guide: อ่านคู่มือ
             template-builder:
+                element-renderer:
+                    barcode: บาร์โค้ด
+                    qr-code: QR Code
+                    rows-from-a-query: แถวจาก Query
+                    rows-from-a-variable: แถวจากตัวแปร
+                    rows-from-data-source: แถวจาก {data_source}
+                    rows-from-query-endpoint: แถวจาก {query_endpoint}
                 layers-panel:
+                    element: องค์ประกอบ
                     text: ข้อความ
                 properties-panel:
                     a3-297-420-mm: A3 (297 × 420 มม.)
@@ -5690,6 +5726,7 @@ ember-ui:
                     fill: ยืดเต็ม
                     georgia: Georgia
                     helvetica: Helvetica
+                    image-upload-failed-message: 'อัปโหลดรูปไม่สำเร็จ: {message}'
                     inter: Inter
                     landscape: แนวนอน
                     legal-216-356-mm: Legal (216 × 356 มม.)
@@ -5772,6 +5809,11 @@ ember-ui:
                 underline: ขีดเส้นใต้
                 unset: ไม่กำหนด
                 youtube-video-url-is-invalid: URL วิดีโอ YouTube ไม่ถูกต้อง
+            unit-input:
+                enter-unitname: กรอก{unitName}
+            user:
+                pill:
+                    no-email: ไม่มีอีเมล
             widget:
                 report:
                     confirm: ยืนยัน

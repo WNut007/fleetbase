@@ -1735,7 +1735,12 @@ ember-ui:
                 deleted: Deleted
                 restored: Restored
                 updated: Updated
+            aside-item-scroller:
+                directory: Directory
             chat-tray:
+                are-you-sure-you-wish-to: Are you sure you wish to end this chat ({title})?
+                conversation-row:
+                    untitled-chat: Untitled Chat
                 once-this-chat-is-ended-it: Once this chat is ended, it will no longer be accessible for anyone.
             chat-window:
                 edit-chat-channel-name: Edit chat channel name
@@ -1752,6 +1757,9 @@ ember-ui:
             fleetbase-attribution:
                 done: Done
                 fleetbase-legal-notices: Fleetbase Legal Notices
+            kanban:
+                column:
+                    untitled-column: Untitled Column
             layout:
                 header:
                     admin: Admin
@@ -1768,8 +1776,13 @@ ember-ui:
                     organization-settings: Organization settings
                     show-keyboard-shortcuts: Show keyboard shortcuts
                     view-profile: View Profile
+                sidebar:
+                    navigator:
+                        cmd-k: Cmd K
+                        ctrl-k: Ctrl K
             metadata-editor:
                 done: Done
+                metadata: Metadata
                 preview-metadata: Preview metadata
             modals:
                 query-builder-computed-column-editor:
@@ -1808,6 +1821,7 @@ ember-ui:
                     is-one-of: is one of
                     less-than: less than
                     less-than-or-equal: less than or equal
+                    no-conditions: No conditions
                     not-between: not between
                     not-between-dates: not between dates
                     not-equals: not equals
@@ -1823,10 +1837,13 @@ ember-ui:
                     count-distinct: Count Distinct
                     maximum: Maximum
                     minimum: Minimum
+                    no-non-aggregated-columns-available-for: No non-aggregated columns available for grouping
+                    select-columns-first-to-enable-grouping: Select columns first to enable grouping
                     sum: Sum
                 sort-by:
                     ascending: Ascending
                     descending: Descending
+                    select-columns-first-to-enable-sorting: Select columns first to enable sorting
             report-builder:
                 configuration: Configuration
                 export-options:
@@ -1835,8 +1852,27 @@ ember-ui:
                     json: JSON
                 failed-to-load-data-sources: Failed to load data sources
                 preview: Preview
+            signature-pad:
+                clear: Clear
+                done: Done
+                no-signature: No signature
+                sign-here: Sign here
+                undo: Undo
+            table:
+                empty-state:
+                    documentation: Documentation
+                    no-records-yet: No records yet
+                    read-guide: Read guide
             template-builder:
+                element-renderer:
+                    barcode: Barcode
+                    qr-code: QR Code
+                    rows-from-a-query: Rows from a query
+                    rows-from-a-variable: Rows from a variable
+                    rows-from-data-source: Rows from {data_source}
+                    rows-from-query-endpoint: Rows from {query_endpoint}
                 layers-panel:
+                    element: Element
                     text: Text
                 properties-panel:
                     a3-297-420-mm: A3 (297 × 420 mm)
@@ -1856,6 +1892,7 @@ ember-ui:
                     fill: Fill
                     georgia: Georgia
                     helvetica: Helvetica
+                    image-upload-failed-message: 'Image upload failed: {message}'
                     inter: Inter
                     landscape: Landscape
                     legal-216-356-mm: Legal (216 × 356 mm)
@@ -1938,6 +1975,11 @@ ember-ui:
                 underline: Underline
                 unset: Unset
                 youtube-video-url-is-invalid: Youtube video URL is invalid.
+            unit-input:
+                enter-unitname: Enter {unitName}
+            user:
+                pill:
+                    no-email: No email
             widget:
                 report:
                     confirm: Confirm
