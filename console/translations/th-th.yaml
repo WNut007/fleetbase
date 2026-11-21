@@ -2007,7 +2007,7 @@ column:
   debit-account: บัญชีเดบิต
   credit-account: บัญชีเครดิต
   source: แหล่งที่มา
-  driver: ตัวเชื่อมต่อ
+  driver: คนขับ
   environment: สภาพแวดล้อม
   default: ค่าเริ่มต้น
   owner: เจ้าของ
