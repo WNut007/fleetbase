@@ -957,3 +957,1109 @@ layout:
         view-profile: View profile
         keyboard-shortcuts: Show keyboard shortcuts
         changelog: Changelog
+ember-ui:
+    components:
+        activity-log:
+            attribute: Attribute
+            attributes: '{changeCount} attributes'
+            changed-attributes: Changed attributes
+            from: from
+            loading-activity: Loading activity...
+            new-value: New value
+            no-activity-yet: No activity yet
+            'on': 'on'
+            previous-value: Previous value
+            to: to
+            with: with
+        array-input:
+            add: Add
+            data-input: Data Input
+            remove: Remove
+        aside-item-scroller:
+            directory: Directory
+            'no': No {resource}
+            search: Search {resource}
+            search-2: Search
+            search-input: Search Input
+        autocomplete-input:
+            loading: Loading...
+        bulk-search-dropdown:
+            bulk-search: Bulk Search
+            clear: Clear
+            input-comma-delimited-id-s-to: Input comma delimited ID''s to perform a bulk search
+            search: Search
+        category:
+            pill:
+                no-category: No category
+        chart:
+            loading: Loading...
+        chat-tray:
+            compose-panel:
+                cancel: Cancel
+                chat-name: Chat name
+                close-new-chat: Close new chat
+                contacts: Contacts
+                create-chat: Create Chat
+                loading-contacts: Loading contacts
+                new-chat: New Chat
+                no-contacts-found: No contacts found
+                optional: Optional
+                search-teammates: Search teammates
+                select-one-or-more-teammates: Select one or more teammates
+                try-a-different-name-email-or: Try a different name, email, or phone number.
+            contact-row:
+                fleetbase-user: Fleetbase user
+            conversation-row:
+                attachment: Attachment
+                end-chat: End chat
+            inbox-panel:
+                close-chat-inbox: Close chat inbox
+                loading-conversations: Loading conversations
+                messages: Messages
+                new-chat: New Chat
+                no-conversations-found: No conversations found
+                search-conversations: Search conversations
+                start-a-new-chat-or-adjust: Start a new chat or adjust your search.
+            open-chat-inbox: Open chat inbox
+        chat-window:
+            add-attachment: Add Attachment
+            attachment:
+                click-to-download-attachment: Click to download attachment
+            send: Send
+            type-your-message-here: Type your message here
+        click-to-copy:
+            click-to-copy: Click to copy
+            copied: Copied!
+        click-to-reveal:
+            click-to-copy: Click to copy
+            copied: Copied!
+        company:
+            pill:
+                no-company: No company
+        coordinates-input:
+            address-search: Address Search
+            done: Done
+            draggable-map-marker: Draggable map marker
+            enter-address: Enter address
+            latitude: Latitude
+            longitude: Longitude
+            lookup: Lookup
+            select-from-map: Select from map
+        currency-select:
+            search-by-currency-code: Search by currency code
+        custom-field:
+            form:
+                field-description: Field Description
+                field-help-text: Field Help Text
+                field-is-editable: Field is Editable
+                field-is-required: Field is Required
+                field-label: Field Label
+                field-model-type: Field Model Type
+                field-type: Field Type
+                meta-column-span: 'Meta: Column-Span'
+                select-field-type: Select field type...
+                select-model-type: Select model type
+            input:
+                saved: Saved
+                uploading: Uploading {progress}%
+                yyyy-mm-dd: YYYY-MM-DD
+            options-input:
+                add-new-option: Add new option
+                field-options: Field Options
+            value:
+                download: Download
+                'no': 'No'
+                signature: Signature
+                'yes': 'Yes'
+            yield:
+                cancel: Cancel
+                save-changes: Save Changes
+        custom-fields-manager:
+            add-your-first-field-group-to: Add your first field group to start adding custom fields for {label}
+            create-new-custom-field: Create new custom field
+            custom-fields-manager: Custom Fields Manager
+            new-field-group: New field group
+            no-custom-field-groups: No custom field groups
+        dashboard:
+            create:
+                remove-widget-from-the-dashboard: Remove widget from the dashboard
+            widget-panel:
+                clear-search: Clear search
+        date-time-input:
+            date-input: Date Input
+            time-input: Time Input
+        docs-panel:
+            close-documentation: Close documentation
+            loading-documentation: Loading documentation...
+            open-documentation: Open documentation
+            open-documentation-in-a-new-tab: Open documentation in a new tab
+            open-fleetbase-documentation: Open Fleetbase documentation
+            this-page-cannot-be-embedded-here: This page cannot be embedded here, but you can open it in a new tab.
+        extensions-list:
+            extensions: Extensions
+        file:
+            pill:
+                no-file: No file
+        filter:
+            model-multiple:
+                clear: Clear
+            multi-input:
+                add-values: Add values...
+                clear: Clear
+            range:
+                clear: Clear
+                max: Max
+                min: Min
+            string:
+                clear: Clear
+                filter-input: Filter Input
+        fleetbase-attribution:
+            fleetbase: Fleetbase
+            legal: Legal
+            powered-by: Powered by
+        group:
+            pill:
+                no-group: No group
+        kanban:
+            column:
+                add-a: + Add a {value}
+                no-yet: No {pluralize} yet
+            kanban-board: Kanban Board
+        layout:
+            header:
+                dark-mode-toggle:
+                    dark-mode: Dark Mode
+                smart-nav-menu:
+                    customise-navigation: Customise navigation
+                    customizer:
+                        add-extensions-from-the-list-on: Add extensions from the list on the right.
+                        all-extensions: All extensions
+                        apply: Apply
+                        cancel: Cancel
+                        click-to-pin-to-bar: Click to pin to bar
+                        click-to-unpin: Click to unpin
+                        close: Close
+                        customise-navigation: Customise Navigation
+                        customise-navigation-2: Customise navigation
+                        drag-to-reorder: Drag to reorder
+                        no-extensions-pinned-yet: No extensions pinned yet.
+                        pinned-to-bar: Pinned to bar
+                        remove-from-bar: Remove from bar
+                        reset-to-default: Reset to default
+                    dropdown:
+                        clear-search: Clear search
+                        close: Close
+                        customise-navigation: Customise navigation
+                        extension-list: Extension list
+                        extensions: Extensions
+                        from: from {_parentTitle}
+                        more-extensions: More extensions
+                        no-extensions-match: No extensions match
+                        pin-to-navigation-bar: Pin to navigation bar
+                        pin-to-navigation-bar-2: Pin {title} to navigation bar
+                        search-extensions: Search extensions...
+                        search-extensions-2: Search extensions
+                    extension-navigation: Extension navigation
+                    more-extensions: More extensions
+            mobile-navbar:
+                menu: Menu
+            resource:
+                cards-grid:
+                    create-new: Create New
+                    'no': No {_resource}
+                panel:
+                    header-actions:
+                        save-changes: Save Changes
+            sidebar:
+                navigator:
+                    clear-search: Clear search
+                    close-search: Close search
+                    esc: Esc
+                    navigation-search-results: Navigation search results
+                    no-navigation-results-found: No navigation results found.
+                    search-navigation: Search navigation
+                    search-or-jump-to: Search or jump to...
+                    searching: Searching...
+                    start-typing-to-search: Start typing to search
+        logo-icon:
+            fleetbase: Fleetbase
+        metadata-editor:
+            add: + Add
+            add-2: Add
+            boolean: Boolean
+            clear-all: Clear all
+            e-g-order-number: e.g. order_number
+            filter-keys: Filter keys…
+            key: Key
+            no-metadata-click: No metadata. Click
+            number: Number
+            please-fix-invalid-duplicate-keys-above: Please fix invalid/duplicate keys above.
+            remove: Remove
+            text: Text
+            to-create-one: to create one.
+            true-false: True / False
+            type: Type
+            value: Value
+        metadata-viewer:
+            hide-raw-metadata: Hide raw metadata
+            key: Key
+            no-metadata: No metadata
+            no-metadata-to-display: No metadata to display
+            value: Value
+            view-raw-metadata: View raw metadata
+        modal:
+            default:
+                cancel: Cancel
+                confirm: Confirm
+            footer:
+                ok: Ok
+            header:
+                close:
+                    close: Close
+        modals:
+            bulk-action-model:
+                are-you-sure-you-want-to: Are you sure you want to {verb} these {modelName}?
+                you-have-selected-for: You have selected {modelName} for {verb}.
+            bulk-delete-model:
+                are-you-sure-you-want-to: Are you sure you want to delete these {modelName}?
+                you-have-selected-for-deletion: You have selected {modelName} for deletion.
+            create-or-join-org:
+                create-new-organization: Create new Organization
+                enter-the-id-of-the-organization: Enter the ID of the organization you wish to join.
+                join-an-organization: Join an Organization
+                organization-currency: Organization currency
+                organization-description: Organization description
+                organization-id: Organization ID
+                organization-name: Organization name
+                organization-phone-number: Organization phone number
+            custom-field-group-form:
+                field-group-name: Field Group Name
+            edit-chat-name:
+                channel-name: Channel Name
+                input-a-new-name-for-your: Input a new name for your chat channel.
+            export-form:
+                format: Format
+                select-export-format: Select export format...
+            export-report:
+                csv-export-options: CSV Export Options
+                data-will-be-exported-as-comma: Data will be exported as comma-separated values, suitable for Excel and other spreadsheet applications.
+                data-will-be-exported-as-structured: Data will be exported as structured JSON, suitable for API consumption and data processing.
+                export-format: Export Format
+                export-rows-of-data-in-your: Export {rowCount} rows of data in your preferred format.
+                file-extension-will-be-added-automatically: File extension will be added automatically
+                file-name: File Name
+                json-export-options: JSON Export Options
+                select-export-format: Select export format...
+            fleetbase-legal-notice:
+                commercial-license: Commercial License
+                copyright-fleetbase-pte-ltd: Copyright © {formatdatefns} Fleetbase Pte. Ltd.
+                fleetbase: Fleetbase
+                fleetbase-is-licensed-under-the-gnu: Fleetbase is licensed under the GNU Affero General Public License v3.0 or later, unless you have a separate commercial license from Fleetbase.
+                need-to-keep-proprietary-modifications-private: Need to keep proprietary modifications private, build a SaaS product, or white-label Fleetbase? A Fleetbase Commercial License removes AGPL copyleft obligations for covered commercial use.
+                no-warranty: No Warranty
+                open-source-and-commercial-licensing: Open source and commercial licensing
+                open-source-license: Open Source License
+                this-program-is-distributed-without-warranty: This program is distributed without warranty. You may convey and modify it under the terms of the AGPL-3.0-or-later.
+                view-agpl-license: View AGPL license
+                view-commercial-license: View commercial license
+                view-licensing-options: View licensing options
+                view-source-code: View source code
+            import-form:
+                download-import-template-xlsx: Download Import Template (XLSX)
+            install-prompt:
+                some-extensions-require-access-to-your: Some extensions require access to your resources.
+                you-are-attempting-to-install-the: You are attempting to install the extension "{value}". Are you sure you wish to proceed with this installation?
+            query-builder-computed-column-editor:
+                allowed-functions: Allowed Functions
+                column-name: Column Name
+                data-type: Data Type
+                description: Description
+                display-label: Display Label
+                e-g-datediff-end-date-start: e.g., DATEDIFF(end_date, start_date) + 1
+                example-expressions: Example Expressions
+                expression: Expression
+                expression-is-valid: Expression is valid
+                optional-description-of-what-this-column: Optional description of what this column calculates
+                select-data-type: Select data type
+                sql-expression-using-allowed-functions-and: SQL expression using allowed functions and column references
+                the-expected-data-type-of-the: The expected data type of the computed value
+                the-human-readable-label-shown-in: The human-readable label shown in reports
+                the-internal-name-for-this-column: The internal name for this column (lowercase letters, numbers and underscores). Leave it empty to use the label.
+                use: Use
+                validating-expression: Validating expression...
+            resend-verification-email:
+                have-a-second-look-and-confirm: Have a second look and confirm your email address is correct.
+                re-verify-your-email-address-and: Re-verify your email address and click Send to continue.
+                verify-your-email-address: Verify your email address.
+                verify-your-email-address-2: Verify your email address
+            save-report:
+                category: Category
+                description: Description
+                enter-report-title: Enter report title...
+                frequency: Frequency
+                optional-description: Optional description...
+                report-title: Report Title
+                schedule-this-report: Schedule this report
+                select-category: Select category...
+                time: Time
+            tip-tap-editor-insert-table:
+                columns: Columns
+                rows: Rows
+                the-number-of-columns-for-the: The number of columns for the table
+                the-number-of-rows-for-the: The number of rows for the table
+            tip-tap-editor-insert-youtube:
+                height: Height
+                the-height-of-the-youtube-video: The Height of the Youtube video
+                the-url-to-the-youtube-video: The URL to the Youtube video you want to insert
+                the-width-of-the-youtube-video: The Width of the Youtube video
+                width: Width
+                youtube-video-url: Youtube Video URL
+            verify-by-sms:
+                confirm-your-phone-number-below-and: Confirm your phone number below and click send to receive a verification code by SMS.
+                have-a-second-look-and-confirm: Have a second look and confirm your phone number is correct.
+                let-s-verify-your-phone-number: Let''s verify your phone number instead.
+                verify-your-phone-number: Verify your phone number
+            verify-email:
+                enter-the-code-you-received-in: Enter the code you received in your email, please check spam if not in inbox.
+                enter-verification-code: Enter verification code
+                have-a-second-look-and-confirm: Have a second look and confirm your email address is correct.
+                re-verify-your-email-address-and: Re-verify your email address and click Send to continue.
+                verify-your-email-address: Verify your email address.
+                verify-your-email-address-2: Verify your email address
+        model-multi-file-upload:
+            uploading: Uploading...
+        notification-tray:
+            no-unread-notifications: No unread notifications
+            received: 'Received: {createdAgo}'
+            view-all-notifications: View all notifications
+        pagination:
+            next: Next
+            of: of
+            previous: Previous
+            results: results
+            showing: Showing
+            to: to
+        query-builder:
+            actions:
+                actions: Actions
+                clear: Clear
+                execute: Execute
+                query-operations: Query operations
+                save: Save
+            column-select:
+                alias: 'Alias:'
+                as: as {name}
+                choose-a-table-to-see-available: Choose a table to see available fields
+                clear-all: Clear All
+                none-selected: None selected
+                search-for-a-column: Search for a column
+                select-a-data-source: Select a data source
+                select-all: Select All
+                select-fields: Select fields
+                selected-fields: 'Selected Fields:'
+            computed-columns:
+                add-computed-column: Add Computed Column
+                add-the-first-computed-column: Add the first computed column
+                computed-columns: Computed Columns
+                computed-columns-allow-you-to-create: Computed columns allow you to create calculated fields using SQL expressions
+                edit-computed-column: Edit computed column
+                no-computed-columns-defined-yet: No computed columns defined yet
+                remove-computed-column: Remove computed column
+            conditions:
+                add-condition: Add condition
+                add-conditions-to-filter-your-data: Add conditions to filter your data
+                add-inner-group: Add inner group
+                choose-columns-to-enable-filtering: Choose columns to enable filtering
+                conditions: Conditions
+                enter-value: Enter value...
+                from: From
+                group: Group
+                no-conditions: No conditions
+                no-conditions-set: No conditions set
+                operator: Operator...
+                select-field: Select field...
+                select-fields-first: Select fields first
+                select-value: Select value...
+                select-values: Select values...
+                to: To
+            group-by:
+                active-groupings: Active Groupings
+                add-grouping: Add Grouping
+                aggregate-functions-calculate-values-for-each: • Aggregate functions calculate values for each group
+                calculate: Calculate
+                group-by: Group By
+                group-by-2: Group by {label}
+                group-by-column: Group By Column
+                grouping-rules: 'Grouping Rules:'
+                no-grouping: No grouping
+                of: of
+                of-column: Of Column
+                select-column: Select column...
+                select-columns-in-the-select-fields: Select columns in the "Select Fields" section first
+                select-function: Select function...
+                use-count-to-count-records-in: • Use COUNT(*) to count records in each group
+                you-can-only-group-by-columns: • You can only group by columns that are selected
+            joins:
+                alias-optional: Alias (optional)
+                available-relationships: Available Relationships
+                joins: Joins
+                no-joins: No joins
+                no-relationships-available: No relationships available
+                performance-warning: Performance Warning
+                select-all: Select All
+                select-columns-from: Select columns from {label}
+                select-none: Select None
+                selected: '{length} selected'
+                table: '{table} table'
+                this-table-has-no-defined-relationships: This table has no defined relationships to join with other tables
+                you-have-joined-columns-selected-consider: You have {totalJoinedColumns} joined columns selected. Consider selecting only the columns you need for better performance.
+            limit:
+                enter-limit-e-g-100: Enter limit (e.g., 100)
+                large-result-sets-may-take-longer: Large result sets may take longer to process and display.
+                limit-results: Limit Results
+                maximum-rows: 'Maximum rows:'
+                no-limit: No limit
+                performance-notice: Performance Notice
+                quick-options: 'Quick options:'
+                remove-limit: Remove Limit
+            sort-by:
+                add-sort: Add Sort
+                both-regular-and-aggregated-columns-can: • Both regular and aggregated columns can be sorted
+                direction: Direction
+                no-sorting: No sorting
+                select-column: Select column...
+                select-columns-in-the-select-fields: Select columns in the "Select Fields" section first
+                select-direction: Select direction...
+                sort-by: Sort By
+                sort-column: Sort Column
+                sort-order-drag-to-reorder: Sort Order (drag to reorder)
+                sort-order-matters-drag-to-reorder: • Sort order matters - drag to reorder priority
+                sorting-rules: 'Sorting Rules:'
+                toggle-sort-direction: Toggle sort direction
+                you-can-only-sort-by-columns: • You can only sort by columns that are selected
+            table-select:
+                columns: 'Columns:'
+                data-source: Data Source
+                no-source-selected: No source selected
+                relationships: 'Relationships:'
+                select-data-source: Select data source...
+                table-information: Table Information
+        report-builder:
+            add-tags-to-the-report: Add tags to the report
+            condition-value:
+                'false': 'False'
+                'true': 'True'
+            configure-the-report-and-press-the: Configure the report and press the execute button to preview the results.
+            description: Description
+            execute: Execute
+            export-options:
+                export: Export
+                export-format: Export format...
+            no-report-preview: No report preview
+            query-builder:
+                clear: Clear
+                execute-query: Execute Query
+                primary-table: Primary Table
+                query-builder: Query Builder
+                save-report: Save Report
+                select-a-table: Select a table...
+                select-columns: Select Columns
+            report-details: Report Details
+            tags: Tags
+            title: Title
+        report:
+            data:
+                configure-the-report-and-press-the: Configure the report and press the execute button to preview the results.
+                no-report-preview: No report preview
+            details:
+                date-created: Date Created
+                description: Description
+                report-details: Report Details
+                tags: Tags
+                title: Title
+            find-select:
+                no-reports-available: No reports available
+                search-reports-by-keyword: Search reports by keyword...
+                select: Select
+                system-found-no-reports-available: System found no reports available.
+        role:
+            pill:
+                no-role: No role
+        tab-navigation:
+            add-new-tab: Add new tab
+            close: Close {label}
+            more-tabs: More tabs
+        table:
+            cell:
+                driver-name:
+                    no-driver-assigned: No driver assigned
+            no-records-found: No records found
+        template-builder:
+            element-renderer:
+                image: Image
+                no-columns-defined: No columns defined
+            layers: Layers
+            layers-panel:
+                delete-element: Delete element
+                double-click-to-rename: Double-click to rename
+                hide-element: Hide element
+                layers: Layers
+                move-layer-down: Move layer down
+                move-layer-up: Move layer up
+                no-elements-yet: No elements yet.
+                show-element: Show element
+                use-the-toolbar-to-add-elements: Use the toolbar to add elements.
+            properties-panel:
+                a-path-on-the-fleetbase-api: A path on the Fleetbase API. Requests carry your session, so full URLs to other hosts are not accepted.
+                add-column: Add column
+                add-parameter: Add parameter
+                add-row: Add row
+                alignment: Alignment
+                alt-text: Alt Text
+                api-endpoint: API Endpoint
+                background: Background
+                background-color: Background Color
+                barcode: Barcode
+                border: Border
+                border-color: Border Color
+                border-radius: Border Radius
+                canvas-settings: Canvas Settings
+                cell-padding: Cell Padding
+                change-variable: Change variable
+                clear: Clear
+                click-to-upload-image: Click to upload image
+                code128: CODE128
+                code39: CODE39
+                color: Color
+                column-label: Column label
+                columns: Columns
+                content: Content
+                data-source: Data Source
+                data-variable: Data Variable
+                define-columns-first: Define columns first.
+                description: Description
+                dotted-path-to-the-array-of: Dotted path to the array of rows in the response. Leave blank when the response is that array itself.
+                ean-13: EAN-13
+                enter-text-or-use-syntax: Enter text or use '{'variable.name'}' syntax...
+                fill-color: Fill Color
+                font-family: Font Family
+                format: Format
+                header-bg: Header BG
+                header-text: Header Text
+                height: Height
+                image: Image
+                image-source: Image Source
+                insert-variable: Insert variable
+                insert-variable-or-formula: Insert variable or formula
+                keys: 'Keys: {keysLabel}'
+                letter-spacing: Letter Spacing
+                line: Line
+                line-height: Line Height
+                manual: Manual
+                no-columns-defined-add-one-below: No columns defined. Add one below.
+                no-parameters: No parameters.
+                no-rows-yet: No rows yet.
+                object-fit: Object Fit
+                opacity: Opacity
+                or: or
+                orientation: Orientation
+                padding-px: Padding (px)
+                paper-size: Paper Size
+                position: Position
+                properties: '{elementType} Properties'
+                qr-code: QR Code
+                query: Query
+                query-parameters: Query Parameters
+                radius-px: Radius (px)
+                remove-column: Remove column
+                remove-parameter: Remove parameter
+                remove-row: Remove row
+                replace-image: Replace image
+                resolved-when-the-template-is-rendered: ', resolved when the template is rendered.'
+                response-path: Response Path
+                returned: Returned {count} {value}.
+                rotation: Rotation
+                row: Row {add}
+                row-alt-color: Row Alt Color
+                sent-without-unresolved-parameters: 'Sent without unresolved parameters: {skippedParamsLabel}.'
+                shape: Shape
+                size: Size
+                size-px: Size (px)
+                style: Style
+                table-style: Table Style
+                template-name: Template Name
+                test-query: Test query
+                testing: Testing…
+                text: Text
+                the-variable-must-resolve-to-an: The variable must resolve to an array of objects. Each object''s keys should match the column keys defined above. Saved queries appear here under
+                uploading: Uploading...
+                use-these-as-columns: Use these as columns
+                use-variable-e-g: Use variable (e.g. '{'company.logo'}')
+                value: Value
+                values-may-hold-variable-tokens-such: Values may hold variable tokens such as
+                variable: Variable
+                weight: Weight
+                width: Width
+                width-px: Width (px)
+                z-index: Z-Index
+            queries: Queries
+            queries-panel:
+                add: Add
+                add-query: Add query
+                delete-query: Delete query
+                edit-query: Edit query
+                no-queries-yet: No queries yet.
+                queries: Queries
+                queries-load-data-from-fleetbase-models: Queries load data from Fleetbase models at render time and are saved with the template.
+                unsaved: unsaved
+            query-form:
+                add-condition: Add condition
+                add-sort: Add sort
+                ascending: Ascending
+                auto-derived-from-label-if-left: Auto-derived from label if left blank.
+                basic-info: Basic Info
+                cancel: Cancel
+                comma-separated-relationship-names-to-eager: Comma-separated relationship names to eager-load.
+                create-query: Create Query
+                descending: Descending
+                description: Description
+                e-g-driver-vehicle: e.g. driver,vehicle
+                e-g-recent-orders: e.g. Recent Orders
+                eager-load-with: Eager Load (with)
+                edit-query: Edit Query
+                field-e-g-created-at: field (e.g. created_at)
+                filter-conditions: Filter Conditions
+                label: Label
+                limit: Limit
+                max-number-of-rows-to-return: Max number of rows to return.
+                new-query: New Query
+                no-conditions-all-records-will-be: No conditions — all records will be returned.
+                no-limit: No limit
+                no-sort-default-model-order-will: No sort — default model order will be used.
+                optional-description: Optional description
+                remove-condition: Remove condition
+                remove-sort: Remove sort
+                resource-type: Resource Type
+                save-changes: Save Changes
+                select-the-fleetbase-model-this-query: Select the Fleetbase model this query runs against.
+                sort: Sort
+                value-or: value or '{'variable'}'
+                variable-name: Variable Name
+            toolbar:
+                add: Add {label}
+                close: Close
+                preview: Preview
+                preview-template: Preview template
+                redo: Redo
+                reset-zoom: Reset zoom
+                rotate-left-90: Rotate left 90°
+                rotate-right-90: Rotate right 90°
+                save: Save
+                undo: Undo
+                zoom-in: Zoom in
+                zoom-out: Zoom out
+            variable-picker:
+                1-1: '[''{'' ''{''invoice.subtotal''}'' * 1.1 ''}'']'
+                1-1-2: '''{''invoice.subtotal''}'' * 1.1'
+                always-available: Always available
+                cancel: Cancel
+                expression: Expression
+                formula: Formula
+                formula-syntax: Formula Syntax
+                global: Global
+                insert-formula: Insert Formula
+                insert-variable-or-formula: Insert Variable or Formula
+                no-variables-match: No variables match "{searchQuery}"
+                preview: Preview
+                quick-insert-variable: Quick-insert variable
+                search-variables: Search variables...
+                supported-round-abs-ceil-floor: 'Supported: + − × ÷ ( ) round() abs() ceil() floor()'
+                text: '[''{'' expression ''}'']'
+                text-2: '[''{'' ''{''order.quantity''}'' * ''{''order.unit_price''}'' ''}'']'
+                use-variables-inside-the-expression: 'Use variables inside the expression:'
+                variables: Variables
+                variables-2: '{length} variables'
+        tip-tap-editor:
+            align-center: Align Center
+            align-left: Align Left
+            align-right: Align Right
+            blockquote: Blockquote
+            bold: Bold
+            clear-color: Clear Color
+            codeblock: Codeblock
+            font: Font
+            format: Format
+            heading: Heading
+            insert-horizontal-rule: Insert Horizontal Rule
+            insert-image: Insert Image
+            insert-table: Insert Table
+            insert-youtube-video: Insert Youtube Video
+            italic: Italic
+            list: List
+            modify-current-table: Modify Current Table
+            ordered-list: Ordered List
+            paragraph: Paragraph
+            redo: Redo
+            strikethrough: Strikethrough
+            table: Table
+            undo: Undo
+        translations-editor:
+            add-language: Add Language
+            add-new-translation: Add new translation
+            translation-key: Translation Key
+            translation-value: Translation Value
+            translations: Translations
+        upload-button:
+            upload-new: Upload new
+            uploading: Uploading...
+        user:
+            pill:
+                no-user: No user
+        widget:
+            report:
+                change-report: Change Report
+                last-run: Last run {lastRunDisplay}
+                loading-report: Loading report...
+                no-report: No report
+                refresh: Refresh
+                running-report: Running report...
+                select-a-report-to-view: Select a report to view.
+                select-report: Select Report
+                showing-first-of-rows: Showing first {length} of {total_rows} rows
+                showing-saved-results: Showing saved results
+                showing-the-last-successful-run: Showing the last successful run.
+    js:
+        components:
+            activity-log:
+                created: Created
+                deleted: Deleted
+                restored: Restored
+                updated: Updated
+            chat-tray:
+                once-this-chat-is-ended-it: Once this chat is ended, it will no longer be accessible for anyone.
+            chat-window:
+                edit-chat-channel-name: Edit chat channel name
+                name-required-to-save-changes: Name required to save changes.
+                save-changes: Save Changes
+            custom-fields-manager:
+                delete: Delete
+                delete-this-custom-field: Delete this custom field?
+                delete-this-field-group: Delete this field group?
+                new-custom-field-group: New custom field group
+                once-this-custom-field-is-deleted: Once this custom field is deleted it will not be recoverable and you will lose all data assosciated.
+                once-this-field-group-is-deleted: Once this field group is deleted it will not be recoverable and you will lose all custom fields inside.
+                untitled-field: Untitled Field
+            fleetbase-attribution:
+                done: Done
+                fleetbase-legal-notices: Fleetbase Legal Notices
+            layout:
+                header:
+                    admin: Admin
+                    changelog: Changelog
+                    create-or-join-organizations: Create or join organizations
+                    developers: Developers
+                    documentation: Documentation
+                    explore-extensions: Explore extensions
+                    fleetbase-documentation: Fleetbase Documentation
+                    help-support: Help & Support
+                    home: Home
+                    join-discord-community: Join Discord Community
+                    logout: Logout
+                    organization-settings: Organization settings
+                    show-keyboard-shortcuts: Show keyboard shortcuts
+                    view-profile: View Profile
+            metadata-editor:
+                done: Done
+                preview-metadata: Preview metadata
+            modals:
+                query-builder-computed-column-editor:
+                    boolean: Boolean
+                    bucket-rows-by-month-use-it: Bucket rows by month; use it as a Group By column
+                    calculate-the-number-of-days-between: Calculate the number of days between two dates
+                    combine-multiple-text-fields: Combine multiple text fields
+                    date: Date
+                    date-time: Date & Time
+                    decimal: Decimal
+                    divide-with-protection-against-division-by: Divide with protection against division by zero
+                    integer: Integer
+                    read-a-number-stored-in-a: Read a number stored in a JSON column such as meta, e.g. an order total in cents, as a decimal
+                    reference-related-columns-by-their-path: Reference related columns by their path, as listed in the column picker, e.g. a quantity kept in order item metadata
+                    return-different-values-based-on-conditions: Return different values based on conditions
+                    text: Text
+            query-builder:
+                column-select:
+                    one-value-across-every-matching-row: One value across every matching row, or one per group when the report is grouped. Select them on their own for a totals row, or add a Group By to combine them with other fields.
+                    summaries: Summaries
+                conditions:
+                    after: after
+                    before: before
+                    between: between
+                    between-dates: between dates
+                    contains: contains
+                    does-not-contain: does not contain
+                    ends-with: ends with
+                    equals: equals
+                    'false': 'False'
+                    greater-than: greater than
+                    greater-than-or-equal: greater than or equal
+                    is-empty: is empty
+                    is-not-empty: is not empty
+                    is-not-one-of: is not one of
+                    is-one-of: is one of
+                    less-than: less than
+                    less-than-or-equal: less than or equal
+                    not-between: not between
+                    not-between-dates: not between dates
+                    not-equals: not equals
+                    on-or-after: on or after
+                    on-or-before: on or before
+                    starts-with: starts with
+                    'true': 'True'
+                group-by:
+                    all-records: All Records
+                    average: Average
+                    concatenate: Concatenate
+                    count: Count
+                    count-distinct: Count Distinct
+                    maximum: Maximum
+                    minimum: Minimum
+                    sum: Sum
+                sort-by:
+                    ascending: Ascending
+                    descending: Descending
+            report-builder:
+                configuration: Configuration
+                export-options:
+                    csv: CSV
+                    excel-xlsx: Excel (XLSX)
+                    json: JSON
+                failed-to-load-data-sources: Failed to load data sources
+                preview: Preview
+            template-builder:
+                layers-panel:
+                    text: Text
+                properties-panel:
+                    a3-297-420-mm: A3 (297 × 420 mm)
+                    a4-210-297-mm: A4 (210 × 297 mm)
+                    a5-148-210-mm: A5 (148 × 210 mm)
+                    arial: Arial
+                    black: Black
+                    bold: Bold
+                    circle: Circle
+                    contain: Contain
+                    courier-new: Courier New
+                    cover: Cover
+                    custom: Custom
+                    dashed: Dashed
+                    dotted: Dotted
+                    extra-bold: Extra Bold
+                    fill: Fill
+                    georgia: Georgia
+                    helvetica: Helvetica
+                    inter: Inter
+                    landscape: Landscape
+                    legal-216-356-mm: Legal (216 × 356 mm)
+                    letter-216-279-mm: Letter (216 × 279 mm)
+                    light: Light
+                    medium: Medium
+                    none: None
+                    open-sans: Open Sans
+                    portrait: Portrait
+                    rectangle: Rectangle
+                    regular: Regular
+                    roboto: Roboto
+                    semi-bold: Semi Bold
+                    solid: Solid
+                    times-new-roman: Times New Roman
+                queries: Queries
+                query-form:
+                    contact: Contact
+                    contains: ~ contains
+                    driver: Driver
+                    equals: = equals
+                    fuel-report: Fuel Report
+                    greater-or-equal: ≥ greater or equal
+                    greater-than: '> greater than'
+                    in-list: in list
+                    is-not-null: is not null
+                    is-null: is null
+                    issue: Issue
+                    less-or-equal: ≤ less or equal
+                    less-than: < less than
+                    not-contains: '!~ not contains'
+                    not-equals: ≠ not equals
+                    not-in-list: not in list
+                    order: Order
+                    place: Place
+                    purchase-rate: Purchase Rate
+                    vehicle: Vehicle
+                    vendor: Vendor
+                toolbar:
+                    barcode: Barcode
+                    image: Image
+                    line: Line
+                    qr-code: QR Code
+                    shape: Shape
+                    table: Table
+                    text: Text
+                variable-picker:
+                    company-address: Company Address
+                    company-email: Company Email
+                    company-logo-url: Company Logo URL
+                    company-name: Company Name
+                    company-phone: Company Phone
+                    current-datetime: Current DateTime
+                    current-user: Current User
+                    current-year: Current Year
+                    today-s-date: Today''s Date
+                    user-email: User Email
+            tip-tap-editor:
+                add-column-after: Add Column After
+                add-column-before: Add Column Before
+                add-row-after: Add Row After
+                add-row-before: Add Row Before
+                bold: Bold
+                comic-sans: Comic Sans
+                delete-column: Delete Column
+                delete-row: Delete Row
+                delete-table: Delete Table
+                heading-1: Heading 1
+                heading-2: Heading 2
+                heading-3: Heading 3
+                insert-a-table: Insert a Table
+                insert-a-youtube-video: Insert a Youtube Video
+                inter: Inter
+                italic: Italic
+                monospace: Monospace
+                serif: Serif
+                strikethrough: Strikethrough
+                subscript: Subscript
+                superscript: Superscript
+                underline: Underline
+                unset: Unset
+                youtube-video-url-is-invalid: Youtube video URL is invalid.
+            widget:
+                report:
+                    confirm: Confirm
+                    select-report: Select report
+        services:
+            modals-manager:
+                loading: Loading...
+                ok: OK
+    status:
+        accepted: Accepted
+        acknowledged: Acknowledged
+        active: Active
+        approved: Approved
+        approved_pending: Approved pending
+        archived: Archived
+        arrived: Arrived
+        assigned: Assigned
+        available: Available
+        backordered: Backordered
+        blocked: Blocked
+        canceled: Canceled
+        cancelled: Cancelled
+        closed: Closed
+        completed: Completed
+        confirmed: Confirmed
+        connected: Connected
+        created: Created
+        critical: Critical
+        damaged: Damaged
+        declined: Declined
+        decommissioned: Decommissioned
+        degraded: Degraded
+        delivered: Delivered
+        disabled: Disabled
+        disconnected: Disconnected
+        dispatched: Dispatched
+        draft: Draft
+        driver_enroute: Driver enroute
+        due: Due
+        enabled: Enabled
+        enroute: Enroute
+        error: Error
+        escalated: Escalated
+        expired: Expired
+        failed: Failed
+        finished: Finished
+        fulfilled: Fulfilled
+        healthy: Healthy
+        high: High
+        idle: Idle
+        in_maintenance: In maintenance
+        in_progress: In progress
+        in_service: In service
+        in_transit: In transit
+        inactive: Inactive
+        inbound: Inbound
+        incoming: Incoming
+        incomplete: Incomplete
+        info: Info
+        investigating: Investigating
+        lost: Lost
+        low: Low
+        maintenance: Maintenance
+        medium: Medium
+        moving: Moving
+        new: New
+        not_started: Not started
+        offline: Offline
+        on_hold: On hold
+        online: Online
+        open: Open
+        operational: Operational
+        ordered: Ordered
+        out_for_delivery: Out for delivery
+        out_of_service: Out of service
+        outbound: Outbound
+        outgoing: Outgoing
+        overdue: Overdue
+        paid: Paid
+        parked: Parked
+        partially_paid: Partially paid
+        passed: Passed
+        paused: Paused
+        pending: Pending
+        pending_approval: Pending approval
+        picked_up: Picked up
+        planned: Planned
+        preparing: Preparing
+        processing: Processing
+        published: Published
+        queued: Queued
+        ready: Ready
+        received: Received
+        refunded: Refunded
+        rejected: Rejected
+        requested: Requested
+        reserved: Reserved
+        resolved: Resolved
+        retired: Retired
+        returned: Returned
+        running: Running
+        scheduled: Scheduled
+        sent: Sent
+        shipped: Shipped
+        skipped: Skipped
+        sold: Sold
+        started: Started
+        stolen: Stolen
+        stopped: Stopped
+        success: Success
+        suspended: Suspended
+        synced: Synced
+        unassigned: Unassigned
+        unavailable: Unavailable
+        unconfirmed: Unconfirmed
+        unfulfilled: Unfulfilled
+        unpaid: Unpaid
+        unverified: Unverified
+        upcoming: Upcoming
+        urgent: Urgent
+        verified: Verified
+        void: Void
+        voided: Voided
+        waiting: Waiting
+        warning: Warning

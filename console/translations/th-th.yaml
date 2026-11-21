@@ -4791,3 +4791,1109 @@ vroom:
   settings:
     title: ตั้งค่า VROOM
     api-key: VROOM API Key
+ember-ui:
+    components:
+        activity-log:
+            attribute: ฟิลด์
+            attributes: '{changeCount} ฟิลด์'
+            changed-attributes: ฟิลด์ที่เปลี่ยน
+            from: จาก
+            loading-activity: กำลังโหลดกิจกรรม...
+            new-value: ค่าใหม่
+            no-activity-yet: ยังไม่มีกิจกรรม
+            'on': ใน
+            previous-value: ค่าเดิม
+            to: เป็น
+            with: กับ
+        array-input:
+            add: เพิ่ม
+            data-input: ช่องกรอกข้อมูล
+            remove: ลบ
+        aside-item-scroller:
+            directory: รายชื่อ
+            'no': ไม่มี{resource}
+            search: ค้นหา{resource}
+            search-2: ค้นหา
+            search-input: ช่องค้นหา
+        autocomplete-input:
+            loading: กำลังโหลด...
+        bulk-search-dropdown:
+            bulk-search: ค้นหาหลายรายการ
+            clear: ล้าง
+            input-comma-delimited-id-s-to: กรอก ID คั่นด้วยจุลภาคเพื่อค้นหาหลายรายการ
+            search: ค้นหา
+        category:
+            pill:
+                no-category: ไม่มีหมวดหมู่
+        chart:
+            loading: กำลังโหลด...
+        chat-tray:
+            compose-panel:
+                cancel: ยกเลิก
+                chat-name: ชื่อแชต
+                close-new-chat: ปิดแชตใหม่
+                contacts: ผู้ติดต่อ
+                create-chat: สร้างแชต
+                loading-contacts: กำลังโหลดรายชื่อ
+                new-chat: แชตใหม่
+                no-contacts-found: ไม่พบรายชื่อ
+                optional: ไม่บังคับ
+                search-teammates: ค้นหาเพื่อนร่วมทีม
+                select-one-or-more-teammates: เลือกเพื่อนร่วมทีมอย่างน้อยหนึ่งคน
+                try-a-different-name-email-or: ลองชื่อ อีเมล หรือเบอร์โทรอื่น
+            contact-row:
+                fleetbase-user: ผู้ใช้ Fleetbase
+            conversation-row:
+                attachment: การพ่วง
+                end-chat: จบแชต
+            inbox-panel:
+                close-chat-inbox: ปิดกล่องแชต
+                loading-conversations: กำลังโหลดบทสนทนา
+                messages: ข้อความ
+                new-chat: แชตใหม่
+                no-conversations-found: ไม่พบบทสนทนา
+                search-conversations: ค้นหาบทสนทนา
+                start-a-new-chat-or-adjust: เริ่มแชตใหม่หรือปรับคำค้นหา
+            open-chat-inbox: เปิดกล่องแชต
+        chat-window:
+            add-attachment: เพิ่มไฟล์แนบ
+            attachment:
+                click-to-download-attachment: คลิกเพื่อดาวน์โหลดไฟล์แนบ
+            send: ส่ง
+            type-your-message-here: พิมพ์ข้อความที่นี่
+        click-to-copy:
+            click-to-copy: คลิกเพื่อคัดลอก
+            copied: คัดลอกแล้ว!
+        click-to-reveal:
+            click-to-copy: คลิกเพื่อคัดลอก
+            copied: คัดลอกแล้ว!
+        company:
+            pill:
+                no-company: ไม่มีบริษัท
+        coordinates-input:
+            address-search: ค้นหาที่อยู่
+            done: เสร็จสิ้น
+            draggable-map-marker: หมุดแผนที่ที่ลากได้
+            enter-address: กรอกที่อยู่
+            latitude: ละติจูด
+            longitude: ลองจิจูด
+            lookup: ค้นหา
+            select-from-map: เลือกจากแผนที่
+        currency-select:
+            search-by-currency-code: ค้นหาด้วยรหัสสกุลเงิน
+        custom-field:
+            form:
+                field-description: คำอธิบายฟิลด์
+                field-help-text: ข้อความช่วยเหลือ
+                field-is-editable: แก้ไขได้
+                field-is-required: จำเป็นต้องกรอก
+                field-label: ป้ายชื่อฟิลด์
+                field-model-type: ประเภท Model
+                field-type: ประเภทฟิลด์
+                meta-column-span: 'Meta: จำนวนคอลัมน์'
+                select-field-type: เลือกประเภทฟิลด์...
+                select-model-type: เลือกประเภท Model
+            input:
+                saved: บันทึกแล้ว
+                uploading: กำลังอัปโหลด {progress}%
+                yyyy-mm-dd: YYYY-MM-DD
+            options-input:
+                add-new-option: เพิ่มตัวเลือกใหม่
+                field-options: ตัวเลือกของฟิลด์
+            value:
+                download: ดาวน์โหลด
+                'no': ไม่
+                signature: ลายเซ็น
+                'yes': ใช่
+            yield:
+                cancel: ยกเลิก
+                save-changes: บันทึกการเปลี่ยนแปลง
+        custom-fields-manager:
+            add-your-first-field-group-to: เพิ่มกลุ่มฟิลด์แรกเพื่อเริ่มสร้างฟิลด์กำหนดเองสำหรับ {label}
+            create-new-custom-field: สร้างฟิลด์กำหนดเองใหม่
+            custom-fields-manager: จัดการฟิลด์กำหนดเอง
+            new-field-group: กลุ่มฟิลด์ใหม่
+            no-custom-field-groups: ไม่มีกลุ่มฟิลด์กำหนดเอง
+        dashboard:
+            create:
+                remove-widget-from-the-dashboard: เอา Widget ออกจาก Dashboard
+            widget-panel:
+                clear-search: ล้างการค้นหา
+        date-time-input:
+            date-input: ช่องวันที่
+            time-input: ช่องเวลา
+        docs-panel:
+            close-documentation: ปิดเอกสาร
+            loading-documentation: กำลังโหลดเอกสาร...
+            open-documentation: เปิดเอกสาร
+            open-documentation-in-a-new-tab: เปิดเอกสารในแท็บใหม่
+            open-fleetbase-documentation: เปิดเอกสาร Fleetbase
+            this-page-cannot-be-embedded-here: หน้านี้ฝังที่นี่ไม่ได้ แต่เปิดในแท็บใหม่ได้
+        extensions-list:
+            extensions: ส่วนขยาย
+        file:
+            pill:
+                no-file: ไม่มีไฟล์
+        filter:
+            model-multiple:
+                clear: ล้าง
+            multi-input:
+                add-values: เพิ่มค่า...
+                clear: ล้าง
+            range:
+                clear: ล้าง
+                max: สูงสุด
+                min: ต่ำสุด
+            string:
+                clear: ล้าง
+                filter-input: ช่องกรอง
+        fleetbase-attribution:
+            fleetbase: Fleetbase
+            legal: กฎหมาย
+            powered-by: ขับเคลื่อนโดย
+        group:
+            pill:
+                no-group: ไม่มีกลุ่ม
+        kanban:
+            column:
+                add-a: + เพิ่ม{value}
+                no-yet: ยังไม่มี{pluralize}
+            kanban-board: บอร์ด Kanban
+        layout:
+            header:
+                dark-mode-toggle:
+                    dark-mode: โหมดมืด
+                smart-nav-menu:
+                    customise-navigation: ปรับแต่งเมนูนำทาง
+                    customizer:
+                        add-extensions-from-the-list-on: เพิ่มส่วนขยายจากรายการด้านขวา
+                        all-extensions: ส่วนขยายทั้งหมด
+                        apply: ใช้
+                        cancel: ยกเลิก
+                        click-to-pin-to-bar: คลิกเพื่อปักหมุดที่แถบ
+                        click-to-unpin: คลิกเพื่อเลิกปักหมุด
+                        close: ปิด
+                        customise-navigation: ปรับแต่งเมนูนำทาง
+                        customise-navigation-2: ปรับแต่งเมนูนำทาง
+                        drag-to-reorder: ลากเพื่อเรียงลำดับ
+                        no-extensions-pinned-yet: ยังไม่ได้ปักหมุดส่วนขยาย
+                        pinned-to-bar: ปักหมุดที่แถบแล้ว
+                        remove-from-bar: เอาออกจากแถบ
+                        reset-to-default: รีเซ็ตเป็นค่าเริ่มต้น
+                    dropdown:
+                        clear-search: ล้างการค้นหา
+                        close: ปิด
+                        customise-navigation: ปรับแต่งเมนูนำทาง
+                        extension-list: รายการส่วนขยาย
+                        extensions: ส่วนขยาย
+                        from: จาก {_parentTitle}
+                        more-extensions: ส่วนขยายเพิ่มเติม
+                        no-extensions-match: ไม่มีส่วนขยายที่ตรง
+                        pin-to-navigation-bar: ปักหมุดที่แถบนำทาง
+                        pin-to-navigation-bar-2: ปักหมุด {title} ที่แถบนำทาง
+                        search-extensions: ค้นหาส่วนขยาย...
+                        search-extensions-2: ค้นหาส่วนขยาย
+                    extension-navigation: เมนูส่วนขยาย
+                    more-extensions: ส่วนขยายเพิ่มเติม
+            mobile-navbar:
+                menu: เมนู
+            resource:
+                cards-grid:
+                    create-new: สร้างใหม่
+                    'no': ไม่มี{_resource}
+                panel:
+                    header-actions:
+                        save-changes: บันทึกการเปลี่ยนแปลง
+            sidebar:
+                navigator:
+                    clear-search: ล้างการค้นหา
+                    close-search: ปิดการค้นหา
+                    esc: Esc
+                    navigation-search-results: ผลการค้นหาเมนู
+                    no-navigation-results-found: ไม่พบเมนูที่ค้นหา
+                    search-navigation: ค้นหาเมนู
+                    search-or-jump-to: ค้นหาหรือไปที่...
+                    searching: กำลังค้นหา...
+                    start-typing-to-search: พิมพ์เพื่อค้นหา
+        logo-icon:
+            fleetbase: Fleetbase
+        metadata-editor:
+            add: + เพิ่ม
+            add-2: เพิ่ม
+            boolean: ใช่/ไม่ใช่
+            clear-all: ล้างทั้งหมด
+            e-g-order-number: เช่น order_number
+            filter-keys: กรองคีย์…
+            key: Key
+            no-metadata-click: ไม่มี Metadata คลิก
+            number: ตัวเลข
+            please-fix-invalid-duplicate-keys-above: กรุณาแก้คีย์ที่ไม่ถูกต้อง/ซ้ำด้านบน
+            remove: ลบ
+            text: ข้อความ
+            to-create-one: เพื่อสร้าง
+            true-false: จริง / เท็จ
+            type: ประเภท
+            value: ค่า
+        metadata-viewer:
+            hide-raw-metadata: ซ่อน Metadata ดิบ
+            key: Key
+            no-metadata: ไม่มี Metadata
+            no-metadata-to-display: ไม่มี Metadata ให้แสดง
+            value: ค่า
+            view-raw-metadata: ดู Metadata ดิบ
+        modal:
+            default:
+                cancel: ยกเลิก
+                confirm: ยืนยัน
+            footer:
+                ok: ตกลง
+            header:
+                close:
+                    close: ปิด
+        modals:
+            bulk-action-model:
+                are-you-sure-you-want-to: ยืนยัน{verb} {modelName} เหล่านี้?
+                you-have-selected-for: คุณเลือก {modelName} เพื่อ{verb}
+            bulk-delete-model:
+                are-you-sure-you-want-to: ยืนยันลบ {modelName} เหล่านี้?
+                you-have-selected-for-deletion: คุณเลือก {modelName} เพื่อลบ
+            create-or-join-org:
+                create-new-organization: สร้างองค์กรใหม่
+                enter-the-id-of-the-organization: กรอก ID ขององค์กรที่ต้องการเข้าร่วม
+                join-an-organization: เข้าร่วมองค์กร
+                organization-currency: สกุลเงินองค์กร
+                organization-description: คำอธิบายองค์กร
+                organization-id: ID องค์กร
+                organization-name: ชื่อองค์กร
+                organization-phone-number: เบอร์โทรองค์กร
+            custom-field-group-form:
+                field-group-name: ชื่อกลุ่มฟิลด์
+            edit-chat-name:
+                channel-name: ชื่อช่อง
+                input-a-new-name-for-your: ตั้งชื่อใหม่ให้ช่องแชต
+            export-form:
+                format: รูปแบบ
+                select-export-format: เลือกรูปแบบไฟล์ส่งออก...
+            export-report:
+                csv-export-options: ตัวเลือกส่งออก CSV
+                data-will-be-exported-as-comma: ข้อมูลจะส่งออกเป็นค่าคั่นด้วยจุลภาค ใช้กับ Excel และโปรแกรมตารางอื่นได้
+                data-will-be-exported-as-structured: ข้อมูลจะส่งออกเป็น JSON แบบมีโครงสร้าง เหมาะกับ API และการประมวลผลข้อมูล
+                export-format: รูปแบบไฟล์ส่งออก
+                export-rows-of-data-in-your: ส่งออกข้อมูล {rowCount} แถวในรูปแบบที่ต้องการ
+                file-extension-will-be-added-automatically: นามสกุลไฟล์จะเพิ่มให้อัตโนมัติ
+                file-name: ชื่อไฟล์
+                json-export-options: ตัวเลือกส่งออก JSON
+                select-export-format: เลือกรูปแบบไฟล์ส่งออก...
+            fleetbase-legal-notice:
+                commercial-license: ไลเซนส์เชิงพาณิชย์
+                copyright-fleetbase-pte-ltd: Copyright © {formatdatefns} Fleetbase Pte. Ltd.
+                fleetbase: Fleetbase
+                fleetbase-is-licensed-under-the-gnu: Fleetbase ใช้สัญญาอนุญาต GNU Affero General Public License v3.0 ขึ้นไป เว้นแต่คุณมีไลเซนส์เชิงพาณิชย์แยกจาก Fleetbase
+                need-to-keep-proprietary-modifications-private: ต้องการเก็บส่วนที่แก้ไขเป็นความลับ สร้าง SaaS หรือ white-label Fleetbase? Fleetbase Commercial License ยกเว้นข้อผูกพัน copyleft ของ AGPL สำหรับการใช้เชิงพาณิชย์ที่ครอบคลุม
+                no-warranty: ไม่มีการรับประกัน
+                open-source-and-commercial-licensing: ไลเซนส์โอเพนซอร์สและเชิงพาณิชย์
+                open-source-license: ไลเซนส์โอเพนซอร์ส
+                this-program-is-distributed-without-warranty: โปรแกรมนี้แจกจ่ายโดยไม่มีการรับประกัน คุณเผยแพร่และแก้ไขได้ภายใต้เงื่อนไข AGPL-3.0-or-later
+                view-agpl-license: ดูไลเซนส์ AGPL
+                view-commercial-license: ดูไลเซนส์เชิงพาณิชย์
+                view-licensing-options: ดูตัวเลือกไลเซนส์
+                view-source-code: ดูซอร์สโค้ด
+            import-form:
+                download-import-template-xlsx: ดาวน์โหลดเทมเพลตนำเข้า (XLSX)
+            install-prompt:
+                some-extensions-require-access-to-your: ส่วนขยายบางตัวต้องเข้าถึงข้อมูลของคุณ
+                you-are-attempting-to-install-the: คุณกำลังติดตั้งส่วนขยาย "{value}" ยืนยันการติดตั้ง?
+            query-builder-computed-column-editor:
+                allowed-functions: ฟังก์ชันที่ใช้ได้
+                column-name: ชื่อคอลัมน์
+                data-type: ชนิดข้อมูล
+                description: คำอธิบาย
+                display-label: ชื่อที่แสดง
+                e-g-datediff-end-date-start: เช่น DATEDIFF(end_date, start_date) + 1
+                example-expressions: ตัวอย่าง Expression
+                expression: Expression
+                expression-is-valid: Expression ถูกต้อง
+                optional-description-of-what-this-column: คำอธิบายว่าคอลัมน์นี้คำนวณอะไร (ไม่บังคับ)
+                select-data-type: เลือกชนิดข้อมูล
+                sql-expression-using-allowed-functions-and: SQL expression ที่ใช้ฟังก์ชันที่อนุญาตและอ้างอิงคอลัมน์
+                the-expected-data-type-of-the: ชนิดข้อมูลของค่าที่คำนวณได้
+                the-human-readable-label-shown-in: ชื่อที่แสดงในรายงาน
+                the-internal-name-for-this-column: ชื่อภายในของคอลัมน์ (ตัวพิมพ์เล็ก ตัวเลข และขีดล่าง) เว้นว่างเพื่อใช้ชื่อป้าย
+                use: ใช้
+                validating-expression: กำลังตรวจ expression...
+            resend-verification-email:
+                have-a-second-look-and-confirm: ตรวจทานอีกครั้งว่าอีเมลถูกต้อง
+                re-verify-your-email-address-and: ยืนยันอีเมลอีกครั้ง แล้วกดส่งเพื่อดำเนินการต่อ
+                verify-your-email-address: ยืนยันอีเมลของคุณ
+                verify-your-email-address-2: ยืนยันอีเมล
+            save-report:
+                category: หมวดหมู่
+                description: คำอธิบาย
+                enter-report-title: กรอกชื่อรายงาน...
+                frequency: ความถี่
+                optional-description: คำอธิบาย (ไม่บังคับ)...
+                report-title: ชื่อรายงาน
+                schedule-this-report: ตั้งเวลารายงานนี้
+                select-category: เลือกหมวดหมู่...
+                time: เวลา
+            tip-tap-editor-insert-table:
+                columns: จำนวนคอลัมน์
+                rows: แถว
+                the-number-of-columns-for-the: จำนวนคอลัมน์ของตาราง
+                the-number-of-rows-for-the: จำนวนแถวของตาราง
+            tip-tap-editor-insert-youtube:
+                height: ความสูง
+                the-height-of-the-youtube-video: ความสูงของวิดีโอ YouTube
+                the-url-to-the-youtube-video: URL ของวิดีโอ YouTube ที่ต้องการแทรก
+                the-width-of-the-youtube-video: ความกว้างของวิดีโอ YouTube
+                width: ความกว้าง
+                youtube-video-url: URL วิดีโอ YouTube
+            verify-by-sms:
+                confirm-your-phone-number-below-and: ยืนยันเบอร์โทรด้านล่าง แล้วกดส่งเพื่อรับรหัสยืนยันทาง SMS
+                have-a-second-look-and-confirm: ตรวจทานอีกครั้งว่าเบอร์โทรถูกต้อง
+                let-s-verify-your-phone-number: ยืนยันด้วยเบอร์โทรแทน
+                verify-your-phone-number: ยืนยันเบอร์โทร
+            verify-email:
+                enter-the-code-you-received-in: กรอกรหัสที่ได้รับทางอีเมล ถ้าไม่เจอในกล่องจดหมายให้ดูในสแปม
+                enter-verification-code: กรอกรหัสยืนยัน
+                have-a-second-look-and-confirm: ตรวจทานอีกครั้งว่าอีเมลถูกต้อง
+                re-verify-your-email-address-and: ยืนยันอีเมลอีกครั้ง แล้วกดส่งเพื่อดำเนินการต่อ
+                verify-your-email-address: ยืนยันอีเมลของคุณ
+                verify-your-email-address-2: ยืนยันอีเมล
+        model-multi-file-upload:
+            uploading: กำลังอัปโหลด...
+        notification-tray:
+            no-unread-notifications: ไม่มีการแจ้งเตือนที่ยังไม่อ่าน
+            received: 'ได้รับ: {createdAgo}'
+            view-all-notifications: ดูการแจ้งเตือนทั้งหมด
+        pagination:
+            next: ถัดไป
+            of: จาก
+            previous: ก่อนหน้า
+            results: รายการ
+            showing: แสดง
+            to: ถึง
+        query-builder:
+            actions:
+                actions: การดำเนินการ
+                clear: ล้าง
+                execute: Execute
+                query-operations: คำสั่ง Query
+                save: บันทึก
+            column-select:
+                alias: 'ชื่อแทน:'
+                as: เป็น {name}
+                choose-a-table-to-see-available: เลือกตารางเพื่อดูฟิลด์ที่ใช้ได้
+                clear-all: ล้างทั้งหมด
+                none-selected: ยังไม่เลือก
+                search-for-a-column: ค้นหาคอลัมน์
+                select-a-data-source: เลือกแหล่งข้อมูล
+                select-all: เลือกทั้งหมด
+                select-fields: เลือกฟิลด์
+                selected-fields: 'ฟิลด์ที่เลือก:'
+            computed-columns:
+                add-computed-column: เพิ่มคอลัมน์คำนวณ
+                add-the-first-computed-column: เพิ่มคอลัมน์คำนวณแรก
+                computed-columns: คอลัมน์คำนวณ
+                computed-columns-allow-you-to-create: คอลัมน์คำนวณให้คุณสร้างฟิลด์ที่คำนวณด้วย SQL expression
+                edit-computed-column: แก้ไขคอลัมน์คำนวณ
+                no-computed-columns-defined-yet: ยังไม่มีคอลัมน์คำนวณ
+                remove-computed-column: ลบคอลัมน์คำนวณ
+            conditions:
+                add-condition: เพิ่มเงื่อนไข
+                add-conditions-to-filter-your-data: เพิ่มเงื่อนไขเพื่อกรองข้อมูล
+                add-inner-group: เพิ่มกลุ่มย่อย
+                choose-columns-to-enable-filtering: เลือกคอลัมน์เพื่อเปิดการกรอง
+                conditions: เงื่อนไข
+                enter-value: กรอกค่า...
+                from: จาก
+                group: กลุ่ม
+                no-conditions: ไม่มีเงื่อนไข
+                no-conditions-set: ยังไม่ได้ตั้งเงื่อนไข
+                operator: ตัวดำเนินการ...
+                select-field: เลือกฟิลด์...
+                select-fields-first: เลือกฟิลด์ก่อน
+                select-value: เลือกค่า...
+                select-values: เลือกค่า...
+                to: ถึง
+            group-by:
+                active-groupings: การจัดกลุ่มที่ใช้อยู่
+                add-grouping: เพิ่มการจัดกลุ่ม
+                aggregate-functions-calculate-values-for-each: • ฟังก์ชันรวมค่าจะคำนวณแยกตามกลุ่ม
+                calculate: คำนวณ
+                group-by: Group By
+                group-by-2: จัดกลุ่มตาม {label}
+                group-by-column: คอลัมน์ Group By
+                grouping-rules: 'กฎการจัดกลุ่ม:'
+                no-grouping: ไม่จัดกลุ่ม
+                of: จาก
+                of-column: ของคอลัมน์
+                select-column: เลือกคอลัมน์...
+                select-columns-in-the-select-fields: เลือกคอลัมน์ในส่วน "เลือกฟิลด์" ก่อน
+                select-function: เลือกฟังก์ชัน...
+                use-count-to-count-records-in: • ใช้ COUNT(*) เพื่อนับรายการในแต่ละกลุ่ม
+                you-can-only-group-by-columns: • จัดกลุ่มได้เฉพาะคอลัมน์ที่เลือกไว้
+            joins:
+                alias-optional: ชื่อแทน (ไม่บังคับ)
+                available-relationships: ความสัมพันธ์ที่ใช้ได้
+                joins: Join ตาราง
+                no-joins: ไม่มี Join
+                no-relationships-available: ไม่มีความสัมพันธ์ให้ใช้
+                performance-warning: คำเตือนด้านประสิทธิภาพ
+                select-all: เลือกทั้งหมด
+                select-columns-from: เลือกคอลัมน์จาก {label}
+                select-none: ไม่เลือกเลย
+                selected: เลือกแล้ว {length}
+                table: ตาราง {table}
+                this-table-has-no-defined-relationships: ตารางนี้ไม่มีความสัมพันธ์สำหรับ Join กับตารางอื่น
+                you-have-joined-columns-selected-consider: คุณเลือกคอลัมน์จาก Join ไว้ {totalJoinedColumns} คอลัมน์ ควรเลือกเฉพาะที่ใช้เพื่อประสิทธิภาพที่ดีกว่า
+            limit:
+                enter-limit-e-g-100: กรอกจำนวนสูงสุด (เช่น 100)
+                large-result-sets-may-take-longer: ผลลัพธ์จำนวนมากอาจใช้เวลาประมวลผลและแสดงนานขึ้น
+                limit-results: จำกัดผลลัพธ์
+                maximum-rows: 'จำนวนแถวสูงสุด:'
+                no-limit: ไม่จำกัด
+                performance-notice: ข้อควรทราบด้านประสิทธิภาพ
+                quick-options: 'ตัวเลือกด่วน:'
+                remove-limit: เอาการจำกัดออก
+            sort-by:
+                add-sort: เพิ่มการเรียงลำดับ
+                both-regular-and-aggregated-columns-can: • เรียงได้ทั้งคอลัมน์ปกติและคอลัมน์รวมค่า
+                direction: ทิศทาง
+                no-sorting: ไม่เรียงลำดับ
+                select-column: เลือกคอลัมน์...
+                select-columns-in-the-select-fields: เลือกคอลัมน์ในส่วน "เลือกฟิลด์" ก่อน
+                select-direction: เลือกทิศทาง...
+                sort-by: เรียงตาม
+                sort-column: คอลัมน์ที่ใช้เรียง
+                sort-order-drag-to-reorder: ลำดับการเรียง (ลากเพื่อจัดลำดับ)
+                sort-order-matters-drag-to-reorder: • ลำดับการเรียงมีผล ลากเพื่อจัดลำดับความสำคัญ
+                sorting-rules: 'กฎการเรียงลำดับ:'
+                toggle-sort-direction: สลับทิศทางการเรียง
+                you-can-only-sort-by-columns: • เรียงได้เฉพาะคอลัมน์ที่เลือกไว้
+            table-select:
+                columns: 'คอลัมน์:'
+                data-source: แหล่งข้อมูล
+                no-source-selected: ยังไม่เลือกแหล่งข้อมูล
+                relationships: 'ความสัมพันธ์:'
+                select-data-source: เลือกแหล่งข้อมูล...
+                table-information: ข้อมูลตาราง
+        report-builder:
+            add-tags-to-the-report: เพิ่มแท็กให้รายงาน
+            condition-value:
+                'false': เท็จ
+                'true': จริง
+            configure-the-report-and-press-the: ตั้งค่ารายงานแล้วกดปุ่ม Execute เพื่อดูตัวอย่างผลลัพธ์
+            description: คำอธิบาย
+            execute: Execute
+            export-options:
+                export: ส่งออก
+                export-format: รูปแบบไฟล์ส่งออก...
+            no-report-preview: ยังไม่มีตัวอย่างรายงาน
+            query-builder:
+                clear: ล้าง
+                execute-query: รัน Query
+                primary-table: ตารางหลัก
+                query-builder: ตัวสร้าง Query
+                save-report: บันทึกรายงาน
+                select-a-table: เลือกตาราง...
+                select-columns: เลือกคอลัมน์
+            report-details: รายละเอียดรายงาน
+            tags: แท็ก
+            title: หัวข้อ
+        report:
+            data:
+                configure-the-report-and-press-the: ตั้งค่ารายงานแล้วกดปุ่ม Execute เพื่อดูตัวอย่างผลลัพธ์
+                no-report-preview: ยังไม่มีตัวอย่างรายงาน
+            details:
+                date-created: วันที่สร้าง
+                description: คำอธิบาย
+                report-details: รายละเอียดรายงาน
+                tags: แท็ก
+                title: หัวข้อ
+            find-select:
+                no-reports-available: ไม่มีรายงาน
+                search-reports-by-keyword: ค้นหารายงานด้วยคำค้น...
+                select: เลือก
+                system-found-no-reports-available: ระบบไม่พบรายงาน
+        role:
+            pill:
+                no-role: ไม่มีบทบาท
+        tab-navigation:
+            add-new-tab: เพิ่มแท็บใหม่
+            close: ปิด {label}
+            more-tabs: แท็บเพิ่มเติม
+        table:
+            cell:
+                driver-name:
+                    no-driver-assigned: ยังไม่ได้มอบหมายคนขับ
+            no-records-found: ไม่พบข้อมูล
+        template-builder:
+            element-renderer:
+                image: รูปภาพ
+                no-columns-defined: ยังไม่ได้กำหนดคอลัมน์
+            layers: เลเยอร์
+            layers-panel:
+                delete-element: ลบองค์ประกอบ
+                double-click-to-rename: ดับเบิลคลิกเพื่อเปลี่ยนชื่อ
+                hide-element: ซ่อนองค์ประกอบ
+                layers: เลเยอร์
+                move-layer-down: ย้ายเลเยอร์ลง
+                move-layer-up: ย้ายเลเยอร์ขึ้น
+                no-elements-yet: ยังไม่มีองค์ประกอบ
+                show-element: แสดงองค์ประกอบ
+                use-the-toolbar-to-add-elements: ใช้แถบเครื่องมือเพื่อเพิ่มองค์ประกอบ
+            properties-panel:
+                a-path-on-the-fleetbase-api: Path บน Fleetbase API คำขอจะแนบ session ของคุณ จึงไม่รับ URL เต็มที่ชี้ไปโฮสต์อื่น
+                add-column: เพิ่มคอลัมน์
+                add-parameter: เพิ่มพารามิเตอร์
+                add-row: เพิ่มแถว
+                alignment: การจัดวาง
+                alt-text: ข้อความแทนรูป
+                api-endpoint: API Endpoint
+                background: พื้นหลัง
+                background-color: สีพื้นหลัง
+                barcode: บาร์โค้ด
+                border: เส้นขอบ
+                border-color: สีขอบ
+                border-radius: ความโค้งมุม
+                canvas-settings: ตั้งค่าพื้นที่วาด
+                cell-padding: ระยะห่างในเซลล์
+                change-variable: เปลี่ยนตัวแปร
+                clear: ล้าง
+                click-to-upload-image: คลิกเพื่ออัปโหลดรูป
+                code128: CODE128
+                code39: CODE39
+                color: สี
+                column-label: ชื่อคอลัมน์
+                columns: จำนวนคอลัมน์
+                content: เนื้อหา
+                data-source: แหล่งข้อมูล
+                data-variable: ตัวแปรข้อมูล
+                define-columns-first: กำหนดคอลัมน์ก่อน
+                description: คำอธิบาย
+                dotted-path-to-the-array-of: Path แบบจุดไปยังอาร์เรย์ของแถวใน response เว้นว่างถ้า response เป็นอาร์เรย์นั้นเลย
+                ean-13: EAN-13
+                enter-text-or-use-syntax: พิมพ์ข้อความหรือใช้รูปแบบ '{'variable.name'}'...
+                fill-color: สีพื้น
+                font-family: ตระกูลฟอนต์
+                format: รูปแบบ
+                header-bg: พื้นหลังหัวตาราง
+                header-text: ข้อความหัวตาราง
+                height: ความสูง
+                image: รูปภาพ
+                image-source: แหล่งรูปภาพ
+                insert-variable: แทรกตัวแปร
+                insert-variable-or-formula: แทรกตัวแปรหรือสูตร
+                keys: 'คีย์: {keysLabel}'
+                letter-spacing: ระยะห่างตัวอักษร
+                line: เส้น
+                line-height: ความสูงบรรทัด
+                manual: ธรรมดา
+                no-columns-defined-add-one-below: ยังไม่ได้กำหนดคอลัมน์ เพิ่มด้านล่าง
+                no-parameters: ไม่มีพารามิเตอร์
+                no-rows-yet: ยังไม่มีแถว
+                object-fit: การปรับขนาดรูป
+                opacity: ความทึบ
+                or: หรือ
+                orientation: แนวกระดาษ
+                padding-px: ระยะขอบใน (px)
+                paper-size: ขนาดกระดาษ
+                position: ตำแหน่ง
+                properties: คุณสมบัติ{elementType}
+                qr-code: QR Code
+                query: Query
+                query-parameters: พารามิเตอร์ Query
+                radius-px: ความโค้ง (px)
+                remove-column: ลบคอลัมน์
+                remove-parameter: ลบพารามิเตอร์
+                remove-row: ลบแถว
+                replace-image: เปลี่ยนรูป
+                resolved-when-the-template-is-rendered: ' ซึ่งจะถูกแทนค่าตอนเรนเดอร์เทมเพลต'
+                response-path: Response Path
+                returned: ได้ {count} {value}
+                rotation: การหมุน
+                row: แถว {add}
+                row-alt-color: สีแถวสลับ
+                sent-without-unresolved-parameters: 'ส่งโดยไม่มีพารามิเตอร์ที่ยังแทนค่าไม่ได้: {skippedParamsLabel}'
+                shape: รูปทรง
+                size: ขนาด
+                size-px: ขนาด (px)
+                style: สไตล์
+                table-style: สไตล์ตาราง
+                template-name: ชื่อแม่แบบ
+                test-query: ทดสอบ Query
+                testing: กำลังทดสอบ…
+                text: ข้อความ
+                the-variable-must-resolve-to-an: ตัวแปรต้องได้ค่าเป็นอาร์เรย์ของออบเจกต์ คีย์ของแต่ละออบเจกต์ต้องตรงกับคีย์คอลัมน์ที่กำหนดด้านบน Query ที่บันทึกไว้จะแสดงที่นี่ภายใต้
+                uploading: กำลังอัปโหลด...
+                use-these-as-columns: ใช้เป็นคอลัมน์
+                use-variable-e-g: ใช้ตัวแปร (เช่น '{'company.logo'}')
+                value: ค่า
+                values-may-hold-variable-tokens-such: ค่าใส่ตัวแปรได้ เช่น
+                variable: ตัวแปร
+                weight: น้ำหนัก
+                width: ความกว้าง
+                width-px: ความกว้าง (px)
+                z-index: Z-Index
+            queries: Query
+            queries-panel:
+                add: เพิ่ม
+                add-query: เพิ่ม Query
+                delete-query: ลบ Query
+                edit-query: แก้ไข Query
+                no-queries-yet: ยังไม่มี Query
+                queries: Query
+                queries-load-data-from-fleetbase-models: Query ดึงข้อมูลจากโมเดล Fleetbase ตอนเรนเดอร์ และบันทึกไปกับเทมเพลต
+                unsaved: ยังไม่บันทึก
+            query-form:
+                add-condition: เพิ่มเงื่อนไข
+                add-sort: เพิ่มการเรียงลำดับ
+                ascending: น้อยไปมาก
+                auto-derived-from-label-if-left: ถ้าเว้นว่างจะสร้างจากชื่อป้ายให้อัตโนมัติ
+                basic-info: ข้อมูลพื้นฐาน
+                cancel: ยกเลิก
+                comma-separated-relationship-names-to-eager: ชื่อความสัมพันธ์ที่จะโหลดล่วงหน้า คั่นด้วยจุลภาค
+                create-query: สร้าง Query
+                descending: มากไปน้อย
+                description: คำอธิบาย
+                e-g-driver-vehicle: เช่น driver,vehicle
+                e-g-recent-orders: เช่น ออเดอร์ล่าสุด
+                eager-load-with: โหลดล่วงหน้า (with)
+                edit-query: แก้ไข Query
+                field-e-g-created-at: ฟิลด์ (เช่น created_at)
+                filter-conditions: เงื่อนไขการกรอง
+                label: ป้าย
+                limit: จำกัดจำนวน
+                max-number-of-rows-to-return: จำนวนแถวสูงสุดที่จะคืนค่า
+                new-query: Query ใหม่
+                no-conditions-all-records-will-be: ไม่มีเงื่อนไข — จะคืนข้อมูลทั้งหมด
+                no-limit: ไม่จำกัด
+                no-sort-default-model-order-will: ไม่เรียงลำดับ — ใช้ลำดับเริ่มต้นของข้อมูล
+                optional-description: คำอธิบาย (ไม่บังคับ)
+                remove-condition: ลบเงื่อนไข
+                remove-sort: ลบการเรียงลำดับ
+                resource-type: ประเภททรัพยากร
+                save-changes: บันทึกการเปลี่ยนแปลง
+                select-the-fleetbase-model-this-query: เลือกโมเดล Fleetbase ที่ Query นี้จะดึงข้อมูล
+                sort: เรียงลำดับ
+                value-or: ค่า หรือ '{'variable'}'
+                variable-name: ชื่อตัวแปร
+            toolbar:
+                add: เพิ่ม{label}
+                close: ปิด
+                preview: ตัวอย่าง
+                preview-template: ดูตัวอย่างเทมเพลต
+                redo: ทำซ้ำ
+                reset-zoom: รีเซ็ตการซูม
+                rotate-left-90: หมุนซ้าย 90°
+                rotate-right-90: หมุนขวา 90°
+                save: บันทึก
+                undo: เลิกทำ
+                zoom-in: ซูมเข้า
+                zoom-out: ซูมออก
+            variable-picker:
+                1-1: '[''{'' ''{''invoice.subtotal''}'' * 1.1 ''}'']'
+                1-1-2: '''{''invoice.subtotal''}'' * 1.1'
+                always-available: พร้อมใช้งานเสมอ
+                cancel: ยกเลิก
+                expression: Expression
+                formula: สูตร
+                formula-syntax: ไวยากรณ์สูตร
+                global: ทั่วไป
+                insert-formula: แทรกสูตร
+                insert-variable-or-formula: แทรกตัวแปรหรือสูตร
+                no-variables-match: ไม่มีตัวแปรที่ตรงกับ "{searchQuery}"
+                preview: ตัวอย่าง
+                quick-insert-variable: แทรกตัวแปรด่วน
+                search-variables: ค้นหาตัวแปร...
+                supported-round-abs-ceil-floor: 'รองรับ: + − × ÷ ( ) round() abs() ceil() floor()'
+                text: '[''{'' expression ''}'']'
+                text-2: '[''{'' ''{''order.quantity''}'' * ''{''order.unit_price''}'' ''}'']'
+                use-variables-inside-the-expression: 'ใช้ตัวแปรใน expression:'
+                variables: ตัวแปร
+                variables-2: '{length} ตัวแปร'
+        tip-tap-editor:
+            align-center: จัดกึ่งกลาง
+            align-left: จัดชิดซ้าย
+            align-right: จัดชิดขวา
+            blockquote: ข้อความอ้างอิง
+            bold: ตัวหนา
+            clear-color: ล้างสี
+            codeblock: บล็อกโค้ด
+            font: ฟอนต์
+            format: รูปแบบ
+            heading: ทิศทาง
+            insert-horizontal-rule: แทรกเส้นคั่น
+            insert-image: แทรกรูปภาพ
+            insert-table: แทรกตาราง
+            insert-youtube-video: แทรกวิดีโอ YouTube
+            italic: ตัวเอียง
+            list: รายการ
+            modify-current-table: แก้ไขตารางนี้
+            ordered-list: รายการลำดับเลข
+            paragraph: ย่อหน้า
+            redo: ทำซ้ำ
+            strikethrough: ขีดฆ่า
+            table: ตาราง
+            undo: เลิกทำ
+        translations-editor:
+            add-language: เพิ่มภาษา
+            add-new-translation: เพิ่มคำแปลใหม่
+            translation-key: คีย์คำแปล
+            translation-value: ข้อความแปล
+            translations: คำแปล
+        upload-button:
+            upload-new: อัปโหลดใหม่
+            uploading: กำลังอัปโหลด...
+        user:
+            pill:
+                no-user: ไม่มีผู้ใช้
+        widget:
+            report:
+                change-report: เปลี่ยนรายงาน
+                last-run: รันล่าสุด {lastRunDisplay}
+                loading-report: กำลังโหลดรายงาน...
+                no-report: ไม่มีรายงาน
+                refresh: รีเฟรช
+                running-report: กำลังรันรายงาน...
+                select-a-report-to-view: เลือกรายงานที่จะดู
+                select-report: เลือกรายงาน
+                showing-first-of-rows: แสดง {length} แถวแรกจาก {total_rows} แถว
+                showing-saved-results: แสดงผลลัพธ์ที่บันทึกไว้
+                showing-the-last-successful-run: แสดงผลจากการรันที่สำเร็จครั้งล่าสุด
+    js:
+        components:
+            activity-log:
+                created: สร้างเมื่อ
+                deleted: ลบแล้ว
+                restored: กู้คืนแล้ว
+                updated: อัปเดตเมื่อ
+            chat-tray:
+                once-this-chat-is-ended-it: เมื่อจบแชตแล้ว จะไม่มีใครเข้าถึงได้อีก
+            chat-window:
+                edit-chat-channel-name: แก้ไขชื่อช่องแชต
+                name-required-to-save-changes: ต้องใส่ชื่อก่อนบันทึก
+                save-changes: บันทึกการเปลี่ยนแปลง
+            custom-fields-manager:
+                delete: ลบ
+                delete-this-custom-field: ลบฟิลด์กำหนดเองนี้?
+                delete-this-field-group: ลบกลุ่มฟิลด์นี้?
+                new-custom-field-group: กลุ่มฟิลด์ใหม่
+                once-this-custom-field-is-deleted: เมื่อลบฟิลด์กำหนดเองแล้วจะกู้คืนไม่ได้ และข้อมูลที่เกี่ยวข้องทั้งหมดจะหายไป
+                once-this-field-group-is-deleted: เมื่อลบแล้วจะกู้คืนไม่ได้ และฟิลด์กำหนดเองทั้งหมดในกลุ่มจะหายไป
+                untitled-field: ฟิลด์ไม่มีชื่อ
+            fleetbase-attribution:
+                done: เสร็จสิ้น
+                fleetbase-legal-notices: ประกาศทางกฎหมายของ Fleetbase
+            layout:
+                header:
+                    admin: ผู้ดูแล
+                    changelog: บันทึกการเปลี่ยนแปลง
+                    create-or-join-organizations: สร้างหรือเข้าร่วมองค์กร
+                    developers: นักพัฒนา
+                    documentation: เอกสาร
+                    explore-extensions: สำรวจส่วนขยาย
+                    fleetbase-documentation: เอกสาร Fleetbase
+                    help-support: ความช่วยเหลือและซัพพอร์ต
+                    home: หน้าแรก
+                    join-discord-community: เข้าร่วมชุมชน Discord
+                    logout: ออกจากระบบ
+                    organization-settings: ตั้งค่าองค์กร
+                    show-keyboard-shortcuts: แสดงคีย์ลัด
+                    view-profile: ดูโปรไฟล์
+            metadata-editor:
+                done: เสร็จสิ้น
+                preview-metadata: ดูตัวอย่าง Metadata
+            modals:
+                query-builder-computed-column-editor:
+                    boolean: ใช่/ไม่ใช่
+                    bucket-rows-by-month-use-it: จัดแถวเป็นรายเดือน ใช้เป็นคอลัมน์ Group By ได้
+                    calculate-the-number-of-days-between: คำนวณจำนวนวันระหว่างสองวันที่
+                    combine-multiple-text-fields: รวมฟิลด์ข้อความหลายฟิลด์
+                    date: วันที่
+                    date-time: วันที่และเวลา
+                    decimal: ทศนิยม
+                    divide-with-protection-against-division-by: หารโดยกันการหารด้วยศูนย์
+                    integer: จำนวนเต็ม
+                    read-a-number-stored-in-a: อ่านตัวเลขที่เก็บในคอลัมน์ JSON เช่น meta (เช่นยอดออเดอร์หน่วยสตางค์) เป็นทศนิยม
+                    reference-related-columns-by-their-path: อ้างอิงคอลัมน์ที่เกี่ยวข้องด้วย path ตามที่แสดงในตัวเลือกคอลัมน์ เช่นจำนวนที่เก็บใน metadata ของรายการสินค้า
+                    return-different-values-based-on-conditions: คืนค่าต่างกันตามเงื่อนไข
+                    text: ข้อความ
+            query-builder:
+                column-select:
+                    one-value-across-every-matching-row: ค่าเดียวจากทุกแถวที่ตรงเงื่อนไข หรือหนึ่งค่าต่อกลุ่มเมื่อรายงานมีการจัดกลุ่ม เลือกอย่างเดียวเพื่อได้แถวยอดรวม หรือเพิ่ม Group By เพื่อใช้ร่วมกับฟิลด์อื่น
+                    summaries: สรุปค่า
+                conditions:
+                    after: หลัง
+                    before: ก่อน
+                    between: ระหว่าง
+                    between-dates: ระหว่างวันที่
+                    contains: มีคำว่า
+                    does-not-contain: ไม่มีคำว่า
+                    ends-with: ลงท้ายด้วย
+                    equals: เท่ากับ
+                    'false': เท็จ
+                    greater-than: มากกว่า
+                    greater-than-or-equal: มากกว่าหรือเท่ากับ
+                    is-empty: ว่าง
+                    is-not-empty: ไม่ว่าง
+                    is-not-one-of: ไม่อยู่ในรายการ
+                    is-one-of: อยู่ในรายการ
+                    less-than: น้อยกว่า
+                    less-than-or-equal: น้อยกว่าหรือเท่ากับ
+                    not-between: ไม่อยู่ระหว่าง
+                    not-between-dates: ไม่อยู่ระหว่างวันที่
+                    not-equals: ไม่เท่ากับ
+                    on-or-after: ตั้งแต่
+                    on-or-before: ไม่เกิน
+                    starts-with: ขึ้นต้นด้วย
+                    'true': จริง
+                group-by:
+                    all-records: ทุกรายการ
+                    average: ค่าเฉลี่ย
+                    concatenate: ต่อข้อความ
+                    count: นับจำนวน
+                    count-distinct: นับแบบไม่ซ้ำ
+                    maximum: ค่าสูงสุด
+                    minimum: ค่าต่ำสุด
+                    sum: ผลรวม
+                sort-by:
+                    ascending: น้อยไปมาก
+                    descending: มากไปน้อย
+            report-builder:
+                configuration: การตั้งค่า
+                export-options:
+                    csv: CSV
+                    excel-xlsx: Excel (XLSX)
+                    json: JSON
+                failed-to-load-data-sources: โหลดแหล่งข้อมูลไม่สำเร็จ
+                preview: ตัวอย่าง
+            template-builder:
+                layers-panel:
+                    text: ข้อความ
+                properties-panel:
+                    a3-297-420-mm: A3 (297 × 420 มม.)
+                    a4-210-297-mm: A4 (210 × 297 มม.)
+                    a5-148-210-mm: A5 (148 × 210 มม.)
+                    arial: Arial
+                    black: Black
+                    bold: ตัวหนา
+                    circle: วงกลม
+                    contain: พอดีกรอบ
+                    courier-new: Courier New
+                    cover: เต็มกรอบ
+                    custom: กำหนดเอง
+                    dashed: เส้นประ
+                    dotted: จุด
+                    extra-bold: Extra Bold
+                    fill: ยืดเต็ม
+                    georgia: Georgia
+                    helvetica: Helvetica
+                    inter: Inter
+                    landscape: แนวนอน
+                    legal-216-356-mm: Legal (216 × 356 มม.)
+                    letter-216-279-mm: Letter (216 × 279 มม.)
+                    light: Light
+                    medium: ปานกลาง
+                    none: ไม่มี
+                    open-sans: Open Sans
+                    portrait: แนวตั้ง
+                    rectangle: สี่เหลี่ยม
+                    regular: Regular
+                    roboto: Roboto
+                    semi-bold: Semi Bold
+                    solid: เส้นทึบ
+                    times-new-roman: Times New Roman
+                queries: Query
+                query-form:
+                    contact: ผู้ติดต่อ
+                    contains: ~ มีคำว่า
+                    driver: คนขับ
+                    equals: = เท่ากับ
+                    fuel-report: รายงานน้ำมัน
+                    greater-or-equal: ≥ มากกว่าหรือเท่ากับ
+                    greater-than: '> มากกว่า'
+                    in-list: อยู่ในรายการ
+                    is-not-null: ไม่เป็น null
+                    is-null: เป็น null
+                    issue: ปัญหา
+                    less-or-equal: ≤ น้อยกว่าหรือเท่ากับ
+                    less-than: < น้อยกว่า
+                    not-contains: '!~ ไม่มีคำว่า'
+                    not-equals: ≠ ไม่เท่ากับ
+                    not-in-list: ไม่อยู่ในรายการ
+                    order: ออเดอร์
+                    place: สถานที่
+                    purchase-rate: อัตราที่ซื้อ
+                    vehicle: รถ
+                    vendor: Vendor
+                toolbar:
+                    barcode: บาร์โค้ด
+                    image: รูปภาพ
+                    line: เส้น
+                    qr-code: QR Code
+                    shape: รูปทรง
+                    table: ตาราง
+                    text: ข้อความ
+                variable-picker:
+                    company-address: ที่อยู่บริษัท
+                    company-email: อีเมลบริษัท
+                    company-logo-url: URL โลโก้บริษัท
+                    company-name: ชื่อบริษัท
+                    company-phone: เบอร์โทรบริษัท
+                    current-datetime: วันเวลาปัจจุบัน
+                    current-user: ผู้ใช้ปัจจุบัน
+                    current-year: ปีปัจจุบัน
+                    today-s-date: วันที่วันนี้
+                    user-email: อีเมลผู้ใช้
+            tip-tap-editor:
+                add-column-after: เพิ่มคอลัมน์ด้านขวา
+                add-column-before: เพิ่มคอลัมน์ด้านซ้าย
+                add-row-after: เพิ่มแถวด้านล่าง
+                add-row-before: เพิ่มแถวด้านบน
+                bold: ตัวหนา
+                comic-sans: Comic Sans
+                delete-column: ลบคอลัมน์
+                delete-row: ลบแถว
+                delete-table: ลบตาราง
+                heading-1: หัวข้อ 1
+                heading-2: หัวข้อ 2
+                heading-3: หัวข้อ 3
+                insert-a-table: แทรกตาราง
+                insert-a-youtube-video: แทรกวิดีโอ YouTube
+                inter: Inter
+                italic: ตัวเอียง
+                monospace: Monospace
+                serif: Serif
+                strikethrough: ขีดฆ่า
+                subscript: ตัวห้อย
+                superscript: ตัวยก
+                underline: ขีดเส้นใต้
+                unset: ไม่กำหนด
+                youtube-video-url-is-invalid: URL วิดีโอ YouTube ไม่ถูกต้อง
+            widget:
+                report:
+                    confirm: ยืนยัน
+                    select-report: เลือกรายงาน
+        services:
+            modals-manager:
+                loading: กำลังโหลด...
+                ok: ตกลง
+    status:
+        accepted: ยอมรับแล้ว
+        acknowledged: รับทราบแล้ว
+        active: ใช้งาน
+        approved: อนุมัติแล้ว
+        approved_pending: รออนุมัติ
+        archived: เก็บถาวรแล้ว
+        arrived: มาถึงแล้ว
+        assigned: มอบหมายแล้ว
+        available: พร้อมใช้งาน
+        backordered: รอสินค้าเข้า
+        blocked: ถูกบล็อก
+        canceled: ยกเลิกแล้ว
+        cancelled: ยกเลิกแล้ว
+        closed: ปิดแล้ว
+        completed: เสร็จสิ้น
+        confirmed: ยืนยันแล้ว
+        connected: เชื่อมต่อแล้ว
+        created: สร้างแล้ว
+        critical: วิกฤต
+        damaged: เสียหาย
+        declined: ปฏิเสธแล้ว
+        decommissioned: ปลดระวางแล้ว
+        degraded: ทำงานไม่เต็มที่
+        delivered: ส่งถึงแล้ว
+        disabled: ปิดใช้
+        disconnected: ไม่ได้เชื่อมต่อ
+        dispatched: จ่ายงานแล้ว
+        draft: ฉบับร่าง
+        driver_enroute: คนขับกำลังไป
+        due: ครบกำหนด
+        enabled: เปิดใช้
+        enroute: กำลังเดินทาง
+        error: ผิดพลาด
+        escalated: ส่งต่อระดับสูง
+        expired: หมดอายุ
+        failed: ล้มเหลว
+        finished: เสร็จสิ้น
+        fulfilled: จัดส่งครบแล้ว
+        healthy: ปกติ
+        high: สูง
+        idle: ว่าง
+        in_maintenance: อยู่ระหว่างซ่อมบำรุง
+        in_progress: กำลังดำเนินการ
+        in_service: ใช้งานอยู่
+        in_transit: กำลังจัดส่ง
+        inactive: ไม่ใช้งาน
+        inbound: ขาเข้า
+        incoming: ขาเข้า
+        incomplete: ไม่ครบ
+        info: ข้อมูล
+        investigating: กำลังตรวจสอบ
+        lost: สูญหาย
+        low: ต่ำ
+        maintenance: ซ่อมบำรุง
+        medium: ปานกลาง
+        moving: กำลังเคลื่อนที่
+        new: ใหม่
+        not_started: ยังไม่เริ่ม
+        offline: ออฟไลน์
+        on_hold: พักไว้
+        online: ออนไลน์
+        open: เปิดอยู่
+        operational: ใช้งานได้
+        ordered: สั่งแล้ว
+        out_for_delivery: กำลังนำส่ง
+        out_of_service: งดใช้งาน
+        outbound: ขาออก
+        outgoing: ขาออก
+        overdue: เลยกำหนด
+        paid: ชำระแล้ว
+        parked: จอดอยู่
+        partially_paid: ชำระบางส่วน
+        passed: ผ่าน
+        paused: หยุดชั่วคราว
+        pending: รอดำเนินการ
+        pending_approval: รออนุมัติ
+        picked_up: รับสินค้าแล้ว
+        planned: วางแผนแล้ว
+        preparing: กำลังเตรียม
+        processing: กำลังประมวลผล
+        published: เผยแพร่แล้ว
+        queued: อยู่ในคิว
+        ready: พร้อม
+        received: ได้รับแล้ว
+        refunded: คืนเงินแล้ว
+        rejected: ปฏิเสธแล้ว
+        requested: ร้องขอแล้ว
+        reserved: จองไว้
+        resolved: แก้ไขแล้ว
+        retired: ปลดระวาง
+        returned: ส่งคืนแล้ว
+        running: กำลังทำงาน
+        scheduled: กำหนดเวลาแล้ว
+        sent: ส่งแล้ว
+        shipped: จัดส่งแล้ว
+        skipped: ข้ามแล้ว
+        sold: ขายแล้ว
+        started: เริ่มแล้ว
+        stolen: ถูกขโมย
+        stopped: หยุดแล้ว
+        success: สำเร็จ
+        suspended: ระงับแล้ว
+        synced: ซิงก์แล้ว
+        unassigned: ยังไม่มอบหมาย
+        unavailable: ไม่พร้อมใช้งาน
+        unconfirmed: ยังไม่ยืนยัน
+        unfulfilled: ยังไม่จัดส่ง
+        unpaid: ยังไม่ชำระ
+        unverified: ยังไม่ยืนยัน
+        upcoming: กำลังจะถึง
+        urgent: ด่วน
+        verified: ยืนยันแล้ว
+        void: ยกเลิก
+        voided: ยกเลิกแล้ว
+        waiting: รอ
+        warning: เตือน
