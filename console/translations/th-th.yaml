@@ -1,0 +1,4793 @@
+app:
+  name: Fleetbase
+common:
+  new: ใหม่
+  create: สร้าง
+  add: เพิ่ม
+  edit: แก้ไข
+  update: อัปเดต
+  save: บันทึก
+  save-changes: บันทึกการเปลี่ยนแปลง
+  close-and-save: บันทึกและปิด
+  delete: ลบ
+  delete-selected: ลบที่เลือก
+  delete-selected-count: ลบ {count} รายการที่เลือก
+  your-profile: โปรไฟล์ของคุณ
+  date-of-birth: วันเกิด
+  organization: องค์กร
+  two-factor: ยืนยันตัวตน 2 ขั้นตอน
+  remove: นำออก
+  cancel: ยกเลิก
+  confirm: ยืนยัน
+  close: ปิด
+  open: เปิด
+  view: ดู
+  preview: ดูตัวอย่าง
+  upload: อัปโหลด
+  download: ดาวน์โหลด
+  import: นำเข้า
+  export: ส่งออก
+  print: พิมพ์
+  duplicate: ทำสำเนา
+  copy: คัดลอก
+  paste: วาง
+  share: แชร์
+  refresh: รีเฟรช
+  reset: รีเซ็ต
+  retry: ลองอีกครั้ง
+  back: ย้อนกลับ
+  next: ถัดไป
+  previous: ก่อนหน้า
+  submit: ส่ง
+  apply: ใช้
+  continue: ดำเนินการต่อ
+  proceed: ดำเนินการ
+  select: เลือก
+  deselect: ยกเลิกการเลือก
+  search: ค้นหา
+  filter: ตัวกรอง
+  sort: เรียงลำดับ
+  view-all: ดูทั้งหมด
+  clear: ล้าง
+  done: เสร็จสิ้น
+  finish: เสร็จ
+  skip: ข้าม
+  method: วิธี
+  bulk-delete: ลบหลายรายการ
+  bulk-delete-resource: ลบ{resource}หลายรายการ
+  bulk-cancel: ยกเลิกหลายรายการ
+  bulk-cancel-resource: ยกเลิก{resource}หลายรายการ
+  bulk-actions: ดำเนินการหลายรายการ
+  column: คอลัมน์
+  row: แถว
+  table: ตาราง
+  list: รายการ
+  grid: ตาราง
+  form: แบบฟอร์ม
+  field: ฟิลด์
+  section: ส่วน
+  panel: แผง
+  card: การ์ด
+  tab: แท็บ
+  modal: หน้าต่าง
+  dialog: กล่องโต้ตอบ
+  menu: เมนู
+  dropdown: ดรอปดาวน์
+  tooltip: คำแนะนำ
+  sidebar: แถบข้าง
+  toolbar: แถบเครื่องมือ
+  footer: ส่วนท้าย
+  header: ส่วนหัว
+  title: หัวข้อ
+  subtitle: หัวข้อรอง
+  description: คำอธิบาย
+  placeholder: ข้อความตัวอย่าง
+  label: ป้ายชื่อ
+  button: ปุ่ม
+  icon: ไอคอน
+  avatar: รูปโปรไฟล์
+  link: ลิงก์
+  badge: ป้าย
+  tag: แท็ก
+  banner: แบนเนอร์
+  step: ขั้นตอน
+  progress: ความคืบหน้า
+  map: แผนที่
+  board: บอร์ด
+  loading: กำลังโหลด
+  loading-resource: กำลังโหลด{resource}
+  saving: กำลังบันทึก
+  processing: กำลังประมวลผล
+  fetching: กำลังดึงข้อมูล
+  updating: กำลังอัปเดต
+  uploading: กำลังอัปโหลด
+  completed: เสร็จสมบูรณ์
+  success: สำเร็จ
+  failed: ล้มเหลว
+  error: ข้อผิดพลาด
+  warning: คำเตือน
+  info: ข้อมูล
+  ready: พร้อม
+  activity: กิจกรรม
+  active: ใช้งาน
+  inactive: ไม่ใช้งาน
+  enabled: เปิดใช้
+  disabled: ปิดใช้
+  online: ออนไลน์
+  offline: ออฟไลน์
+  pending: รอดำเนินการ
+  archived: เก็บถาวร
+  hidden: ซ่อน
+  visible: แสดง
+  empty: ว่าง
+  not-found: ไม่พบ
+  no-results: ไม่พบผลลัพธ์
+  try-again: ลองอีกครั้ง
+  are-you-sure: แน่ใจหรือไม่?
+  changes-saved: บันทึกการเปลี่ยนแปลงแล้ว
+  saved-successfully: บันทึกการเปลี่ยนแปลงแล้ว
+  field-saved: บันทึก{field}แล้ว
+  changes-discarded: ยกเลิกการเปลี่ยนแปลงแล้ว
+  delete-confirm: ต้องการลบรายการนี้ใช่หรือไม่?
+  action-successful: ดำเนินการสำเร็จ
+  action-failed: ดำเนินการไม่สำเร็จ กรุณาลองอีกครั้ง
+  something-went-wrong: เกิดข้อผิดพลาดบางอย่าง
+  please-wait: กรุณารอสักครู่...
+  sign-in: เข้าสู่ระบบ
+  sign-out: ออกจากระบบ
+  sign-up: สมัครใช้งาน
+  log-in: เข้าสู่ระบบ
+  log-out: ออกจากระบบ
+  register: ลงทะเบียน
+  forgot-password: ลืมรหัสผ่าน
+  reset-password: รีเซ็ตรหัสผ่าน
+  change-password: เปลี่ยนรหัสผ่าน
+  authentication: การยืนยันตัวตน
+  password: รหัสผ่าน
+  confirm-password: ยืนยันรหัสผ่าน
+  email: อีเมล
+  phone: โทรศัพท์
+  username: ชื่อผู้ใช้
+  remember-me: จดจำฉัน
+  welcome: ยินดีต้อนรับ
+  welcome-back: ยินดีต้อนรับกลับ
+  profile: โปรไฟล์
+  account: บัญชี
+  settings: ตั้งค่า
+  preferences: การตั้งค่าส่วนตัว
+  record: รายการ
+  records: รายการ
+  item: รายการ
+  items: รายการ
+  entry: รายการ
+  entries: รายการ
+  id: ID
+  name: ชื่อ
+  type: ประเภท
+  category: หมวดหมู่
+  overview: ภาพรวม
+  value: ค่า
+  amount: จำนวนเงิน
+  price: ราคา
+  quantity: จำนวน
+  status: สถานะ
+  date: วันที่
+  date-created: วันที่สร้าง
+  date-updated: วันที่อัปเดต
+  time: เวลา
+  created-at: สร้างเมื่อ
+  updated-at: อัปเดตเมื่อ
+  expired-at: หมดอายุเมื่อ
+  last-seen-at: พบล่าสุดเมื่อ
+  last-modified: แก้ไขล่าสุด
+  last-modified-data: 'แก้ไขล่าสุด: {date}'
+  actions: การดำเนินการ
+  details: รายละเอียด
+  notes: หมายเหตุ
+  reference: อ้างอิง
+  filter-by: กรองตาม
+  filter-by-field: กรองตาม{field}
+  sort-by: เรียงตาม
+  ascending: น้อยไปมาก
+  descending: มากไปน้อย
+  all: ทั้งหมด
+  none: ไม่มี
+  select-all: เลือกทั้งหมด
+  deselect-all: ยกเลิกเลือกทั้งหมด
+  show-more: แสดงเพิ่มเติม
+  show-less: แสดงน้อยลง
+  page: หน้า
+  of: จาก
+  total: รวม
+  items-per-page: รายการต่อหน้า
+  showing: แสดง
+  to: ถึง
+  results: ผลลัพธ์
+  load-more: โหลดเพิ่ม
+  no-more-results: ไม่มีผลลัพธ์เพิ่มเติม
+  today: วันนี้
+  yesterday: เมื่อวาน
+  tomorrow: พรุ่งนี้
+  day: วัน
+  week: สัปดาห์
+  month: เดือน
+  year: ปี
+  date-range: ช่วงวันที่
+  start-date: วันที่เริ่ม
+  end-date: วันที่สิ้นสุด
+  time-zone: เขตเวลา
+  system: ระบบ
+  dashboard: Dashboard
+  home: หน้าแรก
+  analytics: การวิเคราะห์
+  reports: รายงาน
+  logs: Log
+  help: ช่วยเหลือ
+  support: ฝ่ายสนับสนุน
+  contact: ติดต่อ
+  documentation: เอกสารประกอบ
+  language: ภาษา
+  timezone: เขตเวลา
+  version: เวอร์ชัน
+  theme: ธีม
+  light-mode: โหมดสว่าง
+  dark-mode: โหมดมืด
+  update-available: มีอัปเดตใหม่
+  install-update: ติดตั้งอัปเดต
+  maintenance-mode: โหมดปิดปรับปรุง
+  notification: การแจ้งเตือน
+  notifications: การแจ้งเตือน
+  mark-as-read: ทำเครื่องหมายว่าอ่านแล้ว
+  mark-all-as-read: อ่านแล้วทั้งหมด
+  clear-notifications: ล้างการแจ้งเตือน
+  company: บริษัท
+  companies: บริษัท
+  user: ผู้ใช้
+  users: ผู้ใช้
+  role: บทบาท
+  roles: บทบาท
+  permission: สิทธิ์
+  permissions: สิทธิ์
+  group: กลุ่ม
+  groups: กลุ่ม
+  unauthorized: ไม่ได้รับอนุญาต
+  forbidden: ไม่มีสิทธิ์เข้าถึง
+  resource-not-found: ไม่พบข้อมูล
+  server-error: เซิร์ฟเวอร์ขัดข้อง
+  validation-error: ข้อมูลไม่ถูกต้อง
+  timeout-error: หมดเวลาการเชื่อมต่อ
+  network-error: เครือข่ายขัดข้อง
+  unknown-error: ข้อผิดพลาดที่ไม่ทราบสาเหตุ
+  file: ไฟล์
+  files: ไฟล์
+  folder: โฟลเดอร์
+  folders: โฟลเดอร์
+  upload-file: อัปโหลดไฟล์
+  upload-files: อัปโหลดไฟล์
+  upload-image: อัปโหลดรูป
+  upload-image-supported: รองรับ PNG, JPEG และ GIF
+  choose-file: เลือกไฟล์
+  choose-files: เลือกไฟล์
+  drag-and-drop: ลากและวาง
+  download-file: ดาวน์โหลดไฟล์
+  file-size: ขนาดไฟล์
+  file-type: ประเภทไฟล์
+  confirm-delete: ยืนยันการลบ
+  confirm-action: ยืนยันการดำเนินการ
+  confirm-exit: ยืนยันการออก
+  confirm-and-save-changes: ยืนยันและบันทึก
+  are-you-sure-exit: ต้องการออกใช่หรือไม่?
+  unsaved-changes-warning: มีการเปลี่ยนแปลงที่ยังไม่ได้บันทึก
+  connected: เชื่อมต่อแล้ว
+  disconnected: ขาดการเชื่อมต่อ
+  reconnecting: กำลังเชื่อมต่อใหม่
+  connection-lost: การเชื่อมต่อขาดหาย
+  connection-restored: เชื่อมต่อได้อีกครั้ง
+  show: แสดง
+  hide: ซ่อน
+  expand: ขยาย
+  collapse: ย่อ
+  enable: เปิดใช้
+  disable: ปิดใช้
+  minimize: ย่อหน้าต่าง
+  maximize: ขยายเต็ม
+  restore: คืนค่า
+  zoom-in: ซูมเข้า
+  zoom-out: ซูมออก
+  fullscreen: เต็มจอ
+  exit-fullscreen: ออกจากเต็มจอ
+  ok: ตกลง
+  none-available: ไม่มีให้เลือก
+  default: ค่าเริ่มต้น
+  custom: กำหนดเอง
+  general: ทั่วไป
+  advanced: ขั้นสูง
+  placeholder-text: พิมพ์ข้อความที่นี่...
+  learn-more: ดูเพิ่มเติม
+  view-resource: ดู{resource}
+  view-resource-details: ดูรายละเอียด{resource}
+  create-a-new-resource: สร้าง{resource}ใหม่
+  create-new-resource: สร้าง{resource}ใหม่
+  search-resource: ค้นหา{resource}
+  new-resource: '{resource}ใหม่'
+  update-resource: อัปเดต{resource}
+  save-resource-changes: บันทึกการแก้ไข{resource}
+  creating-resource: กำลังสร้าง{resource}
+  cancel-resource: ยกเลิก{resource}
+  delete-resource: ลบ{resource}
+  delete-resource-name: 'ลบ: {resourceName}'
+  resource-actions: การดำเนินการ{resource}
+  resource-location: ตำแหน่ง{resource}
+  delete-resource-named: ลบ{resource} ({resourceName})
+  delete-resource-prompt: ย้อนกลับไม่ได้ เมื่อลบแล้วข้อมูลจะถูกลบถาวร
+  delete-cannot-be-undone: ย้อนกลับไม่ได้ เมื่อลบแล้วข้อมูลจะถูกลบถาวร
+  create-resource: สร้าง{resource}
+  edit-resource: แก้ไข{resource}
+  edit-resource-details: แก้ไขรายละเอียด{resource}
+  edit-resource-type-name: 'แก้ไข{resource}: {resourceName}'
+  edit-resource-name: 'แก้ไข: {resourceName}'
+  config: การตั้งค่า
+  select-field: เลือก{field}
+  columns: คอลัมน์
+  metadata: Metadata
+  meta: Meta
+  resource-created-success: สร้าง{resource}ใหม่แล้ว
+  resource-created-success-name: สร้าง{resource}ใหม่ ({resourceName}) แล้ว
+  resource-updated-success: อัปเดต{resource} ({resourceName}) แล้ว
+  resource-action-success: '{resource} ({resourceName}) {action} สำเร็จ'
+  resource-deleted-success: ลบ{resource} ({resourceName}) แล้ว
+  resource-deleted: ลบ{resource} ({resourceName}) แล้ว
+  continue-without-saving: ดำเนินการต่อโดยไม่บันทึก?
+  continue-without-saving-prompt: '{resource}นี้มีการเปลี่ยนแปลงที่ยังไม่ได้บันทึก ถ้าดำเนินการต่อจะถูกยกเลิก กดดำเนินการต่อเพื่อยืนยัน'
+  changelog: บันทึกการเปลี่ยนแปลง
+  reload: โหลดใหม่
+  ledger: Ledger
+  transactions: ธุรกรรม
+resource:
+  alert: การแจ้งเตือน
+  alerts: การแจ้งเตือน
+  brand: แบรนด์
+  brands: แบรนด์
+  category: หมวดหมู่
+  categories: หมวดหมู่
+  chat-attachment: ไฟล์แนบแชท
+  chat-attachments: ไฟล์แนบแชท
+  chat-channel: ช่องแชท
+  chat-channels: ช่องแชท
+  chat-log: ประวัติแชท
+  chat-logs: ประวัติแชท
+  chat-message: ข้อความแชท
+  chat-messages: ข้อความแชท
+  chat-participant: ผู้ร่วมแชท
+  chat-participants: ผู้ร่วมแชท
+  chat-receipt: สถานะการอ่าน
+  chat-receipts: สถานะการอ่าน
+  comment: ความเห็น
+  comments: ความเห็น
+  company: บริษัท
+  companies: บริษัท
+  custom-field-value: ค่าฟิลด์กำหนดเอง
+  custom-field-values: ค่าฟิลด์กำหนดเอง
+  custom-field: ฟิลด์กำหนดเอง
+  custom-fields: ฟิลด์กำหนดเอง
+  dashboard-widget: Widget ของ Dashboard
+  dashboard-widgets: Widget ของ Dashboard
+  dashboard: Dashboard
+  dashboards: Dashboard
+  extension: ส่วนขยาย
+  extensions: ส่วนขยาย
+  file: ไฟล์
+  files: ไฟล์
+  group: กลุ่ม
+  groups: กลุ่ม
+  notification: การแจ้งเตือน
+  notifications: การแจ้งเตือน
+  permission: สิทธิ์
+  permissions: สิทธิ์
+  policy: นโยบาย
+  policies: นโยบาย
+  report: รายงาน
+  reports: รายงาน
+  role: บทบาท
+  roles: บทบาท
+  setting: การตั้งค่า
+  settings: การตั้งค่า
+  transaction: ธุรกรรม
+  transactions: ธุรกรรม
+  user-device: อุปกรณ์ผู้ใช้
+  user-devices: อุปกรณ์ผู้ใช้
+  user: ผู้ใช้
+  users: ผู้ใช้
+  country: ประเทศ
+  account: บัญชี
+  accounts: บัญชี
+  invoice: ใบแจ้งหนี้
+  invoices: ใบแจ้งหนี้
+  invoice-template: แม่แบบใบแจ้งหนี้
+  invoice-templates: แม่แบบใบแจ้งหนี้
+  journal: รายการบันทึกบัญชี
+  journal-entries: รายการบันทึกบัญชี
+  wallet: Wallet
+  wallets: Wallet
+  gateway: Payment Gateway
+  gateways: Payment Gateway
+  wallet-transaction: ธุรกรรม Wallet
+  wallet-transactions: ธุรกรรม Wallet
+dropzone:
+  file: ไฟล์
+  drop-to-upload: วางเพื่ออัปโหลด
+  invalid: ไม่ถูกต้อง
+  files-ready-for-upload: '{numOfFiles} พร้อมอัปโหลด'
+  upload-images-videos: อัปโหลดรูปและวิดีโอ
+  upload-documents: อัปโหลดเอกสาร
+  upload-documents-files: อัปโหลดเอกสารและไฟล์
+  upload-avatar-files: อัปโหลด Avatar
+  dropzone-supported-images-videos: ลากไฟล์รูปหรือวิดีโอมาวางที่นี่
+  dropzone-supported-avatars: ลากไฟล์ SVG หรือ PNG มาวาง
+  dropzone-supported-files: ลากไฟล์มาวางที่นี่
+  or-select-button-text: หรือเลือกไฟล์เพื่ออัปโหลด
+  upload-queue: คิวอัปโหลด
+  uploading: กำลังอัปโหลด...
+two-fa-enforcement-alert:
+  message: เพื่อความปลอดภัยของบัญชี องค์กรของคุณกำหนดให้ใช้การยืนยันตัวตน 2 ขั้นตอน (2FA) เปิดใช้ 2FA ได้ที่การตั้งค่าบัญชี
+  button-text: ตั้งค่า 2FA
+comment-thread:
+  publish-comment-button-text: โพสต์ความเห็น
+  publish-reply-button-text: โพสต์คำตอบ
+  reply-comment-button-text: ตอบกลับ
+  edit-comment-button-text: แก้ไข
+  delete-comment-button-text: ลบ
+  comment-published-ago: '{createdAgo}ที่แล้ว'
+  comment-input-placeholder: พิมพ์ความเห็นใหม่...
+  comment-reply-placeholder: พิมพ์คำตอบ...
+  comment-input-empty-notification: โพสต์ความเห็นว่างไม่ได้
+  comment-min-length-notification: ความเห็นต้องมีอย่างน้อย 2 ตัวอักษร
+dashboard:
+  select-dashboard: เลือก Dashboard
+  create-new-dashboard: สร้าง Dashboard ใหม่
+  create-a-new-dashboard: สร้าง Dashboard ใหม่
+  confirm-create-dashboard: สร้าง Dashboard!
+  edit-layout: แก้ไขเลย์เอาต์
+  add-widgets: เพิ่ม Widget
+  delete-dashboard: ลบ Dashboard
+  save-dashboard: บันทึก Dashboard
+  you-cannot-delete-this-dashboard: ลบ Dashboard นี้ไม่ได้
+  are-you-sure-you-want-delete-dashboard: ต้องการลบ {dashboardName} ใช่หรือไม่?
+dashboard-widget-panel:
+  widget-name: Widget {widgetName}
+  select-widgets: เลือก Widget
+  close-and-save: บันทึกและปิด
+  filter-widgets: ค้นหา Widget…
+  no-widgets-match: ไม่มี Widget ที่ตรงกับตัวกรอง
+  tab-all: ทั้งหมด
+  tab-default: แนะนำ
+  tab-added: อยู่ใน Dashboard
+  badge-default: ค่าเริ่มต้น
+  add: เพิ่ม
+  add-another: เพิ่มอีก
+filters-picker:
+  filters: ตัวกรอง
+  filter-data: กรองข้อมูล
+visible-column-picker:
+  select-viewable-columns: เลือกคอลัมน์ที่จะแสดง
+  customize-columns: ปรับคอลัมน์
+component:
+  file:
+    dropdown-label: การดำเนินการไฟล์
+  import-modal:
+    loading-message: กำลังนำเข้า...
+    drop-upload: วางเพื่ออัปโหลด
+    invalid: ไม่ถูกต้อง
+    ready-upload: พร้อมอัปโหลด
+    upload-spreadsheets: อัปโหลดสเปรดชีต
+    drag-drop: ลากไฟล์สเปรดชีตมาวางที่นี่
+    button-text: หรือเลือกสเปรดชีตเพื่ออัปโหลด
+    spreadsheets: สเปรดชีต
+    upload-queue: คิวอัปโหลด
+  dropzone:
+    file: ไฟล์
+    drop-to-upload: วางเพื่ออัปโหลด
+    invalid: ไม่ถูกต้อง
+    files-ready-for-upload: '{numOfFiles} พร้อมอัปโหลด'
+    upload-images-videos: อัปโหลดรูปและวิดีโอ
+    upload-documents: อัปโหลดเอกสาร
+    upload-documents-files: อัปโหลดเอกสารและไฟล์
+    upload-avatar-files: อัปโหลด Avatar
+    dropzone-supported-images-videos: ลากไฟล์รูปหรือวิดีโอมาวางที่นี่
+    dropzone-supported-avatars: ลากไฟล์ SVG หรือ PNG มาวาง
+    dropzone-supported-files: ลากไฟล์มาวางที่นี่
+    or-select-button-text: หรือเลือกไฟล์เพื่ออัปโหลด
+    upload-queue: คิวอัปโหลด
+    uploading: กำลังอัปโหลด...
+  two-fa-enforcement-alert:
+    message: เพื่อความปลอดภัยของบัญชี องค์กรของคุณกำหนดให้ใช้การยืนยันตัวตน 2 ขั้นตอน (2FA) เปิดใช้ 2FA ได้ที่การตั้งค่าบัญชี
+    button-text: ตั้งค่า 2FA
+  comment-thread:
+    publish-comment-button-text: โพสต์ความเห็น
+    publish-reply-button-text: โพสต์คำตอบ
+    reply-comment-button-text: ตอบกลับ
+    edit-comment-button-text: แก้ไข
+    delete-comment-button-text: ลบ
+    comment-published-ago: '{createdAgo}ที่แล้ว'
+    comment-input-placeholder: พิมพ์ความเห็นใหม่...
+    comment-reply-placeholder: พิมพ์คำตอบ...
+    comment-input-empty-notification: โพสต์ความเห็นว่างไม่ได้
+    comment-min-length-notification: ความเห็นต้องมีอย่างน้อย 2 ตัวอักษร
+  dashboard:
+    select-dashboard: เลือก Dashboard
+    create-new-dashboard: สร้าง Dashboard ใหม่
+    create-a-new-dashboard: สร้าง Dashboard ใหม่
+    confirm-create-dashboard: สร้าง Dashboard!
+    edit-layout: แก้ไขเลย์เอาต์
+    add-widgets: เพิ่ม Widget
+    delete-dashboard: ลบ Dashboard
+    save-dashboard: บันทึก Dashboard
+    you-cannot-delete-this-dashboard: ลบ Dashboard นี้ไม่ได้
+    are-you-sure-you-want-delete-dashboard: ต้องการลบ {dashboardName} ใช่หรือไม่?
+    create-to-customize-hint: สร้าง Dashboard เพื่อปรับแต่ง Widget
+  dashboard-widget-panel:
+    widget-name: Widget {widgetName}
+    select-widgets: เลือก Widget
+    close-and-save: บันทึกและปิด
+services:
+  dashboard-service:
+    create-dashboard-success-notification: สร้าง Dashboard `{dashboardName}` แล้ว
+    delete-dashboard-success-notification: ลบ Dashboard `{dashboardName}` แล้ว
+auth:
+  verification:
+    header-title: ยืนยันบัญชี
+    title: ยืนยันอีเมลของคุณ
+    message-text: <strong>ใกล้เสร็จแล้ว!</strong><br> ตรวจสอบรหัสยืนยันในอีเมลของคุณ
+    verification-code-text: ใส่รหัสยืนยันที่ได้รับทางอีเมล
+    verification-input-label: รหัสยืนยัน
+    verify-button-text: ยืนยันและดำเนินการต่อ
+    didnt-receive-a-code: ยังไม่ได้รับรหัส?
+    not-sent:
+      message: ยังไม่ได้รับรหัส?
+      alternative-choice: ใช้ช่องทางอื่นด้านล่างเพื่อยืนยันบัญชี
+      resend-email: ส่งอีเมลอีกครั้ง
+      send-by-sms: ส่งทาง SMS
+    verify-and-continue: ยืนยันและดำเนินการต่อ
+  two-fa:
+    verify-code:
+      verification-code: รหัสยืนยัน
+      check-title: ตรวจสอบอีเมลหรือโทรศัพท์
+      check-subtitle: เราส่งรหัสยืนยันให้แล้ว ใส่รหัสด้านล่างเพื่อเข้าสู่ระบบ
+      expired-help-text: รหัส 2FA หมดอายุแล้ว ขอรหัสใหม่ได้ถ้าต้องการเวลาเพิ่ม
+      resend-code: ส่งรหัสอีกครั้ง
+      verify-code: ยืนยันรหัส
+      cancel-two-factor: ยกเลิก 2FA
+      invalid-session-error-notification: เซสชันไม่ถูกต้อง กรุณาลองอีกครั้ง
+      verification-successful-notification: ยืนยันสำเร็จ!
+      verification-code-expired-notification: รหัสยืนยันหมดอายุ กรุณาขอรหัสใหม่
+      verification-code-failed-notification: ยืนยันไม่สำเร็จ กรุณาลองอีกครั้ง
+      too-many-attempts-notification: ใส่รหัสผิดหลายครั้งเกินไป กรุณาเข้าสู่ระบบใหม่
+      authenticator-title: เปิดแอป Authenticator
+      authenticator-subtitle: ใส่รหัส 6 หลักที่แอป Authenticator แสดงสำหรับบัญชีนี้
+      recovery-code-title: ใส่รหัสกู้คืน
+      recovery-code-subtitle: ใช้รหัสกู้คืนที่บันทึกไว้ตอนตั้งค่าแอป Authenticator แต่ละรหัสใช้ได้ครั้งเดียว
+      use-recovery-code: ใช้รหัสกู้คืน
+      use-authenticator-code: ใช้แอป Authenticator
+      send-code-instead: ส่งรหัสให้ฉันแทน
+    resend-code:
+      verification-code-resent-notification: ส่งรหัสยืนยันใหม่แล้ว
+      verification-code-resent-error-notification: ส่งรหัสยืนยันใหม่ไม่สำเร็จ กรุณาลองอีกครั้ง
+  forgot-password:
+    success-message: ตรวจสอบอีเมลเพื่อดำเนินการต่อ!
+    is-sent:
+      title: ใกล้เสร็จแล้ว!
+      message: <strong>ตรวจสอบอีเมลของคุณ!</strong><br> เราส่งลิงก์สำหรับรีเซ็ตรหัสผ่านไปที่อีเมลแล้ว ลิงก์หมดอายุใน 15 นาที
+    not-sent:
+      title: ลืมรหัสผ่าน?
+      message: <strong>ไม่ต้องห่วง</strong><br> ใส่อีเมลที่ใช้เข้าสู่ระบบ {appName} แล้วเราจะส่งลิงก์ที่ปลอดภัยสำหรับรีเซ็ตรหัสผ่านให้
+    form:
+      email-label: อีเมลของคุณ
+      submit-button: ส่งลิงก์ให้ฉัน
+      nevermind-button: ไม่เป็นไร
+  login:
+    title: เข้าสู่ระบบบัญชีของคุณ
+    no-identity-notification: ลืมใส่อีเมลหรือเปล่า?
+    no-password-notification: ลืมใส่รหัสผ่านหรือเปล่า?
+    unverified-notification: ต้องยืนยันบัญชีก่อนจึงจะดำเนินการต่อได้
+    password-reset-required: ต้องรีเซ็ตรหัสผ่านก่อนดำเนินการต่อ
+    failed-attempt:
+      message: <strong>ลืมรหัสผ่าน?</strong><br> กดปุ่มด้านล่างเพื่อรีเซ็ตรหัสผ่าน
+      button-text: ช่วยรีเซ็ตให้หน่อย
+    form:
+      email-label: อีเมล
+      password-label: รหัสผ่าน
+      remember-me-label: จดจำฉัน
+      forgot-password-label: ลืมรหัสผ่าน?
+      sign-in-button: เข้าสู่ระบบ
+      create-account-button: สร้างบัญชีใหม่
+    oauth:
+      divider: หรือดำเนินการต่อด้วย
+      continue-with: ดำเนินการต่อด้วย {provider}
+      signing-in: กำลังเข้าสู่ระบบ...
+      finish-signup: ตั้งค่าบัญชี Fleetbase ให้เสร็จเพื่อดำเนินการต่อ
+      connected-accounts: บัญชีที่เชื่อมต่อ
+      connected-accounts-help: เข้าสู่ระบบด้วยผู้ให้บริการแทนรหัสผ่าน เชื่อมต่อได้มากกว่าหนึ่งราย
+      linked-heading: เชื่อมต่อแล้ว
+      available-heading: เชื่อมต่อได้
+      link-button: เชื่อมต่อ
+      unlink-button: ยกเลิกการเชื่อมต่อ
+      unlink-title: ยกเลิกการเชื่อมต่อ {provider}?
+      unlink-body: คุณจะเข้าสู่ระบบด้วย {provider} ไม่ได้อีก เชื่อมต่อใหม่ได้ภายหลัง
+      linked: เชื่อมต่อผู้ให้บริการกับบัญชีแล้ว
+      auto-linked: เชื่อมต่อ {provider} กับบัญชีแล้ว ต่อไปเข้าสู่ระบบด้วย {provider} ได้
+      existing-account: คุณมีบัญชีอยู่แล้ว เราจึงพาเข้าสู่ระบบให้
+      unlinked: ยกเลิกการเชื่อมต่อ {provider} แล้ว
+      errors:
+        generic: เข้าสู่ระบบไม่สำเร็จ กรุณาลองอีกครั้ง
+        access-denied: ยกเลิกการเข้าสู่ระบบแล้ว
+        provider-error: ผู้ให้บริการเข้าสู่ระบบแจ้งปัญหา กรุณาลองอีกครั้ง
+        provider-disabled: วิธีเข้าสู่ระบบนี้ใช้ไม่ได้
+        invalid-state: ลิงก์เข้าสู่ระบบนี้ใช้ไม่ได้แล้ว กรุณาลองอีกครั้ง
+        exchange-failed: ติดต่อผู้ให้บริการเข้าสู่ระบบไม่ได้ กรุณาลองอีกครั้ง
+        expired: เซสชันเข้าสู่ระบบหมดอายุ กรุณาลองอีกครั้ง
+        hosted-domain: บัญชีของคุณไม่อยู่ในโดเมนที่อนุญาต
+        registration-disabled: ไม่เปิดรับสมัครใหม่
+        link-required: มีบัญชีที่ใช้อีเมลนี้อยู่แล้ว เข้าสู่ระบบแล้วเชื่อมต่อผู้ให้บริการนี้ในการตั้งค่าบัญชี
+        customer-account: บัญชีลูกค้าต้องเข้าสู่ระบบผ่าน Customer Portal
+        not-verified: ต้องยืนยันบัญชีก่อนจึงจะดำเนินการต่อได้
+        rate-limited: พยายามหลายครั้งเกินไป กรุณาลองใหม่อีกสักครู่
+        already-linked: ผู้ให้บริการนี้เชื่อมต่อกับบัญชีแล้ว
+        identity-already-linked: บัญชีนี้เชื่อมต่อกับผู้ใช้ Fleetbase คนอื่นแล้ว
+        last-credential: ตั้งรหัสผ่านหรือเชื่อมต่อผู้ให้บริการอื่นก่อน ไม่อย่างนั้นจะเข้าสู่ระบบไม่ได้
+        link-failed: เชื่อมต่อผู้ให้บริการไม่สำเร็จ กรุณาลองอีกครั้ง
+    slow-connection-message: การเชื่อมต่อมีปัญหา
+    back-to-console: กลับไปที่ Console
+  reset-password:
+    success-message: รีเซ็ตรหัสผ่านแล้ว! เข้าสู่ระบบเพื่อดำเนินการต่อ
+    invalid-verification-code: ลิงก์รีเซ็ตรหัสผ่านนี้ไม่ถูกต้องหรือหมดอายุ
+    title: รีเซ็ตรหัสผ่าน
+    form:
+      code:
+        label: รหัสรีเซ็ต
+        help-text: รหัสยืนยันที่ได้รับทางอีเมล
+      password:
+        label: รหัสผ่านใหม่
+        help-text: ใส่รหัสผ่านอย่างน้อย 6 ตัวอักษร
+      confirm-password:
+        label: ยืนยันรหัสผ่านใหม่
+        help-text: ใส่รหัสผ่านอย่างน้อย 6 ตัวอักษร
+      submit-button: รีเซ็ตรหัสผ่าน
+      back-button: ย้อนกลับ
+  confirm-email-change:
+    success-message: อัปเดตอีเมลแล้ว
+    invalid-verification-code: ลิงก์เปลี่ยนอีเมลนี้ไม่ถูกต้องหรือหมดอายุ
+    title: ยืนยันการเปลี่ยนอีเมล
+    message-text: ยืนยันเพื่อเปลี่ยนอีเมลเข้าสู่ระบบของบัญชี Fleetbase
+    form:
+      code:
+        label: รหัสยืนยัน
+        help-text: รหัสยืนยันจากอีเมลของคุณ
+      submit-button: ยืนยันการเปลี่ยนอีเมล
+      back-button: ย้อนกลับ
+  verify-contact:
+    invalid-link: ลิงก์ยืนยันนี้ไม่ถูกต้องหรือหมดอายุ
+    email-title: ยืนยันอีเมลของคุณ
+    phone-title: ยืนยันเบอร์โทรศัพท์ของคุณ
+    email-message: ยืนยันว่าอีเมลนี้เป็นของคุณ
+    phone-message: ยืนยันว่าเบอร์โทรศัพท์นี้เป็นของคุณ
+    email-verified: ยืนยันอีเมลแล้ว
+    phone-verified: ยืนยันเบอร์โทรศัพท์แล้ว
+    continue-button: ดำเนินการต่อ
+    form:
+      code:
+        label: รหัสยืนยัน
+        help-text: รหัสยืนยันจากอีเมลหรือ SMS
+      submit-button: ยืนยัน
+      back-button: ย้อนกลับ
+console:
+  create-or-join-organization:
+    modal-title: สร้างหรือเข้าร่วมองค์กร
+    join-success-notification: เข้าร่วมองค์กรใหม่แล้ว!
+    create-success-notification: สร้างองค์กรใหม่แล้ว!
+  switch-organization:
+    modal-title: ต้องการสลับไปองค์กร {organizationName} ใช่หรือไม่?
+    modal-body: บัญชีของคุณจะยังเข้าสู่ระบบอยู่ แต่องค์กรหลักจะถูกสลับ
+    modal-accept-button-text: ใช่ สลับองค์กร
+    success-notification: สลับองค์กรแล้ว
+  account:
+    index:
+      upload-new: อัปโหลดใหม่
+      phone: เบอร์โทรศัพท์ของคุณ
+      photos: รูปภาพ
+      timezone: เลือกเขตเวลาของคุณ
+  admin:
+    menu:
+      overview: ภาพรวม
+      organizations: องค์กร
+      branding: แบรนด์
+      2fa-config: ยืนยันตัวตน 2 ขั้นตอน
+      platform-api-token: Platform API Token
+      schedule-monitor: ตรวจสอบงานตามกำหนด
+      services: บริการ
+      mail: อีเมล
+      filesystem: ระบบไฟล์
+      queue: Queue
+      socket: Socket
+      oauth: เข้าสู่ระบบด้วย OAuth
+      oauth-apps: แอป OAuth
+      push-notifications: Push Notification
+    schedule-monitor:
+      schedule-monitor: ตรวจสอบงานตามกำหนด
+      task-logs-for: 'Log ของงาน: '
+      showing-last-count: แสดง {count} Log ล่าสุด
+      name: ชื่อ
+      type: ประเภท
+      timezone: เขตเวลา
+      last-started: เริ่มล่าสุด
+      last-finished: เสร็จล่าสุด
+      last-failure: ล้มเหลวล่าสุด
+      date: วันที่
+      memory: หน่วยความจำ
+      runtime: เวลาที่ใช้
+      output: ผลลัพธ์
+      no-output: ไม่มีผลลัพธ์
+    config:
+      database:
+        title: ตั้งค่าฐานข้อมูล
+      filesystem:
+        title: ตั้งค่าระบบไฟล์
+      oauth:
+        title: ตั้งค่าเข้าสู่ระบบด้วย OAuth
+      mail:
+        title: ตั้งค่าอีเมล
+      notification-channels:
+        title: ตั้งค่า Push Notification
+      queue:
+        title: ตั้งค่า Queue
+      services:
+        title: ตั้งค่าบริการ
+      socket:
+        title: ตั้งค่า Socket
+    platform-api-token:
+      title: Platform API Token
+      description: จัดการ Platform API Token ที่ระบบที่เชื่อถือได้ใช้เข้าถึง endpoint ที่ป้องกันไว้ เช่น รายชื่อองค์กร
+      loading: กำลังโหลดสถานะ Platform API Token...
+      status: สถานะ
+      configured: ตั้งค่าแล้ว
+      not-configured: ยังไม่ได้ตั้งค่า
+      last-rotated: เปลี่ยนล่าสุด
+      last-used: ใช้ล่าสุด
+      never: ไม่เคย
+      generate-token: สร้าง Token
+      rotate-token: เปลี่ยน Token
+      revoke-token: เพิกถอน Token
+      one-time-warning: คัดลอก Token ตอนนี้ จะไม่แสดงอีก
+      rotate-confirm-title: เปลี่ยน Platform API Token?
+      rotate-warning: การเปลี่ยน Token จะทำให้ระบบที่ใช้ Token เดิมใช้งานไม่ได้ทันที
+      revoke-confirm-title: เพิกถอน Platform API Token?
+      revoke-warning: การเพิกถอนจะปิดการเข้าถึง endpoint ที่ป้องกันไว้ด้วย Platform Token
+      generated: สร้าง Platform API Token แล้ว
+      rotated: เปลี่ยน Platform API Token แล้ว
+      revoked: เพิกถอน Platform API Token แล้ว
+      copied: คัดลอก Platform API Token แล้ว
+    branding:
+      title: แบรนด์
+      icon-text: ไอคอน
+      upload-new: อัปโหลดใหม่
+      reset-default: คืนค่าเริ่มต้น
+      logo-text: โลโก้
+      theme: ธีมเริ่มต้น
+    index:
+      total-users: ผู้ใช้ทั้งหมด
+      total-organizations: องค์กรทั้งหมด
+      total-transactions: ธุรกรรมทั้งหมด
+    notifications:
+      title: การแจ้งเตือน
+      notification-settings: ตั้งค่าการแจ้งเตือน
+    organizations:
+      index:
+        title: องค์กร
+        owner-name-column: เจ้าของ
+        owner-phone-column: โทรศัพท์เจ้าของ
+        owner-email-column: อีเมลเจ้าของ
+        users-count-column: ผู้ใช้
+        phone-column: โทรศัพท์
+        email-column: อีเมล
+      users:
+        title: ผู้ใช้
+  settings:
+    index:
+      title: ตั้งค่าองค์กร
+      organization-name: ชื่อองค์กร
+      organization-description: คำอธิบายองค์กร
+      organization-phone: เบอร์โทรศัพท์องค์กร
+      organization-currency: สกุลเงินขององค์กร
+      organization-id: ID องค์กร
+      organization-branding: แบรนด์ขององค์กร
+      logo: โลโก้
+      logo-help-text: โลโก้ขององค์กร
+      upload-new-logo: อัปโหลดโลโก้ใหม่
+      backdrop: ภาพพื้นหลัง
+      backdrop-help-text: แบนเนอร์หรือภาพพื้นหลังขององค์กร (ไม่บังคับ)
+      upload-new-backdrop: อัปโหลดภาพพื้นหลังใหม่
+      organization-timezone: เลือกเขตเวลาเริ่มต้นขององค์กร
+      select-timezone: เลือกเขตเวลา
+  extensions:
+    title: ส่วนขยายกำลังจะมาเร็วๆ นี้!
+    message: โปรดติดตามในเวอร์ชันถัดไป ระหว่างที่เราเตรียมเปิดคลังและ Marketplace ส่วนขยาย
+  notifications:
+    select-all: เลือกทั้งหมด
+    mark-as-read: ทำเครื่องหมายว่าอ่านแล้ว
+    received: 'ได้รับ:'
+    message: ไม่มีการแจ้งเตือน
+modals:
+  set-password:
+    message: บัญชีของคุณสร้างจากคำเชิญและยังไม่มีรหัสผ่าน ตั้งรหัสผ่านตอนนี้เพื่อความปลอดภัยของบัญชี
+    new-password: รหัสผ่านใหม่
+    confirm-password: ยืนยันรหัสผ่าน
+    help-text: ใส่รหัสผ่านอย่างน้อย 6 ตัวอักษร
+invite:
+  for-users:
+    invitation-message: คุณได้รับเชิญเข้าร่วม {companyName}
+    invitation-sent-message: คุณได้รับเชิญเข้าร่วมองค์กร {companyName} บน {appName} ใส่รหัสเชิญที่ได้รับทางอีเมลแล้วกดดำเนินการต่อเพื่อตอบรับ
+    invitation-code-sent-text: รหัสเชิญของคุณ
+    accept-invitation-text: ตอบรับคำเชิญ
+oauth:
+  authorize:
+    title: ดำเนินการต่อด้วย Fleetbase
+    loading: กำลังตรวจสอบคำขอ...
+    heading: '{app} ขอเข้าถึงบัญชี Fleetbase ของคุณ'
+    official: พัฒนาโดย Fleetbase
+    signed-in-as: เข้าสู่ระบบเป็น {email}
+    not-you: ไม่ใช่คุณ?
+    organization-label: องค์กรที่จะแชร์
+    organization-help: แอปจะเห็นและแก้ไขได้เฉพาะองค์กรนี้ ยกเลิกสิทธิ์ได้ทุกเมื่อที่ บัญชี → Auth
+    not-admin: เฉพาะผู้ดูแลระบบเท่านั้นที่แชร์ได้
+    no-organization: คุณไม่ได้เป็นผู้ดูแลองค์กรใดที่จะแชร์ได้ ขอให้ผู้ดูแลองค์กรเชื่อมต่อแอปให้
+    your-organization: องค์กรของคุณ
+    will-be-able-to: '{app} จะสามารถ:'
+    allow: อนุญาต
+    cancel: ยกเลิก
+    footnote: คุณกำลังแชร์ข้อมูลนี้กับ {app} ไม่ใช่กับ Fleetbase
+    privacy: นโยบายความเป็นส่วนตัว
+    terms: ข้อกำหนด
+    reauthenticate: เข้าสู่ระบบอีกครั้งเพื่อดำเนินการต่อ...
+    errors:
+      generic: ดำเนินการคำขอนี้ไม่สำเร็จ
+      invalid-client: แอปนี้ไม่ได้ลงทะเบียนกับ Fleetbase หรือถูกปิดใช้แล้ว
+      invalid-request: ลิงก์จากแอปไม่ถูกต้อง กลับไปที่แอปแล้วลองอีกครั้ง
+      invalid-scope: แอปขอสิทธิ์ที่ไม่ได้รับอนุญาต
+      no-organization: เลือกองค์กรที่คุณเป็นผู้ดูแลเพื่อแชร์กับแอปนี้
+      go-back: ปิดหน้านี้แล้วกลับไปที่แอปได้
+  connected-apps:
+    title: แอปที่เชื่อมต่อ
+    help: แอปที่คุณเข้าสู่ระบบด้วยบัญชี Fleetbase และสิทธิ์ของแต่ละแอป การนำแอปออกจะออกจากระบบแอปนั้นและหยุดสิทธิ์ทันที
+    organization: เข้าถึง {organization} ได้
+    sign-in-only: เข้าสู่ระบบเท่านั้น
+    last-used: ใช้ล่าสุด {date}
+    never-used: ยังไม่เคยใช้
+    remove-button: ยกเลิกสิทธิ์
+    remove-title: นำ {app} ออก?
+    remove-body: '{app} จะออกจากระบบและหมดสิทธิ์ทันที ถ้าต้องการใช้อีกต้องอนุญาตใหม่'
+    removed: '{app} ไม่มีสิทธิ์เข้าถึงแล้ว'
+onboard:
+  index:
+    title: สร้างบัญชีของคุณ
+    welcome-title: <strong>ยินดีต้อนรับสู่ {companyName}!</strong><br />
+    welcome-text: กรอกข้อมูลด้านล่างเพื่อเริ่มต้นใช้งาน
+    full-name: ชื่อ-นามสกุล
+    full-name-help-text: ชื่อ-นามสกุลของคุณ
+    your-email: อีเมล
+    your-email-help-text: อีเมลของคุณ
+    phone: เบอร์โทรศัพท์
+    phone-help-text: เบอร์โทรศัพท์ของคุณ
+    organization-name: ชื่อองค์กร
+    organization-help-text: ชื่อองค์กรของคุณ บริการและข้อมูลทั้งหมดจะอยู่ภายใต้องค์กรนี้ ภายหลังสร้างองค์กรเพิ่มได้ตามต้องการ
+    password: ตั้งรหัสผ่าน
+    password-help-text: รหัสผ่านของคุณ ควรตั้งให้คาดเดายาก
+    confirm-password: ยืนยันรหัสผ่าน
+    confirm-password-help-text: ใส่รหัสผ่านเดิมอีกครั้งเพื่อยืนยัน
+    oauth-verified: ยืนยันตัวตนแล้ว ไม่ต้องใช้รหัสผ่าน คุณจะเข้าสู่ระบบผ่านผู้ให้บริการ
+    oauth-divider: หรือสมัครด้วยอีเมล
+    continue-button-text: ดำเนินการต่อ
+    hosted-routing-label: ใช้บริการคำนวณเส้นทางของ Fleetbase (ฟรี)
+    hosted-routing-help-text: ระยะทางถนน ETA และเส้นทางบนแผนที่จากบริการคำนวณเส้นทางของ Fleetbase ฟรี 500 เส้นทางต่อวัน และ 2,500 เส้นทางเมื่อยืนยันอีเมลที่เราส่งให้ การเปิดใช้จะลงทะเบียนระบบนี้กับ Fleetbase Cloud ด้วยอีเมลและที่อยู่ของระบบ และส่งพิกัดเส้นทางไปยังเซิร์ฟเวอร์ Fleetbase ที่สิงคโปร์ทุกครั้งที่คำนวณเส้นทาง โดยไม่เก็บ Log พิกัด ปิดหรือเปลี่ยนไปใช้เซิร์ฟเวอร์ของคุณเองได้ภายหลังที่ Admin → Fleet-Ops → Routing
+  verify-email:
+    header-title: ยืนยันบัญชี
+    title: ยืนยันอีเมลของคุณ
+    message-text: <strong>ใกล้เสร็จแล้ว!</strong><br> ตรวจสอบรหัสยืนยันในอีเมลของคุณ
+    verification-code-text: ใส่รหัสยืนยันที่ได้รับทางอีเมล
+    verification-input-label: รหัสยืนยัน
+    verify-button-text: ยืนยันและดำเนินการต่อ
+    didnt-receive-a-code: ยังไม่ได้รับรหัส?
+    not-sent:
+      message: ยังไม่ได้รับรหัส?
+      alternative-choice: ใช้ช่องทางอื่นด้านล่างเพื่อยืนยันบัญชี
+      resend-email: ส่งอีเมลอีกครั้ง
+      send-by-sms: ส่งทาง SMS
+install:
+  not-configured-title: Fleetbase ยังไม่ได้ติดตั้งหรือตั้งค่า
+  not-configured-message: ติดตั้งให้เสร็จจาก Fleetbase CLI หรือ application container แล้วโหลดหน้านี้ใหม่เมื่อฐานข้อมูล migration และ seed data พร้อม
+  running-locally-docs: ดูเอกสารการรันบนเครื่อง
+  cloud-docs: ดูเอกสารการติดตั้งบนคลาวด์
+  refreshing: ติดตั้งเสร็จแล้ว กำลังรีเฟรช...
+layout:
+  header:
+    menus:
+      organization:
+        settings: ตั้งค่าองค์กร
+        create-or-join: สร้างหรือเข้าร่วมองค์กร
+        explore-extensions: สำรวจส่วนขยาย
+      user:
+        view-profile: ดูโปรไฟล์
+        keyboard-shortcuts: แสดงคีย์ลัด
+        changelog: บันทึกการเปลี่ยนแปลง
+ai:
+  extension-name: AI
+customer-portal:
+  extension-name: Customer Portal
+portal:
+  account-type:
+    company: บัญชีบริษัท
+    customer: บัญชีลูกค้า
+  user-menu:
+    account-settings: ตั้งค่าบัญชี
+    logout: ออกจากระบบ
+  header:
+    support: ช่วยเหลือ
+    documents: เอกสาร
+  nav:
+    workspace: พื้นที่ทำงาน
+    dashboard: Dashboard
+    orders: ออเดอร์
+    billing: การเรียกเก็บเงิน
+    support: ช่วยเหลือ
+    documents: เอกสาร
+    preferences: การตั้งค่าส่วนตัว
+    address-book: สมุดที่อยู่
+    notifications: การแจ้งเตือน
+  home:
+    welcome: ยินดีต้อนรับ {name}
+    hero-subtitle: ติดตามการจัดส่ง ใบแจ้งหนี้ เอกสาร และการขอความช่วยเหลือได้ในที่เดียว
+    new-support-ticket: แจ้งเรื่องใหม่
+    view-billing: ดูการเรียกเก็บเงิน
+    documents: เอกสาร
+    company-workspace: พื้นที่ทำงานลูกค้าบริษัท
+    customer-workspace: พื้นที่ทำงานลูกค้า
+  settings:
+    eyebrow: ตั้งค่า
+    title: ตั้งค่าบัญชี
+    tabs:
+      account: บัญชี
+      members: สมาชิก
+    account:
+      type: ประเภทบัญชี
+      type-personal: บัญชีลูกค้าบุคคล
+      type-company: บัญชีบริษัท
+      convert-button: เปลี่ยนเป็นบัญชีบริษัท
+      change-password: เปลี่ยนรหัสผ่าน
+      change-password-help: อัปเดตรหัสผ่านที่ใช้เข้าสู่ระบบ Customer Portal
+      current-password: รหัสผ่านปัจจุบัน
+      new-password: รหัสผ่านใหม่
+      confirm-new-password: ยืนยันรหัสผ่านใหม่
+      change-password-button: เปลี่ยนรหัสผ่าน
+      profile-saved: บันทึกโปรไฟล์แล้ว
+      validate-password-body: ต้องยืนยันรหัสผ่านก่อนเปลี่ยนอีเมลของบัญชี
+      password-mismatch: รหัสผ่านใหม่และการยืนยันไม่ตรงกัน
+      password-changed: เปลี่ยนรหัสผ่านแล้ว
+      password-change-failed: เปลี่ยนรหัสผ่านไม่สำเร็จ
+  orders:
+    title: ออเดอร์
+    eyebrow: ออเดอร์
+    subtitle: ติดตามการจัดส่ง ดูความเคลื่อนไหวของเส้นทาง และสร้างคำขอจัดส่งใหม่
+    new-order: ออเดอร์ใหม่
+    create-button: สร้าง
+    search-placeholder: ค้นหาออเดอร์
+    no-orders: ยังไม่มีออเดอร์
+    view-map: แผนที่
+    view-table: ตาราง
+    order-list: รายการออเดอร์
+    recent-orders: ออเดอร์ล่าสุด
+    create-order-ready-desc: สร้างคำขอจัดส่งได้เมื่อพร้อม
+    create-order: สร้างออเดอร์
+    empty-table-desc: สร้างออเดอร์ใหม่เมื่อต้องการขอจัดส่ง
+    table:
+      order: ออเดอร์
+      status: สถานะ
+      scheduled: นัดหมาย
+      created: สร้างเมื่อ
+      actions: การดำเนินการ
+      view-order: ดูออเดอร์
+    details:
+      activity: ความเคลื่อนไหว
+      no-activity: ยังไม่มีความเคลื่อนไหว
+      details: รายละเอียด
+      order-id: Order ID
+      tracking-number: เลขติดตามพัสดุ
+      scheduled: นัดหมาย
+      created: สร้างเมื่อ
+      type: ประเภท
+      dispatched-at: จ่ายงานเมื่อ {time}
+      date-created: 'วันที่สร้าง: {date}'
+      type-label: 'ประเภท: {type}'
+      pod: หลักฐานการส่งมอบ (POD)
+      not-required: ไม่จำเป็น
+      notes: หมายเหตุ
+      no-notes: ไม่มีหมายเหตุ
+      purchase-rate: ค่าบริการ
+      breakdown: รายละเอียดค่าใช้จ่าย
+      no-line-items: ไม่มีรายการค่าใช้จ่าย
+      subtotal: ยอดรวมย่อย
+      tax: ภาษี
+      total: ยอดรวม
+      route: เส้นทาง
+      all-stops: ทุกจุด - {count}
+      payload: สินค้า
+      unnamed-item: สินค้าไม่มีชื่อ
+      no-description: ไม่มีคำอธิบาย
+      weight: น้ำหนัก
+      dimensions: ขนาด
+      no-items: ไม่มีสินค้า
+      no-items-desc: ออเดอร์นี้ไม่มีรายการสินค้า
+      proof-of-delivery: หลักฐานการส่งมอบ (POD)
+      no-pod: ยังไม่มีหลักฐานการส่งมอบ
+      no-pod-desc: หลักฐานการส่งมอบจะแสดงที่นี่เมื่อบันทึกแล้ว
+      documents: เอกสาร
+      uploading: กำลังอัปโหลด...
+      drop-to-attach: วางไฟล์เพื่อแนบ
+      file-type-unsupported: ไม่รองรับไฟล์ประเภทนี้
+      ready-to-upload: พร้อมอัปโหลด
+      upload-documents: อัปโหลดเอกสาร
+      upload-desc: วางไฟล์ที่นี่เพื่อแนบฉลาก ใบเสร็จ เอกสารการส่ง หรือไฟล์ประกอบกับออเดอร์นี้
+      select-files: เลือกไฟล์
+      upload-queue: คิวอัปโหลด
+      no-documents: ยังไม่มีเอกสาร
+      no-documents-desc: ฉลาก ใบเสร็จ และไฟล์ของออเดอร์จะแสดงที่นี่เมื่อมี
+      no-label: ออเดอร์นี้ยังไม่มีฉลาก
+      reschedule-title: เลื่อนนัดออเดอร์
+      reschedule-button: เลื่อนนัด
+      cancel-button: ยกเลิก
+      cancel-confirm-title: ยกเลิกออเดอร์นี้?
+      cancel-confirm-body: คำขอจัดส่งของออเดอร์นี้จะถูกยกเลิก
+      cancel-confirm-button: ยกเลิกออเดอร์
+      order-canceled: ยกเลิกออเดอร์แล้ว
+      choose-time: เลือกเวลาจัดส่งใหม่ก่อนเลื่อนนัด
+      order-rescheduled: เลื่อนนัดออเดอร์แล้ว
+      unable-attach: แนบไฟล์นี้กับออเดอร์ไม่ได้
+      file-attached: แนบไฟล์แล้ว
+      delete-title: ลบไฟล์?
+      delete-body: ไฟล์จะถูกนำออกจากออเดอร์นี้
+      delete-button: ลบ
+      unable-identify: ระบุไฟล์นี้ไม่ได้
+      file-removed: นำไฟล์ออกแล้ว
+      file-unavailable-download: ยังดาวน์โหลดไฟล์นี้ไม่ได้
+    tracking:
+      tracking: การติดตาม
+      current-eta: ETA ปัจจุบัน
+      live: สด
+      pending: รอดำเนินการ
+      eta-desc: ประมาณจากข้อมูลเส้นทางล่าสุด
+      remaining-route: เส้นทางที่เหลือ
+      remaining-distance: เหลืออีก {distance}
+      distance-pending: ระยะทางจะแสดงเมื่อเริ่มติดตามได้
+      current-stop: จุดปัจจุบัน
+      eta: 'ETA:'
+      eta-confidence: ความแม่นยำของ ETA
+      updated: อัปเดต {time}
+      dispatched-title: ออเดอร์ของคุณจ่ายงานแล้ว
+      dispatched-body: ทีมจัดส่งรับออเดอร์นี้แล้ว ETA แบบสดจะแสดงเมื่อเริ่มออกเดินทาง
+      not-started-title: ออเดอร์ของคุณยังไม่เริ่ม
+      not-started-body: ได้รับคำขอแล้วและกำลังรอจ่ายงาน ความคืบหน้าจะแสดงที่นี่เมื่อออเดอร์เคลื่อนที่
+      unavailable-title: ยังติดตามไม่ได้
+      unavailable-body: ETA และความคืบหน้าของเส้นทางจะแสดงทันทีที่มีข้อมูลการเคลื่อนที่ของออเดอร์นี้
+    list-card:
+      pickup: จุดรับ
+      waypoints: จุดแวะ
+      additional-stop: อีก {count} จุด
+      additional-stops: อีก {count} จุด
+      return: จุดส่งคืน
+      dropoff: จุดส่ง
+    entity-types:
+      entity:
+        label: สินค้า
+        description: สินค้าทั่วไปแบบมาตรฐาน
+      parcel:
+        label: พัสดุ
+        description: พัสดุมาตรฐานที่คิดราคาแบบพัสดุ
+      package:
+        label: แพ็กเกจ
+        description: กล่อง พัสดุ ซอง หรือหีบห่อทั่วไป
+      product:
+        label: สินค้าขาย
+        description: สินค้าที่ขายหรือสินค้าในแคตตาล็อก
+      item:
+        label: รายการสินค้า
+        description: สินค้าคงคลังทั่วไปเมื่อไม่มีประเภทที่เจาะจงกว่า
+      sku:
+        label: SKU / หน่วยสินค้าคงคลัง
+        description: หน่วยสินค้าคงคลังหรือชิ้นที่ติดตาม
+      document:
+        label: เอกสาร
+        description: เอกสาร ฉลาก หรือแบบฟอร์ม
+      envelope:
+        label: ซองเอกสาร
+        description: ซองแบนหรือซองเอกสาร
+      box:
+        label: กล่อง
+        description: หน่วยขนส่งแบบกล่องเดียว
+      carton:
+        label: ลัง
+        description: ลัง กล่อง หรือเคสเดียว
+      case:
+        label: เคส
+        description: สินค้าบรรจุเป็นเคส
+      bundle:
+        label: มัด
+        description: สินค้าที่มัดหรือรัดรวมกันส่ง
+      bag:
+        label: ถุง
+        description: สินค้าใส่ถุง กระสอบ หรือซอง
+      tote:
+        label: ลังพลาสติก
+        description: ลัง ถัง หรือภาชนะใช้ซ้ำ
+      crate:
+        label: ลังไม้
+        description: ลังแข็งหรือกรงขนส่ง
+      pallet:
+        label: พาเลท
+        description: สินค้าบนพาเลทหรือสินค้ารวมกอง
+      container:
+        label: ตู้คอนเทนเนอร์
+        description: สินค้าในตู้คอนเทนเนอร์หรือตู้เก็บสินค้า
+      freight:
+        label: สินค้าขนส่ง
+        description: สินค้าแยกชิ้นหรือหน่วยขนส่งขนาดใหญ่
+      cargo:
+        label: Cargo
+        description: สินค้าทั่วไปที่ไม่ได้จัดประเภทเจาะจง
+      equipment:
+        label: อุปกรณ์
+        description: เครื่องมือ เครื่องจักร หรืออุปกรณ์ปฏิบัติงาน
+      machinery:
+        label: เครื่องจักร
+        description: เครื่องจักรอุตสาหกรรมหรือเครื่องกลขนาดใหญ่
+      asset:
+        label: ทรัพย์สิน
+        description: ทรัพย์สินธุรกิจที่ติดตาม หรือสินค้าที่ต้องส่งคืน
+      return:
+        label: สินค้าคืน
+        description: สินค้าคืนหรือ Reverse Logistics
+      sample:
+        label: สินค้าตัวอย่าง
+        description: ตัวอย่างสำหรับทดลอง สาธิต หรือตรวจสอบ
+      spare_part:
+        label: อะไหล่
+        description: ชิ้นส่วนทดแทนหรืออะไหล่ซ่อมบำรุง
+      medical_supply:
+        label: เวชภัณฑ์
+        description: สินค้าทางการแพทย์ ห้องแล็บ หรือสุขภาพ
+      food:
+        label: อาหาร
+        description: อาหารปรุงสำเร็จ มื้ออาหาร หรือของชำ
+      beverage:
+        label: เครื่องดื่ม
+        description: เครื่องดื่ม ของเหลว หรือสินค้าบรรจุขวด
+      retail_goods:
+        label: สินค้าปลีก
+        description: สินค้าอุปโภคบริโภคหรือสินค้าปลีกทั่วไป
+    form:
+      details: รายละเอียด
+      order-type: ประเภทออเดอร์
+      select-type: เลือกประเภทออเดอร์
+      scheduled-at: นัดหมายเวลา
+      require-pod: ต้องมีหลักฐานการส่งมอบ
+      proof-method: วิธียืนยันการส่งมอบ
+      select-method: เลือกวิธียืนยันการส่งมอบ
+      route: เส้นทาง
+      multi-dropoff: ออเดอร์หลายจุดส่ง
+      required: จำเป็น
+      waypoint: จุดแวะ {index}
+      select-waypoint: เลือกจุดแวะ {index}
+      pickup: จุดรับ
+      dropoff: จุดส่ง
+      edit-address: แก้ไขที่อยู่
+      edit: แก้ไข
+      select-pickup: เลือกจุดรับ
+      select-dropoff: เลือกจุดส่ง
+      return: จุดส่งคืน
+      select-return: เลือกจุดส่งคืน
+      new-address: ที่อยู่ใหม่
+      add-waypoint: เพิ่มจุดแวะ
+      save-address: บันทึกที่อยู่
+      cancel: ยกเลิก
+      edit-address-title: แก้ไขที่อยู่
+      save-changes: บันทึกการเปลี่ยนแปลง
+      address-updated: อัปเดตที่อยู่แล้ว
+      address-saved: บันทึกที่อยู่แล้ว
+      items: สินค้า
+      item: สินค้า {index}
+      name: ชื่อ
+      name-placeholder: กล่อง พาเลท ซอง
+      item-type: ประเภทสินค้า
+      select-item-type: เลือกประเภทสินค้า
+      description: คำอธิบาย
+      description-placeholder: หมายเหตุการจัดการหรือคำอธิบายสินค้า (ไม่บังคับ)
+      weight: น้ำหนัก
+      dimensions: ขนาด
+      length: ยาว
+      width: กว้าง
+      height: สูง
+      no-items: ยังไม่มีสินค้า
+      no-items-desc: เพิ่มสินค้าเมื่อผู้ขนส่งต้องการรายละเอียดพัสดุ ขนาด หรือเลขอ้างอิง
+      add-item: เพิ่มสินค้า
+      service: บริการ
+      loading-quotes: กำลังโหลดใบเสนอราคา...
+      no-quotes: ไม่มีใบเสนอราคา
+      no-quotes-desc: ไม่มีอัตราค่าบริการที่ตรงกับออเดอร์นี้
+      add-route-details: เพิ่มรายละเอียดเส้นทาง
+      add-route-details-desc: เลือกประเภทออเดอร์ จุดรับ และจุดส่ง เพื่อดูใบเสนอราคา
+      documents: เอกสาร
+      attach-docs: แนบเอกสารออเดอร์
+      attach-desc: วางฉลาก ใบรายการสินค้า รูปอ้างอิง หรือเอกสารประกอบที่นี่
+      select-files: เลือกไฟล์
+      upload-queue: คิวอัปโหลด
+      notes: หมายเหตุ
+      notes-placeholder: สิ่งที่ทีมปฏิบัติการควรรู้
+      address-label: ชื่อที่อยู่
+      address-label-placeholder: คลังสินค้า สำนักงาน บ้าน...
+      street-address: ที่อยู่
+      street-address-placeholder: ใส่ที่อยู่จุดรับหรือจุดส่ง
+      contact-phone: เบอร์ติดต่อ
+      contact-phone-placeholder: เบอร์โทรศัพท์ (ไม่บังคับ)
+      latitude: ละติจูด
+      longitude: ลองจิจูด
+      optional: ไม่บังคับ
+      validation-warning: เลือกประเภทออเดอร์และจุดในเส้นทางอย่างน้อย 2 จุดก่อนสร้างออเดอร์
+      order-created: สร้างออเดอร์แล้ว
+      payment-title: ชำระเงินสำหรับบริการ {type}
+      payment-failed: เริ่มการชำระเงินแบบปลอดภัยไม่สำเร็จ กรุณาลองอีกครั้ง
+      finalizing-title: กำลังยืนยันการสั่งซื้อ
+      finalizing-message: กำลังทำรายการ อย่ารีเฟรชหรือปิดหน้าต่าง...
+      payment-error: เกิดข้อผิดพลาดระหว่างทำรายการสั่งซื้อ
+  widgets:
+    recent-orders:
+      title: ออเดอร์ล่าสุด
+      subtitle: การจัดส่งล่าสุดของบัญชีนี้
+      empty: ไม่มีออเดอร์ล่าสุด
+    active-orders:
+      title: ออเดอร์ที่กำลังดำเนินการ
+    completed-orders:
+      title: ออเดอร์ที่เสร็จแล้ว
+    open-tickets:
+      title: เรื่องที่เปิดอยู่
+    pending-actions:
+      title: รอดำเนินการ
+      subtitle: รายการที่อาจต้องดำเนินการ
+      empty: ตอนนี้ไม่มีอะไรต้องดำเนินการ
+      error: โหลดรายการรอดำเนินการไม่ได้
+    unpaid-invoices:
+      title: ใบแจ้งหนี้ค้างชำระ
+  support:
+    eyebrow: ศูนย์ช่วยเหลือ
+    title: เรื่องที่แจ้ง
+    subtitle: ติดตามเรื่องที่แจ้งเกี่ยวกับออเดอร์ การเรียกเก็บเงิน เอกสาร และบัญชี
+    new-ticket: แจ้งเรื่องใหม่
+    create-ticket: แจ้งเรื่อง
+    back-to-support: กลับไปที่ศูนย์ช่วยเหลือ
+    empty-title: ยังไม่มีเรื่องที่แจ้ง
+    empty-desc: แจ้งเรื่องเมื่อต้องการความช่วยเหลือเกี่ยวกับออเดอร์ ใบแจ้งหนี้ เอกสาร หรือบัญชี
+    ticket-created: แจ้งเรื่องแล้ว
+    not-found-title: ไม่พบเรื่องที่แจ้ง
+    not-found-desc: โหลดเรื่องนี้ไม่ได้ หรือไม่มีในบัญชีนี้แล้ว
+    table:
+      ticket: เรื่อง
+      priority: ความสำคัญ
+      status: สถานะ
+      updated: อัปเดตเมื่อ
+    form:
+      subtitle: ส่งคำถามเกี่ยวกับออเดอร์ การเรียกเก็บเงิน เอกสาร หรือบัญชีถึงทีมช่วยเหลือ
+      subject: หัวข้อ
+      subject-placeholder: ต้องการความช่วยเหลือเรื่องอะไร?
+      order: ออเดอร์
+      order-help: อ้างอิงออเดอร์ (ไม่บังคับ)
+      select-order: เลือกออเดอร์ที่เกี่ยวข้อง
+      category: หมวดหมู่
+      select-category: เลือกหมวดหมู่
+      priority: ความสำคัญ
+      select-priority: เลือกความสำคัญ
+      tags: แท็ก
+      tags-help: ป้ายกำกับที่ช่วยให้ทีมส่งเรื่องถึงคนที่ถูกต้อง (ไม่บังคับ)
+      add-tags: เพิ่มแท็ก
+      details: รายละเอียด
+      details-placeholder: เพิ่มรายละเอียดให้ทีมช่วยเหลือ
+    details:
+      created: สร้างเมื่อ
+      last-updated: อัปเดตล่าสุด
+      attachment: ไฟล์แนบ
+      attachments: ไฟล์แนบ
+      correspondence: การสนทนา
+      correspondence-subtitle: ตอบกลับที่นี่เพื่อให้ทุกการอัปเดตอยู่ในเรื่องนี้
+      no-replies: ยังไม่มีการตอบกลับ คำตอบจากทีมช่วยเหลือจะแสดงที่นี่
+      ticket-details: รายละเอียดเรื่อง
+      ticket: เรื่อง
+      status: สถานะ
+      priority: ความสำคัญ
+      related-order: ออเดอร์ที่เกี่ยวข้อง
+      tags: แท็ก
+      timeline: ไทม์ไลน์
+      none: ไม่มี
+  billing:
+    eyebrow: ศูนย์การเรียกเก็บเงิน
+    title: การเรียกเก็บเงิน
+    subtitle: ดูใบแจ้งหนี้ ยอดคงค้าง ใบเสร็จ และสถานะการชำระเงิน
+    open-payment-link: เปิดลิงก์ชำระเงิน
+    invoice-details-subtitle: รายละเอียดใบแจ้งหนี้ รายการ และสถานะการชำระเงิน
+    preview: ดูตัวอย่าง
+    notes: หมายเหตุ
+    order: ออเดอร์
+    empty-title: ยังไม่มีใบแจ้งหนี้
+    empty-desc: ใบแจ้งหนี้ ใบเสร็จ และยอดคงค้างจะแสดงที่นี่เมื่อมีข้อมูลการเรียกเก็บเงินของบัญชีนี้
+    no-line-items: ใบแจ้งหนี้นี้ไม่มีรายการ
+    table:
+      invoice: ใบแจ้งหนี้
+      order: ออเดอร์
+      due: ครบกำหนด
+      status: สถานะ
+      balance: ยอดคงค้าง
+    summary:
+      status: สถานะ
+      invoice-date: วันที่ใบแจ้งหนี้
+      due-date: วันครบกำหนด
+      balance: ยอดคงค้าง
+    preview-table:
+      description: รายการ
+      qty: จำนวน
+      unit: หน่วย
+      amount: จำนวนเงิน
+    totals:
+      subtotal: ยอดรวมย่อย
+      tax: ภาษี
+      total: ยอดรวม
+      paid: ชำระแล้ว
+      balance-due: ยอดค้างชำระ
+  documents:
+    eyebrow: คลังเอกสาร
+    title: เอกสาร
+    subtitle: ดาวน์โหลดฉลาก POD รูปภาพ ใบแจ้งหนี้ ใบเสร็จ และไฟล์ออเดอร์
+    unavailable: ไม่พร้อมใช้งาน
+    empty-title: ยังไม่มีเอกสาร
+    empty-desc: ฉลาก POD รูปภาพ ใบแจ้งหนี้ ใบเสร็จ และไฟล์ออเดอร์จะแสดงที่นี่เมื่อพร้อม
+    table:
+      document: เอกสาร
+      type: ประเภท
+      order: ออเดอร์
+      created: สร้างเมื่อ
+      actions: การดำเนินการ
+  address-book:
+    eyebrow: สถานที่ที่บันทึกไว้
+    title: สมุดที่อยู่
+    subtitle: จัดการจุดรับ จุดส่ง ที่อยู่เรียกเก็บเงิน และที่อยู่จัดส่งประจำของบัญชีนี้
+    new-place: สถานที่ใหม่
+    edit-place: แก้ไขสถานที่
+    remove-place: นำสถานที่ออก
+    empty-title: ยังไม่มีสถานที่ที่บันทึกไว้
+    empty-desc: เพิ่มจุดรับและจุดส่งที่ใช้บ่อยเพื่อสร้างออเดอร์ได้เร็วขึ้น
+    table:
+      place: สถานที่
+      address: ที่อยู่
+      phone: โทรศัพท์
+      actions: การดำเนินการ
+  notifications:
+    eyebrow: ตั้งค่าการติดต่อ
+    title: ตั้งค่าการแจ้งเตือน
+    subtitle: เลือกเหตุการณ์ใน Customer Portal ที่ต้องการรับการแจ้งเตือนสำหรับบัญชีนี้
+    info-block: การตั้งค่านี้บันทึกไว้ในบัญชี Portal ของคุณ การส่งแจ้งเตือนจริงขึ้นกับกฎการแจ้งเตือนที่ผู้ให้บริการตั้งไว้ใน Fleetbase
+    save-button: บันทึกการตั้งค่า
+    saved-success: บันทึกการตั้งค่าการแจ้งเตือนแล้ว
+    groups:
+      orders: ออเดอร์
+      orders-desc: ความคืบหน้าระหว่างที่การจัดส่งผ่านการจ่ายงานและการส่ง
+      billing: การเรียกเก็บเงิน
+      billing-desc: สถานะใบแจ้งหนี้และการชำระเงินของบัญชี
+      support: ช่วยเหลือ
+      support-desc: แจ้งเมื่อเรื่องที่แจ้งมีการเปลี่ยนแปลง
+      documents: เอกสาร
+      documents-desc: แจ้งเมื่อฉลาก POD ใบเสร็จ หรือไฟล์ที่เกี่ยวข้องพร้อม
+    labels:
+      order_created: สร้างออเดอร์
+      order_dispatched: จ่ายงานออเดอร์
+      order_delayed: ออเดอร์ล่าช้า
+      driver_nearby: คนขับใกล้ถึง
+      order_delivered: ส่งออเดอร์แล้ว
+      invoice_due: ใบแจ้งหนี้ครบกำหนด
+      invoice_paid: ชำระใบแจ้งหนี้แล้ว
+      ticket_updated: เรื่องที่แจ้งมีอัปเดต
+      document_available: เอกสารพร้อมแล้ว
+  members:
+    title: สมาชิก
+    subtitle: จัดการผู้ที่เข้าถึงพื้นที่ทำงานของบริษัทนี้ได้
+    reload: โหลดใหม่
+    tab-existing: ผู้ติดต่อที่มีอยู่
+    tab-new: ผู้ติดต่อใหม่
+    select-contact: เลือกผู้ติดต่อที่มีอยู่
+    contact-label: ผู้ติดต่อ
+    role-label: บทบาท
+    select-role: เลือกบทบาท
+    name-label: ชื่อ
+    name-placeholder: ชื่อสมาชิก
+    email-label: อีเมล
+    email-placeholder: email@example.com
+    phone-label: โทรศัพท์
+    create-login: สร้างบัญชีเข้าสู่ระบบ
+    add-member: เพิ่มสมาชิก
+    remove: นำออก
+    no-members: ยังไม่มีสมาชิก
+    empty-company-title: เพิ่มสมาชิกด้วยบัญชีบริษัท
+    empty-company-desc: เปลี่ยนบัญชีลูกค้าเป็นบัญชีบริษัทเพื่อเชิญคนอื่นเข้าพื้นที่ทำงานนี้
+    convert-button: เปลี่ยนเป็นบัญชีบริษัท
+    member-added: เพิ่มสมาชิกแล้ว
+    member-removed: นำสมาชิกออกแล้ว
+    roles:
+      admin: ผู้ดูแล
+      manager: ผู้จัดการ
+      member: สมาชิก
+  modals:
+    convert-to-company:
+      title: เปลี่ยนเป็นบัญชีบริษัท
+      accept-button: เปลี่ยนบัญชี
+      banner-title: สร้างพื้นที่ทำงานของบริษัท
+      banner-desc: บัญชีบริษัทเพิ่มสมาชิกได้ โดยออเดอร์ การเรียกเก็บเงิน เอกสาร และประวัติการแจ้งเรื่องยังอยู่ในพื้นที่ทำงานเดิม
+      company-name: ชื่อบริษัท
+      company-name-placeholder: ชื่อบริษัท
+      email: อีเมล
+      email-placeholder: billing@example.com
+      phone: โทรศัพท์
+      success: สร้างบัญชีบริษัทแล้ว
+    place-form:
+      name: ชื่อ
+      name-placeholder: ชื่อ
+      street1: ที่อยู่บรรทัด 1
+      street1-placeholder: ที่อยู่บรรทัด 1
+      searching-addresses: กำลังค้นหาที่อยู่...
+      street2: ที่อยู่บรรทัด 2
+      neighborhood: ตำบล/แขวง
+      building: อาคาร
+      security-access-code: รหัสผ่านเข้าอาคาร
+      postal-code: รหัสไปรษณีย์
+      city: อำเภอ/เขต
+      state: จังหวัด
+      country: ประเทศ
+      coordinates: พิกัด
+      phone: โทรศัพท์
+    reschedule:
+      name: เวลาจัดส่งใหม่
+      help-text: เลือกวันและเวลาจัดส่งที่ต้องการสำหรับออเดอร์นี้
+      placeholder: เลือกวันและเวลา
+    route-list:
+      completed: เสร็จแล้ว
+      current-stop: จุดปัจจุบัน
+      expand: ขยาย
+      collapse: ย่อ
+      more-stops: อีก {count} จุด
+      new-order-route: เส้นทางออเดอร์ใหม่
+  admin-settings:
+    title: ตั้งค่า Customer Portal
+    access-url: การเข้าถึง Customer Portal
+    access-url-help: ใส่ URL slug ที่ใช้เข้า Customer Portal
+    access-url-placeholder: URL ของ Customer Portal
+    available-order-types: ประเภทออเดอร์ที่เปิดให้ใช้
+    available-order-types-help: เลือกประเภทออเดอร์ที่ลูกค้าสร้างได้จาก Portal ไม่เลือกเลยเพื่อปิดการสร้างออเดอร์ของลูกค้า
+    no-order-types: องค์กรนี้ยังไม่มีประเภทออเดอร์
+    quoteable-service-rates: อัตราค่าบริการที่เสนอราคาได้
+    quoteable-service-rates-help: เลือกอัตราค่าบริการที่ใช้เสนอราคาเมื่อลูกค้าขอใบเสนอราคา ไม่เลือกเลยเพื่อไม่เสนอราคา
+    no-service-rates: องค์กรนี้ยังไม่มีอัตราค่าบริการ
+    enable-stripe: เปิดรับชำระผ่าน Stripe
+    stripe-label: บังคับชำระผ่าน Stripe เมื่อลูกค้าเลือกใบเสนอราคา
+    stripe-onboarding-warning: ต้องทำขั้นตอนเริ่มต้นของ Stripe ให้เสร็จก่อนเปิดรับชำระใน Customer Portal
+    complete-onboarding-button: ตั้งค่าการรับชำระให้เสร็จ
+    stripe-configured: ตั้งค่า Stripe แล้ว
+    stripe-not-configured: ยังไม่ได้ตั้งค่า Stripe ผู้ดูแลระบบต้องตั้งค่า Stripe ก่อนรับชำระจากลูกค้า
+    save-button: บันทึกการตั้งค่า
+    saved-success: บันทึกการตั้งค่า Customer Portal แล้ว
+    stripe-required-warning: ต้องตั้งค่า Stripe ก่อนเปิดรับชำระใน Customer Portal
+developers:
+  extension-name: นักพัฒนา
+  common:
+    all: ทั้งหมด
+    attempt: ครั้งที่
+    back: ย้อนกลับ
+    bulk-action: ดำเนินการหลายรายการ
+    clear: ล้าง
+    code: รหัส
+    created: สร้างเมื่อ
+    date: วันที่
+    description: คำอธิบาย
+    email: อีเมล
+    event-id: Event ID
+    event-type: ประเภท Event
+    event: Event
+    export: ส่งออก
+    failed: ล้มเหลว
+    id: ID
+    key: Key
+    mode: โหมด
+    name: ชื่อ
+    new: ใหม่
+    password: รหัสผ่าน
+    result: ผลลัพธ์
+    source: แหล่งที่มา
+    status: สถานะ
+    succeeded: สำเร็จ
+    time: เวลา
+    url: URL
+    version: เวอร์ชัน
+    reload: โหลดใหม่
+    reload-data: โหลดข้อมูลใหม่
+  component:
+    api-event:
+      data:
+        title: ข้อมูล Event
+        no-data: ไม่มีข้อมูล Event
+      details:
+        prefixTitle: Event
+    api-request-log:
+      details:
+        prefixTitle: Request
+        duration: ระยะเวลา
+        ip-address: IP Address
+      query-params:
+        title: Query parameter ของ Request
+        no-parameters: ไม่มี Query parameter
+      request-headers:
+        title: Header ของ Request
+        no-headers: ไม่มี Header
+      request-body:
+        title: Request
+        title-second-part: body
+        no-request-body: ไม่มี body ของ {method} request
+      response-body:
+        title: Response body
+        no-response-body: ไม่มี Response body
+    modals:
+      api-key-form:
+        api-name-aria-label: ชื่อ API Key
+        api-expiration-aria-label: วันหมดอายุ API Key
+        name-placeholder: ตั้งชื่อเล่นหรือชื่อ environment ของ API Key
+        expiration-label: วันหมดอายุ
+        expiration-help-text: ตั้งวันหมดอายุของ API Key นี้ (ไม่บังคับ)
+        select-expiration-date: เลือกวันหมดอายุ...
+        key-expires: เมื่อ Key หมดอายุแล้วจะใช้ทำอะไรไม่ได้อีก
+        enter-domain-placeholder: ใส่โดเมน
+        allowed-browser-label: Browser Origin ที่อนุญาต
+        allowed-browser-help-text: ใส่โดเมนที่ใช้กำหนด CORS policy สำหรับ request จาก browser ที่ใช้ API Key นี้
+        test-key: Test Key
+        testing-environments: คุณกำลังสร้าง Key สำหรับ test environment ใช้สำหรับการทดสอบ
+        live-key: Live Key
+        production-environments: คุณกำลังสร้าง Key สำหรับ live environment ใช้กับระบบ production
+      listen-custom-channel:
+        name: Event channel ID
+        name-help-text: ใส่รหัส socket channel ที่ต้องการติดตาม
+      rename-api-key-form:
+        api-key-label: ชื่อ API Key
+        api-key-placeholder: ตั้งชื่อเล่นหรือชื่อ environment ของ API Key
+      roll-api-key-form:
+        view-button-text: ดู Log
+        last-used: ใช้ล่าสุด
+        expiration: วันหมดอายุ
+        api-key-expiration-label: วันหมดอายุ API Key
+        select-date: เลือกวันหมดอายุ...
+        key-expires: เมื่อ Key หมดอายุแล้วจะใช้ทำอะไรไม่ได้อีก
+        additional-required: ต้องยืนยันตัวตนเพิ่มเติม
+        enter-password: ใส่รหัสผ่านเพื่อดำเนินการต่อ
+        user-email: อีเมลผู้ใช้
+        user-password: รหัสผ่านผู้ใช้
+        user-password-placeholder: ยืนยัน request ด้วยรหัสผ่านของคุณ
+      webhook-form:
+        endpoint-url: Endpoint URL
+        endpoint-url-help-text: URL ที่ Fleetbase จะส่ง event callback ไป
+        endpoint-url-placeholder: https://
+        description-label: คำอธิบาย
+        description-help-text: เพิ่มคำอธิบายของ Webhook endpoint (ไม่บังคับ)
+        description-aria-label: คำอธิบาย Webhook
+        description-placeholder: คำอธิบายว่า Webhook endpoint นี้ใช้ทำอะไร (ไม่บังคับ)
+        api-credential-label: API Credential
+        api-credential-help-text: จำกัดให้ Webhook endpoint รับ callback จาก API Key ที่กำหนดเท่านั้น
+        api-credential-message: รับจากทุก API Credential...
+        api-credential-infoblock: เลือก API Credential ที่จะใช้ trigger callback มาที่ Webhook endpoint นี้ หรือเลือก “ทุก API Credential” เพื่อให้รับ callback ไม่ว่าจะใช้ API Credential ใด
+        version-help-text: เลือกเวอร์ชัน API ที่จะรับ callback
+        version-message: เลือกเวอร์ชัน API...
+        events-send-label: Event ที่จะส่ง
+        events-send-help-text: กำหนดว่าจะรับ callback ของ Event ใดบ้าง
+        select-events: เลือก Event...
+        event-search-label: ค้นหา Event
+        event-search-placeholder: ค้นหา...
+        no-selected: ยังไม่ได้เลือก Event
+        dropdown: ค้นหา Event จากดรอปดาวน์ด้านบน หรือ
+        all-events: รับทุก Event
+    webhook:
+      attempts:
+        copy-event-id: คัดลอก Event ID
+        view-event: ดู Event
+        info-message: คัดลอก Event ID แล้ว
+        webhook-header: การส่ง Webhook
+        webhook-message: การส่ง Event ไปยัง endpoint ของคุณในช่วง 15 วันที่ผ่านมา
+        http-code: HTTP status code
+        response-time: เวลาตอบกลับ
+        request-endpoint: Request ไปยัง endpoint ของคุณ
+        no-request-body: ไม่มี Request body
+        response: Response
+        no-response-body: ไม่มี Response body
+      details:
+        webhook-details: รายละเอียด Webhook
+        update-details: อัปเดตรายละเอียด...
+        event-types: ประเภท Event
+        help-text: คุณจะได้รับ Webhook ของ Event ประเภทใหม่เมื่อมีการเพิ่ม ยกเว้นประเภทที่ต้องเลือกเอง โดยทั่วไปไม่จำเป็นต้องรับทุก Event และอาจเพิ่มภาระให้เซิร์ฟเวอร์
+        all-events: ทุก Event
+        api-credential: API Credential
+        help-text-event: คุณจะได้รับ Webhook callback ไม่ว่า Event จะถูก trigger ด้วย API Credential ใด
+        api-credentials: รับจากทุก API Credential
+      metrics:
+        date-created: วันที่สร้าง
+    widget:
+      dashboard:
+        name: Dashboard นักพัฒนา
+        period: 30 วัน
+        empty: ไม่มีข้อมูล
+        kpi:
+          api-requests: API Request
+          api-error-rate: อัตรา Error ของ API
+          api-latency: Latency เฉลี่ยของ API
+          webhook-success: Webhook สำเร็จ
+          active-api-keys: API Key ที่ใช้งาน
+          active-webhooks: Webhook ที่ใช้งาน
+          webhook-failures: Webhook ล้มเหลว
+          events-emitted: Event ที่ส่งออก
+        api-traffic:
+          title: ปริมาณ API
+          subtitle: จำนวน request ที่สำเร็จและผิดพลาด
+        webhook-delivery:
+          title: สุขภาพการส่ง Webhook
+          subtitle: จำนวนการส่ง การลองซ้ำ และที่ล้มเหลว
+        endpoint-health:
+          title: สุขภาพ Endpoint
+          subtitle: ความเสถียรของ Webhook endpoint ล่าสุด
+        event-stream:
+          title: Event Stream
+          subtitle: ประเภท Event และแหล่งที่มาที่มากที่สุด
+          types: ประเภท Event
+          sources: แหล่งที่มา
+        developer-activity:
+          title: กิจกรรมนักพัฒนา
+          subtitle: Log, Webhook และ Event ล่าสุด
+        quick-resources:
+          title: ทางลัด
+          subtitle: ไปยังเครื่องมือนักพัฒนา
+      api-metrics:
+        title: การติดตาม
+        api-requests: API Request
+        api-error: การกระจายของ API Error
+        webhooks: Webhook
+        webhooks-response: เวลาตอบกลับของ Webhook
+        success-label: สำเร็จ
+        error-label: ผิดพลาด
+        get-error: GET Error
+        post-error: POST Error
+        put-error: PUT Error
+        delete-error: DELETE Error
+        duration-ms: ระยะเวลา (ms)
+  api-keys:
+    index:
+      public-key: Public Key
+      secret-key: Secret Key
+      enviroment: Environment
+      expiry: หมดอายุ
+      last-used: ใช้ล่าสุด
+      edit-key: แก้ไข Key...
+      roll-key: เปลี่ยน Key...
+      view-logs: ดู Request Log...
+      delete-key: ลบ Key...
+      new-api-key-title: API Key ใหม่
+      new-api-key-message: สร้าง API Credential ใหม่แล้ว
+      edit-api-key-title: แก้ไข API Key
+      edit-api-key-message: บันทึกการแก้ไข API Credential แล้ว
+      rename-api-key-title: เปลี่ยนชื่อ API Key {apiKeyName}
+      untitled: ไม่มีชื่อ
+      rename-api-key-success-message: เปลี่ยนชื่อ API Credential เป็น {apiKeyName} แล้ว
+      delete-api-key-title: ลบ API Key {apiKeyName}
+      delete-api-key-body: ต้องการลบ API Key นี้ใช่หรือไม่? ข้อมูลทั้งหมดที่เกี่ยวข้องกับ API Key นี้จะเข้าถึงไม่ได้ ย้อนกลับไม่ได้
+      delete-api-key-success-message: ลบ API Credential {apiKeyName} แล้ว
+      delete-accept-button-text: ลบ API Credential
+      roll-api-key: เปลี่ยน API Key {apiKeyName}
+      roll-api-key-button-text: เปลี่ยน API Key
+      roll-api-key-success-message: เปลี่ยน API Credential {apiKeyName} แล้ว
+      roll-api-key-error-message: เปลี่ยน API Credential ไม่สำเร็จ
+      export-api: ส่งออก API Credential
+      export-api-accept-button-text: ดาวน์โหลด
+      export-api-error-message: ดาวน์โหลดไฟล์ส่งออก API Credential ไม่สำเร็จ
+      title: API Key
+      label: ดูข้อมูลทดสอบ
+      help-text: เปิดเพื่อให้ console แสดงข้อมูลทดสอบทั้งหมดจาก sandbox environment
+      select-api-key-aria-label: เลือก API Key
+      select-key: เลือก Key ที่ต้องการ
+      test-data: ข้อมูลทดสอบทั้งหมด...
+      delete-api: ลบ API Credential
+  events:
+    index:
+      title: Event
+  logs:
+    index:
+      api-credential: API Credential
+      http-method: HTTP Method
+      title: Log
+  sockets:
+    index:
+      link-text: ติดตาม Channel
+      channel: Channel
+      listen-channel-title: ติดตาม Channel ที่กำหนดเอง
+      listen-channel-button-text: ติดตาม
+      title: Channel ที่รับ Event จากบัญชีของคุณ
+      button-text: ติดตาม Channel ที่กำหนดเอง
+    view:
+      socket-connection-error: เชื่อมต่อ Socket ไม่สำเร็จ!
+      socket-connected: เชื่อมต่อ Socket แล้ว
+      socket-subscribed: Socket ติดตาม Channel {modelName} แล้ว
+      socket-subscribe-denied: ไม่มีสิทธิ์ติดตาม Channel {modelName} ({reason})
+      socket-subscribe-failed: 'ติดตาม Channel {modelName} ไม่สำเร็จ: {message}'
+      socket-kicked-out: ถูกนำออกจาก Channel {modelName} ({reason})
+      output: ผลลัพธ์
+      awaiting-events: กำลังรอ Event...
+  webhooks:
+    index:
+      view-logs: ดู Log
+      edit-webhook: แก้ไข Webhook
+      delete-webhook: ลบ Webhook
+      add-webhook: เพิ่ม Webhook endpoint
+      add-webhook-button-text: ยืนยันและสร้าง
+      edit-webhook-endpoint: แก้ไข Webhook endpoint
+      edit-webhook-endpoint-button-text: บันทึกการเปลี่ยนแปลง
+      new-webhook-success-message: สร้าง Webhook ใหม่แล้ว
+      delete-webhook-endpoint: ลบ Webhook endpoint นี้
+      delete-webhook-endpoint-body: ต้องการลบ Webhook นี้ใช่หรือไม่? ข้อมูลทั้งหมดที่เกี่ยวข้องกับ Webhook นี้จะเข้าถึงไม่ได้ และ endpoint จะไม่รับ Event อีก ย้อนกลับไม่ได้
+      delete-webhook-success-message: ลบ Webhook endpoint แล้ว
+      title: Webhook
+      button-text: เพิ่ม endpoint ใหม่
+    view:
+      webhook-deleted-success-message: ลบ Webhook endpoint แล้ว
+      disable-webhook-title: ปิดใช้ Webhook endpoint
+      disable-webhook-body: ปิด Webhook endpoint นี้ชั่วคราวเพื่อไม่ให้รับการแจ้งเตือนจนกว่าจะเปิดใหม่ Fleetbase จะไม่ส่งซ้ำการแจ้งเตือนที่เกิดขึ้นระหว่างที่ปิดอยู่
+      disable-webhook-button-text: ปิดใช้ Webhook endpoint
+      disable-webhook-success-message: ปิดใช้ Webhook แล้ว
+      enable-webhook-title: เปิดใช้ Webhook endpoint
+      enable-webhook-body: Webhook นี้ถูกปิดและไม่รับการแจ้งเตือนแล้ว อาจถูกปิดอัตโนมัติเพราะล้มเหลวต่อเนื่องเป็นเวลานาน ถ้าแก้ปัญหาแล้วเปิดใช้ใหม่ได้ที่นี่ Fleetbase จะไม่ส่งซ้ำการแจ้งเตือนที่เกิดขึ้นระหว่างนั้น และถ้ายังล้มเหลวต่อจะปิด endpoint อีกครั้ง
+      enable-webhook-button-text: เปิดใช้ Webhook endpoint
+      enable-webhook-success-message: เปิดใช้ Webhook แล้ว
+      update-endpoint-button-text: อัปเดต endpoint
+      update-endpoint-success-message: อัปเดตรายละเอียด Webhook แล้ว
+      send-button-text: ส่ง Webhook ทดสอบ...
+      disable-button-text: ปิดใช้...
+      enable-button-text: เปิดใช้...
+      delete-button-text: ลบ...
+  application:
+    sidebar:
+      title: Developers Console
+      items:
+        home: Dashboard
+        api-keys: API Key
+        webhooks: Webhook
+        websockets: WebSocket
+        logs: Log
+        events: Event
+iam:
+  extension-name: IAM
+  common:
+    address: ที่อยู่
+    bulk-action: ดำเนินการหลายรายการ
+    country: ประเทศ
+    create: สร้างเมื่อ
+    dashboard: Dashboard
+    description: คำอธิบาย
+    email: อีเมล
+    export: ส่งออก
+    group: กลุ่ม
+    member: สมาชิก
+    name: ชื่อ
+    new: ใหม่
+    permission: สิทธิ์
+    phone: โทรศัพท์
+    photo: รูปภาพ
+    policy: นโยบาย
+    policies: นโยบาย
+    attach-policies: แนบนโยบาย
+    select-policy: เลือกนโยบาย
+    attach-permissions: แนบสิทธิ์
+    attach-inline-permissions: แนบสิทธิ์โดยตรง
+    select-permissions: เลือกสิทธิ์
+    primary: หลัก
+    role: บทบาท
+    roles: บทบาท
+    status: สถานะ
+    type: ประเภท
+    user: ผู้ใช้
+    service: บริการ
+    reload: โหลดใหม่
+    reload-data: โหลดข้อมูลใหม่
+  components:
+    widget:
+      metrics:
+        title: ตัวชี้วัด IAM
+    modals:
+      group-details:
+        group-name: ชื่อกลุ่ม
+      group-form:
+        group-name: ชื่อกลุ่ม
+        group-description: คำอธิบายกลุ่ม
+        select-users-add-group: เลือกผู้ใช้ที่จะเพิ่มเข้ากลุ่ม
+        search-select-users-add-group: ค้นหาและเลือกผู้ใช้ที่จะเพิ่มเข้ากลุ่มนี้
+        select-user-add-group: เลือกผู้ใช้ที่จะเพิ่มเข้ากลุ่ม
+        no-user-add-group: ยังไม่มีผู้ใช้ในกลุ่ม
+      policy-form:
+        policy-name: ชื่อนโยบาย
+        enter-name-your-policy: ใส่ชื่อนโยบาย
+        policy-description: คำอธิบายนโยบาย
+        enter-description-your-policy: ใส่คำอธิบายนโยบาย
+        select-permissions: เลือกสิทธิ์
+      view-policy-permissions:
+        view-permissions: 'สิทธิ์ของนโยบาย: {policyName}'
+      view-role-permissions:
+        view-permissions: 'สิทธิ์ของบทบาท: {roleName}'
+      view-user-permissions:
+        view-permissions: 'สิทธิ์ของผู้ใช้: {userName}'
+      change-user-email:
+        title: เปลี่ยนอีเมลผู้ใช้
+        heading: เปลี่ยนอีเมลของ {userName}
+        prompt: ใส่อีเมลใหม่ ผู้ใช้ต้องยืนยันอีเมลใหม่ก่อนจึงจะใช้เป็นอีเมลเข้าสู่ระบบ
+        current-email: อีเมลปัจจุบัน
+        new-email: อีเมลใหม่
+        send-verification: ส่งการยืนยัน
+        email-required: ต้องใส่อีเมลใหม่
+        verification-sent: ส่งการยืนยันการเปลี่ยนอีเมลแล้ว ผู้ใช้ต้องยืนยันอีเมลใหม่ก่อนอีเมลเข้าสู่ระบบจะเปลี่ยน
+      role-form:
+        role-name: ชื่อบทบาท
+        enter-name-for-this-role: ใส่ชื่อบทบาทนี้
+        role-description: คำอธิบายบทบาท
+        enter-description-your-role: ใส่คำอธิบายบทบาท
+        select-permission: เลือกสิทธิ์
+    table:
+      group-members:
+        no-member: ไม่มีสมาชิก
+    permission-picker:
+      selected: 'เลือกแล้ว: '
+      search-permissions-keyword: ค้นหาสิทธิ์ด้วยคีย์เวิร์ด
+      loading-permission: กำลังโหลดสิทธิ์...
+  groups:
+    index:
+      untitled: ไม่มีชื่อ
+      delete-group-title: ลบกลุ่ม {groupName}
+      delete-group-success-message: ลบกลุ่ม {name} แล้ว
+      delete-group: ลบกลุ่ม
+      created: สร้างเมื่อ
+      edit-group: แก้ไขกลุ่ม...
+      delete-group-label: ลบกลุ่ม...
+      new-group: กลุ่มใหม่
+      new-group-created: สร้างกลุ่มใหม่แล้ว
+      edit-group-title: แก้ไขกลุ่ม
+      group-actions: การดำเนินการกลุ่ม
+      changes-group-save: บันทึกการแก้ไขกลุ่มแล้ว
+      data-assosciated-this-group-deleted: ต้องการลบกลุ่มนี้ใช่หรือไม่? ข้อมูลทั้งหมดที่เกี่ยวข้องกับกลุ่มนี้จะถูกลบด้วย ย้อนกลับไม่ได้
+  policies:
+    index:
+      title: นโยบาย
+      delete-policies: ลบนโยบาย
+      contact-action: การดำเนินการ
+      edit-policy: แก้ไขนโยบาย...
+      delete-policy: ลบนโยบาย...
+      new-policy: นโยบายใหม่
+      new-policy-created: สร้างนโยบายใหม่แล้ว
+      unable-changes-policy-warning: แก้ไขนโยบายประเภท {policyType} ไม่ได้
+      edit-policy-title: แก้ไขนโยบาย
+      policy-actions: การดำเนินการนโยบาย
+      changes-policy-saved-success: บันทึกการแก้ไขนโยบายแล้ว
+      unable-delete-policy-warning: ลบนโยบายประเภท {policyType} ไม่ได้
+      data-assosciated-this-policy-deleted: ต้องการลบนโยบายนี้ใช่หรือไม่? ข้อมูลทั้งหมดที่เกี่ยวข้องกับนโยบายนี้จะถูกลบด้วย ย้อนกลับไม่ได้
+      policy-deleted: ลบนโยบาย {policyName} แล้ว
+  roles:
+    index:
+      delete-roles: ลบบทบาท
+      contact-action: การดำเนินการ
+      edit-role: แก้ไขบทบาท...
+      delete-role: ลบบทบาท...
+      new-role: บทบาทใหม่
+      new-role-create: สร้างบทบาทใหม่แล้ว
+      edit-role-title: แก้ไขบทบาท
+      role-actions: การดำเนินการบทบาท
+      changes-role-saved: บันทึกการแก้ไขบทบาทแล้ว
+      data-assosciated-this-role-deleted: ต้องการลบบทบาทนี้ใช่หรือไม่? ข้อมูลทั้งหมดที่เกี่ยวข้องกับบทบาทนี้จะถูกลบด้วย ย้อนกลับไม่ได้
+      role-deleted: ลบบทบาท {roleName} แล้ว
+      unable-changes-role-warning: แก้ไขบทบาทประเภท {roleType} ไม่ได้
+      unable-delete-role-warning: ลบบทบาทประเภท {roleType} ไม่ได้
+  users:
+    index:
+      delete-user-title: ลบผู้ใช้ {userName}
+      delete-user-success-message: ลบผู้ใช้ {userName} แล้ว
+      deactivate-user-title: ระงับบัญชีของ {userName}
+      deactivate-user-success-message: ระงับผู้ใช้ {userName} แล้ว
+      re-activate-user-title: เปิดใช้บัญชีของ {userName} อีกครั้ง
+      re-activate-user-success-message: เปิดใช้ผู้ใช้ {userName} แล้ว
+      user-verified-success-message: ยืนยันผู้ใช้ {userName} แล้ว
+      mark-verified-title: ทำเครื่องหมายว่า{channel}ของ {userName} ยืนยันแล้ว
+      mark-verified-prompt: จะถือว่า{channel}ของผู้ใช้ยืนยันแล้วโดยผู้ใช้ไม่ต้องยืนยันเอง แน่ใจหรือไม่?
+      send-verification-title: ส่งการยืนยัน{channel}
+      send-verification-prompt: '{userName} จะได้รับลิงก์ที่ {destination} เพื่อยืนยัน ลิงก์หมดอายุใน 48 ชั่วโมง'
+      send-verification: ส่งการยืนยัน
+      verification-sent: ส่งลิงก์ยืนยันไปที่ {destination} แล้ว
+      channel-email: อีเมล
+      channel-phone: เบอร์โทรศัพท์
+      send-email-verification: ส่งการยืนยันอีเมล...
+      send-phone-verification: ส่งการยืนยันเบอร์โทร...
+      mark-email-verified: ทำเครื่องหมายว่าอีเมลยืนยันแล้ว...
+      mark-phone-verified: ทำเครื่องหมายว่าเบอร์โทรยืนยันแล้ว...
+      email-verified: ยืนยันอีเมลแล้ว
+      phone-verified: ยืนยันเบอร์โทรแล้ว
+      verified: ยืนยันแล้ว
+      unverified: ยังไม่ยืนยัน
+      timezone: เขตเวลา
+      date-of-birth: วันเกิด
+      ip-address: IP Address
+      delete-users: ลบผู้ใช้
+      last-login: เข้าสู่ระบบล่าสุด
+      created-at: สร้างเมื่อ
+      updated-at: อัปเดตเมื่อ
+      user-actions: การดำเนินการผู้ใช้
+      edit-user: แก้ไขผู้ใช้...
+      view-user-permissions: ดูสิทธิ์...
+      re-send-invitation: ส่งคำเชิญอีกครั้ง...
+      deactivate-user: ระงับผู้ใช้...
+      activate-user: เปิดใช้ผู้ใช้...
+      delete-user: ลบผู้ใช้...
+      change-user-password: เปลี่ยนรหัสผ่านผู้ใช้...
+      change-user-email: เปลี่ยนอีเมลผู้ใช้...
+      new-user: ผู้ใช้ใหม่
+      user-invited-join-your-organization-success: ส่งคำเชิญเข้าร่วมองค์กรให้ผู้ใช้แล้ว
+      edit-user-title: แก้ไขผู้ใช้
+      new-user-created: เพิ่มผู้ใช้ใหม่เข้าองค์กรแล้ว
+      user-changes-saved-success: บันทึกการแก้ไขผู้ใช้แล้ว
+      error-you-cant-delete-yourself: ลบตัวเองไม่ได้
+      data-assosciated-user-delete: ต้องการลบผู้ใช้นี้ใช่หรือไม่? ข้อมูลทั้งหมดที่เกี่ยวข้องกับผู้ใช้นี้จะถูกลบด้วย ย้อนกลับไม่ได้
+      access-account-or-resources-unless-re-activated: ต้องการระงับผู้ใช้นี้ใช่หรือไม่? ผู้ใช้จะเข้าบัญชีหรือข้อมูลไม่ได้จนกว่าจะเปิดใช้อีกครั้ง
+      this-user-will-regain-access-to-your-organization: ต้องการเปิดใช้ผู้ใช้นี้อีกครั้งใช่หรือไม่? ผู้ใช้จะกลับมาเข้าถึงองค์กรได้
+      resend-invitation-to-join-organization: ส่งคำเชิญเข้าร่วมองค์กรอีกครั้ง
+      confirming-fleetbase-will-re-send-invitation-for-user-to-join-your-organization: เมื่อยืนยัน ระบบจะส่งคำเชิญเข้าร่วมองค์กรให้ผู้ใช้นี้อีกครั้ง
+      invitation-resent: ส่งคำเชิญอีกครั้งแล้ว
+      invite-user: เชิญผู้ใช้
+    invite:
+      title: เชิญผู้ใช้
+      description: ใส่อีเมลของคนที่ต้องการเชิญ ถ้ามีบัญชี Fleetbase อยู่แล้วจะได้รับคำเชิญเข้าร่วมองค์กร ถ้าเป็นผู้ใช้ใหม่ ระบบจะสร้างบัญชีรอยืนยันและขอให้ตั้งรหัสผ่านเมื่อตอบรับ
+      email-placeholder: colleague@example.com
+      name-placeholder: ชื่อ-นามสกุล (จำเป็นสำหรับผู้ใช้ใหม่)
+      name-help: จำเป็นเฉพาะเมื่อยังไม่มีบัญชี Fleetbase
+      send-invitation: ส่งคำเชิญ
+      email-required: กรุณาใส่อีเมล
+      invitation-sent-existing: ส่งคำเชิญแล้ว ผู้ใช้จะได้รับอีเมลเพื่อเข้าร่วมองค์กร
+      invitation-sent-new: ส่งคำเชิญแล้ว สร้างบัญชีรอยืนยันแล้ว และผู้ใช้จะต้องตั้งรหัสผ่าน
+    role-required: เลือกบทบาทให้ผู้ใช้นี้
+    notifications:
+      promoted-existing-account: อัปเกรดบัญชี{type}ของ {name} เป็นสมาชิกทีมแล้ว
+  application:
+    access-management: จัดการสิทธิ์เข้าถึง
+  home:
+    identity-access-management: จัดการตัวตนและสิทธิ์ (IAM)
+ledger:
+  extension-name: Ledger
+column:
+  id: ID
+  number: เลขที่
+  name: ชื่อ
+  code: รหัส
+  type: ประเภท
+  status: สถานะ
+  direction: ทิศทาง
+  description: คำอธิบาย
+  date: วันที่
+  created-at: สร้างเมื่อ
+  updated-at: อัปเดตเมื่อ
+  amount: จำนวนเงิน
+  balance: ยอดคงเหลือ
+  balance-after: ยอดคงเหลือหลังรายการ
+  total: รวม
+  net-amount: ยอดสุทธิ
+  fee: ค่าธรรมเนียม
+  tax: ภาษี
+  currency: สกุลเงิน
+  gateway: Gateway
+  payment-method: วิธีชำระเงิน
+  reference: อ้างอิง
+  memo: บันทึก
+  period: งวด
+  settled-at: ชำระเมื่อ
+  failure-reason: สาเหตุที่ล้มเหลว
+  due-date: วันครบกำหนด
+  issued-at: ออกเมื่อ
+  invoice-date: วันที่ใบแจ้งหนี้
+  customer: ลูกค้า
+  debit-account: บัญชีเดบิต
+  credit-account: บัญชีเครดิต
+  source: แหล่งที่มา
+  driver: ตัวเชื่อมต่อ
+  environment: สภาพแวดล้อม
+  default: ค่าเริ่มต้น
+  owner: เจ้าของ
+  payer: ผู้จ่าย
+  payee: ผู้รับเงิน
+  frozen: ระงับ
+  orientation: แนว
+menu:
+  dashboard: Dashboard
+  billing: การเรียกเก็บเงิน
+  invoices: ใบแจ้งหนี้
+  payments: การชำระเงิน
+  wallets: Wallet
+  gateways: Payment Gateway
+  accounting: บัญชี
+  chart-of-accounts: ผังบัญชี
+  journal-entries: รายการบันทึกบัญชี
+  general-ledger: บัญชีแยกประเภท
+  reports: รายงาน
+  income-statement: งบกำไรขาดทุน
+  balance-sheet: งบดุล
+  trial-balance: งบทดลอง
+  cash-flow: งบกระแสเงินสด
+  ar-aging: อายุลูกหนี้
+  wallet-summary: สรุป Wallet
+  settings: ตั้งค่า
+  invoice-settings: ตั้งค่าใบแจ้งหนี้
+  payment-settings: ตั้งค่าการชำระเงิน
+  accounting-settings: ตั้งค่าบัญชี
+invoice:
+  no-transactions: ใบแจ้งหนี้นี้ยังไม่มีธุรกรรม
+  actions:
+    preview-invoice: 'ดูตัวอย่างใบแจ้งหนี้ #{number}'
+    preview-invoice-fallback: ดูตัวอย่างใบแจ้งหนี้
+    download-pdf: ดาวน์โหลด PDF
+    record-payment: บันทึกการชำระเงิน
+    record-payment-title: บันทึกการชำระเงิน — {number}
+    copy-payment-link: คัดลอกลิงก์ชำระเงิน
+    copy-invoice-url: คัดลอก URL ใบแจ้งหนี้
+    payment-link-copied: คัดลอก URL ใบแจ้งหนี้แล้ว
+    payment-link-copy-failed: คัดลอก URL ใบแจ้งหนี้ไม่สำเร็จ กรุณาคัดลอกเอง
+    send: ส่งใบแจ้งหนี้
+    void: ยกเลิกใบแจ้งหนี้
+    edit: แก้ไขใบแจ้งหนี้
+registry-bridge:
+  extension-name: Registry Bridge
+  common:
+    install: ติดตั้ง
+    uninstall: ถอนการติดตั้ง
+    approve: อนุมัติ
+    reject: ปฏิเสธ
+    details: รายละเอียด
+    publish: เผยแพร่
+    about: เกี่ยวกับ
+    about-extension: เกี่ยวกับ {extensionName}
+  component:
+    extension-details-modal:
+      extension: ส่วนขยาย
+      author: ผู้พัฒนา
+      description: คำอธิบาย
+      overview: ภาพรวม
+      details: รายละเอียด
+      version: เวอร์ชัน
+      updated: อัปเดตเมื่อ
+      website: เว็บไซต์
+      self-managed: Self Managed
+      self-managed-help-text: ส่วนขยายแบบ Self Managed สำหรับผู้ที่ติดตั้ง Fleetbase บนเซิร์ฟเวอร์ของตัวเอง นอกระบบคลาวด์/SaaS ต้องติดตั้งและตั้งค่าเอง ถ้าคุณใช้ Fleetbase แบบ Self-hosted ใช้ส่วนขยายเหล่านี้เพิ่มฟีเจอร์ได้ แต่ผู้ใช้คลาวด์/SaaS ใช้ไม่ได้
+      self-hosted-install: ติดตั้งแบบ Self-hosted
+      self-hosted-install-help-text: ดูวิธีติดตั้งแบบ Self-hosted
+    extension-pending-publish-viewer:
+      content-panel-title: ส่วนขยายที่รอเผยแพร่
+      focused-extension-title: 'รายละเอียด {extensionName}
+
+        '
+      download-bundle: ดาวน์โหลด Bundle
+      view-details: ดูรายละเอียด
+      publish: เผยแพร่
+      no-extensions-awaiting-publish: ไม่มีส่วนขยายที่รอเผยแพร่
+    extension-reviewer-control:
+      content-panel-title: ส่วนขยายที่รอตรวจสอบ
+      focused-extension-title: 'รายละเอียด {extensionName}
+
+        '
+      approve-confirm-title: ต้องการอนุมัติส่วนขยายนี้ใช่หรือไม่?
+      approve-confirm-body: ส่วนขยายนี้ควรผ่านการทดสอบทั้งใน development และ test environment รวมถึงตรวจด้านการปฏิบัติตามข้อกำหนดและความปลอดภัย เมื่ออนุมัติแล้วต้องเผยแพร่เข้า Registry เอง
+      decline-confirm-title: ต้องการปฏิเสธส่วนขยายนี้ใช่หรือไม่?
+      decline-confirm-body: ส่วนขยายนี้จะถูกปฏิเสธ แต่ผู้พัฒนาแก้ไขและส่งตรวจใหม่ได้
+      download-bundle: ดาวน์โหลด Bundle
+      view-details: ดูรายละเอียด
+      approve: อนุมัติ
+      reject: ปฏิเสธ
+      no-extensions-awaiting-review: ไม่มีส่วนขยายที่รอตรวจสอบ
+  installed:
+    title: ส่วนขยายที่ติดตั้ง
+  purchased:
+    title: ส่วนขยายที่ซื้อ
+  developers:
+    payments:
+      manage-account: จัดการบัญชีรับเงิน
+      no-account-warning: ต้องทำขั้นตอนเริ่มต้นของ Stripe ให้เสร็จก่อนเข้าการตั้งค่าบัญชี
+      settings:
+        title: จัดการบัญชีรับเงิน
+        description: จัดการบัญชี Stripe รวมถึงข้อมูลธุรกิจและบัญชีธนาคารสำหรับรับเงิน
+        loading: กำลังโหลดการจัดการบัญชี...
+    extensions:
+      extensions: ส่วนขยาย
+      create-new-extension: สร้างส่วนขยายใหม่
+      new-extension: ส่วนขยายใหม่
+      extension: ส่วนขยาย
+      submission: การส่งตรวจ
+      details: รายละเอียด
+      bundles: Bundle
+      monetize: สร้างรายได้
+      explore:
+        explore-extensions: สำรวจส่วนขยาย
+        explore-category-extensions: 'ส่วนขยายหมวด {categoryName}
+
+          '
+      extension-form:
+        package-name: ชื่อแพ็กเกจ
+        package-json-name: ชื่อใน package.json
+        composer-json-name: ชื่อใน composer.json
+        submission-success-message: ส่งส่วนขยายแล้ว กำลังรอตรวจสอบ
+        extension-category: หมวดหมู่
+        extension-category-help-text: เลือกหมวดหมู่ที่ผู้ใช้จะค้นเจอส่วนขยายของคุณ
+        extension-select-category: เลือกหมวดหมู่
+        extension-name: ชื่อส่วนขยาย
+        extension-icon: ไอคอนส่วนขยาย
+        upload-extension-icon: อัปโหลดไอคอน
+        extension-description: คำอธิบาย
+        extension-tags: แท็ก
+        extension-add-tags: เพิ่มคีย์เวิร์ดและแท็ก
+        extension-promotional-text: ข้อความโปรโมต
+        details-content-block: รายละเอียดส่วนขยาย
+        extension-listing-details: รายละเอียดการแสดงผล
+        extension-subtitle: หัวข้อรอง
+        extension-website-url: URL เว็บไซต์
+        extension-repo-url: URL Repository
+        extension-support-url: URL ฝ่ายสนับสนุน
+        extension-privacy-policy-url: URL นโยบายความเป็นส่วนตัว
+        extension-tos-url: URL ข้อกำหนดการใช้งาน
+        extension-primary-language: ภาษาหลัก
+        extension-version: เวอร์ชัน
+        extension-copyright: ลิขสิทธิ์
+        extension-copyright-help-text: ใส่ข้อความลิขสิทธิ์ของส่วนขยาย โดยทั่วไปมีปีและชื่อเจ้าของลิขสิทธิ์หรือบริษัท
+        extension-payment-required: ต้องชำระเงิน
+        extension-payment-required-help-text: กำหนดว่าผู้ใช้ต้องชำระเงินหรือสมัครสมาชิกก่อนติดตั้งส่วนขยายนี้หรือไม่
+        extension-price: ราคา
+        extension-price-help-text: ระบุราคาปกติของส่วนขยาย ซึ่งเป็นราคามาตรฐานที่ผู้ใช้ต้องจ่ายเพื่อซื้อหรือใช้งาน
+        extension-sale-price: ราคาลด
+        extension-sale-price-help-text: ถ้ากำลังลดราคา ใส่ราคาลดที่นี่ ต้องต่ำกว่าราคาปกติ
+        extension-subscription-required: ต้องสมัครสมาชิก
+        extension-subscription-required-help-text: กำหนดว่าผู้ใช้ต้องสมัครสมาชิกก่อนติดตั้งและใช้งานส่วนขยายนี้หรือไม่
+        extension-subscription-billing-period: รอบการเรียกเก็บเงิน
+        extension-subscription-billing-period-placeholder: เลือกรอบการเรียกเก็บเงิน
+        extension-subscription-billing-period-help-text: ระบุรอบการเรียกเก็บเงิน เช่น รายเดือน รายไตรมาส รายปี หรือรอบที่กำหนดเอง
+        extension-subscription-amount: ค่าสมาชิก
+        extension-subscription-amount-help-text: ใส่ค่าสมาชิกมาตรฐาน ควรเป็นราคาปกติก่อนส่วนลดหรือการปรับราคาตามระดับ
+        extension-subscription-model: รูปแบบสมาชิก
+        extension-subscription-model-help-text: กำหนดรูปแบบราคาสมาชิก เช่น ราคาเหมา แบ่งระดับ หรือคิดตามการใช้งาน
+        extension-subscription-tiers: ระดับสมาชิก
+        extension-subscription-tiers-help-text: กำหนดระดับราคาสมาชิก (ถ้ามี) เช่น ระดับ ราคาของแต่ละระดับ และฟีเจอร์หรือข้อจำกัดของแต่ละระดับ
+        extension-name-help-text: ใส่ชื่อทางการของส่วนขยาย ซึ่งจะแสดงเป็นชื่อหลักให้ผู้ใช้เห็น
+        extension-icon-help-text: อัปโหลดไอคอนของส่วนขยาย ใช้ในรายการและผลการค้นหา
+        extension-description-help-text: อธิบายว่าส่วนขยายทำอะไรและมีฟีเจอร์หลักอะไรบ้าง เพื่อให้ผู้ใช้เข้าใจการทำงาน
+        extension-tags-help-text: เพิ่มคีย์เวิร์ดและแท็กที่เกี่ยวข้อง ช่วยให้ผู้ใช้ค้นเจอ
+        extension-promotional-text-help-text: เขียนข้อความโปรโมตจุดเด่นของส่วนขยาย ใช้ในส่วนการตลาดหรือส่วนแนะนำ
+        extension-subtitle-help-text: หัวข้อรองสั้นๆ ที่ให้ข้อมูลเพิ่มเติมเกี่ยวกับส่วนขยาย
+        extension-website-url-help-text: URL เว็บไซต์ทางการหรือหน้าผลิตภัณฑ์ของส่วนขยาย
+        extension-repo-url-help-text: URL Repository ของโค้ด (เช่น GitHub, GitLab) ถ้ามี
+        extension-support-url-help-text: URL ที่ผู้ใช้ขอความช่วยเหลือ ถามคำถาม หรือแจ้งปัญหาได้
+        extension-privacy-policy-url-help-text: ลิงก์นโยบายความเป็นส่วนตัวที่อธิบายการจัดการและปกป้องข้อมูลผู้ใช้
+        extension-tos-url-help-text: ลิงก์ข้อกำหนดการใช้งานที่ผู้ใช้ต้องยอมรับก่อนใช้ส่วนขยาย
+        extension-primary-language-help-text: ระบุภาษาหลักที่ใช้พัฒนาหรือที่ส่วนขยายรองรับ
+        extension-version-help-text: ระบุเวอร์ชันปัจจุบันของส่วนขยาย ใช้ติดตามการอัปเดตและความเข้ากันได้
+        extension-payment-details: รายละเอียดการชำระเงิน
+        extension-screenshots: ภาพหน้าจอ
+        upload-screenshots: อัปโหลดภาพหน้าจอ
+        submit-for-review: ส่งตรวจสอบ
+        extension-bundle: Bundle ส่วนขยาย
+        extension-upload-bundle: อัปโหลด Bundle ส่วนขยาย
+        details: รายละเอียด
+        bundle-id: Bundle ID
+        bundle-id-help-text: รหัสของ Bundle ที่เผยแพร่อยู่
+        extension-id: Extension ID
+        extension-id-help-text: รหัสเฉพาะของส่วนขยายนี้
+        bundles: Bundle
+        upload-new-bundle: อัปโหลด Bundle ใหม่
+        self-managed: Self Managed
+        self-managed-help-text: เปิดตัวเลือกนี้ถ้าโมดูลใช้กับระบบ Self-hosted เท่านั้น โมดูลจะไม่มีให้ติดตั้งบน Fleetbase เวอร์ชันคลาวด์/SaaS และผู้ใช้ต้องติดตั้งบนเซิร์ฟเวอร์ของตัวเอง
+storefront:
+  extension-name: Storefront
+  common:
+    sku: SKU
+    updated: อัปเดตเมื่อ
+    select-all: เลือกทั้งหมด
+    food-truck: รถขายของ
+    promotion: โปรโมชัน
+    save: บันทึก
+    filters: ตัวกรอง
+    all: ทั้งหมด
+    active: ใช้งาน
+    select: เลือก
+    preview: ดูตัวอย่าง
+    actions: การดำเนินการ
+    address: ที่อยู่
+    alerts: การแจ้งเตือน
+    amount: จำนวนเงิน
+    api: API
+    back: ย้อนกลับ
+    backdrop: ภาพพื้นหลัง
+    building: อาคาร
+    bulk-action: ดำเนินการหลายรายการ
+    cash: เงินสด
+    city: อำเภอ/เขต
+    config: การตั้งค่า
+    coordinates: พิกัด
+    country: ประเทศ
+    created: สร้างเมื่อ
+    currency: สกุลเงิน
+    customer: ลูกค้า
+    customers: ลูกค้า
+    category: หมวดหมู่
+    delivery-tip: ทิปค่าส่ง
+    delivery: จัดส่ง
+    details: รายละเอียด
+    description: คำอธิบาย
+    driver: คนขับ
+    dropoff: จุดส่ง
+    earning: รายได้
+    email: อีเมล
+    export: ส่งออก
+    id: ID
+    internal-id: รหัสภายใน
+    import: นำเข้า
+    invalid: ไม่ถูกต้อง
+    loading: กำลังโหลด...
+    loading-storefront: กำลังโหลด Storefront...
+    error-state:
+      title: โหลดหน้านี้ไม่ได้
+      description: เกิดข้อผิดพลาดระหว่างโหลดหน้านี้ ลองอีกครั้ง หรือกลับไปที่ Dashboard
+      retry: ลองอีกครั้ง
+      back: กลับไปที่ Dashboard
+    more: เพิ่มเติม
+    logo: โลโก้
+    name: ชื่อ
+    neighborhood: ตำบล/แขวง
+    online: ออนไลน์
+    offline: ออฟไลน์
+    last-modified: แก้ไขล่าสุด
+    order: ออเดอร์
+    orders: ออเดอร์
+    phone: โทรศัพท์
+    photos: รูปภาพ
+    pickup: รับที่ร้าน
+    product: สินค้า
+    remove: นำออก
+    state: จังหวัด
+    status: สถานะ
+    store: ร้านค้า
+    street-1: ที่อยู่บรรทัด 1
+    storefront: Storefront
+    tag: แท็ก
+    tip: ทิป
+    title: หัวข้อ
+    total: รวม
+    type: ประเภท
+    upload-new: อัปโหลดใหม่
+    uploading: กำลังอัปโหลด...
+    view: ดู
+    website: เว็บไซต์
+    edit: แก้ไข
+    delete: ลบ
+    network: เครือข่าย
+    file: ไฟล์
+    general: ทั่วไป
+    location: ตำแหน่ง
+    notification: การแจ้งเตือน
+    gateways: Payment Gateway
+    settings: ตั้งค่า
+    new: ใหม่
+    facebook: Facebook
+    instagram: Instagram
+    twitter: Twitter
+    food-trucks: รถขายของ
+    catalog: แคตตาล็อก
+    catalogs: แคตตาล็อก
+  sidebar:
+    all-products: สินค้าทั้งหมด
+    descriptions:
+      network-overview: สมาชิก คำเชิญ ออเดอร์ และรายได้ทั้งเครือข่าย
+      network-stores: ร้านค้าที่ขายผ่านเครือข่ายนี้ หมวดหมู่ และคำเชิญ
+      network-trucks: รถขายของของร้านค้าในเครือข่ายนี้
+      network-orders: ออเดอร์ที่สั่งผ่านเครือข่ายนี้
+      network-customers: ลูกค้าที่สั่งซื้อผ่านเครือข่ายนี้
+      network-categories: หมวดหมู่ที่ใช้จัดกลุ่มร้านค้าในแอปเครือข่าย
+      network-promotions: โปรโมชัน แคมเปญ กลุ่มลูกค้า และการใช้สิทธิ์ของเครือข่าย
+      network-settings: รายละเอียดเครือข่าย Payment Gateway และช่องทางแจ้งเตือน
+      dashboard: Dashboard และภาพรวมยอดขายของ Storefront
+      orders: จัดการออเดอร์ที่เข้ามาใน Storefront
+      products: จัดการสินค้า หมวดหมู่ ตัวเลือก และสินค้าเสริม
+      all-products: ดูและจัดการคลังสินค้า
+      catalogs: สร้างและจัดการแคตตาล็อก
+      customers: ดูลูกค้าและประวัติการสั่งซื้อ
+      trucks: จัดการรถขายของ พื้นที่ให้บริการ และสินค้าที่ขาย
+      promotions: ส่วนลด โค้ดโปรโมชัน กลุ่มลูกค้า และแคมเปญ
+      settings: รายละเอียดร้าน เวลาเปิด-ปิด สาขา กฎการชำระเงิน Payment Gateway การแจ้งเตือน และ API Key
+      launch-app: เผยแพร่ร้านเป็นเว็บและแอปมือถือของคุณเอง
+    storefront: Storefront
+    dashboard: Dashboard
+    products: สินค้า
+    catalogs: แคตตาล็อก
+    food-trucks: รถขายของ
+    customers: ลูกค้า
+    orders: ออเดอร์
+    networks: เครือข่าย
+    promotions: โปรโมชัน
+    settings: ตั้งค่า
+    launch-app: เปิดตัวแอป
+    member-of: สมาชิกของ
+    your-stores: ร้านของคุณในเครือข่ายนี้
+  component:
+    storefront-order-summary:
+      order-summary-title: สรุปออเดอร์ Storefront
+    modals:
+      add-store-hours:
+        start-time: เวลาเริ่ม
+        operation-start: เวลาที่เริ่มเปิดให้บริการ
+        end-time: เวลาสิ้นสุด
+        operation-end: เวลาที่ปิดให้บริการ
+      assign-driver:
+        message-driver: เลือกคนขับที่จะมอบหมายให้ออเดอร์นี้
+        name-driver: เลือกคนขับ
+        placeholder-driver: เลือกคนขับที่จะมอบหมาย
+      create-first-store:
+        title: ยินดีต้อนรับสู่ Storefront!
+        message: Storefront ช่วยให้ตั้งร้านค้าออนไลน์แบบ on-demand ได้อย่างรวดเร็ว ขับเคลื่อนด้วย Fleetbase
+        submit-message: กรอกแบบฟอร์มด้านล่างเพื่อสร้างร้านแรก
+        storefront-name: ชื่อร้าน
+        enter-name: ใส่ชื่อร้านของคุณ
+        description: คำอธิบายร้าน
+        brief-description: อธิบายสั้นๆ ว่าร้านขายอะไร
+        currency: สกุลเงินของร้าน
+        select-currency: เลือกสกุลเงินเริ่มต้นของร้าน
+      create-getaway:
+        getaway: ประเภท Gateway
+        getaway-text: เลือกประเภท Gateway
+        getaway-name: ชื่อ Gateway
+        name-text: ตั้งชื่อ Payment Gateway ใช้ภายในเท่านั้น
+        getaway-code: รหัส Gateway
+        code-text: รหัสที่ SDK ใช้ระบุ Gateway
+        callback-url: Callback URL
+        callback-text: Callback URL (ถ้ามี)
+        return-url: Return URL
+        return-text: Return URL (ถ้ามี)
+        sandbox-getaway: เป็น Gateway แบบ Sandbox
+      create-network-category:
+        parent-category: หมวดหมู่หลัก
+        select-parent: เลือกหมวดหมู่หลัก (ถ้ามี)
+        category-name: ชื่อหมวดหมู่
+        name-text: ใส่ชื่อหมวดหมู่
+        description: คำอธิบายหมวดหมู่
+        description-text: อธิบายหมวดหมู่ของเครือข่ายสั้นๆ
+        category-icon: ประเภทไอคอนหมวดหมู่
+      create-network:
+        title: เริ่มเครือข่าย
+        message-line1: Storefront ช่วยสร้าง Marketplace ได้อย่างรวดเร็ว ให้หลายร้านขายภายใต้ร่มเดียวกัน
+        message-line2: เมื่อสร้างเครือข่ายแล้ว คุณกำหนดกฎเองได้และขยายเครือข่ายด้วยการเชิญ
+        message-line3: เริ่มต้นด้วยการสร้างเครือข่ายด้านล่าง
+        name: ชื่อเครือข่าย
+        name-text: ใส่ชื่อเครือข่าย
+        description: คำอธิบายเครือข่าย
+        description-text: อธิบายสั้นๆ ว่าเครือข่ายขายอะไร
+        currency: สกุลเงินของเครือข่าย
+        currency-text: เลือกสกุลเงินเริ่มต้นของเครือข่าย
+      create-new-variant:
+        name: ชื่อตัวเลือก
+        name-text: ตั้งชื่อตัวเลือกสินค้า
+        description: คำอธิบายตัวเลือก
+        description-text: คำอธิบายสั้นๆ ของตัวเลือก
+        checkbox-1: ให้ผู้ใช้เลือกได้หลายตัวเลือกพร้อมกัน
+        checkbox-2: ต้องเลือกตัวเลือกนี้
+      create-notification-channel:
+        title: ช่องทาง
+        title-text: เลือกช่องทางแจ้งเตือน
+        name: ชื่อช่องทาง
+        name-text: ตั้งชื่อช่องทางแจ้งเตือน ใช้ภายในเท่านั้น
+        key: Channel Key
+        key-text: Key ของช่องทางแจ้งเตือน ใช้ระบุใน SDK config ว่าแอปใดใช้ช่องทางนี้
+        environment-help-text: Auto จะลอง production ก่อน แล้วลอง sandbox (development build) ถ้า Apple ปฏิเสธ device token
+        android-channel-id-help-text: Notification channel ID ของ Android (ไม่บังคับ) เว้นว่างเพื่อใช้ช่องเริ่มต้นของแอป
+      test-notification-channel:
+        token: Device token
+        token-text: วาง FCM registration token (Android) หรือ APNs device token (iOS) จากอุปกรณ์ที่รันแอปของคุณ
+        environment: APNs environment
+        environment-text: เว้นว่างเพื่อลอง environment ที่ตั้งไว้ในช่องทาง
+        result: ผลจากผู้ให้บริการ
+      create-product-category:
+        name: ชื่อหมวดหมู่
+        name-text: ใส่ชื่อหมวดหมู่
+        description: คำอธิบายหมวดหมู่
+        description-text: อธิบายหมวดหมู่สั้นๆ
+        icon: ไอคอนหมวดหมู่
+        uploading-new: อัปโหลดไอคอนหมวดหมู่ใหม่
+        parent: หมวดหมู่หลัก
+        parent-text: หมวดหมู่ซ้อนได้ 3 ระดับ เช่น เครื่องดื่ม › กาแฟ › Cold brew
+        top-level: ไม่มี (ระดับบนสุด)
+      create-store:
+        name: ชื่อร้าน
+        name-text: ใส่ชื่อร้านของคุณ
+        description: คำอธิบายร้าน
+        description-text: อธิบายสั้นๆ ว่าร้านขายอะไร
+        currency: สกุลเงินของร้าน
+        currency-text: เลือกสกุลเงินเริ่มต้นของร้าน
+      import-products:
+        uploading-message: กำลังนำเข้า...
+        drop-upload: วางเพื่ออัปโหลด
+        ready-upload: พร้อมอัปโหลด
+        upload-spreadsheets: อัปโหลดสเปรดชีต
+        drag-drop: ลากไฟล์สเปรดชีตมาวางที่นี่
+        select-spreadsheets: หรือเลือกสเปรดชีตเพื่ออัปโหลด
+        upload-queue: คิวอัปโหลด
+        optionally-select-category: เลือกหมวดหมู่ที่จะนำเข้าสินค้า (ไม่บังคับ)
+        select-category: เลือกหมวดหมู่
+      incoming-order:
+        placed: สั่งเมื่อ {ago}
+        items-count: '{count, plural, one {# รายการ} other {# รายการ}}'
+        paid-in-app: ชำระในแอปแล้ว
+        scheduled-for: สำหรับ {date}
+        collects-from: ลูกค้ารับสินค้าที่
+        leaves-from: ออกจาก
+        deliver-to: ส่งถึง
+        note: หมายเหตุจากลูกค้า
+        scan-hint: สแกนหรือพิมพ์เพื่อส่งมอบ
+        assigned: มอบหมายคนขับแล้ว
+        not-assigned: ยังไม่มอบหมายคนขับ
+        no-phone: ไม่มีเบอร์โทร
+        change-driver: เปลี่ยนคนขับ
+        assign-driver: มอบหมายคนขับ
+        pickup-order: ลูกค้าต้องรับสินค้าที่
+        address: ที่อยู่ลูกค้า
+        tracking: การติดตาม
+        summary: สรุปออเดอร์
+        subtotal: ยอดรวมย่อย
+        fee: ค่าจัดส่ง
+        tip: ทิป
+        delivery-tip: ทิปค่าส่ง
+      manage-addons:
+        title: หมวดหมู่ใหม่
+        delete: ลบหมวดหมู่
+        new-addon: สินค้าเสริมใหม่
+        addon-name: ชื่อสินค้าเสริม
+        description: คำอธิบายสินค้าเสริม
+        delete-this-addon-category-assosiated-will-lost: ต้องการลบหมวดหมู่สินค้าเสริมนี้ใช่หรือไม่? สินค้าเสริมทั้งหมดในหมวดนี้จะหายไป!
+        untitled-addon-category: หมวดหมู่สินค้าเสริมไม่มีชื่อ
+      order-ready-assign-driver:
+        driver-dispatch: ออเดอร์นี้จะถูกตั้งเป็นพร้อมและจ่ายงาน เลือกคนขับจากดรอปดาวน์ด้านล่าง <br><br>หรือเลือกจ่ายงานแบบ adhoc เพื่อส่งออเดอร์ให้คนขับทุกคนที่อยู่ใกล้ได้รับงาน
+        adhoc-dispatch-nearby-drivers: จ่ายงานแบบ adhoc ให้คนขับใกล้เคียง
+        select-driver: เลือกคนขับ
+        select-driver-to-assign: เลือกคนขับที่จะมอบหมาย
+      share-network:
+        invite-member: เชิญสมาชิกเข้าเครือข่าย
+        email-below: รับลิงก์คำเชิญเพื่อแชร์ หรือส่งคำเชิญทางอีเมลด้านล่าง
+        invite-network: ใส่อีเมลของคนหรือองค์กรที่ต้องการเชิญเข้าเครือข่าย
+        add-email: เพิ่มอีเมล
+        get-link: รับลิงก์
+        enable-shareable-link: เปิดใช้ลิงก์แชร์
+        anyone-with-this-link-able-to-join-your-network: ทุกคนที่มีลิงก์นี้เข้าร่วมเครือข่ายได้
+      store-form:
+        storefront-name: ชื่อร้าน
+        the-name-of-your-store: ชื่อร้านของคุณ
+        storefront-description-placeholder: คำอธิบายร้าน
+        give-your-store-brief-description: อธิบายร้านสั้นๆ ให้ผู้ใช้รู้ว่าคุณขายอะไร
+        add-tags-placeholder: เพิ่มแท็ก
+      store-location-form:
+        street-2: ที่อยู่บรรทัด 2
+        security-access-code: รหัสผ่านเข้าอาคาร
+        postal-code: รหัสไปรษณีย์
+    widget:
+      key-metrics:
+        title: ตัวชี้วัด Storefront
+      customers:
+        widget-title: ลูกค้าล่าสุด
+        phone: โทรศัพท์
+        email: อีเมล
+      orders:
+        next: ถัดไป
+        order: ออเดอร์
+        refresh: รีเฟรชออเดอร์
+        active-only: เฉพาะที่กำลังดำเนินการ
+        all-orders: ออเดอร์ทั้งหมด
+        driver-not-needed: ไม่ต้องใช้
+        unassigned: ยังไม่มอบหมาย
+        empty: ยังไม่มีออเดอร์ล่าสุด
+        recent-count: '{count, plural, =0 {ไม่มีออเดอร์ล่าสุด} one {ออเดอร์ล่าสุด # รายการ} other {ออเดอร์ล่าสุด # รายการ}}'
+        widget-title: ออเดอร์ล่าสุด
+        id-column: Order ID
+        cancel-order: ยกเลิกออเดอร์
+        cancel-orders: ยกเลิกออเดอร์
+        cancel-order-modal-title: ยกเลิกออเดอร์นี้?
+        cancel-order-modal-body: ออเดอร์ Storefront จะถูกยกเลิก และหยุดขั้นตอนการจัดส่งที่เหลือ
+        cancel-order-success: ยกเลิกออเดอร์ {orderId} แล้ว
+        accept-order: รับออเดอร์!
+        mark-as-ready: พร้อมแล้ว!
+        dispatch: จ่ายงาน
+        mark-as-preparing: กำลังเตรียม
+        mark-as-completed: เสร็จสิ้น
+        more-details: รายละเอียดเพิ่มเติม
+        customer: ลูกค้า
+        driver: คนขับ
+        subtotal: ยอดรวมย่อย
+        delivery-fee: ค่าจัดส่ง
+        delivery-tip: ทิปค่าส่ง
+        tip: ทิป
+        total: ยอดรวม
+        change-driver: เปลี่ยนคนขับ
+        assign-driver: มอบหมายคนขับ
+        customer-pickup: ลูกค้ารับเอง
+        pickup-order: ออเดอร์รับที่ร้าน
+        mark-as-ready-modal-pickup-title: ออเดอร์พร้อมให้รับแล้ว?
+        mark-as-ready-modal-pickup-body: เมื่อตั้งว่าพร้อม ระบบจะแจ้งลูกค้าว่าออเดอร์พร้อมให้รับแล้ว!
+        mark-as-ready-modal-pickup-accept-button-text: พร้อมให้รับ!
+        mark-as-ready-modal-not-adhoc-title: มอบหมายคนขับและจ่ายงาน
+        mark-as-ready-modal-not-adhoc-accept-button-text: มอบหมายและจ่ายงาน!
+        mark-as-ready-modal-title: ต้องการตั้งออเดอร์ว่าพร้อมใช่หรือไม่?
+        mark-as-ready-modal-body: เมื่อตั้งว่าพร้อม ออเดอร์จะถูกส่งให้คนขับใกล้เคียง ตั้งว่าพร้อมเมื่อมารับได้แล้วเท่านั้น
+        mark-as-ready-modal-accept-button-text: จ่ายงาน!
+        mark-as-completed-modal-title: ต้องการตั้งออเดอร์ว่าเสร็จสิ้นใช่หรือไม่?
+        mark-as-completed-modal-body: การตั้งว่าเสร็จสิ้นเป็นการยืนยันว่าลูกค้ารับสินค้าแล้วและออเดอร์เสร็จสมบูรณ์
+        mark-as-completed-accept-button-text: ออเดอร์เสร็จสิ้น!
+        mark-as-preparing-modal-title: ต้องการตั้งออเดอร์ว่ากำลังเตรียมใช่หรือไม่?
+        mark-as-preparing-modal-body: การตั้งว่ากำลังเตรียมเป็นการยืนยันว่ากำลังเตรียมออเดอร์
+        mark-as-preparing-accept-button-text: กำลังเตรียมออเดอร์
+        assign-driver-modal-title: มอบหมายคนขับ
+        assign-driver-modal-accept-button-text: มอบหมายคนขับ
+      storefront-metrics:
+        last-day: 30 วันที่ผ่านมา
+    file-record:
+      delete-this-file: ต้องการลบไฟล์นี้ใช่หรือไม่?
+      delete-this-file-you-will-unable-recover: เมื่อลบไฟล์แล้วจะกู้คืนไม่ได้
+    network-category-picker:
+      no-subcategory: ไม่มีหมวดหมู่ย่อยของ
+      no-categories: เครือข่ายนี้ยังไม่มีหมวดหมู่
+      create-category: สร้างหมวดหมู่ใหม่
+    schedule-manager:
+      add-hours: เพิ่มเวลา
+      no-hours: ไม่มีเวลาเปิด
+      add-new-hours-for-day: เพิ่มเวลาใหม่ของวัน{day}
+      new-hours-added-for-day: เพิ่มเวลาใหม่ของวัน{day}แล้ว
+      you-wish-to-remove-these-hour: ต้องการลบช่วงเวลานี้ใช่หรือไม่?
+      by-removing-these-operation: เมื่อลบช่วงเวลาเปิดให้บริการนี้ ร้านหรือสินค้าอาจปิดหรือไม่พร้อมใช้งานตามตารางที่อัปเดต...
+    store-selector:
+      no-stores: ไม่มีร้านให้เลือก
+      create-storefront: สร้างใหม่
+      store: ร้านค้า
+      network: เครือข่าย
+      stores: ร้านค้า
+      networks: เครือข่าย
+      no-networks: ยังไม่มีเครือข่าย
+      new-store: ร้านใหม่
+      new-network: เครือข่ายใหม่
+      badge-title: '{count, plural, one {คำเชิญเข้าเครือข่าย # รายการ} other {คำเชิญเข้าเครือข่าย # รายการ}}'
+  home:
+    title: Dashboard ของ Storefront
+  customers:
+    create:
+      button: ลูกค้าใหม่
+      title: ลูกค้าใหม่
+      save: เพิ่มลูกค้า
+      saved: เพิ่ม {name} แล้ว
+      name-placeholder: ชื่อ-นามสกุล
+      help: จำเป็นเฉพาะชื่อ เพิ่มเบอร์โทรหรืออีเมลเพื่อให้ร้านติดต่อเรื่องออเดอร์ได้
+    addresses:
+      new-title: ที่อยู่ใหม่ของ {name}
+      save: บันทึกที่อยู่
+      street-required: ใส่ที่อยู่
+      saved: บันทึกที่อยู่ให้ {name} แล้ว
+      add: เพิ่มที่อยู่
+    card:
+      places-count: '{count, plural, =0 {ไม่มีสถานที่ที่บันทึก} one {บันทึก # สถานที่} other {บันทึก # สถานที่}}'
+      account: บัญชีแอป
+      since: เป็นลูกค้าตั้งแต่ {date}
+    panel:
+      edit-details: รายละเอียด
+      edit-help: แก้ไขสถานที่ที่บันทึกได้ที่แท็บสถานที่
+      name-required: ตั้งชื่อให้ลูกค้า
+      saved: บันทึก {name} แล้ว
+      segments: กลุ่มลูกค้า
+      no-segments: ตอนนี้ไม่อยู่ในกลุ่มใด
+      manage-segments: จัดการกลุ่มลูกค้า
+      tabs:
+        overview: ภาพรวม
+        orders: ออเดอร์
+        places: สถานที่
+        activity: กิจกรรมและบันทึก
+      new-order: ออเดอร์ใหม่
+      copy-id: คัดลอก ID ลูกค้า
+      copy-email: คัดลอกอีเมล
+      copied: คัดลอก {value} แล้ว
+      since: ตั้งแต่ {date}
+      lifetime: ยอดรวมทั้งหมด
+      average: เฉลี่ย
+      last-order: ออเดอร์ล่าสุด
+      first-order: ออเดอร์แรก
+      never: ไม่เคย
+      prefers-delivery: ชอบให้จัดส่ง
+      prefers-pickup: ชอบรับที่ร้าน
+      preferred-fulfillment: วิธีรับสินค้าที่ชอบ
+      account: บัญชี
+      guest: ผู้ใช้ทั่วไป
+      saved-places: สถานที่ที่บันทึก
+      default: ค่าเริ่มต้น
+      set-default: ตั้งเป็นค่าเริ่มต้น
+      default-saved: ตั้ง {name} เป็นสถานที่เริ่มต้นแล้ว
+      no-places: ยังไม่มีที่อยู่ที่บันทึก
+      no-places-help: เพิ่มตอนนี้ หรือให้ลูกค้าเพิ่มตอนชำระเงิน
+      places-lede: สถานที่ของลูกค้าใน Fleet-Ops กดที่ป้ายของสถานที่เพื่อแก้ไขใน Fleet-Ops
+      places-note: สถานที่เป็นข้อมูลของ Fleet-Ops ส่วนค่าเริ่มต้นคือที่อยู่ที่แอปเสนอตอนชำระเงิน
+      stores-ordered-from: ร้านที่เคยสั่ง
+      orders-count: '{count, plural, one {# ออเดอร์} other {# ออเดอร์}}'
+      recent-orders: ออเดอร์ล่าสุด
+      no-orders: ยังไม่มีออเดอร์
+      canceled-orders: ออเดอร์ที่ยกเลิก
+      notes: บันทึกภายใน
+    index:
+      subtitle: คนที่เคยสั่งซื้อจากร้านนี้
+      search: ค้นหาลูกค้า
+      view-cards: การ์ด
+      view-table: ตาราง
+      empty: ยังไม่มีลูกค้า ลูกค้าจะแสดงที่นี่หลังสั่งซื้อครั้งแรกหรือสมัครสมาชิก
+      internal-id: รหัสภายใน
+      create-at: สร้างเมื่อ
+      update-at: อัปเดตเมื่อ
+      vendor-action: การดำเนินการ
+      view-customer-details: ดูรายละเอียดลูกค้า
+      edit-customer: แก้ไขลูกค้า
+      success-message: สร้างเครือข่าย Storefront ใหม่แล้ว!
+      delete-customer: ลบลูกค้า
+    customer-panel:
+      details:
+        web-url: URL เว็บไซต์
+      edit-button: แก้ไขลูกค้า
+      cancel-edit-button: ยกเลิกการแก้ไขลูกค้า
+      cancel-new-button: ยกเลิกการเพิ่มลูกค้า
+  catalogs:
+    editor:
+      edit-category: แก้ไขหมวดหมู่
+      edit-category-title: แก้ไข {name}
+      apply-category: ใช้
+      category-name-required: ตั้งชื่อหมวดหมู่
+      back: แคตตาล็อกทั้งหมด
+      delete-catalog: ลบแคตตาล็อก
+      sold-here: ขายที่นี่
+      columns:
+        product: สินค้า
+        price: ราคาในแคตตาล็อก
+        availability: การขาย
+        stock: สต็อก
+        actions: การดำเนินการ
+      name-placeholder: ชื่อแคตตาล็อก
+      categories-count: '{count, plural, =0 {ไม่มีหมวดหมู่} one {# หมวดหมู่} other {# หมวดหมู่}}'
+      served-by-count: 'ให้บริการโดย {stores, plural, =0 {ไม่มีร้าน} one {# ร้าน} other {# ร้าน}} และ {trucks, plural, =0 {ไม่มีรถขายของ} one {รถขายของ # คัน} other {รถขายของ # คัน}}'
+      duplicate: ทำสำเนา
+      duplicated: ทำสำเนาแคตตาล็อกเป็นฉบับร่างแล้ว
+      sections:
+        categories: หมวดหมู่และสินค้า
+        hours: เวลา
+        served-by: ให้บริการโดย
+        details: รายละเอียด
+      new-category: หมวดหมู่ใหม่
+      move-up: เลื่อนขึ้น
+      move-down: เลื่อนลง
+      indent: ย้ายไปอยู่ใต้หมวดหมู่ด้านบน
+      outdent: เลื่อนขึ้นหนึ่งระดับ
+      add-subcategory: เพิ่มหมวดหมู่ย่อย
+      new-subcategory-name: หมวดหมู่ย่อยใหม่
+      categories-note: ลำดับที่นี่คือลำดับที่แสดงในแอป หมวดหมู่ที่ไม่มีสินค้าจะถูกซ่อนในแอป
+      remove-category-title: นำหมวดหมู่ {name} ออก?
+      remove-category-body: สินค้ายังอยู่ในร้าน แค่ออกจากแคตตาล็อกนี้ และหมวดหมู่ย่อยจะเลื่อนขึ้นหนึ่งระดับ
+      add-products: เพิ่มสินค้า
+      search-products: ค้นหาสินค้าของร้าน
+      picker-hint: '{count, plural, =0 {ซ่อนสินค้าที่อยู่ในแคตตาล็อกนี้แล้ว} one {เลือก #} other {เลือก #}}'
+      no-products-to-add: สินค้าทุกชิ้นของร้านนี้อยู่ในแคตตาล็อกแล้ว
+      add-count-to: '{count, plural, =0 {เพิ่มใน {category}} one {เพิ่ม # รายการใน {category}} other {เพิ่ม # รายการใน {category}}}'
+      variants-count: '{count, plural, one {# ตัวเลือก} other {# ตัวเลือก}}'
+      addons-count: '{count, plural, one {สินค้าเสริม #} other {สินค้าเสริม #}}'
+      store-price: ราคาร้าน
+      catalog-price: ราคาแคตตาล็อก
+      set-catalog-price: ตั้งราคาสำหรับแคตตาล็อกนี้
+      price-done: เสร็จ
+      use-store-price: ใช้ราคาร้าน
+      hidden-here: ซ่อนในแคตตาล็อกนี้
+      sold-here-help: ขายผ่านแคตตาล็อกนี้ ปิดเพื่อซ่อนสินค้าที่นี่โดยไม่กระทบร้าน
+      in-stock: มีสินค้า
+      out-of-stock: สินค้าหมด
+      remove-from-category: นำออกจากหมวดหมู่นี้
+      products-note: สินค้าหนึ่งชิ้นอยู่ได้หลายแคตตาล็อก การนำออกที่นี่ไม่ลบสินค้าออกจากร้าน
+      no-products-in-category: หมวดหมู่นี้ยังไม่มีสินค้า
+      pick-a-category: เลือกหมวดหมู่ทางซ้าย หรือสร้างใหม่
+      status: สถานะ
+      visible-in-app: แสดงในแอป
+      visible-yes: แสดง ในเวลาเปิด
+      visible-no: ไม่แสดง ฉบับร่าง
+      empty-categories: หมวดหมู่ว่าง
+      no-hours: ยังไม่ได้ตั้งเวลา
+      every-day: ทุกวัน
+      hours-lede: เวลาที่แคตตาล็อกเปิดขาย นอกเวลานี้แอปจะซ่อนไว้
+      served-by-lede: ร้านและรถขายของที่ใช้แคตตาล็อกนี้ รถขายของจะแสดงเฉพาะตอนออนไลน์
+      manage-served-by: จัดการ
+      served-by-title: ผู้ให้บริการ {name}
+      served-by-saved: บันทึกรายชื่อผู้ให้บริการแล้ว
+      serving: ให้บริการ
+      no-served-by: ยังไม่มีใครให้บริการแคตตาล็อกนี้
+      assign-store-or-truck: กำหนดร้านหรือรถขายของ
+      stop-serving: หยุดให้บริการจาก {name}
+      served-by-removed: '{name} ไม่ให้บริการแคตตาล็อกนี้แล้ว'
+      stores: ร้านค้า
+      stores-help: ร้านที่ให้บริการแคตตาล็อกนี้ที่สาขาของตน
+      trucks-help: รถขายของที่ให้บริการแคตตาล็อกนี้ตอนออนไลน์
+      pick-trucks: เลือกรถขายของ
+      unsaved: มีการเปลี่ยนแปลงที่ยังไม่บันทึก
+      unsaved-summary: 'ยังไม่บันทึก: {added, plural, =0 {} one {เพิ่มสินค้า # รายการ} other {เพิ่มสินค้า # รายการ}} {removed, plural, =0 {} one {นำออก # รายการ} other {นำออก # รายการ}} {categories, plural, =0 {} other {แก้ไขหมวดหมู่}} {overrides, plural, =0 {} one {เปลี่ยนราคาหรือการขาย # รายการ} other {เปลี่ยนราคาหรือการขาย # รายการ}}'
+      save: บันทึกแคตตาล็อก
+      saved: บันทึกแคตตาล็อกแล้ว
+      created: สร้างแคตตาล็อกแล้ว ต่อไปเพิ่มหมวดหมู่และสินค้า
+      create-and-open: สร้างและเปิด
+      create-lede: ตั้งชื่อแคตตาล็อก แล้วค่อยเพิ่มหมวดหมู่ สินค้า เวลา และผู้ให้บริการ
+      leave-title: ออกโดยไม่บันทึก?
+      leave-body: การเปลี่ยนแปลงที่ยังไม่บันทึกของแคตตาล็อกนี้จะหายไป
+      leave: ออก
+    index:
+      subtitle: แคตตาล็อกคือเมนู มีหมวดหมู่ของตัวเอง สินค้าในหมวด เวลาที่ขาย และร้านหรือรถขายของที่ให้บริการ
+      search: ค้นหาแคตตาล็อก
+      new-catalog: แคตตาล็อกใหม่
+      sort:
+        name: ชื่อ
+        updated: อัปเดตล่าสุด
+      empty-state: สร้างแคตตาล็อกเพื่อจัดกลุ่มสินค้าเป็นเมนูที่มีหมวดหมู่และเวลาขายของตัวเอง
+      create-catalog: สร้างแคตตาล็อก
+    card:
+      out-of-stock-count: '{count, plural, one {สินค้าหมด #} other {สินค้าหมด #}}'
+      assign: กำหนดให้ร้านและรถขายของ
+      publish: เผยแพร่
+      unpublish: ยกเลิกการเผยแพร่
+      published: เผยแพร่แคตตาล็อกแล้ว
+      unpublished: ยกเลิกการเผยแพร่แล้ว กลับเป็นฉบับร่าง
+      store-only: เฉพาะร้าน ไม่มีรถขายของ
+      draft-hint: ต้องมีหมวดหมู่ สินค้า และเวลา
+      continue-setup: ตั้งค่าต่อ
+      no-description: ไม่มีคำอธิบาย
+      no-categories: ยังไม่มีหมวดหมู่
+      products-count: '{count, plural, =0 {ไม่มีสินค้า} one {สินค้า # รายการ} other {สินค้า # รายการ}}'
+  trucks:
+    panel:
+      new-subtitle: เลือกรถ พื้นที่ให้บริการ และสินค้าที่ขาย
+      tabs:
+        details: รายละเอียด
+        catalogs: แคตตาล็อก
+        orders: ออเดอร์
+        location: ตำแหน่ง
+      location-lede: ตำแหน่งล่าสุดที่รถรายงาน ตามที่ Fleet-Ops ติดตาม
+      last-position: ตำแหน่งล่าสุด
+      no-position: ยังไม่มีการรายงานตำแหน่ง
+      last-seen: อัปเดตล่าสุด
+      ago: '{value}ที่แล้ว'
+      open-map: เปิดบนแผนที่ Fleet-Ops
+      open-vehicle: เปิดรถ
+      no-vehicle-yet: เลือกรถที่แท็บรายละเอียดเพื่อดูตำแหน่ง
+      new-truck: รถขายของใหม่
+      delete-truck: ลบรถขายของ
+      not-assigned: ยังไม่กำหนด
+      sections:
+        vehicle-crew: รถและทีมงาน
+        catalogs: แคตตาล็อกบนรถคันนี้
+        today: วันนี้
+      today:
+        revenue: รายได้
+        avg-prep: เวลาเตรียมเฉลี่ย
+        minutes: '{value} นาที'
+      orders-lede: ออเดอร์ที่ส่งจากรถคันนี้ ล่าสุดก่อน
+      no-orders: รถคันนี้ยังไม่มีออเดอร์
+      vehicle: รถ
+      vehicle-help: รถใน Fleet-Ops คนขับและสถานะออนไลน์มาจาก Fleet-Ops
+      vehicle-placeholder: เลือกรถสำหรับรถขายของนี้
+      service-area: พื้นที่ให้บริการ
+      service-area-placeholder: พื้นที่ที่รถให้บริการ
+      zone: โซน
+      zone-placeholder: โซนภายในพื้นที่ให้บริการ
+      pick-service-area-first: เลือกพื้นที่ให้บริการก่อน
+      status-help: รถที่ไม่ใช้งานจะถูกซ่อนในแอปแม้รถจะออนไลน์
+      catalogs-lede: แอปจะแสดงรวมทุกแคตตาล็อกที่กำหนดไว้และอยู่ในเวลาขาย
+      catalogs-note: เวลาซ้อนกันได้ แคตตาล็อกฉบับร่างจะไม่แสดง
+      outside-hours: นอกเวลา
+      no-catalogs: ยังไม่มีแคตตาล็อกให้กำหนด สร้างได้ที่หน้าแคตตาล็อก
+      unsaved: มีการเปลี่ยนแปลงที่ยังไม่บันทึก
+      create: สร้างรถขายของ
+      saved: บันทึกรถขายของแล้ว
+    network:
+      subtitle: รถขายของของเครือข่ายนี้และของร้านที่ขายผ่านเครือข่าย
+    map:
+      unavailable: โหลดแผนที่ใน console นี้ไม่ได้
+    index:
+      subtitle: รถใน Fleet-Ops ที่ขายสินค้าจากแคตตาล็อกภายในพื้นที่ให้บริการ
+      new-truck: รถขายของใหม่
+      map: แผนที่
+      search: ค้นหารถขายของ
+      map-note: รถ {count} จาก {total} คันมีการรายงานตำแหน่ง
+      active: ใช้งาน
+      inactive: ไม่ใช้งาน
+      empty-state: เพิ่มรถขายของเพื่อขายจากรถภายในพื้นที่ให้บริการ
+      create-truck: เพิ่มรถขายของ
+    card:
+      no-vehicle: ยังไม่กำหนดรถ
+      no-driver: ยังไม่กำหนดคนขับ
+      service-area: พื้นที่ให้บริการ {name}
+      orders-today: '{count, plural, =0 {วันนี้ไม่มีออเดอร์} one {วันนี้ # ออเดอร์} other {วันนี้ # ออเดอร์}}'
+      no-service-area: ไม่มีพื้นที่ให้บริการ
+      inactive: ไม่ใช้งาน
+      no-catalog: ใช้งาน ไม่มีแคตตาล็อก
+      no-catalog-in-hours: ใช้งาน · ไม่มีแคตตาล็อกในเวลาขาย
+      serving: กำลังขาย · {catalog}
+      assign-catalogs: กำหนดแคตตาล็อก
+      catalogs-count: '{count, plural, =0 {ไม่มีแคตตาล็อก} one {# แคตตาล็อก} other {# แคตตาล็อก}}'
+      owned-by: เป็นของ {name}
+  dashboard:
+    kpi:
+      metric: ตัวชี้วัด
+      vs-previous-period: เทียบช่วงก่อนหน้า
+      no-previous-period: ไม่มีข้อมูลช่วงก่อนหน้า
+      load-error: โหลดตัวชี้วัดไม่ได้
+      active-orders: ออเดอร์ที่กำลังดำเนินการ
+      orders: ออเดอร์
+      aov: ยอดเฉลี่ยต่อออเดอร์
+      revenue: รายได้
+      cancellation-rate: อัตราการยกเลิก
+      customers: ลูกค้า
+      completed-orders: ออเดอร์ที่เสร็จแล้ว
+      cart-conversion: อัตราการสั่งซื้อจากตะกร้า
+    widgets:
+      recent-customers: '{count, plural, one {ลูกค้าล่าสุด # คน} other {ลูกค้าล่าสุด # คน}}'
+      no-recent-customers: ยังไม่มีลูกค้าล่าสุด
+      new-vs-returning: ลูกค้าใหม่เทียบลูกค้าเก่า
+      repeat-rate: อัตราการซื้อซ้ำ
+      no-customer-activity: ยังไม่มีกิจกรรมของลูกค้า
+      no-order-activity: ยังไม่มีกิจกรรมของออเดอร์
+      best-sellers: สินค้าขายดีตามรายได้
+      no-product-sales: ยังไม่มียอดขายสินค้า
+      no-revenue: ยังไม่มีข้อมูลรายได้
+    open-state:
+      open: เปิดอยู่ · ปิด {time}
+      closed-until: ปิดอยู่ · เปิด {time}
+      closed-until-day: ปิดอยู่ · เปิดวัน{day} {time}
+      closed: ปิด
+      no-hours: ยังไม่ได้ตั้งเวลา
+      days:
+        monday: จันทร์
+        tuesday: อังคาร
+        wednesday: พุธ
+        thursday: พฤหัสบดี
+        friday: ศุกร์
+        saturday: เสาร์
+        sunday: อาทิตย์
+    attention:
+      title: ต้องดำเนินการ
+      subtitle: สิ่งที่ร้านต้องจัดการวันนี้
+      all-clear: ตอนนี้ไม่มีอะไรรอคุณอยู่
+      refresh: รีเฟรช
+      orders-to-confirm: '{count, plural, one {ออเดอร์รอยืนยัน} other {ออเดอร์รอยืนยัน}}'
+      oldest: เก่าสุด {age}
+      ready-for-pickup: พร้อมให้รับ
+      customers-notified: แจ้งลูกค้าแล้ว
+      awaiting-driver: '{count, plural, one {การจัดส่งที่ยังไม่มีคนขับ} other {การจัดส่งที่ยังไม่มีคนขับ}}'
+      out-of-stock: '{count, plural, one {สินค้าที่ตั้งว่าไม่พร้อมขาย} other {สินค้าที่ตั้งว่าไม่พร้อมขาย}}'
+      still-published: ยังเผยแพร่อยู่
+      trucks-inactive: '{count, plural, one {รถขายของไม่ใช้งาน} other {รถขายของไม่ใช้งาน}}'
+      network-invitations: '{count, plural, one {คำเชิญเข้าเครือข่าย} other {คำเชิญเข้าเครือข่าย}}'
+  order:
+    booking-steps:
+      booked: จองแล้ว
+      confirmed: ยืนยันแล้ว
+      on_the_way: กำลังเดินทาง
+      in_progress: กำลังดำเนินการ
+      done: เสร็จสิ้น
+    sections:
+      details: รายละเอียด
+      metadata: Metadata
+      customer-insights: ข้อมูลเชิงลึกลูกค้า
+      order: ออเดอร์
+      comments: ความเห็น
+      no-items: ไม่พบรายการสินค้าในออเดอร์
+      delivery-tip: ทิปค่าส่ง
+      cash: เงินสด
+      unnamed-item: สินค้าไม่มีชื่อ
+      no-description: ไม่มีคำอธิบาย
+      scheduled-at: นัดหมาย {date}
+      subtotal: ยอดรวมย่อย
+      discount: ส่วนลด
+      tip: ทิป
+      total: ยอดรวม
+      delivery-address: ที่อยู่จัดส่ง
+    tracking:
+      based-on: อิงจากเส้นทางของผู้ให้บริการและสัญญาณของคนขับ
+      reported-total: ยอดรวมที่รายงาน
+      between-stops: ระหว่างจุด
+      provider: ผู้ให้บริการ
+      fallback: สำรอง
+      traffic-aware: คำนึงถึงจราจร
+      confidence: ความแม่นยำ
+      driver-signal: สัญญาณคนขับ
+      warnings: คำเตือน
+    workflow:
+      dispatch-provider: จ่ายงานให้ผู้ให้บริการ
+      mark-as-ready: ตั้งว่าพร้อม
+      mark-picked-up: ตั้งว่ารับแล้ว
+    reload-activity: โหลดกิจกรรมใหม่
+    update-activity: อัปเดตกิจกรรมออเดอร์
+    asap: เร็วที่สุด
+    incl-tip: รวมทิป {tip}
+    other-orders-in-checkout: '{count, plural, =0 {ออเดอร์อื่นในการชำระเงินนี้} one {มีออเดอร์อื่นอีก # รายการในการชำระเงินนี้} other {มีออเดอร์อื่นอีก # รายการในการชำระเงินนี้}}'
+    no-other-orders: เป็นออเดอร์เดียวในการชำระเงินนี้
+    tabs:
+      items: สินค้า
+      route: เส้นทาง
+      payment: การชำระเงิน
+      activity: กิจกรรม
+      customer: ลูกค้า
+      data: ข้อมูล
+    flow:
+      created: สร้างแล้ว
+      accepted: ยืนยันแล้ว
+      preparing: กำลังเตรียม
+      ready: พร้อม
+      pickup_ready: พร้อมให้รับ
+      dispatched: จ่ายงานแล้ว
+      picked_up: รับสินค้าแล้ว
+      completed: เสร็จสิ้น
+      canceled: ยกเลิก
+    panel:
+      app-review: ออเดอร์ทดสอบจาก App Review
+      app-review-body: ผู้ตรวจของ App Store สั่งออเดอร์นี้ระหว่างทดสอบแอป ไม่ต้องเตรียมหรือจัดส่ง ยกเลิกได้เมื่อพร้อม
+      app-review-order: ออเดอร์ App Review
+      customer-note: หมายเหตุจาก {name}
+      copy-tracking: คัดลอกเลขติดตามพัสดุ
+      copied: คัดลอก {value} แล้ว
+      booking: การจอง
+      app-order: ออเดอร์จากแอป
+      console-order: ออเดอร์จาก console
+      placed: สั่งเมื่อ {time} ({ago})
+      part-of-checkout: อยู่ในการชำระเงิน {checkout}
+      message: ข้อความ
+      more: การดำเนินการเพิ่มเติม
+      print-label: พิมพ์ฉลาก
+      tracking-page: หน้าติดตามสำหรับลูกค้า
+      open-in-fleet-ops: เปิดใน Fleet-Ops
+      steps: ขั้นตอนออเดอร์
+      due-left: ครบกำหนด {time} · เหลือ {left}
+      eta: ETA {time}
+      driver: คนขับ
+      driver-tab: '{name} (คนขับ)'
+      all-three: ทั้งสาม
+      everyone: ทุกคน
+      no-customer: ออเดอร์นี้ไม่มีลูกค้า
+      orders-count: '{count, plural, one {# ออเดอร์} other {# ออเดอร์}}'
+      since: ตั้งแต่ {date}
+      call: โทรหา {name}
+      message-to: ส่งข้อความถึง {name}
+      online: ออนไลน์
+      offline: ออฟไลน์
+      track: ติดตามบนแผนที่
+      reassign: มอบหมายใหม่
+      no-driver: ยังไม่มีคนขับ
+      adhoc: เสนองานให้คนขับใกล้เคียงแล้ว
+      assign-hint: มอบหมายคนขับเมื่อออเดอร์พร้อม
+      assign-driver: มอบหมายคนขับ
+      collects: '{name} รับสินค้าที่ร้าน'
+      driver-status:
+        assigned: มอบหมายแล้ว
+        heading-to-store: กำลังไปที่ร้าน
+        picked-up: รับออเดอร์แล้ว
+        on-the-way: กำลังไปหาลูกค้า
+        arrived: ถึงจุดส่งแล้ว
+        delivered: ส่งแล้ว
+      open-in-maps: เปิดในแผนที่
+      edit-address: แก้ไขที่อยู่
+      map-label: 'แผนที่: ร้านและจุดส่ง'
+      provider: ผู้ให้บริการ
+      no-provider: ยังไม่มีผู้ให้บริการ
+      assign-provider: มอบหมายผู้ให้บริการ
+      bring-to-job: นำไปที่หน้างาน
+      hand-over: ส่งมอบที่ร้าน
+      booking-when: '{day} {start} ถึง {end}'
+      booking-starts: เริ่มในอีก {in}
+      booking-started: เริ่มไปแล้ว {ago}
+      reschedule: เลื่อนนัด
+      move-to: ไปที่ {step}
+      complete-order: ปิดออเดอร์
+      complete-now: ปิดออเดอร์ตอนนี้
+      more-steps: ขั้นตอนเพิ่มเติม
+      proof-title: หลักฐานการส่งมอบ (POD)
+      proof-count: '{count, plural, one {หลักฐาน #} other {หลักฐาน #}}'
+      proof-types:
+        photo: รูปภาพ
+        signature: ลายเซ็น
+        scan: รหัสที่สแกน
+      proof-open: เปิด{type}
+      step-dialog:
+        move-title: ย้ายออเดอร์ไปที่ “{step}”?
+        move-body: สถานะออเดอร์จะเป็น “{step}” และลูกค้ากับคนขับจะเห็น
+        move: ไปที่ {step}
+        complete-title: ปิดออเดอร์นี้?
+        complete-body: ออเดอร์จะเสร็จสิ้น ยอดเก็บเงินปลายทางจะถูกปิด และแจ้งลูกค้า
+        complete: ปิดออเดอร์
+        complete-pickup-title: ตั้งว่าลูกค้ารับออเดอร์แล้ว?
+        complete-pickup-body: ออเดอร์จะเสร็จสิ้นและแจ้งลูกค้า
+        complete-pickup: ตั้งว่ารับแล้ว
+        no-proof: ขั้นตอนนี้ต้องมีหลักฐานการส่งมอบ ซึ่งบันทึกจาก console ไม่ได้ จึงบันทึกโดยไม่มีหลักฐาน
+        moved: ย้ายออเดอร์ไปที่ “{step}” แล้ว
+      map-focus: โฟกัสเส้นทาง
+      map-expand: ขยายแผนที่
+      map-shrink: ย่อแผนที่
+      from: จาก
+      to: ถึง
+      no-address: ไม่มีที่อยู่จุดส่ง
+      out-of-stock: สินค้าหมด?
+      substitute-or-remove: เปลี่ยนสินค้าหรือนำออก
+      each: ชิ้นละ {price}
+      promotion: โปรโมชัน {code}
+      payment:
+        paid: ชำระแล้ว
+        paid-at: ผ่าน {method} เมื่อ {time} · ไม่ต้องเก็บเงิน
+        paid-with: ผ่าน {method} · ไม่ต้องเก็บเงิน
+        to-collect: ต้องเก็บเงิน {amount}
+        cash-on-delivery: เก็บเงินปลายทาง
+        unpaid: ยังไม่ชำระ
+        balance-due: ยังค้าง {amount}
+        paid-by: · ชำระ {amount} ผ่าน {method}
+        refunded: คืนเงินแล้ว
+        refunded-to: '{amount} คืนไปที่ {method}'
+        credited: ผ่าน {method} · ให้เป็นเครดิตร้าน {amount}
+        partly-refunded: ผ่าน {method} · คืนเงิน {amount}
+      store-author: '{name} (ร้าน)'
+      staff-only: เฉพาะพนักงาน
+      customer-sees: ลูกค้าเห็นข้อความนี้
+      note-placeholder: เพิ่มบันทึกพนักงาน (ลูกค้าไม่เห็น)
+      staff-note: บันทึกพนักงาน
+      add: เพิ่ม
+      checkout: การชำระเงิน
+      other-stores: '{count, plural, one {ร้านอื่นอีก # ร้าน} other {ร้านอื่นอีก # ร้าน}} ใน {checkout}'
+      method: วิธีชำระ
+      transaction: ธุรกรรม
+      gateway-reference: เลขอ้างอิง Gateway
+      invoice: ใบแจ้งหนี้
+      invoice-short: ใบแจ้งหนี้ {id}
+      paid: ชำระแล้ว
+      refunded: คืนเงินแล้ว
+      credited: เครดิตร้าน
+      balance: ยอดค้างชำระ
+      details-documents: รายละเอียดและเอกสาร
+      details-summary: ID ฟิลด์กำหนดเอง ไฟล์
+      details-summary-count: ID, Metadata, {files, plural, =0 {ไม่มีไฟล์} one {# ไฟล์} other {# ไฟล์}}
+      details-tab: ออเดอร์
+      tracking-number: เลขติดตามพัสดุ
+      created: สร้างเมื่อ
+      scheduled: นัดหมาย
+      updated: อัปเดตเมื่อ
+      no-files: ยังไม่มีไฟล์
+      payment-state: สถานะ
+      paid-at: ชำระเมื่อ
+      credit-code: รหัสเครดิต
+      cash-to-collect: เงินสดที่ต้องเก็บ
+      payment-states:
+        paid: ชำระแล้ว
+        to_collect: รอเก็บเงิน
+        unpaid: ยังไม่ชำระ
+        refunded: คืนเงินแล้ว
+        partially_refunded: คืนเงินบางส่วน
+        balance_due: ค้างชำระ
+      details-tabs:
+        details: รายละเอียด
+        metadata: Metadata
+        files: ไฟล์
+      order-id: Order ID
+      internal-id: รหัสภายใน
+      open: เปิด
+      events: '{count, plural, one {# เหตุการณ์} other {# เหตุการณ์}}'
+      last: ล่าสุด {time}
+      no-activity: ยังไม่มีอะไรเกิดขึ้น
+      activity:
+        note: 'บันทึกโดย {name}: {content}'
+        edit: '{name} แก้ไขออเดอร์: {summary}'
+        message: '{name}: {content}'
+        payment-refund: คืนเงิน {amount}
+        payment-store_credit: เครดิตร้าน {amount}
+        payment-charge: เรียกเก็บ {amount}
+        payment-cod_update: เงินสดที่ต้องเก็บเปลี่ยน {amount}
+      close-messages: ปิดข้อความ
+      unread: ยังไม่อ่าน
+      group-hint: ห้องสนทนาระหว่างลูกค้า คนขับ และร้าน สำหรับส่งมอบ จะเปิดเมื่อมีคนเริ่มพิมพ์
+      group-no-driver: ลูกค้า คนขับ และร้านคุยกันที่นี่ได้เมื่อมอบหมายคนขับแล้ว
+      assign-to-message: มอบหมายคนขับก่อนจึงจะส่งข้อความได้
+      customer-footnote: ส่งเป็น Push และในแชทออเดอร์ของแอป
+      driver-footnote: ส่งไปที่แอปคนขับ
+      alerts:
+        address-wrong: '{name} แจ้งว่าที่อยู่ไม่ถูกต้อง'
+        suggested: 'แนะนำ: {address}'
+        reply: ตอบกลับ
+        dismiss: ปิด
+        update-address: อัปเดตที่อยู่
+        balance-due: หลังแก้ไขยังค้างชำระ {amount}
+        balance-link: ลิงก์ชำระเงินพร้อมแล้ว ออเดอร์จะเป็นชำระแล้วเมื่อลูกค้าจ่าย
+        balance-collect: คนขับเก็บเงินตอนส่ง
+        balance-no-link: ยังไม่มีลิงก์ชำระเงิน
+        view-link: ลิงก์ชำระเงิน
+        create-link: สร้างลิงก์ชำระเงิน
+        link-created: สร้างลิงก์ชำระเงินแล้ว
+        send-link: ส่งให้ {name}
+        link-message: 'ออเดอร์ของคุณยังค้างชำระ {amount} ชำระได้ที่นี่: {link}'
+        check-payment: ตรวจสอบการชำระ
+        balance-paid: ชำระยอดค้างแล้ว
+        balance-not-paid: ยังไม่ชำระ
+        late: เกินกำหนด {late}
+        late-detail: ยังไม่ได้แจ้งลูกค้า
+        late-told: แจ้ง {name} แล้วเมื่อ {time}
+        tell: แจ้ง {name}
+        late-message: ขออภัย ออเดอร์ของคุณล่าช้าเล็กน้อย เราจะรีบส่งให้เร็วที่สุด
+        delivered: ส่งแล้ว {time}
+        picked-up: รับแล้ว {time}
+        on-time: ตรงเวลา
+        early: เร็วกว่ากำหนด {early}
+        late-by: ช้ากว่ากำหนด {late}
+        proof-captured: '{count, plural, one {บันทึกหลักฐานการส่งมอบแล้ว} other {บันทึกหลักฐานการส่งมอบแล้ว # รายการ}}'
+        view-proof: ดูหลักฐาน
+    overview:
+      items-count: '{count, plural, one {# ชิ้น} other {# ชิ้น}} · {products, plural, one {# สินค้า} other {# สินค้า}}'
+      print-label: พิมพ์ฉลาก
+      due-in: 'ครบกำหนด {time} · {minutes, plural, =0 {ตอนนี้} one {เหลือ # นาที} other {เหลือ # นาที}}'
+      due-late: ครบกำหนด {time} · ช้า {late}
+      duration:
+        minutes: '{count} นาที'
+        hours: '{hours} ชม. {minutes} นาที'
+        days: '{count, plural, one {# วัน} other {# วัน}}'
+      next:
+        accept: 'ถัดไป: รับออเดอร์'
+        ready: 'ถัดไป: เตรียมและตั้งว่าพร้อม'
+        hand-to-customer: 'ถัดไป: ส่งมอบให้ลูกค้าเมื่อมาถึง'
+        hand-to-driver: 'ถัดไป: ส่งมอบให้ {driver}'
+        assign-driver: 'ถัดไป: มอบหมายคนขับ'
+        with-driver: '{driver} กำลังจัดส่ง'
+        on-the-way: กำลังไปหาลูกค้า
+        delivered: ส่งแล้ว
+        picked-up: ลูกค้ารับแล้ว
+        canceled: ยกเลิก
+        canceled-because: 'ยกเลิก: {reason}'
+        next-step: 'ถัดไป: {step}'
+        in-progress: 'กำลังดำเนินการ: {step}'
+        confirm-booking: 'ถัดไป: ยืนยันการจอง'
+        send-provider: 'ถัดไป: ส่งผู้ให้บริการ'
+        start-when-arrives: 'ถัดไป: เริ่มเมื่อ {name} มาถึง'
+    alerts:
+      address-change-requested: ลูกค้าแจ้งว่าที่อยู่ไม่ถูกต้อง
+      update-address: อัปเดตที่อยู่
+      driver-not-accepted: คนขับยังไม่รับออเดอร์
+      reassign: มอบหมายใหม่
+      balance-due: หลังแก้ไขยังค้างชำระ {amount}
+      balance-link-sent: ส่งลิงก์ชำระเงินให้ลูกค้าแล้ว
+      balance-collect: คนขับเก็บเงินตอนส่ง
+      copy-link: คัดลอกลิงก์ชำระเงิน
+      link-copied: คัดลอกลิงก์ชำระเงินแล้ว
+      item-unavailable: 'ไม่มีสินค้า: {items}'
+      item-unavailable-detail: เปลี่ยนสินค้าหรือนำออก ส่วนต่างจะคืนเงินหรือให้เป็นเครดิต
+      substitute-or-remove: เปลี่ยนสินค้าหรือนำออก
+      late: เกินกำหนด {late}
+      change-time: เปลี่ยนเวลา
+      suggested-address: 'แนะนำ: {address}'
+      dismiss: ปิด
+    chat:
+      title: ข้อความ
+      thread: การสนทนา
+      unread: '{count, plural, one {ข้อความจากลูกค้ายังไม่อ่าน #} other {ข้อความจากลูกค้ายังไม่อ่าน #}}'
+      with-customer: ร้านและลูกค้า
+      customer-and-driver: ลูกค้าและคนขับ
+      empty: ยังไม่มีข้อความ
+      no-driver: ลูกค้าส่งข้อความถึงคนขับได้เมื่อมอบหมายคนขับแล้ว
+      placeholder: พิมพ์ถึงลูกค้า…
+      send: ส่ง
+      delivery-help: ลูกค้าได้รับเป็น Push และในแชทออเดอร์ของแอป
+      driver-readonly: นี่คือการสนทนาระหว่างลูกค้ากับคนขับ ร้านอ่านได้
+      new-message: ข้อความใหม่จาก {name}
+      roles:
+        customer: ลูกค้า
+        driver: คนขับ
+        store: ร้าน
+        system: อัปเดต
+    payment-link:
+      title: ลิงก์ชำระเงิน
+      due-label: ยอดค้างชำระ
+      waiting: รอการชำระเงิน
+      via: ผ่าน {gateway}
+      link-label: ลิงก์สำหรับ {name}
+      open: เปิด
+      step-send: ส่งให้ {name}
+      step-send-help: ในแชทออเดอร์ (ปุ่มส่งด้านล่าง) หรือคัดลอกลิงก์ไปส่งทางช่องทางใดก็ได้
+      step-pay: '{name} ชำระเงิน'
+      step-pay-help: ผ่านแอปธนาคารหรือบัตร เหมือนตอนชำระเงิน {name} จะเห็นปุ่มชำระเลยที่ออเดอร์ในแอปด้วย
+      step-paid: ออเดอร์เป็นชำระแล้ว
+      how-qpay: QPay แจ้งร้านเมื่อชำระแล้ว ไม่ต้องทำอะไร
+      how-stripe: ภายในไม่กี่นาทีหลังชำระ หรือทันทีเมื่อกดตรวจสอบการชำระ
+      send: ส่งให้ {name}
+      close: ปิด
+    packing:
+      unavailable: ไม่มีสินค้า
+      mark-unavailable: ตั้งว่าไม่มีสินค้า
+      available-again: มีสินค้าอีกครั้ง
+      unavailable-told: ตั้ง {item} ว่าไม่มีสินค้าแล้ว แจ้ง {name} แล้ว
+    payment:
+      paid: ชำระ {amount} ผ่าน {method} · ไม่ต้องเก็บเงิน
+      to-collect: เก็บเงินปลายทาง · ต้องเก็บ {amount}
+      unpaid: ยังไม่ชำระ · {amount}
+      balance-due: ชำระ {paid} ผ่าน {method} · ยังค้าง {amount}
+      refunded: คืนเงิน {amount} ไปที่ {method}
+      partially-refunded: ชำระ {paid} ผ่าน {method} · คืนเงิน {amount}
+      credited: ชำระ {paid} ผ่าน {method} · ให้เป็นเครดิตร้าน {amount}
+    cancel:
+      title: ยกเลิกออเดอร์นี้?
+      body: ลูกค้าจะได้รับแจ้งเหตุผล และโปรโมชันที่ใช้จะกลับมาใช้ได้อีก
+      why: ยกเลิกเพราะอะไร?
+      common-reasons: เหตุผลที่พบบ่อย
+      reasons:
+        customer-asked: ลูกค้าขอยกเลิก
+        out-of-stock: สินค้าหมด
+        store-closed: ร้านปิด
+        cannot-deliver: ส่งไปที่อยู่นี้ไม่ได้
+        payment-problem: การชำระเงินมีปัญหา
+      reason: เหตุผล
+      reason-placeholder: หรือพิมพ์เหตุผลเอง ลูกค้าจะเห็นข้อความนี้
+      money-back: การจัดการเงินที่ชำระแล้ว
+      paid-line: ชำระ {amount} ผ่าน {method}
+      already-back: คืนไปแล้ว {amount}
+      refund-to: คืนเงินไปที่ {method}
+      store-credit: เครดิตร้าน
+      keep: ไม่คืนเงิน
+      amount: จำนวนเงิน
+      up-to: สูงสุด {amount} ตามยอดที่ยังชำระอยู่
+      whole-only: '{method} คืนเงินได้เฉพาะเต็มจำนวน ถ้าคืนบางส่วนให้ใช้เครดิตร้าน'
+      credit-help: รหัสใช้ครั้งเดียวสำหรับลูกค้ารายนี้ ใช้ได้ 1 ปี
+      nothing-paid: ยังไม่มีการชำระ จึงไม่มีเงินคืน
+      nothing-collected: ยังไม่ได้เก็บเงินปลายทาง คนขับจะไม่เก็บเงิน
+      review:
+        none: ออเดอร์จะถูกยกเลิกและแจ้งเหตุผลให้ลูกค้า ไม่มีการคืนเงิน
+        refund: ออเดอร์จะถูกยกเลิก คืนเงิน {amount} ไปที่ {method} และแจ้งเหตุผลให้ลูกค้า
+        store_credit: ออเดอร์จะถูกยกเลิก ให้เครดิตร้าน {amount} และลูกค้าจะได้รับรหัสพร้อมเหตุผล
+      keep-order: เก็บออเดอร์ไว้
+      confirm: ยกเลิกออเดอร์
+      confirm-refund: ยกเลิกและคืนเงิน {amount}
+      confirm-credit: ยกเลิกและให้เครดิต {amount}
+      success: ยกเลิกออเดอร์ {orderId} แล้ว
+    reschedule:
+      title: เลื่อนการจอง
+      moving-to: เลื่อนไปเป็น
+      move: เลือกเวลาใหม่
+      move-to: เลื่อนไป {time}
+      keep: ใช้เวลาเดิม
+      moved: เลื่อนการจอง {id} แล้ว
+    edit:
+      title: แก้ไขออเดอร์
+      edit-items: แก้ไขสินค้า
+      changed: เปลี่ยนแล้ว
+      was: เดิม {value}
+      dropoff: ที่อยู่จัดส่ง
+      dropoff-reroutes: คนขับจะได้เส้นทางใหม่ไปที่อยู่ใหม่และได้รับแจ้ง
+      contact-scope: บันทึกข้อมูลติดต่อที่ไหน
+      contact-order: เฉพาะออเดอร์นี้
+      contact-profile: อัปเดตโปรไฟล์ของ {name}
+      contact-order-help: สำหรับของขวัญหรือผู้รับคนอื่น โปรไฟล์ยังเหมือนเดิม
+      contact-profile-help: ใช้กับออเดอร์นี้และออเดอร์ต่อไป
+      removed: นำออกแล้ว
+      added: เพิ่มแล้ว
+      qty-was: จำนวนเดิม {quantity}
+      undo: เลิกทำ
+      when: เมื่อไร
+      notes: หมายเหตุ
+      notify-customer: แจ้ง {name} ว่ามีอะไรเปลี่ยน
+      notify-driver: แจ้ง {name}
+      notify-driver-dropoff: แจ้ง {name} (จุดส่งใหม่)
+      notify-driver-items: แจ้ง {name} (สินค้าเปลี่ยน)
+      pricing: กำลังคำนวณราคา…
+      no-changes: ยังไม่มีการเปลี่ยนแปลง
+      discard: ยกเลิกการแก้ไข
+      save: บันทึกการเปลี่ยนแปลง
+      saved: อัปเดตออเดอร์ {id} แล้ว
+      settle-label: การจัดการส่วนต่าง
+      settle:
+        refund: คืนเงินไปที่ {method}
+        store_credit: เครดิตร้าน
+        payment_link: ลิงก์ชำระเงิน
+        collect: คนขับเก็บเงิน
+        cod_update: ปรับยอดเงินสดที่ต้องเก็บ
+      settle-sentence:
+        refund: คืนเงิน {amount} ไปที่ {method} เมื่อบันทึก
+        store_credit: ให้เครดิตร้าน {amount} เมื่อบันทึก
+        payment_link: ต้องชำระเพิ่ม {amount} ลูกค้าจะได้รับลิงก์ชำระเงิน
+        collect: ต้องชำระเพิ่ม {amount} คนขับเก็บเงินตอนส่ง
+        cod_update: เงินสดที่คนขับต้องเก็บเปลี่ยน {amount}
+      applies-to-order: การเปลี่ยนแปลงมีผลกับออเดอร์นี้เท่านั้น เว้นแต่จะเลือกเป็นอย่างอื่นด้านล่าง
+      back: กลับไปที่ออเดอร์
+      the-customer: ลูกค้า
+      the-driver: คนขับ
+      was-prefix: เดิม
+      address: ที่อยู่
+      address-placeholder: ค้นหาที่อยู่
+      saved-places: สถานที่ที่บันทึกของ {name}
+      unit: ห้อง ชั้น
+      door-contact: ผู้ติดต่อหน้าประตู
+      instructions: คำแนะนำสำหรับคนขับ
+      map-label: แผนที่จุดส่ง ลากหมุดเพื่อปรับตำแหน่ง
+      drag-pin: ลากหมุดไปที่ทางเข้าให้ตรง
+      distance: ระยะทาง {was} → {now}
+      distance-now: ระยะทาง {now}
+      fee-unchanged: ค่าจัดส่งเท่าเดิม {fee}
+      fee-changed: ค่าจัดส่ง {was} → {now}
+      save-place: บันทึกในสถานที่ของ {name}
+      open-profile: เปิดโปรไฟล์ของ {name}
+      items-source: จากแคตตาล็อกที่ร้านขายอยู่ตอนนี้
+      add-product: เพิ่มสินค้า
+      removed-out-of-stock: 'นำออก: สินค้าหมด'
+      substitute: เปลี่ยนสินค้า
+      substitute-for: แทน {name}
+      substitute-title: สินค้าแทน {name}
+      options-changed: เปลี่ยนตัวเลือกแล้ว
+      out-of-stock: สินค้าหมด
+      change-options: เปลี่ยนตัวเลือก
+      quantity-of: จำนวน {name}
+      decrease: ลด {name} 1 ชิ้น
+      increase: เพิ่ม {name} 1 ชิ้น
+      remove: นำ {name} ออก
+      promotion-applies: '{promotion} (ลด {amount}) ยังใช้ได้: ยอดรวมย่อยใหม่ {subtotal}'
+      promotion-lost: '{promotion} ใช้กับสินค้าใหม่ไม่ได้แล้ว'
+      due: ครบกำหนด {time}
+      asap-help: เร็วที่สุดเท่าที่ร้านทำได้
+      schedule-help: เลือกวันและเวลา
+      closed-today: วันนี้ร้านปิด
+      open-until: ในเวลาทำการ วันนี้ถึง {time}
+      customer-note: หมายเหตุจากลูกค้า
+      changes-count: '{count, plural, one {# การเปลี่ยนแปลง} other {# การเปลี่ยนแปลง}}'
+      paid-by: 'ชำระ {amount} ผ่าน {method}:'
+      booked-for: จองสำหรับ
+      no-booked-service: บริการที่จองไม่อยู่ในแคตตาล็อกของร้านแล้ว จึงแสดงเวลาว่างไม่ได้
+      unit-placeholder: เช่น ห้อง 4B ชั้น 3
+      door-contact-placeholder: เบอร์โทรที่ใช้ติดต่อหน้าประตู
+      instructions-placeholder: เช่น ฝากไว้ที่ล็อบบี้ โทรเมื่อถึง
+      name-placeholder: ชื่อ-นามสกุล
+      phone-placeholder: เบอร์โทรศัพท์
+      email-placeholder: อีเมล
+      notes-placeholder: สิ่งที่ลูกค้าขอ
+      saved-link: อัปเดตออเดอร์ {id} แล้ว มีลิงก์ชำระเงิน {amount} ในออเดอร์
+      saved-link-sent: อัปเดตออเดอร์ {id} แล้ว ส่งลิงก์ชำระเงิน {amount} ให้ {name} แล้ว
+      stage:
+        open: ยังเปลี่ยนได้ทุกอย่าง การเปลี่ยนสินค้าระหว่างเตรียมจะแจ้งร้าน
+        ready: 'ออเดอร์พร้อมแล้ว: นำสินค้าออกได้อย่างเดียว และเลื่อนเวลาได้เฉพาะให้เร็วขึ้น'
+        with_driver: 'ออเดอร์อยู่กับคนขับ: เปลี่ยนที่อยู่จะทำให้คนขับได้เส้นทางใหม่ สินค้าและเวลาเปลี่ยนไม่ได้'
+        closed: ออเดอร์เสร็จแล้ว เปลี่ยนอะไรไม่ได้ ให้คืนเงินแทน
+  networks:
+    store-details:
+      back: ร้านค้า
+      revenue-share: '{share}% ของรายได้เครือข่าย'
+      through-network: ผ่านเครือข่าย
+      no-orders: ยังไม่มีออเดอร์ผ่านเครือข่าย
+      no-customers: ยังไม่มีลูกค้าผ่านเครือข่าย
+    card:
+      stores-count: '{count, plural, =0 {ไม่มีร้าน} one {# ร้าน} other {# ร้าน}}'
+    overview:
+      members-count: '{count, plural, =0 {ไม่มีสมาชิก} one {สมาชิก # ราย} other {สมาชิก # ราย}}'
+      invitee: ผู้ได้รับเชิญ
+      sent: ส่งเมื่อ
+      state: สถานะ
+      copy-link: คัดลอก
+      manage-stores: จัดการร้าน
+      no-category: ไม่มีหมวดหมู่
+      view-on-stores: ดูในหน้าร้านค้า
+      open-store: จัดการร้านนี้
+      view-store: ดูรายละเอียดร้าน
+      online-count: '{count, plural, =0 {ไม่มีใครออนไลน์} one {ออนไลน์ #} other {ออนไลน์ #}}'
+      invitations-hint: รอตอบรับ ปฏิเสธ {declined}
+      orders-7d: ออเดอร์ · 7 วัน
+      multi-store-count: '{count, plural, =0 {ไม่มีหลายร้าน} one {หลายร้าน #} other {หลายร้าน #}}'
+      revenue-7d: รายได้ · 7 วัน
+      tips-hint: ทิป {tips} แบ่งให้ทุกร้าน
+      new-customers: '{count, plural, =0 {เดือนนี้ไม่มีลูกค้าใหม่} one {เดือนนี้ใหม่ #} other {เดือนนี้ใหม่ #}}'
+      members-title: '{count, plural, =0 {ร้านค้า} one {ร้านค้า · สมาชิก #} other {ร้านค้า · สมาชิก #}}'
+      orders-count-7d: '{count, plural, =0 {ไม่มีออเดอร์ · 7 วัน} one {# ออเดอร์ · 7 วัน} other {# ออเดอร์ · 7 วัน}}'
+      share-of-network: '{share}% ของเครือข่าย'
+      no-members: ยังไม่มีร้านขายผ่านเครือข่ายนี้
+      recent-orders: ออเดอร์ล่าสุดของเครือข่าย
+      all-orders: ออเดอร์ทั้งหมด
+      no-orders: ไม่มีออเดอร์ผ่านเครือข่ายนี้ในช่วง 7 วันที่ผ่านมา
+    orders:
+      search: ค้นหาออเดอร์
+      subtitle: ทุกออเดอร์ที่สั่งผ่านแอป Marketplace จัดกลุ่มตามการชำระเงิน
+      group-by-checkout: จัดกลุ่มตามการชำระเงิน
+      flat: แบบรายการ
+      tabs:
+        all: ทั้งหมด
+        needs-action: ต้องดำเนินการ
+        preparing: กำลังเตรียม
+        ready: พร้อมให้รับ
+        dispatched: กำลังจัดส่ง
+        completed: เสร็จสิ้น
+        canceled: ยกเลิก
+        custom: กรองแล้ว
+      columns:
+        next: ถัดไป
+        reference: การชำระเงิน / ออเดอร์
+        fulfillment: การส่งมอบ
+        total: ยอดรวม
+        placed: สั่งเมื่อ
+      group-summary: '{orders, plural, one {# ออเดอร์} other {# ออเดอร์}} · {items, plural, one {# ชิ้น} other {# ชิ้น}}'
+      part-of: อยู่ใน {checkout}
+      items-count: '{count, plural, one {# ชิ้น} other {# ชิ้น}}'
+      no-customer: ไม่มีลูกค้า
+      no-store: ไม่มีร้าน
+      delivery: จัดส่ง
+      truck: รถขายของ
+      from-truck: สั่งจากรถขายของ {name}
+      from-a-truck: สั่งจากรถขายของ
+      tip-split: ทิป {tip} แบ่ง {count} ส่วน
+      tip-shared: + ทิป {tip} แบ่งกัน
+      tip-to-store: ทิป {tip} ให้ร้าน
+      driver-shared: ใช้ร่วมกัน {count} ออเดอร์
+      no-driver-needed: ไม่ต้องใช้คนขับ
+      drivers-count: คนขับ {count} คน
+      assign-driver: มอบหมายคนขับ
+      unassigned: ยังไม่มอบหมาย
+      group-status: '{count} จาก {total} {status}'
+      expand-hint: ขยายเพื่อดูออเดอร์ของแต่ละร้าน
+      group-note: สถานะกลุ่มคือสถานะของออเดอร์ย่อยที่คืบหน้าน้อยที่สุด กลุ่มจะออกจาก “ต้องดำเนินการ” เมื่อออเดอร์ย่อยทุกรายการมีคนขับหรือพร้อมให้รับแล้ว
+    join:
+      eyebrow: คุณได้รับเชิญเข้าร่วม
+      sent-by: ส่งโดย {name}
+      expires: หมดอายุ {when}
+      what-happens: จะเกิดอะไรขึ้น
+      what-happens-body: ร้านของคุณเข้าร่วมพร้อมแคตตาล็อก ราคา และเวลาเปิดของตัวเอง แอปของเครือข่ายจะแสดงร้าน
+      category-later: เครือข่ายจะเลือกหมวดหมู่หลังเข้าร่วม
+      approval: การอนุมัติ
+      approval-body: เครือข่ายจะตรวจสอบร้านก่อนแสดงในแอป
+      which-store: ร้านที่จะเข้าร่วม
+      which-store-help: ร้านที่คุณดูแล เครือข่ายจะเห็นชื่อร้าน แคตตาล็อก และเวลาเปิด
+      accept: ตรวจสอบและตอบรับ
+      decline: ปฏิเสธ
+      accepted: '{store} เข้าร่วม {network} แล้ว'
+      declined: ปฏิเสธคำเชิญแล้ว
+      joined: '{store} เป็นสมาชิกของ {network} แล้ว'
+      awaiting-approval: '{network} จะตรวจสอบร้านของคุณก่อนแสดงในแอป'
+      go-to-dashboard: ไปที่ Dashboard
+      closed:
+        accepted: คำเชิญนี้ตอบรับไปแล้ว
+        awaiting_approval: ตอบรับคำเชิญแล้ว กำลังรอเครือข่ายอนุมัติ
+        declined: คำเชิญนี้ถูกปฏิเสธ
+        expired: คำเชิญหมดอายุแล้ว ขอให้เครือข่ายเชิญใหม่
+        revoked: คำเชิญนี้ถูกยกเลิก
+      banner-title: '{network} เชิญร้านนี้เข้าร่วม'
+      review: ตรวจสอบ
+      badge-title: '{count, plural, one {คำเชิญเข้าเครือข่าย # รายการ} other {คำเชิญเข้าเครือข่าย # รายการ}}'
+    customers:
+      subtitle: ลูกค้าที่สั่งผ่านแอปของเครือข่าย
+      search: ค้นหาลูกค้า
+      note: ลูกค้าเป็นของร้านที่ให้บริการครั้งแรก เครือข่ายเห็นทุกคนที่สั่งผ่านเครือข่าย
+    share:
+      lede: แชร์กับบุคคลและองค์กร
+    categories:
+      icon: ไอคอนหมวดหมู่
+      upload-icon: อัปโหลดไอคอนหมวดหมู่
+      subtitle: '{count, plural, =0 {ยังไม่มีหมวดหมู่} one {# หมวดหมู่} other {# หมวดหมู่}} ที่ลูกค้าเลือกดูในแอปเครือข่าย'
+      title: หมวดหมู่
+      new-category: หมวดหมู่ใหม่
+      parent: หมวดหมู่หลัก
+      add-subcategory: เพิ่มหมวดหมู่ย่อย
+      saved: บันทึกการแก้ไขหมวดหมู่แล้ว
+      deleted: ลบหมวดหมู่แล้ว ร้านในหมวดย้ายไปอยู่ระดับบนสุด
+      empty: ยังไม่มีหมวดหมู่ หมวดหมู่ใช้จัดกลุ่มร้านที่ลูกค้าเลือกดูในแอปเครือข่าย
+      note: ร้านหนึ่งอยู่ได้หมวดเดียว การนำหมวดหมู่ออกจะย้ายร้านไปอยู่ระดับบนสุด
+    invitations:
+      title: คำเชิญ
+      invite-stores: เชิญร้าน
+      invited: เชิญแล้ว
+      pending-count: '{count, plural, =0 {ไม่มีคำเชิญที่รอ} one {คำเชิญที่รอ #} other {คำเชิญที่รอ #}}'
+      none: ไม่มีคำเชิญที่เปิดอยู่
+      sent-ago: ส่งเมื่อ {ago}
+      resend: ส่งอีกครั้ง
+      revoke: ยกเลิก
+      invite-again: เชิญอีกครั้ง
+      resent: ส่งคำเชิญอีกครั้งถึง {email} แล้ว
+      revoke-title: ยกเลิกคำเชิญถึง {email}?
+      revoke-body: ลิงก์ในอีเมลจะใช้ไม่ได้ทันที เชิญอีเมลนี้ใหม่ได้ภายหลัง
+      shareable-link: ลิงก์แชร์
+      manage-link: จัดการลิงก์
+      link: ลิงก์
+      link-hint: ทุกคนที่มีลิงก์ขอเข้าร่วมได้ การปิดลิงก์จะทำให้ลิงก์ใช้ไม่ได้ทันที
+      regenerate: สร้างใหม่
+      regenerate-hint: การสร้างใหม่จะทำให้ลิงก์เดิมใช้ไม่ได้ทันที
+      link-expires: ลิงก์หมดอายุ
+      link-expires-on: หมดอายุ {date}
+      link-joins: '{count, plural, =0 {ยังไม่มีร้านเข้าร่วมผ่านลิงก์นี้} one {มี # ร้านเข้าร่วมผ่านลิงก์นี้} other {มี # ร้านเข้าร่วมผ่านลิงก์นี้}}'
+      approve-automatically: อนุมัติอัตโนมัติ (ไม่ต้องตรวจสอบ)
+      approve-automatically-help: ถ้าปิด คุณต้องอนุมัติเอง ร้านที่เข้าร่วมผ่านลิงก์จะรออยู่ที่หน้าร้านค้าจนกว่าคุณจะอนุมัติ
+      link-updated: อัปเดตลิงก์เข้าร่วมแล้ว
+      via-link: เข้าร่วมผ่านลิงก์
+      status:
+        pending: รอตอบรับ
+        declined: ปฏิเสธ
+        expired: หมดอายุ
+        accepted: ตอบรับแล้ว
+        revoked: ยกเลิกแล้ว
+        awaiting_approval: รออนุมัติ
+        rejected: ไม่อนุมัติ
+      stores-subtitle: '{members, plural, =0 {ไม่มีสมาชิก} one {สมาชิก #} other {สมาชิก #}} · {pending, plural, =0 {ไม่มีคำเชิญที่รอ} one {คำเชิญที่รอ #} other {คำเชิญที่รอ #}}'
+      add-existing-store: เพิ่มร้านที่มีอยู่
+      edit-category: แก้ไขหมวดหมู่
+      delete-category: ลบหมวดหมู่
+      selected-count: '{count, plural, one {เลือก #} other {เลือก #}}'
+      clear: ล้าง
+      rows-note: แถวที่เชิญแล้วคือคำเชิญ ยังไม่ใช่สมาชิก จะหายไปเมื่อตอบรับหรือยกเลิก
+      assign-category-count: กำหนดหมวดหมู่ให้ {count, plural, one {# ร้าน} other {# ร้าน}}
+      pick-a-category: เลือกหมวดหมู่ก่อน
+      remove-count-title: นำ {count, plural, one {# ร้าน} other {# ร้าน}} ออกจาก {networkName}?
+      remove-body: ร้านยังมีแคตตาล็อกและออเดอร์ของตัวเอง ออเดอร์เครือข่ายที่เปิดอยู่ซึ่งมีร้านนี้ยังเปิดต่อ แต่ตะกร้าหลายร้านใหม่จะไม่มีสินค้าของร้านนี้
+      panel-title: เชิญร้านเข้า {network}
+      panel-lede: ร้านที่ตอบรับจะเข้าร่วมพร้อมแคตตาล็อก ราคา และเวลาเปิดของตัวเอง คุณเป็นคนเลือกหมวดหมู่
+      tab-email: ทางอีเมล
+      tab-link: ลิงก์แชร์
+      tab-own: เพิ่มร้านที่คุณดูแล
+      email-addresses: อีเมล
+      email-help: วางรายการอีเมล หนึ่งคำเชิญต่อหนึ่งอีเมล สมาชิกและผู้ที่เชิญแล้วจะถูกทำเครื่องหมายก่อนส่ง
+      already-flagged: '{count, plural, one {มี # อีเมลที่เป็นสมาชิกหรือเชิญแล้ว จะข้ามไป} other {มี # อีเมลที่เป็นสมาชิกหรือเชิญแล้ว จะข้ามไป}}'
+      invalid-flagged: '{count, plural, one {มี # อีเมลที่ไม่ถูกต้อง} other {มี # อีเมลที่ไม่ถูกต้อง}}'
+      category-on-joining: หมวดหมู่เมื่อเข้าร่วม
+      let-store-choose: ให้ร้านเลือกเอง
+      expires: คำเชิญหมดอายุ
+      expires-14: ใน 14 วัน
+      expires-7: ใน 7 วัน
+      expires-30: ใน 30 วัน
+      expires-never: ไม่หมดอายุ
+      message: ข้อความ (ไม่บังคับ)
+      message-placeholder: สวัสดีครับ เราอยากให้ร้านของคุณเข้าร่วม {network} ตอบรับเพื่อแสดงแคตตาล็อกในแอป
+      require-approval: ต้องให้ฉันอนุมัติหลังร้านตอบรับ
+      require-approval-help: คุณตรวจสอบร้านก่อนแสดงในแอป
+      send-count: '{count, plural, =0 {ส่งคำเชิญ} one {ส่งคำเชิญ #} other {ส่งคำเชิญ #}}'
+      sent: '{count, plural, one {ส่งคำเชิญ # รายการแล้ว} other {ส่งคำเชิญ # รายการแล้ว}}'
+      own-stores: ร้านในองค์กรของคุณ
+      own-stores-help: ร้านที่คุณดูแลจะเข้าร่วมทันที ไม่ต้องส่งคำเชิญ
+      pick-stores: เลือกร้าน
+      add-to-network: เพิ่มเข้าเครือข่าย
+      own-stores-added: '{count, plural, one {เพิ่ม # ร้านเข้าเครือข่ายแล้ว} other {เพิ่ม # ร้านเข้าเครือข่ายแล้ว}}'
+    index:
+      empty-state: สร้างเครือข่ายเพื่อขายจากหลายร้านผ่านแอปเดียว
+      create-network: สร้างเครือข่าย
+      network-option: ตัวเลือกเครือข่าย
+      manage-network: จัดการเครือข่าย
+      send-invite: ส่งคำเชิญ
+      delete-network: ลบเครือข่าย
+      create-new-network: สร้างเครือข่ายใหม่
+      success-message: สร้างเครือข่าย Storefront ใหม่แล้ว!
+      delete-this-network-all-assigned-stores-customer-order: ต้องการลบเครือข่ายนี้ ({networkName}) ใช่หรือไม่? ร้าน ลูกค้า และออเดอร์ที่อยู่ในเครือข่ายจะเข้าถึงไม่ได้อีก
+      network:
+        unsaved-title: เครือข่ายมีการเปลี่ยนแปลงที่ยังไม่บันทึก
+        unsaved-body: การย้อนกลับจะยกเลิกการเปลี่ยนแปลงที่ยังไม่บันทึกทั้งหมดของเครือข่ายนี้
+        manage-network: จัดการเครือข่าย
+        all-networks: เครือข่ายทั้งหมด
+        overview: ภาพรวม
+        settings: ตั้งค่า
+        customers: ลูกค้า
+        orders: ออเดอร์
+        trucks:
+          empty-state: ยังไม่มีรถขายของ รถขายของสร้างจากร้านและจะแสดงที่นี่สำหรับทุกร้านในเครือข่าย
+        Network-changes-not-save: ยังไม่ได้บันทึกการเปลี่ยนแปลงของเครือข่าย!
+        going-back-will-rollback-all-unsaved-changes: การย้อนกลับจะยกเลิกการเปลี่ยนแปลงที่ยังไม่บันทึกทั้งหมด ต้องการดำเนินการต่อหรือไม่?
+        index:
+          placeholder-tax: เปอร์เซ็นต์ภาษี
+          change-network-saved: บันทึกการเปลี่ยนแปลงของเครือข่ายแล้ว
+          create-new-payment-gateway: สร้าง Payment Gateway ใหม่
+          save-gateway: บันทึก Gateway
+          new-gateway-add-network: เพิ่ม Gateway ใหม่ให้เครือข่ายแล้ว
+          payment-gateway-changes-success: บันทึกการเปลี่ยนแปลง Payment Gateway แล้ว!
+          create-new-notification-channel: สร้างช่องทางแจ้งเตือนใหม่
+          create-notification-channel: สร้างช่องทางแจ้งเตือน
+          notification-channel-add-network: เพิ่มช่องทางแจ้งเตือนใหม่ให้เครือข่ายแล้ว!
+          notification-channel-changes-save: บันทึกการเปลี่ยนแปลงช่องทางแจ้งเตือนแล้ว!
+          general-network-settings-title: ตั้งค่าทั่วไปของเครือข่าย
+          general-network-settings-subtitle: ตั้งค่าทั่วไปของเครือข่ายหรือ Marketplace
+          general-network-settings-form:
+            save-changes-button-text: บันทึกการเปลี่ยนแปลง
+            name: ชื่อ
+            name-placeholder: ชื่อเครือข่าย
+            name-help-text: ชื่อเครือข่ายหรือ Marketplace ของคุณ
+            description: คำอธิบาย
+            description-placeholder: คำอธิบายเครือข่าย
+            description-help-text: อธิบายสั้นๆ ให้ผู้ใช้รู้ว่าเครือข่ายของคุณเกี่ยวกับอะไร
+            currency: สกุลเงิน
+            contact-social-panel:
+              panel-title: ช่องทางติดต่อและโซเชียล
+              phone: โทรศัพท์
+              email: อีเมล
+              email-help-text: อีเมลธุรกิจของคุณ
+              website: เว็บไซต์
+              website-help-text: URL เว็บไซต์ธุรกิจของคุณ
+              facebook: Facebook
+              facebook-help-text: Page ID ของเพจ Facebook ธุรกิจ
+              instagram: Instagram
+              instagram-help-text: ชื่อผู้ใช้ Instagram ของธุรกิจ
+              twitter: Twitter
+              twitter-help-text: ชื่อผู้ใช้ Twitter ของธุรกิจ
+            logo-backdrop-panel:
+              panel-title: โลโก้และภาพพื้นหลัง
+              logo-label: โลโก้
+              logo-help-text: โลโก้ของเครือข่าย
+              upload-logo-button-text: อัปโหลดโลโก้ใหม่
+              backdrop-label: ภาพพื้นหลัง
+              backdrop-help-text: แบนเนอร์หรือภาพพื้นหลัง (ไม่บังคับ)
+              upload-backdrop-button-text: อัปโหลดภาพพื้นหลังใหม่
+            alert-panel:
+              panel-title: การแจ้งเตือน
+              panel-description: ตั้งค่าว่าใครจะได้รับแจ้งเตือนเมื่อเกิดเหตุการณ์ต่างๆ
+              new-order-alert-label: แจ้งเตือนออเดอร์ใหม่
+              new-order-alert-placeholder: เลือกผู้ใช้ที่จะได้รับแจ้งเมื่อมีออเดอร์ใหม่
+            config-switches:
+              online: ออนไลน์
+              enable-tax: เปิดใช้ภาษี
+              tax-percentage-input-label: เปอร์เซ็นต์ภาษี
+              tax-percentage-input-help-text: เปอร์เซ็นต์ภาษีขายที่ใช้กับออเดอร์
+              enable-minimum-order-amount: เปิดใช้ยอดสั่งซื้อขั้นต่ำ
+              minimum-order-amount-input-label: ยอดสั่งซื้อขั้นต่ำ
+              minimum-order-amount-input-help-text: ยอดสั่งซื้อขั้นต่ำที่ต้องมีจึงจะชำระเงินได้
+              auto-accept-incoming-orders: รับออเดอร์ที่เข้ามาอัตโนมัติ
+              auto-dispatch-orders: จ่ายงานออเดอร์อัตโนมัติ
+              require-proof-of-delivery: ต้องมีหลักฐานการส่งมอบ
+              proof-of-delivery-method-label: วิธียืนยันการส่งมอบ
+              enable-cash-on-delivery: เปิดใช้เก็บเงินปลายทาง
+              enable-order-pickup: เปิดให้รับที่ร้าน
+              enable-tips: เปิดใช้ทิป
+              enable-delivery-tips: เปิดใช้ทิปค่าส่ง
+              enable-multi-cart-checkout: เปิดชำระเงินหลายตะกร้า
+              split-tips-across-stores: แบ่งทิปร้านให้ทุกร้านในออเดอร์หลายร้าน
+              enable-user-reviews: เปิดให้ผู้ใช้รีวิว
+          api-panel:
+            panel-title: API
+            panel-header: ตั้งค่า API
+            panel-description: Key สำหรับ Storefront API และการเชื่อมต่อ
+            network-key-label: Network Key
+            network-key-help-text: Key ของเครือข่าย ใช้เปิดใช้งานแอปและการเชื่อมต่อของเครือข่าย
+          payment-gateways-panel:
+            panel-title: ตั้งค่า Gateway
+            panel-description: เพิ่มหรือจัดการการตั้งค่า Payment Gateway ที่นี่
+            new-gateway-button-text: สร้าง Gateway ใหม่
+            gateway-form:
+              name: ชื่อ Gateway
+              name-help-text: ตั้งชื่อ Payment Gateway ใช้ภายในเท่านั้น
+              code: รหัส Gateway
+              code-help-text: รหัสที่ SDK ใช้ระบุ Gateway
+              callback-url: Callback URL
+              callback-url-help-text: Callback URL (ถ้ามี)
+              return-url: Return URL
+              return-url-help-text: Return URL (ถ้ามี)
+              sandbox-toggle-label: เป็น Gateway แบบ Sandbox
+              config-header-label: การตั้งค่า
+              delete-gateway-button-text: ลบ Payment Gateway
+          notification-channels-panel:
+            panel-title: ช่องทางแจ้งเตือน
+            panel-header: ตั้งค่าการแจ้งเตือน
+            panel-description: ตั้งค่าช่องทางแจ้งเตือนของ Storefront แต่ละช่องทางมีกฎและตัวเลือกของตัวเองได้
+            new-channel-button-text: สร้างช่องทางใหม่
+        stores:
+          store: ร้านค้า
+          suspended: ระงับ
+          suspend-short: ระงับ
+          remove-short: นำออกจากเครือข่าย
+          approve-short: อนุมัติ
+          search: ค้นหาร้าน
+          no-categories: ยังไม่มีหมวดหมู่
+          showing: แสดง {from} ถึง {to} จาก {total}
+          awaiting-approval: รออนุมัติ
+          approve: อนุมัติสมาชิก
+          reject: ไม่อนุมัติสมาชิก
+          reject-title: ไม่อนุมัติ {name}?
+          reject-body: ร้านจะไม่ได้เข้าร่วม {networkName} คำเชิญจะปิดเป็นไม่อนุมัติ เชิญใหม่ได้ภายหลัง
+          approve-done: '{count, plural, one {อนุมัติร้านแล้ว} other {อนุมัติ # ร้านแล้ว}}'
+          reject-done: '{count, plural, one {ไม่อนุมัติสมาชิกแล้ว} other {ไม่อนุมัติสมาชิก # รายแล้ว}}'
+          suspend: ระงับจากเครือข่าย
+          reinstate: คืนสถานะในเครือข่าย
+          suspend-title: '{count, plural, one {ระงับ {names}?} other {ระงับ # ร้าน?}}'
+          suspend-body: ร้านที่ถูกระงับยังเป็นสมาชิกของ {networkName} แต่จะหายจากแอปและตะกร้าจนกว่าจะคืนสถานะ หมวดหมู่และประวัติออเดอร์ยังอยู่
+          suspend-done: '{count, plural, one {ระงับร้านแล้ว} other {ระงับ # ร้านแล้ว}}'
+          reinstate-done: '{count, plural, one {คืนสถานะร้านแล้ว} other {คืนสถานะ # ร้านแล้ว}}'
+          orders-7d: ออเดอร์ · 7 วัน
+          share: สัดส่วนออเดอร์
+          joined: เข้าร่วมเมื่อ
+          empty: เครือข่ายนี้ยังไม่มีร้าน เพิ่มร้านที่มีอยู่หรือเชิญร้านใหม่
+          add-stores-button-text: เพิ่มร้าน
+          invite-stores-button-text: เชิญร้าน
+          created-at: สร้างเมื่อ
+          view-store-details: ดูร้าน
+          edit-store: เปิดร้าน
+          assign-category: เปลี่ยนหมวดหมู่
+          remove-category: นำหมวดหมู่ออก
+          remove-store-from-network: นำออกจากเครือข่าย
+          delete-network-category: ลบหมวดหมู่เครือข่าย?
+          deleting-category-move-all-stores-inside-on-top-level: การลบหมวดหมู่นี้จะย้ายร้านทั้งหมดในหมวดไปอยู่ระดับบนสุด ต้องการลบใช่หรือไม่?
+          add-store-to-category: เพิ่มร้านเข้าหมวดหมู่
+          save-change: บันทึกการเปลี่ยนแปลง
+          add-new-network-category: เพิ่มหมวดหมู่เครือข่ายใหม่
+          create-new-category: สร้างหมวดหมู่ใหม่
+          new-category-created: สร้างหมวดหมู่ใหม่แล้ว
+          network-category-create: สร้างหมวดหมู่เครือข่ายใหม่แล้ว
+          edit-category: แก้ไขหมวดหมู่ ({categoryName})
+          add-stores-to-network: เพิ่มร้านเข้าเครือข่าย
+          network-stores-update: อัปเดตร้านในเครือข่ายแล้ว
+          remove-this-store: นำร้าน ({storeName}) ออกจากเครือข่าย ({networkName})?
+          done: เสร็จ
+          longer-findable-by-this-network: ต้องการนำร้านนี้ออกจากเครือข่ายใช่หรือไม่? เครือข่ายนี้จะค้นหาร้านไม่เจออีก
+          viewing-storefront: กำลังดูร้าน {storeName}
+          editing-storefront: กำลังแก้ไขร้าน {storeName}
+          send-invitations: ส่งคำเชิญ
+          invitation-sent-recipients: ส่งคำเชิญถึงผู้รับแล้ว!
+          invalid-emails-provided-error: อีเมลไม่ถูกต้อง!
+          remove-store-category: นำร้านออกจากหมวดหมู่
+          remove-store-category-body: กำลังจะนำ {storeName} ออกจากหมวดหมู่ {categoryName} ต้องการดำเนินการต่อหรือไม่?
+  orders:
+    booking:
+      title: การจองใหม่
+      subtitle: แบบฟอร์มออเดอร์ เปิดที่บริการ
+      booking: การจอง
+      when-where: เมื่อไรและที่ไหน
+      services-products: บริการและสินค้า
+      services-hint: บริการและสินค้าที่ผู้ให้บริการนำไปด้วย
+      type: ประเภท
+      service: บริการ
+      product: สินค้า
+      brought-along: ผู้ให้บริการนำไปด้วย
+      products-ride: สินค้าในการจองจะไปพร้อมผู้ให้บริการ ไม่ต้องจัดส่งแยก และแพ็กมาสำหรับงานนั้น
+      add-service-first: เพิ่มบริการเพื่อดูวันและเวลาว่าง
+      at-customer: ที่อยู่ของลูกค้า
+      at-store: ที่ร้าน
+      at-store-short: ที่ {store}
+      where-help: ผู้ให้บริการไปหาลูกค้า หรือลูกค้ามาที่ร้าน
+      provider-from: ผู้ให้บริการออกเดินทางจาก
+      at-location: ลูกค้ามาที่
+      service-address: ที่อยู่ให้บริการ
+      job-notes: การเข้าพื้นที่และหมายเหตุงาน
+      job-notes-placeholder: เช่น กุญแจฝากไว้ที่นิติบุคคล มีแมวในห้องนอนที่สอง
+      day: วัน
+      slots: เวลาว่าง
+      start-time: เวลาเริ่ม
+      previous-week: สัปดาห์ก่อน
+      next-week: สัปดาห์ถัดไป
+      closed: ปิด
+      range: '{start} ถึง {end}'
+      hours: '{count, plural, one {# ชม.} other {# ชม.}}'
+      minutes: '{count} นาที'
+      hours-job: '{count, plural, one {งาน # ชม.} other {งาน # ชม.}}'
+      minutes-job: งาน {count} นาที
+      slots-help: เวลาคำนวณจากเวลาเปิดและความยาวของบริการ หักการจองที่มีแล้ว เวลาที่ขีดฆ่าคือเต็มแล้ว
+      left: เหลือ {count}
+      full: เต็ม
+      no-slots: วันนี้ไม่มีเวลาว่าง เวลาเปิดของบริการ (หรือของร้าน) เป็นตัวกำหนดเวลาที่จองได้
+      pick-slot: เลือกเวลาสำหรับการจอง
+      issues:
+        service: เพิ่มบริการ
+        address: เลือกที่อยู่ให้บริการ
+      payment-after: เงินสดหลังเสร็จงาน
+      payment-paid: ชำระแล้ว
+      payment-help: ชำระแล้วจะบันทึกว่าจ่ายแล้ว ไม่อย่างนั้นผู้ให้บริการเก็บเงินหลังเสร็จงาน
+      products: '{count, plural, one {สินค้า · # ชิ้น} other {สินค้า · # ชิ้น}}'
+      products-brought: '{count, plural, one {สินค้า · # ชิ้น นำไปด้วย} other {สินค้า · # ชิ้น นำไปด้วย}}'
+      travel-fee: ค่าเดินทาง
+      travel-fee-km: ค่าเดินทาง · {distance}
+      book: จอง · {total}
+      book-at: จอง {when} · {total}
+      provider: ผู้ให้บริการ
+      any-provider: ใครก็ได้ที่ว่าง
+      assign-at-confirmation: มอบหมายคนขับเมื่อยืนยันการจอง
+      choose-provider: เลือกคนขับ
+      driver: คนขับ
+      provider-help: ผู้ให้บริการคือคนขับใน Fleet-Ops ของร้าน แผนที่สดและแชทใช้ได้เหมือนคนขับทั่วไป
+      provider-not-assigned: จองแล้ว แต่มอบหมาย {name} ไม่ได้ มอบหมายจากหน้าออเดอร์
+    create:
+      add-product-from-storefront: เพิ่มสินค้าจาก Storefront
+      select-store: เลือกร้าน
+      select-category: เลือกหมวดหมู่สินค้า
+      filter-by-category: กรองตามหมวดหมู่สินค้า
+      select-product-title: เลือกสินค้าที่จะเพิ่มในออเดอร์
+      title: ออเดอร์ใหม่
+      fulfillment-help: รับที่ร้านจะซ่อนจุดส่งและค่าจัดส่ง นัดหมายจะเพิ่มเวลาภายในเวลาทำการ
+      store-location: สาขาร้าน
+      no-locations: ร้านนี้ยังไม่มีสาขา เพิ่มได้ที่ตั้งค่า
+      add-products: เพิ่มสินค้า
+      options: ตัวเลือก
+      qty: จำนวน
+      decrease: ลดจำนวน
+      increase: เพิ่มจำนวน
+      promotion: โปรโมชัน
+      method: วิธีชำระ
+      product: สินค้า
+      price: ราคา
+      fulfillment: การส่งมอบ
+      subtitle: ออเดอร์จาก console ใช้ขั้นตอนเดียวกับออเดอร์จากแอป
+      change-customer: เปลี่ยนลูกค้า
+      customer-placeholder: ค้นหาลูกค้าด้วยชื่อ เบอร์โทร หรืออีเมล
+      customer-help: เลือกลูกค้าเพื่อเติมสถานที่ด้านล่าง
+      schedule: นัดหมาย
+      pickup-from: รับจาก
+      change-address: เปลี่ยนที่อยู่
+      leaves-from: ออกจาก
+      location-help: สาขาของร้าน เวลาเปิดของสาขากำหนดว่าแคตตาล็อกมีอะไรให้เลือก
+      deliver-to: ส่งถึง
+      no-places: ยังไม่มีสถานที่ที่บันทึก เลือกที่อยู่อื่นหรือเพิ่มใหม่
+      other-address: ที่อยู่อื่น
+      pick-customer-first: เลือกลูกค้าเพื่อดูสถานที่ที่บันทึกไว้
+      dropoff-help: สถานที่ที่บันทึกของลูกค้า ที่อยู่อื่น หรือที่อยู่ใหม่ที่จะบันทึกให้ลูกค้า
+      new-address: ที่อยู่ใหม่
+      street-placeholder: ที่อยู่
+      unit-placeholder: ห้อง ชั้น หรืออาคาร
+      address-name-placeholder: ชื่อเรียก เช่น บ้าน
+      save-address: บันทึกที่อยู่
+      address-saved: บันทึกที่อยู่ให้ {name} แล้ว
+      items-hint: จากสินค้าที่เผยแพร่ของร้าน
+      store-hint: ร้านสมาชิกที่รับออเดอร์นี้
+      each: ต่อชิ้น
+      choose-options: เลือกตัวเลือก แล้วเพิ่มลงออเดอร์
+      add-to-order: เพิ่มลงออเดอร์
+      max: (สูงสุด {max})
+      max-addons: เลือกได้สูงสุด {max} จาก {category}
+      variant-required: เลือก{variant}
+      picker-hint: กดที่สินค้าเพื่อเพิ่ม สินค้าที่มีตัวเลือกจะถามก่อน
+      no-products: ไม่มีสินค้าที่เผยแพร่ตรงกับการค้นหา
+      notes: หมายเหตุออเดอร์
+      notes-placeholder: สิ่งที่ร้านหรือคนขับควรรู้
+      summary: สรุป
+      promo-placeholder: โค้ดโปรโมชัน
+      apply: ใช้
+      promo-applied: ใช้ {name} แล้ว
+      promo-rejected: ใช้ {code} ไม่ได้ ({reason})
+      payment-cash: เก็บเงินปลายทาง
+      payment-paid: ตั้งว่าชำระแล้ว (สั่งทางโทรศัพท์)
+      payment-help: การชำระด้วยบัตรทำในแอป ออเดอร์จาก console เป็นเงินสดหรือชำระแล้วเท่านั้น
+      tip: ทิป
+      tip-none: ไม่มี
+      tip-custom: กำหนดเอง
+      subtotal: ยอดรวมย่อย · {count, plural, one {# ชิ้น} other {# ชิ้น}}
+      discount: โปรโมชัน
+      delivery-fee: ค่าจัดส่ง
+      pricing: กำลังคำนวณราคาผ่าน API…
+      minimum-met: ถึงยอดขั้นต่ำ {amount} แล้ว
+      ready: พร้อมสั่ง
+      place: สั่งออเดอร์ · {total}
+      placed: สั่งออเดอร์ {id} แล้ว
+      issues:
+        store: เลือกร้านที่รับออเดอร์
+        customer: เลือกลูกค้า
+        items: เพิ่มสินค้าอย่างน้อย 1 รายการ
+        dropoff: เลือกที่ส่งออเดอร์
+        location: เลือกสาขาร้าน
+        minimum: ยังไม่ถึงยอดขั้นต่ำ {amount}
+    index:
+      subtitle: ออเดอร์จากแอปและ console ล่าสุดก่อน
+      search: ค้นหาออเดอร์
+      empty-title: ยังไม่มีออเดอร์
+      empty-help: ออเดอร์จากแอปและจาก console จะแสดงที่นี่
+      items: สินค้า
+      internal-id: รหัสภายใน
+      customer: ลูกค้า
+      select-order-customer: เลือกลูกค้าของออเดอร์
+      select-order-pickup-location: เลือกจุดรับของออเดอร์
+      select-order-dropoff-location: เลือกจุดส่งของออเดอร์
+      scheduled-at: นัดหมาย
+      transaction-total: ยอดธุรกรรม
+      total: ยอดรวม
+      tracking-number: เลขติดตามพัสดุ
+      driver-assigned: คนขับที่มอบหมาย
+      select-driver-for-order: เลือกคนขับให้ออเดอร์
+      created-at: สร้างเมื่อ
+      updated-at: อัปเดตเมื่อ
+      created-by: สร้างโดย
+      updated-by: อัปเดตโดย
+      select-user: เลือกผู้ใช้
+      view-order: ดูออเดอร์
+      cancel-order: ยกเลิกออเดอร์
+      delete-order: ลบออเดอร์
+      view:
+        route-panel-title: เส้นทาง
+        comments-title: ความเห็น
+        notes-title: หมายเหตุ
+        dispatch: จ่ายงาน
+        unassign-driver: ยกเลิกการมอบหมายคนขับ
+        assign-driver: มอบหมายคนขับ
+        cancel-order: ยกเลิกออเดอร์
+        delete-order: ลบออเดอร์
+        activity: กิจกรรม
+        unable-load-order-activity: โหลดกิจกรรมออเดอร์ไม่ได้
+        ad-hoc: Ad-Hoc
+        customer: ลูกค้า
+        facilitator: ผู้ประสานงาน
+        driver-assigned: คนขับที่มอบหมาย
+        change-driver: เปลี่ยนคนขับ
+        tracking-number: เลขติดตามพัสดุ
+        date-scheduled: วันนัดหมาย
+        date-dispatched: วันจ่ายงาน
+        date-started: วันเริ่ม
+        order-details-title: รายละเอียดออเดอร์
+        route: เส้นทาง
+        pickup: จุดรับ
+        dropoff: จุดส่ง
+        return: จุดส่งคืน
+        order-summary: สรุปออเดอร์
+        subtotal: ยอดรวมย่อย
+        delivery-fee: ค่าจัดส่ง
+        tip: ทิป
+        delivery-tip: ทิปค่าส่ง
+        total: ยอดรวม
+        payload: สินค้า
+        items-drop: ส่งสินค้าที่
+        tracking: การติดตาม
+        view-activity: ดูกิจกรรม
+        order-metadata: Metadata ของออเดอร์
+        unassign-title: ต้องการยกเลิกการมอบหมายคนขับ ({driverName}) จากออเดอร์นี้ใช่หรือไม่?
+        unassign-body: เมื่อยกเลิกแล้ว คนขับจะเข้าถึงรายละเอียดออเดอร์นี้ไม่ได้อีก
+        unassign-success: ยกเลิกการมอบหมายคนขับจากออเดอร์นี้แล้ว
+        route-error: จัดเส้นทางไม่สำเร็จ ตรวจสอบจุดในเส้นทางแล้วลองอีกครั้ง
+        invalid-warning: สถานะกำหนดเองไม่ถูกต้อง
+        change-order: เปลี่ยนคนขับของออเดอร์
+        assign-order: มอบหมายคนขับให้ออเดอร์
+        assign-success: อัปเดตคนขับของ {orderId} แล้ว
+        order-title: ฉลากออเดอร์
+        waypoint-title: ฉลากจุดแวะ
+        proof-of-delivery: หลักฐานการส่งมอบ (POD)
+        notes-placeholder: พิมพ์หมายเหตุออเดอร์ที่นี่....
+        save-order-note: บันทึกหมายเหตุออเดอร์
+        order-notes-updated: อัปเดตหมายเหตุออเดอร์แล้ว
+  products:
+    sidebar:
+      categories: หมวดหมู่
+      categories-help: จัดสินค้าให้เลือกดูง่าย กดลูกศรเพื่อพับหมวดหมู่
+      new-category: หมวดหมู่ใหม่
+      new-subcategory: หมวดหมู่ย่อยใหม่
+      all-products: สินค้าทั้งหมด
+      no-categories: ยังไม่มีหมวดหมู่
+      smart-groups: กลุ่มอัจฉริยะ
+    empty:
+      help: สร้างหมวดหมู่ แล้วเพิ่มสินค้าเข้าไป
+      category-help: สร้างสินค้าแรกในหมวดหมู่นี้
+    booking:
+      title: การจอง
+      hint: วิธีที่ลูกค้าจองบริการนี้
+      duration: ความยาวการจอง (นาที)
+      duration-help: ช่วงเวลาจะแบ่งจากเวลาเปิดของบริการ (หรือของร้าน) ตามความยาวนี้
+      capacity: จำนวนการจองพร้อมกัน
+      capacity-help: จำนวนลูกค้าที่จองช่วงเวลาเดียวกันได้ เช่น จำนวนผู้ให้บริการ
+    inventory:
+      title: สต็อก
+      track: ติดตามสต็อกของสินค้านี้
+      help-on: ออเดอร์จะตัดสต็อกจากสาขาที่จัดส่ง ระหว่างลูกค้าชำระเงินจะกันสต็อกไว้ 15 นาที และออเดอร์ที่ยกเลิกจะคืนสต็อก
+      help-off: ไม่จำกัด เปิดเพื่อนับสต็อกแต่ละสาขาและหยุดขายเมื่อหมด
+      save-first: บันทึกสินค้าก่อนจึงจะตั้งสต็อกได้
+      available-total: พร้อมขาย {count}
+      out-of-stock: สินค้าหมด
+      only-left: เหลือเพียง {count}
+      location: สาขา
+      on-hand: คงเหลือ
+      on-hand-for: คงเหลือที่ {location}
+      held: กันไว้
+      available: พร้อมขาย
+      low-at: แจ้งเตือนเมื่อเหลือ
+      low-at-for: เกณฑ์สต็อกต่ำที่ {location}
+      backorder: สั่งล่วงหน้า
+      backorder-for: อนุญาตสั่งล่วงหน้าที่ {location}
+      note-placeholder: หมายเหตุการเปลี่ยนแปลง เช่น รับสินค้าเข้า
+      save: บันทึกสต็อก
+      saved: บันทึกสต็อกแล้ว
+      no-locations: ร้านนี้ไม่มีสาขาหรือรถขายของสำหรับเก็บสต็อก
+      recent: การเปลี่ยนแปลงล่าสุด
+      types:
+        adjustment: ปรับยอด
+        restock: เติมสต็อก
+        reservation: กันไว้สำหรับการชำระเงิน
+        release: ปล่อยคืนจากการชำระเงิน
+        sale: ขายแล้ว
+        cancellation: คืนสต็อก (ยกเลิกออเดอร์)
+        edit: แก้ไขออเดอร์
+    groups:
+      out-of-stock: ไม่พร้อมขาย
+      low-stock: สต็อกต่ำ
+      drafts: ฉบับร่าง
+      recommended: แนะนำ
+      on-sale: ลดราคา
+      uncategorized: ไม่มีหมวดหมู่
+    statuses:
+      published: เผยแพร่
+      draft: ฉบับร่าง
+    card:
+      untitled: สินค้าไม่มีชื่อ
+      updated: อัปเดต {ago}ที่แล้ว
+      ago: '{ago}ที่แล้ว'
+      unavailable: ไม่พร้อมขาย
+      variants: '{count, plural, =0 {ไม่มีตัวเลือก} one {# ตัวเลือก} other {# ตัวเลือก}}'
+      simple: สินค้าธรรมดา
+      in-catalogs: '{count, plural, one {อยู่ใน # แคตตาล็อก} other {อยู่ใน # แคตตาล็อก}}'
+      addons: '{count, plural, =0 {ไม่มีสินค้าเสริม} one {สินค้าเสริม #} other {สินค้าเสริม #}}'
+      service: บริการ
+      bookable: จองได้
+      missing: 'ขาด: {items}'
+      restock-hint: สินค้าหมดแต่ยังเผยแพร่อยู่ เติมสต็อกหรือยกเลิกการเผยแพร่
+    sort:
+      label: 'เรียง: {sort}'
+      recently-updated: อัปเดตล่าสุด
+      newest: ใหม่สุดก่อน
+      name: ชื่อ
+      price-low: ราคา ต่ำไปสูง
+      price-high: ราคา สูงไปต่ำ
+    bulk:
+      publish: เผยแพร่
+      unpublish: ยกเลิกการเผยแพร่
+      move: ย้ายไปหมวดหมู่
+      mark-on-sale: ตั้งเป็นลดราคา
+      add-to-catalog: เพิ่มเข้าแคตตาล็อก
+      add-to-catalog-title: เพิ่ม {count, plural, one {# สินค้า} other {# สินค้า}} เข้าแคตตาล็อก
+      pick-catalog: เลือกแคตตาล็อก
+      pick-category: เลือกหมวดหมู่
+      pick-catalog-first: เลือกแคตตาล็อกและหมวดหมู่ก่อน
+      catalog-help: แคตตาล็อกหนึ่งของร้านนี้
+      category-help: หมวดหมู่ในแคตตาล็อกที่จะแสดงสินค้า
+      no-categories: แคตตาล็อกนี้ยังไม่มีหมวดหมู่ เพิ่มในตัวแก้ไขแคตตาล็อกก่อน
+      added-to-catalog: '{count, plural, one {เพิ่ม # สินค้า} other {เพิ่ม # สินค้า}} เข้า {category} ใน {catalog} แล้ว'
+      published: '{count, plural, one {เผยแพร่ # สินค้าแล้ว} other {เผยแพร่ # สินค้าแล้ว}}'
+      unpublished: '{count, plural, one {ยกเลิกการเผยแพร่ # สินค้าแล้ว} other {ยกเลิกการเผยแพร่ # สินค้าแล้ว}}'
+      on-sale: '{count, plural, one {ตั้ง # สินค้าเป็นลดราคาแล้ว} other {ตั้ง # สินค้าเป็นลดราคาแล้ว}}'
+      move-title: ย้าย {count, plural, one {# สินค้า} other {# สินค้า}} ไปหมวดหมู่
+      moved: '{count, plural, one {ย้าย # สินค้า} other {ย้าย # สินค้า}} ไป {category} แล้ว'
+      delete-title: ลบ {count, plural, one {# สินค้า} other {# สินค้า}}?
+    addons:
+      title: สินค้าเสริม
+      subtitle: กลุ่มที่ใช้ซ้ำได้ซึ่งลูกค้าเลือกตอนชำระเงิน เช่น ท็อปปิ้งหรือเครื่องเคียง
+      groups: กลุ่ม
+      new-group: กลุ่มใหม่
+      untitled-group: กลุ่มไม่มีชื่อ
+      group-name: ชื่อกลุ่ม
+      delete-group: ลบกลุ่ม
+      delete-group-title: ลบ {name}?
+      delete-group-body: สินค้าเสริมในกลุ่มจะถูกนำออกจากทุกสินค้าที่ใช้กลุ่มนี้
+      name: ชื่อ
+      description: คำอธิบาย
+      add-addon: เพิ่มสินค้าเสริม
+      no-addons: กลุ่มนี้ยังไม่มีสินค้าเสริม
+      no-groups: ยังไม่มีกลุ่ม
+      pick-group: สร้างกลุ่มเพื่อเริ่มเพิ่มสินค้าเสริม
+      saved: บันทึกสินค้าเสริมแล้ว
+    form:
+      add-metafield: เพิ่ม Metafield
+      actions:
+        make-primary: ตั้งเป็นหลัก
+        new-variant: ตัวเลือกใหม่
+        remove-variant: นำตัวเลือกออก
+        edit-variant: แก้ไขตัวเลือก
+        select-addon-categories: เลือกหมวดหมู่สินค้าเสริม
+      tabs:
+        details: รายละเอียด
+        variants: ตัวเลือกและสินค้าเสริม
+        availability: การขาย
+        media: สื่อ
+      sections:
+        organization: การจัดกลุ่ม
+        product: สินค้า
+        pricing: ราคา
+        flags: การแสดงผล
+        videos: วิดีโอ YouTube
+        media: รูปภาพและวิดีโอ
+        variants: ตัวเลือก
+        addons: สินค้าเสริม
+        translations: คำแปล
+      fields:
+        name: ชื่อ
+        name-placeholder: ชื่อสินค้าที่แสดงในแอป เช่น พิซซ่ามาร์เกอริต้า
+        description: คำอธิบาย
+        description-placeholder: ข้อความที่ลูกค้าอ่านในแอป
+        category: หมวดหมู่
+        category-placeholder: เลือกหมวดหมู่
+        sku: SKU
+        sku-placeholder: เช่น PIZ-MARG-12
+        sku-help: ไม่บังคับ แสดงในรายการออเดอร์และไฟล์ส่งออก
+        tags: แท็ก
+        tags-placeholder: เพิ่มแท็ก
+        price: ราคา
+        price-help: ราคาที่ลูกค้าจ่ายต่อหนึ่งหน่วย
+        sale-price: ราคาลด
+        sale-price-help: ใช้แทนราคาปกติระหว่างที่สินค้าลดราคา
+        video-placeholder: https://www.youtube.com/watch?v=...
+        video-urls: URL วิดีโอ YouTube
+        video-urls-help: วิดีโอที่แสดงในหน้าสินค้าในแอป
+        no-options: ตัวเลือกนี้ยังไม่มีรายการ
+        checkout-modifiers: ตัวปรับตอนชำระเงิน
+      flags:
+        service: เป็นบริการ (จอง ไม่ต้องจัดส่ง)
+        bookable: บริการนี้จองได้
+        on-sale: ลดราคา แสดงราคาลด
+        recommended: แนะนำ ปักไว้บนสุดของหมวดหมู่
+        available: พร้อมให้สั่ง
+      status-help: ฉบับร่างจะซ่อนในแอปจนกว่าจะเผยแพร่
+      hours-hint: เวลาที่สั่งสินค้านี้ได้
+      hours-empty: ไม่ได้ตั้งเวลา สั่งได้ทุกเวลาที่ร้านเปิด
+      variants:
+        hint: ตัวเลือกบังคับหรือไม่บังคับ เช่น ขนาด แต่ละรายการบวกราคาเพิ่มได้
+        new-option: รายการ{name}ใหม่
+        add-option: เพิ่มรายการ
+        required: บังคับ
+        multiple: เลือกได้หลายรายการ
+        none: ไม่มีตัวเลือก เพิ่มสำหรับขนาดหรือรสชาติ
+        option-name: ชื่อรายการ
+        option-description: คำอธิบายรายการ
+        option: รายการ
+        extra-cost: ราคาเพิ่ม
+        optional: ไม่บังคับ
+        pick-one: เลือกหนึ่งรายการ
+        options-count: '{count, plural, =0 {ไม่มีรายการ} one {# รายการ} other {# รายการ}}'
+        edit: แก้ไขตัวเลือก
+        remove: นำตัวเลือกออก
+      videos:
+        add: เพิ่มวิดีโอ
+        invalid: ไม่ใช่ลิงก์ YouTube วางลิงก์ดู แชร์ หรือ Shorts
+      addons:
+        hint: กลุ่มสินค้าเสริมที่ใช้ซ้ำได้ ติ๊กออกเพื่อซ่อนสินค้าเสริมสำหรับสินค้านี้
+        no-description: ไม่มีคำอธิบาย
+        group-empty: กลุ่มนี้ยังไม่มีสินค้าเสริม
+        none: ยังไม่ได้แนบกลุ่มสินค้าเสริม
+        offered: เสนอ {offered} จาก {total}
+        hidden: ซ่อน
+        remove-group: นำกลุ่มออก
+      more: เพิ่มเติม
+      more-subtitle: คำแปล ({translations}), Metadata ({metadata} คีย์)
+      metadata: Metadata
+      metadata-subtitle: '{count, plural, =0 {ไม่มีคีย์} one {# คีย์} other {# คีย์}} สำหรับการเชื่อมต่อ'
+      translations:
+        hint: ชื่อและคำอธิบายในภาษาอื่น แอปจะแสดงภาษาของลูกค้าถ้ามี
+        add-language: เพิ่มภาษา
+        remove-language: นำ {language} ออก
+        placeholder: เหมือนต้นฉบับ
+        custom-fields: ฟิลด์กำหนดเอง
+        new-field: คีย์ฟิลด์ใหม่ เช่น ingredients
+        add-field: เพิ่มฟิลด์
+        help: ฟิลด์ว่างจะแสดงข้อความต้นฉบับในแอป
+        none: ยังไม่ได้แปล เพิ่มภาษาเพื่อแปลชื่อและคำอธิบาย
+      needs-attention: '{count, plural, one {มี # ฟิลด์ที่ต้องแก้} other {มี # ฟิลด์ที่ต้องแก้}}'
+      create: สร้างสินค้า
+      creating: กำลังสร้างสินค้า...
+      save: บันทึกการเปลี่ยนแปลง
+      issues:
+        name: ตั้งชื่อสินค้า
+        price: ตั้งราคา
+        sale-price: ราคาลดต้องต่ำกว่าราคาปกติ
+        sale-price-missing: สินค้าลดราคาแต่ยังไม่มีราคาลด
+        category: สินค้าที่เผยแพร่ต้องมีหมวดหมู่
+        media: สินค้าที่เผยแพร่ควรมีรูปอย่างน้อย 1 รูป
+    index:
+      summary: '{products, plural, =0 {ไม่มีสินค้า} one {# สินค้า} other {# สินค้า}} · {categories, plural, =0 {ไม่มีหมวดหมู่} one {# หมวดหมู่} other {# หมวดหมู่}}'
+      summary-categories: '{categories, plural, =0 {ไม่มีหมวดหมู่} one {# หมวดหมู่} other {# หมวดหมู่}}'
+      search: ค้นหาสินค้า
+      new-product: สินค้าใหม่
+      edit-category: แก้ไขหมวดหมู่นี้…
+      delete-category: ลบหมวดหมู่นี้…
+      manage-addons: จัดการสินค้าเสริม
+      view-grid: ตาราง
+      view-list: รายการ
+      manage-addons-dialog:
+        manage-addons-title: จัดการหมวดหมู่และรายการสินค้าเสริม
+        manage-addons-accept-button: บันทึกการเปลี่ยนแปลง
+      done: เสร็จ
+      create-new-product-category: สร้างหมวดหมู่สินค้าใหม่
+      create-new-product-subcategory: หมวดหมู่ใหม่ใต้ {parent}
+      category-meta: '{path} · {products, plural, =0 {ไม่มีสินค้า} one {# สินค้า} other {# สินค้า}}'
+      product-category-created-success: สร้างหมวดหมู่สินค้าใหม่แล้ว
+      import-products-via-spreadsheets: นำเข้าสินค้าจากสเปรดชีต
+      start-upload: เริ่มอัปโหลด
+      warning-no-file-upload: ไม่มีไฟล์ในคิวอัปโหลด!
+      products-success-message: นำเข้าสินค้า {resultsLength} รายการแล้ว...
+      delete-product: ต้องการลบสินค้านี้ใช่หรือไม่?
+      body-warning: คำเตือน! เมื่อลบแล้วจะเข้าถึงสินค้านี้ไม่ได้อีก
+      aside-scroller:
+        title: หมวดหมู่สินค้า
+        custom-top-item-text: สินค้าทั้งหมด
+      import-products-success-message: นำเข้าสินค้า {resultsLength} รายการแล้ว...
+      edit:
+        title: ยังไม่ได้บันทึกสินค้า!
+        body: การเปลี่ยนแปลงที่ยังไม่บันทึกจะหายไป ต้องการยกเลิกใช่หรือไม่?
+        changes-saved: บันทึกการเปลี่ยนแปลงแล้ว!
+      new:
+        new-product-created-success: สร้างสินค้าใหม่แล้ว!
+        warning-only-select-an-image-file-to-be-primary: เลือกได้เฉพาะไฟล์รูปเป็นรูปหลัก!
+        made-the-primary-success-image: ตั้ง {fileName} เป็นรูปหลักแล้ว
+        title: ยังไม่ได้บันทึกสินค้า!
+        body: การย้อนกลับจะยกเลิกการสร้างสินค้านี้ ถ้าดำเนินการต่อ ข้อมูลที่กรอกทั้งหมดจะถูกล้าง!
+        select-addon-categories: เลือกหมวดหมู่สินค้าเสริม
+        add-new-product-variant: เพิ่มตัวเลือกสินค้าใหม่
+        edit-product-variant: แก้ไขตัวเลือกสินค้า
+        untitled-field: ฟิลด์ไม่มีชื่อ
+      category:
+        category: หมวดหมู่
+        title: ยังไม่ได้บันทึกสินค้า!
+        body: คำเตือน! การลบหมวดหมู่นี้จะลบสินค้าทั้งหมดในหมวดด้วย
+        edit-category: แก้ไขหมวดหมู่
+        save-changes: บันทึกการเปลี่ยนแปลง
+        category-changes-saved-success: บันทึกการแก้ไขหมวดหมู่แล้ว
+        delete-product: ต้องการลบสินค้านี้ใช่หรือไม่?
+        body-warning: คำเตือน! เมื่อลบแล้วจะเข้าถึงสินค้านี้ไม่ได้อีก
+  settings:
+    hours:
+      lede: เวลาเปิดของแต่ละสาขา แอปจะเสนอเฉพาะสิ่งที่อยู่ในเวลานี้ แก้ไขได้ที่สาขา
+      edit: แก้ไขเวลา
+      open-days: '{count, plural, =0 {ปิดทุกวัน} one {เปิดสัปดาห์ละ # วัน} other {เปิดสัปดาห์ละ # วัน}}'
+      empty: ยังไม่มีสาขา เวลาเปิดเป็นของสาขา จึงต้องเพิ่มสาขาก่อน
+    danger:
+      lede: การดำเนินการที่นี่ย้อนกลับไม่ได้
+      delete-title: ลบ {name}
+      delete-description: ลบร้าน สินค้า แคตตาล็อก สาขา และการตั้งค่า ออเดอร์ที่สั่งแล้วยังเก็บไว้
+      delete-button: ลบร้าน
+      confirm-title: ลบ {name}?
+      confirm-body: ร้านและทุกอย่างของร้านจะถูกลบถาวร ออเดอร์ที่สั่งแล้วยังเก็บไว้ ย้อนกลับไม่ได้
+      deleted: ลบ {name} แล้ว
+    shell:
+      copy-store-key: คัดลอก Store Key
+      store-key-copied: คัดลอก Store Key แล้ว
+    sections:
+      app-review: App Review
+      select-gateway-type: เลือกประเภท Gateway
+      hours: เวลาเปิด
+      locations: สาขา
+      payment-gateways: Payment Gateway
+      notification-channels: ช่องทางแจ้งเตือน
+      danger: โซนอันตราย
+      general: ทั่วไป
+      branding: แบรนด์และสื่อ
+      checkout-rules: กฎการชำระเงิน
+      checkout-rules-lede: สิ่งที่แอปอนุญาตในตะกร้าและตอนชำระเงิน
+      messages: ข้อความออเดอร์
+      messages-lede: ข้อความตอบด่วนเมื่อร้านส่งข้อความหาลูกค้าเรื่องออเดอร์
+      alerts: การแจ้งเตือน
+      api-keys: API Key
+      store-key: Store Key
+      timezone: เขตเวลา
+      timezone-help: เวลาเปิดและออเดอร์นัดหมายจะอ่านตามเขตเวลานี้
+      timezone-search: ค้นหาเขตเวลา เช่น Bangkok
+      store-key-help: ใช้โดยแอปและ API เปลี่ยนไม่ได้
+      default-order-config: Order Config เริ่มต้น
+      default-order-config-help: ใช้กับทุกออเดอร์ที่สร้างให้ร้านนี้
+      default-order-config-placeholder: เลือก Order Config เริ่มต้น
+      network-key: Network Key
+      network-key-help: ใช้โดยแอปและ API เปลี่ยนไม่ได้
+      gateways: Payment Gateway
+      notifications: ช่องทางแจ้งเตือน
+      contact-social: ช่องทางติดต่อและโซเชียล
+      network-rules-lede: สิ่งที่แอปอนุญาตสำหรับทุกร้านในเครือข่ายนี้
+      copy-network-key: คัดลอก Network Key
+      network-key-copied: คัดลอก Network Key แล้ว
+    messages:
+      quick-replies: ข้อความตอบด่วนสำหรับออเดอร์
+      quick-replies-help: หนึ่งข้อความต่อหนึ่งบรรทัด เว้นว่างเพื่อใช้ข้อความเริ่มต้นที่แสดง
+      quick-replies-placeholder: 'กำลังเตรียมออเดอร์ของคุณ
+
+        คนขับกำลังไป
+
+        ขออภัย เราช้ากว่ากำหนดประมาณ 10 นาที
+
+        ช่วยยืนยันที่อยู่จัดส่งได้ไหม?'
+      booking-quick-replies: ข้อความตอบด่วนสำหรับการจอง
+      booking-quick-replies-help: หนึ่งข้อความต่อหนึ่งบรรทัด เว้นว่างเพื่อใช้ข้อความเริ่มต้นของการจอง ข้อความของออเดอร์จะไม่ใช้กับการจอง
+      booking-quick-replies-placeholder: 'ยืนยันการจองแล้ว
+
+        ผู้ให้บริการกำลังไป
+
+        ขออภัย เราช้ากว่ากำหนดประมาณ 10 นาที
+
+        ช่วยยืนยันที่อยู่และวิธีเข้าพื้นที่ได้ไหม?'
+      note: ข้อความตอบกลับคนขับไม่ได้ตั้งที่นี่ console มีชุดข้อความของตัวเอง
+    rules:
+      online: ลูกค้าเห็นและสั่งจากร้านนี้ในแอปได้
+      pickup-label: ออเดอร์รับที่ร้าน
+      pickup: ลูกค้ารับที่สาขาแทนการจัดส่งได้
+      tips-label: ทิปร้าน
+      tips: ลูกค้าให้ทิปร้านตอนชำระเงินได้
+      delivery-tips-label: ทิปค่าส่ง
+      delivery-tips: ลูกค้าให้ทิปคนขับตอนชำระเงินได้
+      minimum-label: ยอดสั่งซื้อขั้นต่ำ
+      minimum: ตะกร้าที่ต่ำกว่ายอดนี้ชำระเงินไม่ได้
+      cod-label: เก็บเงินปลายทาง
+      cod: ลูกค้าจ่ายเงินสดให้คนขับเมื่อสินค้าถึงได้
+      tax-label: ภาษี
+      tax: บวกภาษีทุกออเดอร์ตามเปอร์เซ็นต์ด้านล่าง
+      auto-accept-label: รับออเดอร์อัตโนมัติ
+      auto-accept: ออเดอร์ใหม่ข้ามขั้นตอนยืนยันและเริ่มเตรียมเลย
+      auto-dispatch-label: จ่ายงานอัตโนมัติ
+      auto-dispatch: ออเดอร์จะถูกจ่ายงานเข้า Fleet-Ops ทันทีที่พร้อม
+      pod-label: หลักฐานการส่งมอบ
+      pod: คนขับต้องบันทึกหลักฐานก่อนปิดออเดอร์
+      network-note: กฎระดับเครือข่าย (ชำระหลายตะกร้า แบ่งทิป) อยู่ในการตั้งค่าของเครือข่าย
+      online-network: ลูกค้าเลือกดูและสั่งจากเครือข่ายนี้ในแอปได้
+      multi-cart-label: ชำระเงินหลายตะกร้า
+      multi-cart: ลูกค้าชำระสินค้าจากหลายร้านในออเดอร์เดียวได้
+      split-tips-label: แบ่งทิปร้านให้ทุกร้าน
+      split-tips: ทิปร้านของออเดอร์หลายร้านจะแบ่งตามสัดส่วนของแต่ละร้าน ถ้าปิด เครือข่ายเก็บไว้
+      reviews-label: รีวิวจากลูกค้า
+      reviews: ลูกค้ารีวิวสินค้าและร้านได้หลังออเดอร์เสร็จ
+    app-review:
+      lede: Apple และ Google ทดสอบแอปก่อนเผยแพร่ และผู้ตรวจรับ SMS ไม่ได้ เปิดเพื่อให้ผู้ตรวจเข้าสู่ระบบด้วยเบอร์ทดสอบและรหัสที่คุณให้ App Store
+      'on': เปิด
+      'off': ปิด
+      phone-label: เบอร์โทรของผู้ตรวจ
+      phone-help: เบอร์ทดสอบที่ไม่มีการส่ง SMS ใช้เบอร์เดียวกันทุกร้าน รหัสเป็นตัวกำหนดว่าจะเข้าร้านไหน
+      code-label: รหัสเข้าสู่ระบบ
+      code-new: คัดลอกรหัสตอนนี้ แสดงเพียงครั้งเดียว
+      code-hidden: สร้างรหัสเมื่อ {date} แสดงเพียงครั้งเดียว ถ้าหายให้สร้างใหม่
+      code-none: ยังไม่มีรหัส การเปิดใช้จะสร้างรหัสให้
+      where: ใน App Store Connect ใส่ทั้งสองที่ App Review Information, Sign-in required ใน Google Play Console ใส่ที่ App content, App access
+      orders: ออเดอร์ที่ผู้ตรวจสั่งจะถูกทำเครื่องหมายว่าเป็นออเดอร์ทดสอบ App Review และไม่ส่งให้คนขับ ไม่ต้องจัดส่ง
+      turn-on: เปิด
+      turn-off: ปิด
+      turn-off-title: ปิดการเข้าถึงของ App Review?
+      turn-off-body: ผู้ตรวจจะเข้าสู่ระบบ {name} ไม่ได้อีก ปิดเมื่อแอปได้รับอนุมัติ และเปิดอีกครั้งก่อนส่งอัปเดต
+      regenerate: สร้างรหัสใหม่
+      regenerate-title: สร้างรหัสใหม่?
+      regenerate-body: รหัสปัจจุบันจะใช้ไม่ได้ทันที ใส่รหัสใหม่ใน App Store Connect และ Google Play Console
+      turned-on: เปิดการเข้าถึงของ App Review แล้ว
+      turned-off: ปิดการเข้าถึงของ App Review แล้ว
+      regenerated: สร้างรหัสใหม่แล้ว
+    rotate-key:
+      button: เปลี่ยน Key
+      help: การเปลี่ยนจะออก Key ใหม่ แอปและการเชื่อมต่อที่ใช้ Key เดิมจะถูกปฏิเสธทันทีจนกว่าจะอัปเดตเป็น Key ใหม่
+      title: เปลี่ยน {type} Key?
+      body: '{name} จะได้ Key ใหม่ และ Key เดิมจะใช้ไม่ได้ทันที ทุกแอป เว็บไซต์ และการเชื่อมต่อที่ใช้อยู่จะถูกปฏิเสธจนกว่าจะอัปเดตเป็น Key ใหม่'
+      confirm: เปลี่ยน Key
+      done: เปลี่ยน {type} Key แล้ว อัปเดตแอปด้วย Key ใหม่
+    save-bar:
+      unsaved: '{count, plural, one {มี # การเปลี่ยนแปลงที่ยังไม่บันทึก} other {มี # การเปลี่ยนแปลงที่ยังไม่บันทึก}}'
+      saved: บันทึกทั้งหมดแล้ว
+      saved-toast: บันทึกการเปลี่ยนแปลงแล้ว
+      discard: ยกเลิกการแก้ไข
+      save: บันทึกการตั้งค่า
+    api:
+      api-settings: ตั้งค่า API
+      access-key-for-storefront-api-integrations: Key สำหรับ Storefront API และการเชื่อมต่อ
+      store-key: Store Key
+      store-key-help-text: Key ของร้าน ใช้เปิดใช้งานแอปและการเชื่อมต่อของร้าน
+    gateways:
+      empty: ยังไม่มี Payment Gateway เพิ่มเพื่อให้ลูกค้าชำระเงินในแอปได้
+      geteway-settings: ตั้งค่า Gateway
+      add-or-manage-your-paymeny-gateway-settings-here: เพิ่มหรือจัดการการตั้งค่า Payment Gateway ที่นี่
+      create-new-gateway: สร้าง Gateway ใหม่
+      gateway-name: ชื่อ Gateway
+      gateway-help-text: ตั้งชื่อ Payment Gateway ใช้ภายในเท่านั้น
+      gateway-code: รหัส Gateway
+      gateway-code-help-text: รหัสที่ SDK ใช้ระบุ Gateway
+      callback-url: Callback URL
+      callback-url-help-text: Callback URL (ถ้ามี)
+      return-url: Return URL
+      return-url-help-text: Return URL (ถ้ามี)
+      this-is-a-sandbox-gateway: เป็น Gateway แบบ Sandbox
+      delete-payment-gateway: ลบ Payment Gateway
+      create-new-payment-gateway: สร้าง Payment Gateway ใหม่
+      save-gateway: บันทึก Gateway
+      edit-payment-gateway: แก้ไข Payment Gateway
+      save-changes: บันทึกการเปลี่ยนแปลง
+      title-remove: ต้องการนำ Gateway นี้ออกใช่หรือไม่?
+      application-website-utilizing-gateway: แอปและเว็บไซต์ทั้งหมดที่ใช้ Gateway นี้อาจหยุดทำงานถ้าไม่เปลี่ยน Gateway ก่อน
+    index:
+      general-settings-header: ตั้งค่าทั่วไป
+      general-settings-message: ตั้งค่าทั่วไปของร้าน
+      name-placeholder: ชื่อร้าน
+      name-help-text: ชื่อร้านของคุณ
+      description-placeholder: คำอธิบายร้าน
+      description-help-text: อธิบายร้านสั้นๆ ให้ผู้ใช้รู้ว่าคุณขายอะไร
+      tags-placeholder: เพิ่มแท็ก
+      contact-social: ช่องทางติดต่อและโซเชียล
+      website-help-text: URL เว็บไซต์ธุรกิจของคุณ
+      facebook-placeholder: Facebook ID
+      facebook-help-text: Page ID ของเพจ Facebook ธุรกิจ
+      instagram-placeholder: ชื่อผู้ใช้ Instagram
+      instagram-help-text: ชื่อผู้ใช้ Instagram ของธุรกิจ
+      twitter-placeholder: ชื่อผู้ใช้ Twitter
+      twitter-help-text: ชื่อผู้ใช้ Twitter ของธุรกิจ
+      logo-backdrop: โลโก้และภาพพื้นหลัง
+      logo-help-text: โลโก้ของร้าน
+      upload-new-logo: อัปโหลดโลโก้ใหม่
+      backdrop-help-text: แบนเนอร์หรือภาพพื้นหลังของร้าน (ไม่บังคับ)
+      upload-new-backdrop: อัปโหลดภาพพื้นหลังใหม่
+      map-marker: หมุดบนแผนที่
+      map-marker-help-text: รูปแบบที่ร้านนี้แสดงบนแผนที่ในแอป
+      map-marker-network-help-text: รูปแบบที่ร้านในเครือข่ายแสดงบนแผนที่ในแอป
+      map-marker-store: ไอคอนร้าน
+      map-marker-warehouse: ไอคอนคลังสินค้า
+      map-marker-factory: ไอคอนโรงงาน
+      map-marker-logo: โลโก้ร้าน
+      images-videos: รูปภาพและวิดีโอ
+      drop-to-upload: วางเพื่ออัปโหลด
+      ready-to-upload: พร้อมอัปโหลด
+      upload-image-video: อัปโหลดรูปและวิดีโอ
+      drag-and-drop-image: ลากไฟล์รูปหรือวิดีโอมาวางที่นี่
+      upload-queue: คิวอัปโหลด
+      alerted-for-certain-event: ตั้งค่าว่าใครจะได้รับแจ้งเตือนเมื่อเกิดเหตุการณ์ต่างๆ
+      new-order-alert: แจ้งเตือนออเดอร์ใหม่
+      alert-placeholder: เลือกผู้ใช้ที่จะได้รับแจ้งเมื่อมีออเดอร์ใหม่
+      enable-tax: เปิดใช้ภาษี
+      tax-percentage: เปอร์เซ็นต์ภาษี
+      tax-percentage-help-text: เปอร์เซ็นต์ภาษีขายที่ใช้กับออเดอร์
+      enable-minimum-order-amount: เปิดใช้ยอดสั่งซื้อขั้นต่ำ
+      minimum-order-amount: ยอดสั่งซื้อขั้นต่ำ
+      minimum-order-amount-help-text: ยอดสั่งซื้อขั้นต่ำที่ต้องมีจึงจะชำระเงินได้
+      auto-accept-incoming-order: รับออเดอร์ที่เข้ามาอัตโนมัติ
+      auto-dispatch-order: จ่ายงานออเดอร์อัตโนมัติ
+      require-proof-of-delivery: ต้องมีหลักฐานการส่งมอบ
+      proof-of-delivery-method: วิธียืนยันการส่งมอบ
+      enable-cash-on-delivery: เปิดใช้เก็บเงินปลายทาง
+      enable-order-pickup: เปิดให้รับที่ร้าน
+      enable-tips: เปิดใช้ทิป
+      enable-delivery-tips: เปิดใช้ทิปค่าส่ง
+      enable-integrated-vendors: เปิดใช้ Vendor ที่เชื่อมต่อ
+      save-changes: บันทึกการเปลี่ยนแปลง
+    locations:
+      empty: ยังไม่มีสาขา เพิ่มสาขาเพื่อให้ลูกค้ารับสินค้าได้และตั้งเวลาเปิดได้
+      new-store-location: สาขาใหม่
+      add-new-location: เพิ่มสาขาใหม่
+      edit-store-location: แก้ไขสาขา
+      save-changes: บันทึกการเปลี่ยนแปลง
+      remove-this-store-location: ต้องการนำสาขานี้ออกใช่หรือไม่?
+      solely-accosciated-location: สินค้าที่ผูกกับสาขานี้เท่านั้นจะเข้าถึงไม่ได้อีก
+      new-store-hour: เพิ่มเวลาเปิดร้านของวัน{day}
+      add-hours: เพิ่มเวลา
+      store-hour-added: เพิ่มเวลาเปิดร้านของวัน{day}แล้ว
+      remove-these-hour: ต้องการลบช่วงเวลานี้ใช่หรือไม่?
+      update-schedule-location: เมื่อลบช่วงเวลาทำการนี้ ร้านอาจปิดตามตารางที่อัปเดตของสาขานี้
+      location-setting: ตั้งค่าสาขา
+      manage-store: จัดการสาขาและเวลาทำการของร้าน
+      text-location: สร้างสาขาใหม่
+      store-hour: จัดการเวลาเปิดร้าน
+    notification:
+      empty: ยังไม่มีช่องทางแจ้งเตือน เพิ่มเพื่อส่ง Push ถึงลูกค้า
+      create-new-notification-channel: สร้างช่องทางแจ้งเตือนใหม่
+      create-notification-channel: สร้างช่องทางแจ้งเตือน
+      edit-notification-channel: แก้ไขช่องทางแจ้งเตือน
+      save-changes: บันทึกการเปลี่ยนแปลง
+      new-notification-channel-added: เพิ่มช่องทางแจ้งเตือนใหม่แล้ว
+      remove-this-notification-channel: ต้องการนำช่องทางแจ้งเตือนนี้ออกใช่หรือไม่?
+      application-websites-utillizing-channel: แอปและเว็บไซต์ทั้งหมดที่ใช้ช่องทางนี้อาจหยุดทำงานถ้าไม่เปลี่ยนช่องทางก่อน
+      notification-settings: ตั้งค่าการแจ้งเตือน
+      notification-storefront: ตั้งค่าช่องทางแจ้งเตือนของร้าน แต่ละช่องทางมีกฎและตัวเลือกของตัวเองได้
+      new-channel: ช่องทางใหม่
+      send-test: ส่งทดสอบ
+      send-test-push: ส่ง Push Notification ทดสอบ
+      send-test-push-button: ส่ง Push ทดสอบ
+      test-push-sent: ส่ง Push ทดสอบถึงผู้ให้บริการแล้ว
+      test-push-failed: ส่ง Push ทดสอบไม่สำเร็จ ดูผลจากผู้ให้บริการด้านล่าง
+  service:
+    storefront:
+      new-incoming-order: มีออเดอร์ใหม่เข้ามา!
+      accept-order: รับออเดอร์
+      decline-order: ปฏิเสธออเดอร์
+      create-first-storefront: สร้างร้านแรกของคุณ
+      storefront-has-been-create-success: สร้างร้านใหม่แล้ว!
+      create-new-storefront: สร้างร้านใหม่
+      storefront-create-success: สร้างร้านใหม่แล้ว!
+  application:
+    launch-app: เปิดตัวแอป
+  promotions:
+    hub:
+      title: โปรโมชัน
+      subtitle: รวมข้อเสนอ แคมเปญที่ประกาศ กลุ่มลูกค้าเป้าหมาย และ Push ที่ส่งออกไว้ในที่เดียว
+      active: ใช้งาน
+      scheduled: ตั้งเวลาไว้
+      discount-given: ส่วนลดที่ให้ไป
+      cards: การ์ด
+      table: ตาราง
+    redemptions:
+      tab-title: การใช้สิทธิ์
+      header: การใช้สิทธิ์
+      subtitle: ทุกครั้งที่มีการใช้โปรโมชัน พร้อมออเดอร์และส่วนลดที่ได้
+      search-placeholder: ค้นหาด้วยโปรโมชันหรือโค้ด
+      discount: ส่วนลด
+      redeemed-at: ใช้เมื่อ
+      empty-title: ยังไม่มีการใช้สิทธิ์
+      empty-help: การใช้สิทธิ์จะแสดงที่นี่ทันทีที่ลูกค้าใช้โปรโมชันตอนชำระเงิน
+    card:
+      bogo-summary: ซื้อ {buy} แถม {get}
+      first-order: ออเดอร์แรก
+      with-code: ใช้โค้ด
+      cart-total-above: ยอดตะกร้าเกิน {amount}
+      starts: เริ่ม {date}
+      ends: สิ้นสุด {date}
+      always: ตลอด
+      products-count: '{count, plural, one {# สินค้า} other {# สินค้า}}'
+      categories-count: '{count, plural, one {# หมวดหมู่} other {# หมวดหมู่}}'
+      whole-store: ทั้งร้าน
+      redemptions-summary: '{count, plural, =0 {ยังไม่มีการใช้สิทธิ์} one {ใช้สิทธิ์ # ครั้ง} other {ใช้สิทธิ์ # ครั้ง}} · {amount}'
+    builder:
+      step-of: ขั้นตอน {step} จาก {total}
+      steps:
+        what: อะไร
+        when: ใช้เมื่อไร
+        targets: เป้าหมาย
+        schedule: ระยะเวลาและข้อจำกัด
+        review: ตรวจทานและประกาศ
+      type-hints:
+        percentage: ลดเป็นเปอร์เซ็นต์จากสินค้าที่ร่วมรายการ
+        fixed_amount: ลดเป็นจำนวนเงินจากตะกร้า
+        free_delivery: ยกเว้นค่าจัดส่ง
+        bogo: ซื้อแล้วแถมฟรีหรือได้ส่วนลด
+      trigger:
+        code: ตอนชำระเงินด้วยโค้ด
+        code-hint: ลูกค้ากรอกโค้ด
+        automatic: อัตโนมัติ
+        automatic-hint: ใช้เมื่อเงื่อนไขตรง
+      min-subtotal-help: ยอดขั้นต่ำในสกุลเงินของร้าน เว้นว่างถ้าไม่มี
+      codes-after-save: บันทึกโปรโมชันก่อน แล้วสร้างโค้ดที่นี่
+      segment: กลุ่มลูกค้า
+      stores: ร้านค้า
+      stores-help: เว้นว่างเพื่อใช้กับทุกร้านสมาชิก
+      stores-placeholder: เลือกร้านสมาชิก
+      segment-help: เฉพาะลูกค้าในกลุ่มนี้ที่ได้โปรโมชัน
+      segment-placeholder: ทุกคน
+      summary:
+        percentage: ลด {value}%
+        fixed: ลด {amount}
+        with-code: ตอนชำระเงินด้วยโค้ด
+        automatic: อัตโนมัติ
+        excluded: '{count, plural, one {ยกเว้น #} other {ยกเว้น #}}'
+        limit: ใช้ได้ {count} ครั้ง
+      issues:
+        name: ตั้งชื่อโปรโมชัน
+        value: ตั้งมูลค่าส่วนลด
+        percent: เปอร์เซ็นต์ต้องไม่เกิน 100
+        window: เวลาสิ้นสุดต้องหลังเวลาเริ่ม
+      announce: ประกาศหลังบันทึก
+      announce-help: เปิดหน้าสร้างแคมเปญเพื่อให้ลูกค้ารู้
+      save-draft: บันทึกฉบับร่าง
+      back: ย้อนกลับ
+      next: 'ถัดไป: {step}'
+    title: โปรโมชัน
+    push-notifications:
+      tab-title: Push Notification
+      header: ส่ง Push Notification
+      description: ส่ง Push Notification โปรโมชันถึงลูกค้า
+      title-label: หัวข้อการแจ้งเตือน
+      title-placeholder: ใส่หัวข้อการแจ้งเตือน
+      title-help-text: หัวข้อที่แสดงใน Push Notification
+      body-label: ข้อความแจ้งเตือน
+      body-placeholder: ใส่ข้อความแจ้งเตือน
+      body-help-text: ข้อความที่จะส่งถึงลูกค้า
+      select-all-customers: เลือกลูกค้าทั้งหมด
+      select-all-customers-help-text: ส่งการแจ้งเตือนถึงลูกค้าทุกคนของร้านนี้
+      customers-label: เลือกลูกค้า
+      customers-placeholder: เลือกลูกค้าที่จะส่งการแจ้งเตือน
+      send-button: ส่งการแจ้งเตือน
+      validation-title-body-required: กรุณาใส่ทั้งหัวข้อและข้อความ
+      validation-customers-required: กรุณาเลือกลูกค้าอย่างน้อย 1 คน
+      notification-sent-success: ส่ง Push Notification ถึงลูกค้าที่เลือกแล้ว
+      notification-sent-error: ส่ง Push Notification ไม่สำเร็จ กรุณาลองอีกครั้ง
+    common:
+      new: ใหม่
+      edit: แก้ไข
+      delete: ลบ
+      save: บันทึก
+      cancel: ยกเลิก
+      name: ชื่อ
+      description: คำอธิบาย
+      status: สถานะ
+      created: สร้างเมื่อ
+      updated: อัปเดตเมื่อ
+      none: ไม่มี
+      all-customers: ลูกค้าทั้งหมด
+      done: เสร็จ
+      no-results: ไม่พบผลลัพธ์
+      no-results-help: ลองค้นหาใหม่หรือกลับไปที่รายการทั้งหมด
+      reset-filters: แสดงทั้งหมด
+    statuses:
+      all: ทั้งหมด
+      draft: ฉบับร่าง
+      active: ใช้งาน
+      paused: หยุดชั่วคราว
+      ended: สิ้นสุด
+      scheduled: ตั้งเวลาไว้
+      sending: กำลังส่ง
+      sent: ส่งแล้ว
+      canceled: ยกเลิก
+    list:
+      none-with-status: ไม่มีโปรโมชันสถานะ{status}
+      bulk-updated: '{count, plural, one {อัปเดต # โปรโมชันแล้ว} other {อัปเดต # โปรโมชันแล้ว}}'
+      tab-title: โปรโมชัน
+      header: โปรโมชัน
+      duplicate: ทำสำเนา
+      view-redemptions: ดูการใช้สิทธิ์
+      new-promotion: โปรโมชันใหม่
+      edit-promotion: แก้ไขโปรโมชัน
+      type: ประเภท
+      trigger: เงื่อนไขการใช้
+      runs: ระยะเวลา
+      redemptions: การใช้สิทธิ์
+      discount-given: ส่วนลดที่ให้ไป
+      actions: การดำเนินการโปรโมชัน
+      manage-codes: จัดการโค้ด
+      announce: ประกาศถึงลูกค้า
+      activate: เปิดใช้
+      pause: หยุดชั่วคราว
+      end: สิ้นสุดโปรโมชัน
+      created-success: สร้างโปรโมชันแล้ว
+      saved-success: บันทึกโปรโมชันแล้ว
+      status-updated: อัปเดตสถานะโปรโมชันแล้ว
+      empty: ยังไม่มีโปรโมชัน สร้างเพื่อให้ส่วนลดตอนชำระเงิน
+      search-placeholder: ค้นหาโปรโมชัน...
+      empty-title: ยังไม่มีโปรโมชัน
+      empty-help: สร้างโปรโมชันเพื่อให้ส่วนลดตอนชำระเงิน
+    types:
+      percentage: ลดเป็นเปอร์เซ็นต์
+      fixed_amount: ลดเป็นจำนวนเงิน
+      free_delivery: ส่งฟรี
+      bogo: ซื้อ X แถม Y
+    triggers:
+      automatic: อัตโนมัติ
+      code: โค้ดโปรโมชัน
+    form:
+      basics: ข้อมูลพื้นฐาน
+      name-placeholder: เช่น โปรสุดสัปดาห์
+      name-help: แสดงให้ลูกค้าเห็นตอนชำระเงินและในแอป
+      description-placeholder: อธิบายข้อเสนอและเงื่อนไข
+      description-help: รายละเอียดที่แสดงพร้อมดีลในแอป (ไม่บังคับ)
+      type-help: วิธีคำนวณส่วนลด
+      trigger-help: โปรโมชันอัตโนมัติใช้กับทุกตะกร้าที่เข้าเงื่อนไข โปรโมชันแบบโค้ดต้องกรอกโค้ด
+      percent-off: ลด (%)
+      amount-off: ลด (จำนวนเงิน)
+      buy-quantity: ซื้อ (ชิ้น)
+      get-quantity: แถม (ชิ้น)
+      get-discount-percent: ส่วนลดของแถม (%)
+      bogo-help: ทุกกลุ่มของสินค้าที่ร่วมรายการตามจำนวน “ซื้อ” + “แถม” สินค้า “แถม” ที่ถูกที่สุดจะได้ส่วนลด
+      schedule: ระยะเวลา
+      starts-at: เริ่ม
+      ends-at: สิ้นสุด
+      schedule-help: เว้นวันเริ่มว่างเพื่อให้ใช้ได้ทันทีที่เปิดใช้ เว้นวันสิ้นสุดว่างถ้าไม่มีกำหนดสิ้นสุด
+      conditions: เงื่อนไข
+      min-subtotal: ยอดซื้อขั้นต่ำ
+      min-items: จำนวนชิ้นขั้นต่ำ
+      no-minimum: ไม่มีขั้นต่ำ
+      no-limit: ไม่จำกัด
+      first-order-only: เฉพาะออเดอร์แรก
+      first-order-only-help: เฉพาะลูกค้าที่ไม่เคยสั่งซื้อ
+      targeting: เป้าหมาย
+      targeting-help: จำกัดส่วนลดเฉพาะสินค้าหรือหมวดหมู่เหล่านี้ เว้นว่างเพื่อใช้กับทั้งตะกร้า
+      products: สินค้า
+      products-placeholder: ค้นหาและเลือกสินค้า
+      categories: หมวดหมู่
+      categories-placeholder: ค้นหาและเลือกหมวดหมู่
+      exclude-products: สินค้าที่ยกเว้น
+      exclude-products-placeholder: ค้นหาสินค้าที่จะยกเว้น
+      limits: ข้อจำกัด
+      usage-limit: จำนวนครั้งที่ใช้ได้ทั้งหมด
+      usage-limit-per-customer: จำนวนครั้งต่อลูกค้า
+      budget-amount: งบประมาณรวม
+      max-discount-amount: ส่วนลดสูงสุดต่อออเดอร์
+      limits-help: เว้นว่างถ้าไม่จำกัด
+      stacking: การใช้ร่วมและการแสดงผล
+      stackable: ใช้ร่วมกับโปรโมชันอื่นได้
+      stackable-help: ถ้าไม่ได้ จะใช้เดี่ยวๆ เมื่อให้ส่วนลดลูกค้ามากกว่า
+      priority: ลำดับความสำคัญ
+      priority-help: โปรโมชันที่ลำดับสูงกว่าจะถูกใช้ก่อน
+      is-public: แสดงในดีลของแอป
+    codes:
+      title: โค้ดโปรโมชันของ {name}
+      help: สร้างโค้ดเฉพาะหลายโค้ดพร้อมกัน หรือใส่โค้ดที่ต้องการเพื่อแชร์ให้ลูกค้า
+      generate: สร้างโค้ด
+      count: จำนวน
+      prefix: คำนำหน้า
+      prefix-placeholder: เช่น SUMMER
+      length: ความยาวโค้ด
+      usage-limit: จำนวนครั้งต่อโค้ด
+      usage-limit-help: ใส่ 1 สำหรับโค้ดใช้ครั้งเดียว เว้นว่างถ้าไม่จำกัด
+      specific-code: หรือสร้างโค้ดที่กำหนดเอง
+      specific-code-placeholder: เช่น SUMMER25
+      specific-code-help: เมื่อกรอก จะสร้างเฉพาะโค้ดนี้ จำนวน คำนำหน้า และความยาวด้านบนจะไม่ถูกใช้
+      loading: กำลังโหลดโค้ดโปรโมชัน...
+      load-failed: โหลดโค้ดโปรโมชันไม่ได้
+      retry: ลองอีกครั้ง
+      code: โค้ด
+      used: ใช้แล้ว
+      expires: หมดอายุ
+      disable: ปิดใช้
+      enable: เปิดใช้
+      generated-success: สร้างโค้ดแล้ว
+      empty: ยังไม่มีโค้ด
+    announce:
+      title: ประกาศ {name}
+      help: ส่งการแจ้งเตือนเกี่ยวกับโปรโมชันนี้ถึงลูกค้า จะส่งเมื่อโปรโมชันเริ่ม หรือทันทีถ้าเริ่มไปแล้ว
+      segment: กลุ่มเป้าหมาย
+      segment-placeholder: ลูกค้าทั้งหมด
+      message-title: หัวข้อการแจ้งเตือน
+      title-placeholder: เช่น ออเดอร์ถัดไปมีส่วนลด
+      message-body: ข้อความแจ้งเตือน
+      body-placeholder: บอกลูกค้าเกี่ยวกับข้อเสนอ
+      send-at: ส่งเมื่อ (ไม่บังคับ)
+      send-at-help: เว้นว่างเพื่อส่งเมื่อโปรโมชันเริ่ม หรือส่งทันทีถ้าเริ่มไปแล้ว
+      success: ตั้งเวลาประกาศแล้ว
+    campaigns:
+      tab-title: แคมเปญ
+      header: แคมเปญ
+      new-campaign: แคมเปญใหม่
+      edit-campaign: แก้ไขแคมเปญ
+      view-campaign: ดูแคมเปญ
+      search-placeholder: ค้นหาแคมเปญ...
+      empty-title: ยังไม่มีแคมเปญ
+      empty-help: สร้างแคมเปญเพื่อส่งข่าวสารและข้อเสนอถึงลูกค้า
+      name-placeholder: เช่น ประกาศโปรสุดสัปดาห์
+      name-help: ชื่อภายในเพื่อให้ทีมระบุแคมเปญนี้ได้
+      title-placeholder: เช่น โปรสุดสัปดาห์มาแล้ว
+      body-placeholder: เขียนข้อความที่ลูกค้าจะได้รับ
+      read-only-help: แคมเปญนี้แก้ไขไม่ได้แล้ว ข้อความและกลุ่มเป้าหมายแสดงไว้เพื่ออ้างอิง
+      audience: กลุ่มเป้าหมาย
+      audience-help: เลือกกลุ่มลูกค้าเพื่อส่งเฉพาะกลุ่ม หรือเว้นว่างเพื่อส่งถึงลูกค้าทั้งหมดในองค์กร
+      channels: ช่องทาง
+      channels-help: เลือกช่องทางที่ลูกค้าจะได้รับแคมเปญนี้
+      channel-push: Push Notification
+      channel-inbox: กล่องข้อความในแอป
+      send-at: ส่งเมื่อ
+      sent-at: ส่งแล้ว
+      targeted: ลูกค้าที่ส่งถึง
+      send-now: ส่งตอนนี้
+      send-now-confirm: ส่งแคมเปญนี้ถึงกลุ่มเป้าหมายตอนนี้?
+      cancel-campaign: ยกเลิกแคมเปญ
+      cancel-confirm: ยกเลิกแคมเปญนี้? แคมเปญจะไม่ถูกส่ง
+      audience-count: แคมเปญนี้จะส่งถึงลูกค้า {count} คน
+      title-label: หัวข้อการแจ้งเตือน
+      body-label: ข้อความแจ้งเตือน
+      promotion: โปรโมชันที่เชื่อมโยง
+      promotion-help: แตะการแจ้งเตือนเพื่อเปิดโปรโมชันนี้
+      promotion-placeholder: เลือกโปรโมชัน (ไม่บังคับ)
+      link-url: หรือลิงก์ไปที่ URL
+      link-help: ปลายทางเมื่อลูกค้าแตะการแจ้งเตือน (ไม่บังคับ)
+      link-placeholder: https://example.com/offers
+      when: ส่งเมื่อไร
+      when-draft: บันทึกเป็นฉบับร่าง
+      when-now: ส่งตอนนี้
+      when-schedule: ตั้งเวลา
+      required-fields: ใส่ชื่อแคมเปญ หัวข้อ และข้อความแจ้งเตือน
+      required-channel: เลือกช่องทางส่งอย่างน้อย 1 ช่องทาง
+      required-schedule: เลือกวันและเวลาในอนาคตสำหรับแคมเปญนี้
+      schedule-help: เลือกวันและเวลาในอนาคตตามเขตเวลาของคุณ
+      saved-success: บันทึกแคมเปญแล้ว
+      sent-success: ส่งแคมเปญแล้ว
+      canceled-success: ยกเลิกแคมเปญแล้ว
+      empty: ยังไม่มีแคมเปญ
+    segments:
+      tab-title: กลุ่มลูกค้า
+      header: กลุ่มลูกค้า
+      new-segment: กลุ่มใหม่
+      edit-segment: แก้ไขกลุ่ม
+      required-name: ใส่ชื่อกลุ่ม
+      search-placeholder: ค้นหากลุ่ม...
+      empty-title: ยังไม่มีกลุ่มลูกค้า
+      empty-help: จัดกลุ่มลูกค้าตามประวัติการสั่งซื้อและกิจกรรม เพื่อส่งแคมเปญแบบเจาะจง
+      name-placeholder: เช่น ลูกค้าประจำ
+      description-placeholder: อธิบายว่าใครอยู่ในกลุ่มนี้ (ไม่บังคับ)
+      rules: เงื่อนไข
+      rules-help: ลูกค้าต้องตรงทุกเงื่อนไขที่กรอก เว้นว่างเงื่อนไขที่ไม่ใช้ หรือเว้นว่างทั้งหมดเพื่อรวมลูกค้าทุกคนในองค์กร
+      orders-placeholder: ไม่จำกัดจำนวนออเดอร์
+      days-placeholder: ไม่จำกัดเวลา
+      spend-placeholder: ไม่มียอดขั้นต่ำ
+      min-orders: ออเดอร์อย่างน้อย
+      max-orders: ออเดอร์ไม่เกิน
+      ordered-within-days: สั่งซื้อภายใน (วัน)
+      not-ordered-within-days: ไม่ได้สั่งซื้อภายใน (วัน)
+      joined-within-days: สมัครภายใน (วัน)
+      min-spent: ยอดซื้ออย่างน้อย
+      min-spent-help: ยอดชำระสำเร็จขั้นต่ำทั้งองค์กร เว้นว่างหรือใส่ 0 ถ้าไม่มีขั้นต่ำ
+      has-push-device: รับ Push Notification ได้
+      matching: ลูกค้าที่ตรงเงื่อนไข {count} คน
+      matching-loading: กำลังนับลูกค้าที่ตรงเงื่อนไข...
+      matching-unavailable: นับจำนวนลูกค้าไม่ได้ชั่วคราว
+      saved-success: บันทึกกลุ่มแล้ว
+      empty: ยังไม่มีกลุ่ม กลุ่มช่วยให้ส่งแคมเปญถึงลูกค้าบางกลุ่มได้
+starter:
+  extension-name: Starter
+vroom:
+  extension-name: VROOM
+  settings:
+    title: ตั้งค่า VROOM
+    api-key: VROOM API Key
