@@ -7,7 +7,7 @@ publicHoistPattern:
 overrides:
   "@fleetbase/fleetops-data": "^0.2.4"
   "@fleetbase/ember-core": "^0.3.27"
-  "@fleetbase/ember-ui": "^0.4.7"
+  "@fleetbase/ember-ui": "github:WNut007/ember-ui#feat/thai-labels"
 allowBuilds:
   "@fortawesome/fontawesome-common-types": false
   "@fortawesome/fontawesome-svg-core": false
@@ -28,3 +28,4 @@ minimumReleaseAgeExclude:
   - '@fleetbase/valhalla-engine@0.1.0'
   - '@fleetbase/vroom-engine@0.1.0'
   - '@fleetbase/ai-engine@0.1.0'
+blockExoticSubdeps: false
