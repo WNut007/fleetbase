@@ -117,7 +117,7 @@ services:
       context: ./console
       dockerfile: Dockerfile
       args:
-        ENVIRONMENT: development
+        ENVIRONMENT: production
     ports:
       - "4200:4200"
     volumes:
