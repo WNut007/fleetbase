@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use Fleetbase\Models\Setting;
+use Fleetbase\Models\User;
+use Fleetbase\Services\UserCacheService;
 use Illuminate\Database\Connection;
 use Illuminate\Database\Events\QueryExecuted;
 use Illuminate\Database\Events\TransactionBeginning;
@@ -46,6 +49,53 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->configureOutboundHttpLogging();
         $this->configureTransactionTripwire();
+        $this->configureLocaleCacheInvalidation();
+    }
+
+    /**
+     * Clear a user's cached `users/me` payload when they change language.
+     *
+     * core-api saves the language as the setting `user.<uuid>.locale` but leaves the
+     * cached `users/me` response (UserCacheService, 15 minutes) in place. The console
+     * reads the language from that response, so after a reload it showed the old
+     * language until the cache expired.
+     */
+    protected function configureLocaleCacheInvalidation(): void
+    {
+        Setting::saved(function (Setting $setting) {
+            $this->invalidateUserCacheForSetting($setting->key);
+        });
+    }
+
+    /**
+     * Invalidate the cached user when the key is a user's locale setting.
+     *
+     * @return bool whether a user cache was invalidated
+     */
+    protected function invalidateUserCacheForSetting(?string $key): bool
+    {
+        if (!is_string($key) || !preg_match('/^user\.([0-9a-f-]{36})\.locale$/i', $key, $matches)) {
+            return false;
+        }
+
+        $user = $this->findUserByUuid($matches[1]);
+        if (!$user) {
+            return false;
+        }
+
+        $this->forgetUserCache($user);
+
+        return true;
+    }
+
+    protected function findUserByUuid(string $uuid): ?User
+    {
+        return User::where('uuid', $uuid)->first();
+    }
+
+    protected function forgetUserCache(User $user): void
+    {
+        UserCacheService::invalidateUser($user);
     }
 
     /**
