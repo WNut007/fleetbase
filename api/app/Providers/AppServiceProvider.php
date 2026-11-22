@@ -37,7 +37,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        // Cached country lookups (see CachedLookupController).
+        $this->app->bind(\Fleetbase\Http\Controllers\Internal\v1\LookupController::class, \App\Http\Controllers\Internal\CachedLookupController::class);
     }
 
     /**
