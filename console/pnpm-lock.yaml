@@ -36,7 +36,7 @@ importers:
         version: 0.2.4(@ember/string@3.1.1)(@ember/test-helpers@3.3.1(@babel/core@7.29.7)(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26)))(webpack@5.109.2(postcss@8.5.26)))(ember-resolver@11.0.1(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26))))(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26)))(eslint@8.57.1)(webpack@5.109.2(postcss@8.5.26))
       '@fleetbase/fleetops-engine':
         specifier: github:WNut007/fleetops#feat/thai-labels
-        version: https://codeload.github.com/WNut007/fleetops/tar.gz/974ef9130cc27e89dfb930031a688cf2ad4a1d59(bffd95f1ee8fa5c6dc085f568b2e0221)
+        version: https://codeload.github.com/WNut007/fleetops/tar.gz/a2680db9e0d77ea23cab762848fc93ff572f3f25(bffd95f1ee8fa5c6dc085f568b2e0221)
       '@fleetbase/iam-engine':
         specifier: ^0.1.13
         version: 0.1.13(bffd95f1ee8fa5c6dc085f568b2e0221)
@@ -1587,8 +1587,8 @@ packages:
     resolution: {integrity: sha512-9kW9/mfHLnWFq93//AHQHxHasx/zxe4zLQxPGnyC9L3JKzTNauRGiXzqJJReQS6q5W+cRM+/MvE8sOQvFqOavw==}
     engines: {node: '>= 18'}
 
-  '@fleetbase/fleetops-engine@https://codeload.github.com/WNut007/fleetops/tar.gz/974ef9130cc27e89dfb930031a688cf2ad4a1d59':
-    resolution: {gitHosted: true, integrity: sha512-gUKRid5Be+QH7rMBmWz23ExWmxk8EyR+bMu3BrXqgDkWwDsfCJl9elGm6YYrqZxdzaGsjbI/s8jixFN3unOFCw==, tarball: https://codeload.github.com/WNut007/fleetops/tar.gz/974ef9130cc27e89dfb930031a688cf2ad4a1d59}
+  '@fleetbase/fleetops-engine@https://codeload.github.com/WNut007/fleetops/tar.gz/a2680db9e0d77ea23cab762848fc93ff572f3f25':
+    resolution: {gitHosted: true, integrity: sha512-8cfplE9VDdG80gySCMNHrGq4J2ufsNmzUdzsOt3dC27cSkxBbiqr32Gfj6gAwHxDQuni4V9MC2TJkpKjq516Wg==, tarball: https://codeload.github.com/WNut007/fleetops/tar.gz/a2680db9e0d77ea23cab762848fc93ff572f3f25}
     version: 0.7.1
     engines: {node: '>= 18'}
     peerDependencies:
@@ -11261,7 +11261,7 @@ snapshots:
       - utf-8-validate
       - webpack
 
-  '@fleetbase/fleetops-engine@https://codeload.github.com/WNut007/fleetops/tar.gz/974ef9130cc27e89dfb930031a688cf2ad4a1d59(bffd95f1ee8fa5c6dc085f568b2e0221)':
+  '@fleetbase/fleetops-engine@https://codeload.github.com/WNut007/fleetops/tar.gz/a2680db9e0d77ea23cab762848fc93ff572f3f25(bffd95f1ee8fa5c6dc085f568b2e0221)':
     dependencies:
       '@babel/core': 7.29.7
       '@fleetbase/ember-core': 0.3.27(@ember/string@3.1.1)(@ember/test-helpers@3.3.1(@babel/core@7.29.7)(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26)))(webpack@5.109.2(postcss@8.5.26)))(ember-resolver@11.0.1(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26))))(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26)))(eslint@8.57.1)(webpack@5.109.2(postcss@8.5.26))
