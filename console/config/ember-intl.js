@@ -27,6 +27,10 @@ module.exports = function (/* environment */) {
          */
         inputPath: 'translations',
 
+        // Only bundle the languages we ship. Every lazy engine bundles its own copy of all
+        // translations, so 18 locales cost ~11 MB per engine (~85 MB of JS at start-up).
+        includeLocales: ['en-us', 'th-th'],
+
         /**
          * Prevents the translations from being bundled with the application code.
          * This enables asynchronously loading the translations for the active locale
