@@ -11,8 +11,23 @@ function langOf(tag = 'en') {
     return String(tag).toLowerCase().split('-')[0];
 }
 
-// The polyfills always replace native Intl: browsers lack data for some of the console's
-// languages (Mongolian, for one), and ember-intl refuses to start without it.
+const INTL_SERVICES = ['NumberFormat', 'PluralRules', 'DateTimeFormat', 'RelativeTimeFormat'];
+
+/**
+ * Whether the browser's own Intl has data for every console language. Native Intl is far
+ * faster than the formatjs polyfills (a polyfilled date format costs milliseconds, native
+ * microseconds; a dashboard formats thousands), so the polyfills load only when it doesn't.
+ */
+export function nativeIntlSupports(langs, intl = Intl) {
+    try {
+        return INTL_SERVICES.every((name) => typeof intl[name]?.supportedLocalesOf === 'function' && intl[name].supportedLocalesOf(langs).length === langs.length);
+    } catch {
+        return false;
+    }
+}
+
+// When the browser lacks a console language (Mongolian, for one), the polyfills replace
+// native Intl: ember-intl refuses to start without locale data.
 async function loadBasePolyfills() {
     await import('@formatjs/intl-numberformat/polyfill-force');
     await import('@formatjs/intl-pluralrules/polyfill-force');
@@ -126,7 +141,7 @@ async function loadLocaleData(lang) {
     ]);
 }
 
-export function initialize(application) {
+export function initialize(application, intl = Intl) {
     // There is no window to polyfill outside a browser. The test suite only ever runs in
     // one, so this arm cannot be exercised.
     /* istanbul ignore next -- no browser, nothing to polyfill */
@@ -134,6 +149,11 @@ export function initialize(application) {
 
     const locales = translations.map(([locale]) => String(locale));
     const langs = [...new Set(locales.map(langOf).filter(isValidLang))];
+
+    // The browser already has every language: keep native Intl and start straight away.
+    if (nativeIntlSupports(langs, intl)) {
+        return;
+    }
 
     application.deferReadiness();
 

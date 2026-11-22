@@ -1,5 +1,58 @@
 import { module, test } from 'qunit';
-import { deviceTimeZone, gregorianFallback, initialize, pinDefaultLocale, pinDefaultTimeZone, preferredLanguage } from '@fleetbase/console/initializers/load-intl-polyfills';
+import {
+    deviceTimeZone,
+    gregorianFallback,
+    initialize,
+    nativeIntlSupports,
+    pinDefaultLocale,
+    pinDefaultTimeZone,
+    preferredLanguage,
+} from '@fleetbase/console/initializers/load-intl-polyfills';
+
+// An Intl with no locale data, so initialize() takes the polyfill path.
+const NO_NATIVE_INTL = {};
+
+module('Unit | Initializer | load-intl-polyfills | native Intl', function () {
+    test('native Intl with every language is kept: no polyfills, readiness untouched', function (assert) {
+        const calls = [];
+        const supports = (langs) => langs;
+        const native = {
+            NumberFormat: { supportedLocalesOf: supports },
+            PluralRules: { supportedLocalesOf: supports },
+            DateTimeFormat: { supportedLocalesOf: supports },
+            RelativeTimeFormat: { supportedLocalesOf: supports },
+        };
+
+        initialize({ deferReadiness: () => calls.push('defer'), advanceReadiness: () => calls.push('advance') }, native);
+
+        assert.deepEqual(calls, [], 'nothing to wait for');
+    });
+
+    test('nativeIntlSupports needs every service to have every language', function (assert) {
+        const all = (langs) => langs;
+        const noThai = (langs) => langs.filter((lang) => lang !== 'th');
+        const make = (dtf) => ({
+            NumberFormat: { supportedLocalesOf: all },
+            PluralRules: { supportedLocalesOf: all },
+            DateTimeFormat: { supportedLocalesOf: dtf },
+            RelativeTimeFormat: { supportedLocalesOf: all },
+        });
+
+        assert.true(nativeIntlSupports(['en', 'th'], make(all)));
+        assert.false(nativeIntlSupports(['en', 'th'], make(noThai)), 'a missing language needs the polyfill');
+        assert.false(nativeIntlSupports(['en'], {}), 'no Intl services');
+        assert.false(
+            nativeIntlSupports(
+                ['en'],
+                make(() => {
+                    throw new Error('broken');
+                })
+            ),
+            'a throwing Intl needs the polyfill'
+        );
+        assert.true(nativeIntlSupports(['en', 'th']), 'this browser has English and Thai natively');
+    });
+});
 
 module('Unit | Initializer | load-intl-polyfills', function () {
     test('it defers readiness while the polyfills load and advances afterwards', async function (assert) {
@@ -15,7 +68,7 @@ module('Unit | Initializer | load-intl-polyfills', function () {
             },
         };
 
-        initialize(application);
+        initialize(application, NO_NATIVE_INTL);
 
         assert.deepEqual(calls, ['defer'], 'readiness is deferred synchronously');
 
@@ -55,7 +108,7 @@ module('Unit | Initializer | load-intl-polyfills | default locale', function () 
         let advanced;
         const didAdvance = new Promise((resolve) => (advanced = resolve));
 
-        initialize({ deferReadiness() {}, advanceReadiness: () => advanced() });
+        initialize({ deferReadiness() {}, advanceReadiness: () => advanced() }, NO_NATIVE_INTL);
         await didAdvance;
 
         const language = (tag) => String(tag).toLowerCase().split('-')[0];
@@ -75,8 +128,20 @@ module('Unit | Initializer | load-intl-polyfills | default locale', function () 
 
 module('Unit | Initializer | load-intl-polyfills | time zones and calendars', function () {
     test('the device time zone comes from the native constructor, or is undefined when it throws', function (assert) {
-        const native = { DateTimeFormat: class { resolvedOptions() { return { timeZone: 'Asia/Bangkok' }; } } };
-        const broken = { DateTimeFormat: class { constructor() { throw new Error('no Intl'); } } };
+        const native = {
+            DateTimeFormat: class {
+                resolvedOptions() {
+                    return { timeZone: 'Asia/Bangkok' };
+                }
+            },
+        };
+        const broken = {
+            DateTimeFormat: class {
+                constructor() {
+                    throw new Error('no Intl');
+                }
+            },
+        };
 
         assert.strictEqual(deviceTimeZone(native), 'Asia/Bangkok');
         assert.strictEqual(deviceTimeZone(broken), undefined);
@@ -84,8 +149,20 @@ module('Unit | Initializer | load-intl-polyfills | time zones and calendars', fu
 
     test('the polyfill default time zone is pinned only when it can be', function (assert) {
         const seen = [];
-        const polyfilled = { DateTimeFormat: { __setDefaultTimeZone(zone) { seen.push(zone); } } };
-        const rejects = { DateTimeFormat: { __setDefaultTimeZone() { throw new RangeError('Invalid timeZoneName'); } } };
+        const polyfilled = {
+            DateTimeFormat: {
+                __setDefaultTimeZone(zone) {
+                    seen.push(zone);
+                },
+            },
+        };
+        const rejects = {
+            DateTimeFormat: {
+                __setDefaultTimeZone() {
+                    throw new RangeError('Invalid timeZoneName');
+                },
+            },
+        };
         const native = { DateTimeFormat: function NativeDateTimeFormat() {} };
 
         assert.true(pinDefaultTimeZone('Asia/Bangkok', polyfilled));
@@ -129,7 +206,7 @@ module('Unit | Initializer | load-intl-polyfills | time zones and calendars', fu
         let advanced;
         const didAdvance = new Promise((resolve) => (advanced = resolve));
 
-        initialize({ deferReadiness() {}, advanceReadiness: () => advanced() });
+        initialize({ deferReadiness() {}, advanceReadiness: () => advanced() }, NO_NATIVE_INTL);
         await didAdvance;
 
         const noon = new Date('2026-11-19T05:00:00Z');
