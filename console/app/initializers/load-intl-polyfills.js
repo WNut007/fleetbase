@@ -103,11 +103,15 @@ export function gregorianFallback(intl = Intl) {
 
 /**
  * Every date in the console uses the gregorian calendar (C.E. years), in every language.
- * Thai's default calendar is buddhist (B.E.: 2569 for 2026), so native Intl and
- * Date#toLocale*String would show B.E. years while date-fns shows C.E.: mixed years on one
- * page. Adds calendar: 'gregory' to any date format that doesn't name a calendar itself.
+ * Thai's default calendar is buddhist (B.E.: 2569 for 2026), so Intl.DateTimeFormat would
+ * show B.E. years while date-fns shows C.E.: mixed years on one page. Adds calendar: 'gregory'
+ * to any DateTimeFormat that doesn't name a calendar itself.
+ *
+ * Date#toLocaleString and friends are deliberately left alone: native Intl caches the
+ * formatter only when they are called without options, and passing a calendar on every call
+ * made each one cost milliseconds (start-up spent seconds in them).
  */
-export function forceGregorianCalendar(intl = Intl, dateProto = Date.prototype) {
+export function forceGregorianCalendar(intl = Intl) {
     const Original = intl.DateTimeFormat;
     if (!Original || Original.__forceGregorian) {
         return;
@@ -121,13 +125,6 @@ export function forceGregorianCalendar(intl = Intl, dateProto = Date.prototype) 
         apply: (target, thisArg, args) => create(args),
         get: (target, key, receiver) => (key === '__forceGregorian' ? true : Reflect.get(target, key, receiver)),
     });
-
-    for (const name of ['toLocaleString', 'toLocaleDateString', 'toLocaleTimeString']) {
-        const original = dateProto[name];
-        dateProto[name] = function (locales, options) {
-            return original.call(this, locales, withGregorian(options));
-        };
-    }
 }
 
 /**
