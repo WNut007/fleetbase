@@ -1,6 +1,7 @@
 import { module, test } from 'qunit';
 import {
     deviceTimeZone,
+    forceGregorianCalendar,
     gregorianFallback,
     initialize,
     nativeIntlSupports,
@@ -214,5 +215,39 @@ module('Unit | Initializer | load-intl-polyfills | time zones and calendars', fu
 
         assert.strictEqual(bangkok, '12:00', 'Asia/Bangkok is UTC+7, not UTC');
         assert.ok(new Intl.DateTimeFormat('th-th', { hour: 'numeric', minute: '2-digit', timeZone: 'Asia/Bangkok' }).format(noon), 'a Thai format no longer throws');
+    });
+});
+
+module('Unit | Initializer | load-intl-polyfills | gregorian calendar', function () {
+    test('Thai dates use C.E. years everywhere, an explicit calendar still wins', function (assert) {
+        const date = new Date(Date.UTC(2026, 10, 22, 5));
+        const fakeIntl = { DateTimeFormat: Intl.DateTimeFormat };
+        const proto = { toLocaleString: Date.prototype.toLocaleString, toLocaleDateString: Date.prototype.toLocaleDateString, toLocaleTimeString: Date.prototype.toLocaleTimeString };
+
+        forceGregorianCalendar(fakeIntl, proto);
+        forceGregorianCalendar(fakeIntl, proto); // a second call is a no-op
+
+        const year = (format) => format.formatToParts(date).find((part) => part.type === 'year').value;
+        assert.strictEqual(year(new fakeIntl.DateTimeFormat('th-th', { year: 'numeric', timeZone: 'UTC' })), '2026', 'new');
+        assert.strictEqual(year(fakeIntl.DateTimeFormat('th-th', { year: 'numeric', timeZone: 'UTC' })), '2026', 'called without new');
+        // An explicit calendar passes through untouched (checked on a stub: the polyfill, loaded by
+        // earlier tests, supports gregory only).
+        const seen = [];
+        const stub = {
+            DateTimeFormat: class {
+                constructor(locales, options) {
+                    seen.push(options);
+                }
+            },
+        };
+        forceGregorianCalendar(stub, {});
+        new stub.DateTimeFormat('th-th', { calendar: 'buddhist' });
+        new stub.DateTimeFormat('th-th');
+        assert.deepEqual(seen, [{ calendar: 'buddhist' }, { calendar: 'gregory' }], 'explicit calendar kept, gregory added otherwise');
+        assert.true(proto.toLocaleDateString.call(date, 'th-th', { year: 'numeric', timeZone: 'UTC' }).includes('2026'), 'toLocaleDateString');
+        assert.true(proto.toLocaleString.call(date, 'th-th', { timeZone: 'UTC' }).includes('2026'), 'toLocaleString');
+        assert.true(proto.toLocaleTimeString.call(date, 'th-th', { timeZone: 'UTC' }).length > 0, 'toLocaleTimeString');
+        assert.true(fakeIntl.DateTimeFormat.__forceGregorian);
+        assert.strictEqual(forceGregorianCalendar({}), undefined, 'nothing to wrap without a DateTimeFormat');
     });
 });

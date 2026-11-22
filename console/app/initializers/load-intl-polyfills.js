@@ -102,6 +102,35 @@ export function gregorianFallback(intl = Intl) {
 }
 
 /**
+ * Every date in the console uses the gregorian calendar (C.E. years), in every language.
+ * Thai's default calendar is buddhist (B.E.: 2569 for 2026), so native Intl and
+ * Date#toLocale*String would show B.E. years while date-fns shows C.E.: mixed years on one
+ * page. Adds calendar: 'gregory' to any date format that doesn't name a calendar itself.
+ */
+export function forceGregorianCalendar(intl = Intl, dateProto = Date.prototype) {
+    const Original = intl.DateTimeFormat;
+    if (!Original || Original.__forceGregorian) {
+        return;
+    }
+
+    const withGregorian = (options) => (options?.calendar ? options : { ...(options ?? {}), calendar: 'gregory' });
+    const create = ([locales, options]) => Reflect.construct(Original, [locales, withGregorian(options)]);
+
+    intl.DateTimeFormat = new Proxy(Original, {
+        construct: (target, args) => create(args),
+        apply: (target, thisArg, args) => create(args),
+        get: (target, key, receiver) => (key === '__forceGregorian' ? true : Reflect.get(target, key, receiver)),
+    });
+
+    for (const name of ['toLocaleString', 'toLocaleDateString', 'toLocaleTimeString']) {
+        const original = dateProto[name];
+        dateProto[name] = function (locales, options) {
+            return original.call(this, locales, withGregorian(options));
+        };
+    }
+}
+
+/**
  * The first of the browser's preferred languages that has locale data loaded, or English.
  */
 export function preferredLanguage(langs, browserLanguages = []) {
@@ -152,6 +181,7 @@ export function initialize(application, intl = Intl) {
 
     // The browser already has every language: keep native Intl and start straight away.
     if (nativeIntlSupports(langs, intl)) {
+        forceGregorianCalendar(intl);
         return;
     }
 
@@ -164,6 +194,7 @@ export function initialize(application, intl = Intl) {
         pinDefaultLocale(preferredLanguage(langs, window.navigator.languages));
         pinDefaultTimeZone(timeZone);
         gregorianFallback();
+        forceGregorianCalendar();
         application.advanceReadiness();
     })();
 }
