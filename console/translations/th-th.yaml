@@ -4810,6 +4810,7 @@ ember-ui:
             data-input: ช่องกรอกข้อมูล
             remove: ลบ
         aside-item-scroller:
+            create-resource: สร้าง
             directory: รายชื่อ
             'no': ไม่มี{resource}
             search: ค้นหา{resource}
@@ -5003,6 +5004,7 @@ ember-ui:
                     'no': ไม่มี{_resource}
                 panel:
                     header-actions:
+                        create-model: สร้าง
                         save-changes: บันทึกการเปลี่ยนแปลง
             sidebar:
                 navigator:
@@ -5562,6 +5564,11 @@ ember-ui:
                 showing-first-of-rows: แสดง {length} แถวแรกจาก {total_rows} แถว
                 showing-saved-results: แสดงผลลัพธ์ที่บันทึกไว้
                 showing-the-last-successful-run: แสดงผลจากการรันที่สำเร็จครั้งล่าสุด
+    duration:
+        d: '{n} วัน'
+        h: '{n} ชม.'
+        m: '{n} นาที'
+        s: '{n} วินาที'
     js:
         components:
             activity-log:

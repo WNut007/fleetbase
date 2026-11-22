@@ -976,6 +976,7 @@ ember-ui:
             data-input: Data Input
             remove: Remove
         aside-item-scroller:
+            create-resource: Create {resource}
             directory: Directory
             'no': No {resource}
             search: Search {resource}
@@ -1169,6 +1170,7 @@ ember-ui:
                     'no': No {_resource}
                 panel:
                     header-actions:
+                        create-model: Create {model}
                         save-changes: Save Changes
             sidebar:
                 navigator:
@@ -1728,6 +1730,11 @@ ember-ui:
                 showing-first-of-rows: Showing first {length} of {total_rows} rows
                 showing-saved-results: Showing saved results
                 showing-the-last-successful-run: Showing the last successful run.
+    duration:
+        d: '{n}d'
+        h: '{n}h'
+        m: '{n}m'
+        s: '{n}s'
     js:
         components:
             activity-log:
