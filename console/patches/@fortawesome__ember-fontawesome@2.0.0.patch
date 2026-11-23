@@ -1,0 +1,28 @@
+diff --git a/addon/components/fa-icon.js b/addon/components/fa-icon.js
+index 68f28d4ec8bc2afdf2ad1c47ac8ab4ae92fa83ba..8391b669b2512fe0d18b4239adb4258f24dcff32 100644
+--- a/addon/components/fa-icon.js
++++ b/addon/components/fa-icon.js
+@@ -1,4 +1,5 @@
+ import Component from '@glimmer/component';
++import { cached } from '@glimmer/tracking';
+ import { icon, parse, toHtml } from '@fortawesome/fontawesome-svg-core';
+ import { htmlSafe } from '@ember/template';
+ import appConfig from 'ember-get-config';
+@@ -41,6 +42,9 @@ function normalizeIconArgs(prefix, icon) {
+ }
+ 
+ export default class FaIconComponent extends Component {
++  // The template reads ~15 values derived from the rendered icon; without caching each read
++  // rendered the icon again, which made pages with many icons stall for seconds.
++  @cached
+   get content() {
+     const children = this.abstractIcon?.children ?? [];
+     const html = children.reduce((acc, cur) => {
+@@ -85,6 +89,7 @@ export default class FaIconComponent extends Component {
+     return Object.keys(classes).filter((key) => classes[key]);
+   }
+ 
++  @cached
+   get abstractIcon() {
+     const iconLookup = normalizeIconArgs(this.args.prefix, this.args.icon);
+     const classes = objectWithKey('classes', this.classList);

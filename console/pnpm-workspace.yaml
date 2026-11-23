@@ -32,3 +32,4 @@ blockExoticSubdeps: false
 patchedDependencies:
   '@fleetbase/ember-core@0.3.27': patches/@fleetbase__ember-core@0.3.27.patch
   '@fleetbase/valhalla-engine@0.1.0': patches/@fleetbase__valhalla-engine@0.1.0.patch
+  '@fortawesome/ember-fontawesome@2.0.0': patches/@fortawesome__ember-fontawesome@2.0.0.patch
