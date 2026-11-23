@@ -1,0 +1,46 @@
+diff --git a/addon/abilities/dynamic.js b/addon/abilities/dynamic.js
+index e56da313a123ef34ce4c5db0643d172598f83499..f85eadb90ce2abc9be14e351a1bb33c9e2b9c586 100644
+--- a/addon/abilities/dynamic.js
++++ b/addon/abilities/dynamic.js
+@@ -3,17 +3,36 @@ import { tracked } from '@glimmer/tracking';
+ import { inject as service } from '@ember/service';
+ import { singularize } from 'ember-inflector';
+ 
++/**
++ * Permission-name sets, one per permissions array. ember-can creates a new ability for every
++ * `can` check, and building a Set of all the user's permissions (766 for an admin) each time cost
++ * ~2 ms per check: a menu checks hundreds of items on every render, which stalled pages for
++ * seconds. The set is built once per permissions array and shared.
++ */
++const permissionSets = new WeakMap();
++
++export function permissionNames(permissions) {
++    if (!permissions || typeof permissions !== 'object') {
++        return new Set();
++    }
++
++    let names = permissionSets.get(permissions);
++    if (!names) {
++        names = new Set(Array.from(permissions, (permission) => permission?.name));
++        permissionSets.set(permissions, names);
++    }
++
++    return names;
++}
++
+ export default class extends Ability {
+     @service currentUser;
+     @tracked service;
+     @tracked resource;
+     @tracked ability;
+-    /* istanbul ignore next -- the constructor assigns permissions unconditionally, so this default is never read */
+-    @tracked permissions = new Set();
+ 
+-    constructor() {
+-        super(...arguments);
+-        this.permissions = new Set(this.currentUser.permissions.map((permission) => permission.name));
++    get permissions() {
++        return permissionNames(this.currentUser.permissions);
+     }
+ 
+     parseProperty(str) {
