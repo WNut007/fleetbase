@@ -5947,3 +5947,20 @@ ember-ui:
         voided: ยกเลิกแล้ว
         waiting: รอ
         warning: เตือน
+crud:
+  confirm-delete: ต้องการลบ{model}นี้ใช่หรือไม่?
+  deleted: ลบ{model}แล้ว
+  deleted-named: ลบ{model} '{name}' แล้ว
+  bulk-delete: ลบ{models}ที่เลือก
+  verb-delete: ลบ
+  export-title: ส่งออก{models}
+  download: ดาวน์โหลด
+  import-title: นำเข้า{models}จากสเปรดชีต
+  start-import: เริ่มนำเข้า
+  column-type: ประเภท
+  column-file-name: ชื่อไฟล์
+  column-file-size: ขนาดไฟล์
+  column-upload-date: วันที่อัปโหลด
+  no-spreadsheets: ยังไม่ได้อัปโหลดสเปรดชีตสำหรับนำเข้า
+  uploading: กำลังอัปโหลด...
+  processing: กำลังประมวลผล...

@@ -2113,3 +2113,20 @@ ember-ui:
         voided: Voided
         waiting: Waiting
         warning: Warning
+crud:
+  confirm-delete: Are you sure to delete this {model}?
+  deleted: '''{model}'' has been deleted.'
+  deleted-named: '{model} ''{name}'' has been deleted.'
+  bulk-delete: Bulk delete {models}
+  verb-delete: Delete
+  export-title: Export {models}
+  download: Download
+  import-title: Import {models} with spreadsheets
+  start-import: Start Import
+  column-type: Type
+  column-file-name: File Name
+  column-file-size: File Size
+  column-upload-date: Upload Date
+  no-spreadsheets: No spreadsheets uploaded for import to process.
+  uploading: Uploading...
+  processing: Processing...

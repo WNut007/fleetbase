@@ -44,3 +44,123 @@ index e56da313a123ef34ce4c5db0643d172598f83499..f85eadb90ce2abc9be14e351a1bb33c9
      }
  
      parseProperty(str) {
+diff --git a/addon/services/crud.js b/addon/services/crud.js
+index b83a84c0dd82f4dc947e72b000183e29b22232d6..f5ac4214c1ec55bd3f39dfa5d823f377afe5892d 100644
+--- a/addon/services/crud.js
++++ b/addon/services/crud.js
+@@ -21,6 +21,7 @@ function displayModelName(model, options) {
+ }
+ 
+ export default class CrudService extends Service {
++    @service intl;
+     @service fetch;
+     @service modalsManager;
+     @service notifications;
+@@ -36,12 +37,36 @@ export default class CrudService extends Service {
+      * @param {Object} options
+      * @void
+      */
++    /**
++     * A model name in the user's language: the `resource.<name>` translation when there is one,
++     * else the humanized name.
++     */
++    modelLabel(modelName, plural = false) {
++        const name = String(modelName ?? '');
++        const key = `resource.${dasherize((plural ? pluralize(name) : name).toLowerCase().replace(/\s+/g, '-'))}`;
++        if (this.intl?.exists?.(key)) {
++            return this.intl.t(key);
++        }
++
++        return plural ? pluralize(smartHumanize(name)) : smartHumanize(name);
++    }
++
++    /** A translation with an English fallback, for when the key is missing. */
++    text(key, fallback, values = {}) {
++        return this.intl?.exists?.(key) ? this.intl.t(key, values) : fallback;
++    }
++
+     @action delete(model, options = {}) {
+         const modelName = displayModelName(model, options);
+-        const successNotification = options?.successNotification || `${model.name ? modelName + " '" + model.name + "'" : "'" + modelName + "'"} has been deleted.`;
++        const label = this.modelLabel(modelName);
++        const successNotification =
++            options?.successNotification ||
++            (model.name
++                ? this.text('crud.deleted-named', `${modelName} '${model.name}' has been deleted.`, { model: label, name: model.name })
++                : this.text('crud.deleted', `'${modelName}' has been deleted.`, { model: label }));
+ 
+         this.modalsManager.confirm({
+-            title: `Are you sure to delete this ${modelName}?`,
++            title: this.text('crud.confirm-delete', `Are you sure to delete this ${modelName}?`, { model: label }),
+             args: ['model'],
+             model,
+             confirm: async (modal) => {
+@@ -138,8 +163,8 @@ export default class CrudService extends Service {
+         }
+ 
+         this.modalsManager.show(modalTemplate, {
+-            title: `Bulk ${verb} ${pluralize(smartHumanize(modelName))}`,
+-            acceptButtonText: smartHumanize(verb),
++            title: this.text(`crud.bulk-${dasherize(verb)}`, `Bulk ${verb} ${pluralize(smartHumanize(modelName))}`, { models: this.modelLabel(modelName, true) }),
++            acceptButtonText: this.text(`crud.verb-${dasherize(verb)}`, smartHumanize(verb)),
+             args: ['selected'],
+             modelNamePath: 'name',
+             verb,
+@@ -221,8 +246,8 @@ export default class CrudService extends Service {
+         const exportEndpoint = options?.exportEndpoint ?? options?.actionPath ?? `${modelEndpoint}/export`;
+ 
+         this.modalsManager.show('modals/export-form', {
+-            title: `Export ${pluralize(smartHumanize(modelName))}`,
+-            acceptButtonText: 'Download',
++            title: this.text('crud.export-title', `Export ${pluralize(smartHumanize(modelName))}`, { models: this.modelLabel(modelName, true) }),
++            acceptButtonText: this.text('crud.download', 'Download'),
+             modalClass: 'modal-sm',
+             format: 'xlsx',
+             formatOptions: ['csv', 'xlsx', 'xls', 'html', 'pdf'],
+@@ -295,18 +320,18 @@ export default class CrudService extends Service {
+         };
+ 
+         this.modalsManager.show('modals/import-form', {
+-            title: `Import ${pluralize(smartHumanize(modelName))} with spreadsheets`,
+-            acceptButtonText: 'Start Import',
++            title: this.text('crud.import-title', `Import ${pluralize(smartHumanize(modelName))} with spreadsheets`, { models: this.modelLabel(modelName, true) }),
++            acceptButtonText: this.text('crud.start-import', 'Start Import'),
+             acceptButtonScheme: 'magic',
+             acceptButtonIcon: 'upload',
+             acceptButtonDisabled: true,
+             isProcessing: false,
+             uploadQueue: A([]),
+             fileQueueColumns: [
+-                { name: 'Type', valuePath: 'extension', key: 'type' },
+-                { name: 'File Name', valuePath: 'name', key: 'fileName' },
+-                { name: 'File Size', valuePath: 'size', key: 'fileSize' },
+-                { name: 'Upload Date', valuePath: 'file.lastModifiedDate', key: 'uploadDate' },
++                { name: this.text('crud.column-type', 'Type'), valuePath: 'extension', key: 'type' },
++                { name: this.text('crud.column-file-name', 'File Name'), valuePath: 'name', key: 'fileName' },
++                { name: this.text('crud.column-file-size', 'File Size'), valuePath: 'size', key: 'fileSize' },
++                { name: this.text('crud.column-upload-date', 'Upload Date'), valuePath: 'file.lastModifiedDate', key: 'uploadDate' },
+                 { name: '', valuePath: '', key: 'delete' },
+             ],
+             acceptedFileTypes: ['application/vnd.ms-excel', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'text/csv'],
+@@ -345,18 +370,18 @@ export default class CrudService extends Service {
+                 };
+ 
+                 if (!uploadQueue.length) {
+-                    return this.notifications.warning('No spreadsheets uploaded for import to process.');
++                    return this.notifications.warning(this.text('crud.no-spreadsheets', 'No spreadsheets uploaded for import to process.'));
+                 }
+ 
+                 modal.startLoading();
+-                modal.setOption('acceptButtonText', 'Uploading...');
++                modal.setOption('acceptButtonText', this.text('crud.uploading', 'Uploading...'));
+ 
+                 for (let i = 0; i < uploadQueue.length; i++) {
+                     const file = uploadQueue.objectAt(i);
+                     await uploadTask(file);
+                 }
+ 
+-                this.modalsManager.setOption('acceptButtonText', 'Processing...');
++                this.modalsManager.setOption('acceptButtonText', this.text('crud.processing', 'Processing...'));
+                 this.modalsManager.setOption('isProcessing', true);
+ 
+                 const files = uploadedFiles.map((file) => file.id);
