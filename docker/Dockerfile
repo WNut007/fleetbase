@@ -179,6 +179,10 @@ COPY --chown=www-data:www-data ./api /fleetbase/api
 # Dump autoload
 RUN su www-data -s /bin/sh -c "composer dumpautoload"
 
+# Serve the "public" disk (order files, photos) at /storage: without this link every
+# uploaded file's URL returned 404. storage/app is a mounted volume, so the target exists at runtime.
+RUN ln -sfn /fleetbase/api/storage/app/public /fleetbase/api/public/storage
+
 # Setup composer root directory
 RUN mkdir -p /root/.composer
 RUN mkdir -p /fleetbase/api/.composer && chown www-data:www-data /fleetbase/api/.composer
