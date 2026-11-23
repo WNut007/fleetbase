@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+      // Opt-in boot profiler for performance work: set localStorage "fleetbase:profile" to "1" and reload;
+      // the samples are on window.__bootProfiler (JS Self-Profiling API, enabled by the Document-Policy header).
+      try {
+        if (localStorage.getItem('fleetbase:profile') === '1' && window.Profiler) {
+          window.__bootProfiler = new Profiler({ sampleInterval: 10, maxBufferSize: 200000 });
+        }
+      } catch (e) {}
+    </script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
