@@ -29,3 +29,5 @@ minimumReleaseAgeExclude:
   - '@fleetbase/vroom-engine@0.1.0'
   - '@fleetbase/ai-engine@0.1.0'
 blockExoticSubdeps: false
+patchedDependencies:
+  '@fleetbase/valhalla-engine@0.1.0': patches/@fleetbase__valhalla-engine@0.1.0.patch

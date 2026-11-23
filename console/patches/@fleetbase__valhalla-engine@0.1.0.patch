@@ -1,0 +1,57 @@
+diff --git a/addon/services/valhalla-routing.js b/addon/services/valhalla-routing.js
+index a7afe73567a4fc4c08a4425d91cc618b194911d3..974762654376a0a4a2978c37f87ab4cf36f3eeaf 100644
+--- a/addon/services/valhalla-routing.js
++++ b/addon/services/valhalla-routing.js
+@@ -3,6 +3,7 @@ import Routing from '@fleetbase/leaflet-routing-machine';
+ import corslite from '@fleetbase/ember-core/utils/corslite';
+ import polyline from '@fleetbase/ember-core/utils/polyline';
+ import { later, cancel } from '@ember/runloop';
++import { toMeters } from './valhalla';
+ 
+ const L = window.L ?? {};
+ export default class ValhallaRoutingService extends Service {
+@@ -257,7 +258,8 @@ export default class ValhallaRoutingService extends Service {
+ 
+             _convertSummary: function (route) {
+                 return {
+-                    totalDistance: route.length,
++                    // Leaflet Routing Machine expects meters; Valhalla reports kilometers (or miles).
++                    totalDistance: toMeters(route.length, this.options.units === 'imperial' ? 'miles' : 'kilometers'),
+                     totalTime: route.time,
+                 };
+             },
+diff --git a/addon/services/valhalla.js b/addon/services/valhalla.js
+index 8626ca972cf43bfa5939fec32366aa3e947a82b8..e917bbe7917926ba2da8c7d9215672c1aec69375 100644
+--- a/addon/services/valhalla.js
++++ b/addon/services/valhalla.js
+@@ -3,6 +3,20 @@ import { isArray } from '@ember/array';
+ import { debug } from '@ember/debug';
+ import polyline from '@fleetbase/ember-core/utils/polyline';
+ 
++/**
++ * Valhalla distances are in the request's units ("kilometers" by default, or "miles"); convert to meters.
++ */
++export function toMeters(length, units = 'kilometers') {
++    const value = Number(length ?? 0);
++    if (!Number.isFinite(value)) {
++        return 0;
++    }
++
++    const perUnit = String(units ?? 'kilometers').startsWith('mi') ? 1609.344 : 1000;
++
++    return Math.round(value * perUnit);
++}
++
+ export default class ValhallaService extends RouteOptimizationInterfaceService {
+     name = 'Valhalla';
+ 
+@@ -88,7 +102,8 @@ export default class ValhallaService extends RouteOptimizationInterfaceService {
+             coordinates,
+             bounds: this.#boundsFromCoordinates(coordinates),
+             summary: {
+-                totalDistance: result?.trip?.summary?.length ?? 0,
++                // Valhalla reports length in the request's units (km by default); the rest of the platform uses meters.
++                totalDistance: toMeters(result?.trip?.summary?.length, result?.trip?.units),
+                 totalTime: result?.trip?.summary?.time ?? 0,
+             },
+             legs,

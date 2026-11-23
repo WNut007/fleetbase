@@ -2,6 +2,7 @@ app:
   name: Fleetbase
 
 common:
+  search-input: Search Input
   new: New
   create: Create
   add: Add

@@ -1,6 +1,7 @@
 app:
   name: Fleetbase
 common:
+  search-input: ช่องค้นหา
   new: ใหม่
   create: สร้าง
   add: เพิ่ม
