@@ -45,7 +45,7 @@ index e56da313a123ef34ce4c5db0643d172598f83499..f85eadb90ce2abc9be14e351a1bb33c9
  
      parseProperty(str) {
 diff --git a/addon/services/crud.js b/addon/services/crud.js
-index b83a84c0dd82f4dc947e72b000183e29b22232d6..f5ac4214c1ec55bd3f39dfa5d823f377afe5892d 100644
+index b83a84c0dd82f4dc947e72b000183e29b22232d6..a5d61f6eb1b42c0cc316e98c169a89998c239df9 100644
 --- a/addon/services/crud.js
 +++ b/addon/services/crud.js
 @@ -21,6 +21,7 @@ function displayModelName(model, options) {
@@ -66,7 +66,7 @@ index b83a84c0dd82f4dc947e72b000183e29b22232d6..f5ac4214c1ec55bd3f39dfa5d823f377
 +     */
 +    modelLabel(modelName, plural = false) {
 +        const name = String(modelName ?? '');
-+        const key = `resource.${dasherize((plural ? pluralize(name) : name).toLowerCase().replace(/\s+/g, '-'))}`;
++        const key = `resource.${dasherize((plural ? pluralize(name) : name).trim()).replace(/\s+/g, '-').toLowerCase()}`;
 +        if (this.intl?.exists?.(key)) {
 +            return this.intl.t(key);
 +        }
@@ -164,3 +164,86 @@ index b83a84c0dd82f4dc947e72b000183e29b22232d6..f5ac4214c1ec55bd3f39dfa5d823f377
                  this.modalsManager.setOption('isProcessing', true);
  
                  const files = uploadedFiles.map((file) => file.id);
+diff --git a/addon/services/resource-action.js b/addon/services/resource-action.js
+index a4ac5b2071b35016b40d58c6e9135193102b9b79..cec9ef6faebdf4032c75ad4e3d8fe1c6c6a6beb7 100644
+--- a/addon/services/resource-action.js
++++ b/addon/services/resource-action.js
+@@ -53,6 +53,15 @@ export default class ResourceActionService extends Service {
+      */
+     @tracked modelName = null;
+ 
++    /** The model's name in the user's language (`resource.<name>`), else titleized. */
++    get resourceLabel() {
++        return this.crud?.modelLabel ? this.crud.modelLabel(this.modelName) : titleize(this.modelName);
++    }
++
++    get resourceLabelPlural() {
++        return this.crud?.modelLabel ? this.crud.modelLabel(this.modelName, true) : pluralize(titleize(this.modelName));
++    }
++
+     /**
+      * The model name path to get the name attribute of the contexted model.
+      * Should be overridden in child services.
+@@ -252,7 +261,7 @@ export default class ResourceActionService extends Service {
+     @action delete(record, options = {}, deleteOptions = {}) {
+         const taskOptions = { ...deleteOptions, ...(options.taskOptions ?? {}) };
+         this.modalsManager.confirm({
+-            title: this.intl.t('common.delete-resource-named', { resource: titleize(this.modelName), resourceName: this.getRecordName(record) }) + '?',
++            title: this.intl.t('common.delete-resource-named', { resource: this.resourceLabel, resourceName: this.getRecordName(record) }) + '?',
+             body: this.intl.t('common.delete-resource-prompt'),
+             acceptButtonText: this.intl.t('common.confirm-delete'),
+             acceptButtonType: 'danger',
+@@ -283,7 +292,7 @@ export default class ResourceActionService extends Service {
+     @action confirmContinueWithUnsavedChanges(model, options = {}) {
+         return this.modalsManager.confirm({
+             title: this.intl.t('common.continue-without-saving'),
+-            body: this.intl.t('common.continue-without-saving-prompt', { resource: titleize(this.modelName) }),
++            body: this.intl.t('common.continue-without-saving-prompt', { resource: this.resourceLabel }),
+             acceptButtonText: this.intl.t('common.continue'),
+             confirm: async () => {
+                 model.rollbackAttributes();
+@@ -309,7 +318,7 @@ export default class ResourceActionService extends Service {
+ 
+         return this.crud.bulkDelete(selected, {
+             modelNamePath: this.modelNamePath,
+-            acceptButtonText: this.intl.t('common.bulk-delete-resource', { resource: pluralize(titleize(this.modelName)) }),
++            acceptButtonText: this.intl.t('common.bulk-delete-resource', { resource: this.resourceLabelPlural }),
+             onSuccess: async () => {
+                 await this.router.refresh();
+                 this.tableContext.untoggleSelectAll();
+@@ -388,7 +397,7 @@ export default class ResourceActionService extends Service {
+ 
+             this.notifications.success(
+                 this.intl.t('common.resource-created-success-name', {
+-                    resource: titleize(this.modelName),
++                    resource: this.resourceLabel,
+                     resourceName: this.getRecordName(record),
+                 })
+             );
+@@ -421,7 +430,7 @@ export default class ResourceActionService extends Service {
+ 
+             this.notifications.success(
+                 this.intl.t('common.resource-updated-success', {
+-                    resource: titleize(this.modelName),
++                    resource: this.resourceLabel,
+                     resourceName: this.getRecordName(record),
+                 })
+             );
+@@ -456,7 +465,7 @@ export default class ResourceActionService extends Service {
+ 
+             this.notifications.success(
+                 this.intl.t('common.resource-action-success', {
+-                    resource: titleize(this.modelName),
++                    resource: this.resourceLabel,
+                     resourceName: this.getRecordName(record),
+                     action: isNew ? 'created' : 'updated',
+                 })
+@@ -511,7 +520,7 @@ export default class ResourceActionService extends Service {
+ 
+             this.notifications.success(
+                 this.intl.t('common.resource-deleted', {
+-                    resource: titleize(this.modelName),
++                    resource: this.resourceLabel,
+                     resourceName: this.getRecordName(record),
+                 })
+             );
