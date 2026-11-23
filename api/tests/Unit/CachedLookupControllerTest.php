@@ -45,4 +45,30 @@ class CachedLookupControllerTest extends TestCase
         // Same as core-api: a null country is an empty JSON object.
         $this->assertSame([], (new CachedLookupController())->country('zz', new Request())->getData(true));
     }
+
+    public function test_the_country_list_drops_flag_svg_markup_and_is_cached(): void
+    {
+        $controller = new CachedLookupController();
+        $request    = new Request(['columns' => ['name', 'cca2', 'flag', 'emoji']]);
+
+        $countries = $controller->countries($request)->getData(true);
+        $thailand  = collect($countries)->firstWhere('cca2', 'TH');
+
+        $this->assertNotNull($thailand);
+        $this->assertSame(['emoji', 'flag-icon', 'flag-icon-squared'], array_keys($thailand['flag']));
+        $this->assertLessThan(500 * 1024, strlen(json_encode($countries)), 'the list stays small without SVG markup');
+
+        // The same query is answered from the cache.
+        $key = CachedLookupController::countriesCacheKey($request);
+        $this->assertTrue(Cache::has($key));
+        Cache::put($key, [['name' => 'from cache']]);
+        $this->assertSame([['name' => 'from cache']], $controller->countries($request)->getData(true));
+        $this->assertNotSame($key, CachedLookupController::countriesCacheKey(new Request(['columns' => ['name']])));
+    }
+
+    public function test_countries_without_a_flag_array_are_left_alone(): void
+    {
+        $this->assertSame(['name' => 'X', 'flag' => 'x.svg'], CachedLookupController::withoutFlagMarkup(['name' => 'X', 'flag' => 'x.svg']));
+        $this->assertSame('plain', CachedLookupController::withoutFlagMarkup('plain'));
+    }
 }

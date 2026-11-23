@@ -20,6 +20,54 @@ class CachedLookupController extends LookupController
 {
     public const COUNTRY_CACHE_TTL = 86400;
 
+    /**
+     * Flag fields kept in country lists. The others are raw SVG markup (up to 350 KB for one
+     * country) that no screen uses.
+     */
+    public const LIST_FLAG_FIELDS = ['emoji', 'flag-icon', 'flag-icon-squared'];
+
+    /**
+     * GET int/v1/lookup/countries, cached and without the flag SVG markup.
+     *
+     * With the SVGs the list was ~5 MB. The console keeps it in localStorage, and every write
+     * to that cache re-serialised all 5 MB: a page load stalled the browser for seconds and
+     * filled the browser's 5 MB storage quota.
+     */
+    public function countries(Request $request)
+    {
+        $countries = Cache::remember(static::countriesCacheKey($request), static::COUNTRY_CACHE_TTL, function () use ($request) {
+            return array_map([static::class, 'withoutFlagMarkup'], parent::countries($request)->getData(true));
+        });
+
+        return response()->json($countries);
+    }
+
+    /**
+     * One cache entry per distinct list query.
+     */
+    public static function countriesCacheKey(Request $request): string
+    {
+        return 'lookup:countries:' . md5(json_encode([
+            $request->input('query'),
+            $request->boolean('simple'),
+            $request->inputArray('columns'),
+            $request->inputArray('only'),
+            $request->inputArray('except'),
+        ]));
+    }
+
+    /**
+     * A country with only the light flag fields (emoji and CSS class names).
+     */
+    public static function withoutFlagMarkup($country)
+    {
+        if (is_array($country) && is_array($country['flag'] ?? null)) {
+            $country['flag'] = array_intersect_key($country['flag'], array_flip(static::LIST_FLAG_FIELDS));
+        }
+
+        return $country;
+    }
+
     public function country($code, Request $request)
     {
         $simple = $request->boolean('simple', true);
