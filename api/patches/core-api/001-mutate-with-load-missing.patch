@@ -1,0 +1,16 @@
+--- a/src/Traits/HasApiModelBehavior.php	2026-11-24 15:30:15.006608518 +0700
++++ b/src/Traits/HasApiModelBehavior.php	2026-11-24 15:30:15.027362762 +0700
+@@ -567,8 +567,12 @@
+         $with    = RequestRelations::eagerLoads($result, $request->or(['with', 'expand'], []));
+         $without = array_filter($request->inputArray('without'), 'is_string');
+ 
++        // ShipCode: the query builder has already eager-loaded these (withRelationships), and a
++        // create/update has just load()ed them; load() here re-queried every relation once per
++        // record (N+1 on every list using with[]) and dropped any constraint the controller put
++        // on the eager load. Only load what is still missing.
+         if ($with) {
+-            $result->load($with);
++            $result->loadMissing($with);
+         }
+ 
+         // makeHidden adds to the model's hidden attributes; setHidden would replace them and expose the defaults

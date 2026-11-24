@@ -176,6 +176,13 @@ RUN --mount=type=bind,source=docker/scripts/assert-frankenphp-version.php,target
 # Setup application
 COPY --chown=www-data:www-data ./api /fleetbase/api
 
+# Local fixes to packages we do not fork (api/patches/<package>/*.patch, applied in name order).
+# The build fails if a patch no longer applies, so an upstream bump cannot silently drop one.
+RUN command -v patch >/dev/null 2>&1 || (apt-get update && apt-get install -y --no-install-recommends patch && rm -rf /var/lib/apt/lists/*); \
+  for p in /fleetbase/api/patches/core-api/*.patch; do \
+    [ -e "$p" ] || continue; echo "applying $p"; patch -p1 -d /fleetbase/api/vendor/fleetbase/core-api --forward --batch < "$p" || exit 1; \
+  done
+
 # Dump autoload
 RUN su www-data -s /bin/sh -c "composer dumpautoload"
 
