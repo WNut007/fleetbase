@@ -1033,6 +1033,7 @@ ember-ui:
             click-to-copy: Click to copy
             copied: Copied!
         click-to-reveal:
+            reveal: Click to reveal
             click-to-copy: Click to copy
             copied: Copied!
         company:

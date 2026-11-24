@@ -4867,6 +4867,7 @@ ember-ui:
             click-to-copy: คลิกเพื่อคัดลอก
             copied: คัดลอกแล้ว!
         click-to-reveal:
+            reveal: คลิกเพื่อแสดง
             click-to-copy: คลิกเพื่อคัดลอก
             copied: คัดลอกแล้ว!
         company:
