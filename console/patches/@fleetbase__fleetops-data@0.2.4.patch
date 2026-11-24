@@ -1,0 +1,12 @@
+diff --git a/addon/models/device-event.js b/addon/models/device-event.js
+index 2906106f2e01ba7adb6dca7ca55ca20451493c7e..cf6c81bb692a80f9c4ddf13545bfec4d7932d7a9 100644
+--- a/addon/models/device-event.js
++++ b/addon/models/device-event.js
+@@ -15,6 +15,7 @@ export default class DeviceEventModel extends Model {
+     @attr('raw') meta;
+     @attr('string') location;
+     @attr('string') event_type;
++    @attr('string') message;
+     @attr('string') severity;
+     @attr('string') ident;
+     @attr('string') protocol;
