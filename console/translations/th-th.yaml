@@ -5831,6 +5831,11 @@ ember-ui:
                 loading: กำลังโหลด...
                 ok: ตกลง
     status:
+        recorded: บันทึกแล้ว
+        disputed: โต้แย้ง
+        matched: จับคู่แล้ว
+        unmatched: ไม่พบที่ตรงกัน
+        flagged: พบความผิดปกติ
         accepted: ยอมรับแล้ว
         acknowledged: รับทราบแล้ว
         active: ใช้งาน

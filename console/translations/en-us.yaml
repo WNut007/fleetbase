@@ -1997,6 +1997,11 @@ ember-ui:
                 loading: Loading...
                 ok: OK
     status:
+        recorded: Recorded
+        disputed: Disputed
+        matched: Matched
+        unmatched: Unmatched
+        flagged: Flagged
         accepted: Accepted
         acknowledged: Acknowledged
         active: Active
