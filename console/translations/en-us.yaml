@@ -2097,6 +2097,10 @@ ember-ui:
         started: Started
         stolen: Stolen
         stopped: Stopped
+        needs_review: Needs Review
+        reviewed: Reviewed
+        submitted: Submitted
+        under_review: Under Review
         success: Success
         suspended: Suspended
         synced: Synced

@@ -5931,6 +5931,10 @@ ember-ui:
         started: เริ่มแล้ว
         stolen: ถูกขโมย
         stopped: หยุดแล้ว
+        needs_review: รอตรวจทาน
+        reviewed: ตรวจทานแล้ว
+        submitted: ส่งแล้ว
+        under_review: กำลังตรวจทาน
         success: สำเร็จ
         suspended: ระงับแล้ว
         synced: ซิงก์แล้ว

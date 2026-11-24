@@ -2378,12 +2378,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WNut007/fleetops.git",
-                "reference": "2210dae9aa4e8b254c01bd6b5fa5ddd390e62985"
+                "reference": "a227372f1828fee60da90c632a9d9e344ed67086"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WNut007/fleetops/zipball/2210dae9aa4e8b254c01bd6b5fa5ddd390e62985",
-                "reference": "2210dae9aa4e8b254c01bd6b5fa5ddd390e62985",
+                "url": "https://api.github.com/repos/WNut007/fleetops/zipball/a227372f1828fee60da90c632a9d9e344ed67086",
+                "reference": "a227372f1828fee60da90c632a9d9e344ed67086",
                 "shasum": ""
             },
             "require": {
