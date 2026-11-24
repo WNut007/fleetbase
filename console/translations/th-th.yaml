@@ -5307,6 +5307,9 @@ ember-ui:
         report:
             data:
                 configure-the-report-and-press-the: ตั้งค่ารายงานแล้วกดปุ่ม Execute เพื่อดูตัวอย่างผลลัพธ์
+                export-csv: ส่งออก CSV
+                limit-reached: 'ถึงลิมิต {limit} แถวของรายงาน อาจมีข้อมูลมากกว่านี้ ปรับลิมิตได้ในการตั้งค่ารายงาน'
+                row-count: '{count} แถว'
                 no-report-preview: ยังไม่มีตัวอย่างรายงาน
             details:
                 date-created: วันที่สร้าง

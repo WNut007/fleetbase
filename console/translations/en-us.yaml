@@ -1473,6 +1473,9 @@ ember-ui:
         report:
             data:
                 configure-the-report-and-press-the: Configure the report and press the execute button to preview the results.
+                export-csv: Export CSV
+                limit-reached: 'reached the query limit of {limit} rows, more records may exist — raise the limit in the report settings'
+                row-count: '{count} rows'
                 no-report-preview: No report preview
             details:
                 date-created: Date Created
