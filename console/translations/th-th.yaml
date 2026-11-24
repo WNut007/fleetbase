@@ -5931,6 +5931,12 @@ ember-ui:
         started: เริ่มแล้ว
         stolen: ถูกขโมย
         stopped: หยุดแล้ว
+        discontinued: เลิกผลิตแล้ว
+        in_stock: มีสต็อก
+        in_use: กำลังใช้งาน
+        low_stock: สต็อกต่ำ
+        on_order: กำลังสั่งซื้อ
+        out_of_stock: สินค้าหมด
         needs_review: รอตรวจทาน
         reviewed: ตรวจทานแล้ว
         submitted: ส่งแล้ว
