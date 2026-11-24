@@ -27,6 +27,8 @@ export default class ConsoleSettingsIndexController extends Controller {
      */
     @service fetch;
 
+    @service intl;
+
     /**
      * the upload queue.
      *
@@ -61,11 +63,18 @@ export default class ConsoleSettingsIndexController extends Controller {
     @task *saveSettings(event) {
         event?.preventDefault();
 
+        // The currency picker shows a default (from the user's location, else USD) while the
+        // organization has none stored; save what is shown, or revenue/cost widgets fall back to USD.
+        if (!this.model.currency) {
+            this.model.currency = this.currentUser.getOption('whois')?.currency?.code ?? 'USD';
+        }
+
         try {
             yield this.model.save();
-            this.notifications.success('Organization changes successfully saved.');
+            this.notifications.success(this.intl.t('common.changes-saved'));
         } catch (error) {
             debug(`Unable to save organization settings : ${error.message}`);
+            this.notifications.serverError(error);
         }
     }
 
