@@ -1,0 +1,47 @@
+--- a/src/Traits/HasCustomFields.php	2026-11-25 01:00:55.753266104 +0700
++++ b/src/Traits/HasCustomFields.php	2026-11-25 01:00:55.791870902 +0700
+@@ -212,6 +212,13 @@
+      */
+     public function getCustomFieldValues(bool $snakeKeys = true): array
+     {
++        // ShipCode: resources call this for every row of a list, and loadMissing() then runs
++        // one query per row (206 on a 105-driver list) even when nothing of this type has a
++        // custom field value. Check once per request and type before loading per row.
++        if (!$this->relationLoaded('customFieldValues') && !static::typeHasCustomFieldValues($this->getMorphClass())) {
++            return [];
++        }
++
+         $this->loadMissing('customFieldValues.customField');
+ 
+         $out = [];
+@@ -248,6 +255,30 @@
+      *
+      * Values are inserted as a flattened associative map.
+      */
++    /**
++     * Whether any record of this morph type (in the current company, when there is one) has a
++     * custom field value; answered once per request.
++     */
++    protected static function typeHasCustomFieldValues(string $subjectType): bool
++    {
++        $company = session('company');
++        $key     = 'shipcode.cfv_exists.' . $subjectType . '.' . ($company ?? '*');
++        $request = app('request');
++
++        if ($request->attributes->has($key)) {
++            return (bool) $request->attributes->get($key);
++        }
++
++        $query = CustomFieldValue::where('subject_type', $subjectType);
++        if ($company) {
++            $query->where('company_uuid', $company);
++        }
++        $exists = $query->exists();
++        $request->attributes->set($key, $exists);
++
++        return $exists;
++    }
++
+     public function withCustomFields(array $attributes = [], int|string $position = 'middle'): array
+     {
+         $inserts = $this->getCustomFieldValues(true);
