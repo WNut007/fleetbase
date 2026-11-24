@@ -14,3 +14,7 @@ Dockerfile*   text eol=lf
 crontab       text eol=lf
 *.conf        text eol=lf
 Caddyfile*    text eol=lf
+
+# patch files must keep LF line endings on Windows checkouts
+api/patches/**/*.patch text eol=lf
+console/patches/**/*.patch text eol=lf
