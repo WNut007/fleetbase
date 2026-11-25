@@ -176,61 +176,61 @@ index 8218c1131ca552b267610a685ea2314e10eb539f..b94e40842b71317a474c49f7d5df028b
      </div>
  </Widget::IamDashboardWidget>
 diff --git a/addon/components/widget/kpi-active-users.hbs b/addon/components/widget/kpi-active-users.hbs
-index 2511e6231981ddf0ddc79ed08f5feb8edee24c07..a634b8b04cb867356e0b2e91796e8ef86d3e0dce 100644
+index 2511e6231981ddf0ddc79ed08f5feb8edee24c07..eda69ef0d8be09261a052f9ffec7d4c9d12eb9a1 100644
 --- a/addon/components/widget/kpi-active-users.hbs
 +++ b/addon/components/widget/kpi-active-users.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="active_users" @title="Active Users" @icon="user-check" @accent="green" @footnote="Current access" ...attributes />
-+<Widget::IamKpiTile @metric="active_users" @title={{t "iam-ui.s.active-users"}} @icon="user-check" @accent="green" @footnote="Current access" ...attributes />
++<Widget::IamKpiTile @metric="active_users" @title={{t "iam-ui.s.active-users"}} @icon="user-check" @accent="green" @footnote={{t "iam-ui.s.current-access"}} ...attributes />
 diff --git a/addon/components/widget/kpi-dormant-users.hbs b/addon/components/widget/kpi-dormant-users.hbs
-index 2774117563480b89270d50a42f341ac81881001a..36c18a201b48ac6403c50ce1402bf21cf28f2002 100644
+index 2774117563480b89270d50a42f341ac81881001a..842e7590b00b645d981c9505d21320d397f20206 100644
 --- a/addon/components/widget/kpi-dormant-users.hbs
 +++ b/addon/components/widget/kpi-dormant-users.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="dormant_users" @title="Dormant Users" @icon="bed" @accent="rose" @footnote="No recent login" ...attributes />
-+<Widget::IamKpiTile @metric="dormant_users" @title={{t "iam-ui.s.dormant-users"}} @icon="bed" @accent="rose" @footnote="No recent login" ...attributes />
++<Widget::IamKpiTile @metric="dormant_users" @title={{t "iam-ui.s.dormant-users"}} @icon="bed" @accent="rose" @footnote={{t "iam-ui.s.no-recent-login"}} ...attributes />
 diff --git a/addon/components/widget/kpi-inactive-users.hbs b/addon/components/widget/kpi-inactive-users.hbs
-index 05cf8aab3381068d345c8c59af9e50d83a8b8bc2..52d23a74c99edf4d8c4daffaf13bb81476d50efc 100644
+index 05cf8aab3381068d345c8c59af9e50d83a8b8bc2..45a4d49effe6e79ace1f06edde3f9c8d754b2938 100644
 --- a/addon/components/widget/kpi-inactive-users.hbs
 +++ b/addon/components/widget/kpi-inactive-users.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="inactive_users" @title="Inactive Users" @icon="user-slash" @accent="slate" @footnote="Disabled access" ...attributes />
-+<Widget::IamKpiTile @metric="inactive_users" @title={{t "iam-ui.s.inactive-users"}} @icon="user-slash" @accent="slate" @footnote="Disabled access" ...attributes />
++<Widget::IamKpiTile @metric="inactive_users" @title={{t "iam-ui.s.inactive-users"}} @icon="user-slash" @accent="slate" @footnote={{t "iam-ui.s.disabled-access"}} ...attributes />
 diff --git a/addon/components/widget/kpi-mfa-coverage.hbs b/addon/components/widget/kpi-mfa-coverage.hbs
-index 06c2d0b2fbfcd801661158333eea4c4a6f3eae93..af0342e36c8d626b1bf1b85e25744981c26a6d72 100644
+index 06c2d0b2fbfcd801661158333eea4c4a6f3eae93..d943778c3bbe569a0720f149772f2ff4866c3bd3 100644
 --- a/addon/components/widget/kpi-mfa-coverage.hbs
 +++ b/addon/components/widget/kpi-mfa-coverage.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="mfa_coverage" @title="MFA Coverage" @icon="lock" @accent="violet" @unavailableText="Org enforcement shown" ...attributes />
-+<Widget::IamKpiTile @metric="mfa_coverage" @title={{t "iam-ui.s.mfa-coverage-2"}} @icon="lock" @accent="violet" @unavailableText="Org enforcement shown" ...attributes />
++<Widget::IamKpiTile @metric="mfa_coverage" @title={{t "iam-ui.s.mfa-coverage-2"}} @icon="lock" @accent="violet" @unavailableText={{t "iam-ui.s.org-enforcement-shown"}} ...attributes />
 diff --git a/addon/components/widget/kpi-pending-invites.hbs b/addon/components/widget/kpi-pending-invites.hbs
-index 7706f2a06d211da6d1daef36c731834a416617af..b85a53cd94d28a4f32fd36ca3a147eeaaa335cbb 100644
+index 7706f2a06d211da6d1daef36c731834a416617af..1e7090a2bee629e0648f3747acfec169a20c0c59 100644
 --- a/addon/components/widget/kpi-pending-invites.hbs
 +++ b/addon/components/widget/kpi-pending-invites.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="pending_invites" @title="Pending Invites" @icon="envelope-open-text" @accent="amber" @footnote="Awaiting access" ...attributes />
-+<Widget::IamKpiTile @metric="pending_invites" @title={{t "iam-ui.s.pending-invites"}} @icon="envelope-open-text" @accent="amber" @footnote="Awaiting access" ...attributes />
++<Widget::IamKpiTile @metric="pending_invites" @title={{t "iam-ui.s.pending-invites"}} @icon="envelope-open-text" @accent="amber" @footnote={{t "iam-ui.s.awaiting-access"}} ...attributes />
 diff --git a/addon/components/widget/kpi-policies.hbs b/addon/components/widget/kpi-policies.hbs
-index 4de68843a50ee1474e585294ff61b6443d07c700..ea11693a47248b59a905a7d73b2de377cc5f037e 100644
+index 4de68843a50ee1474e585294ff61b6443d07c700..e3e2ec42daed9747c48d1a8067aed37024a1d432 100644
 --- a/addon/components/widget/kpi-policies.hbs
 +++ b/addon/components/widget/kpi-policies.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="policies" @title="Policies" @icon="file-shield" @accent="green" @footnote="Organization managed" ...attributes />
-+<Widget::IamKpiTile @metric="policies" @title={{t "iam-ui.s.policies"}} @icon="file-shield" @accent="green" @footnote="Organization managed" ...attributes />
++<Widget::IamKpiTile @metric="policies" @title={{t "iam-ui.s.policies"}} @icon="file-shield" @accent="green" @footnote={{t "iam-ui.s.organization-managed-2"}} ...attributes />
 diff --git a/addon/components/widget/kpi-roles.hbs b/addon/components/widget/kpi-roles.hbs
-index a4b5d75f09b511d54d6e12e8d0397023e8c74d92..2c59f172788a2e03f5d9dfc5c4e3c6cb7d782b06 100644
+index a4b5d75f09b511d54d6e12e8d0397023e8c74d92..e0b16f9a6b9da8e9005a2e260b0fc42ee8f16108 100644
 --- a/addon/components/widget/kpi-roles.hbs
 +++ b/addon/components/widget/kpi-roles.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="roles" @title="Roles" @icon="user-tag" @accent="blue" @footnote="Organization managed" ...attributes />
-+<Widget::IamKpiTile @metric="roles" @title={{t "iam-ui.s.roles"}} @icon="user-tag" @accent="blue" @footnote="Organization managed" ...attributes />
++<Widget::IamKpiTile @metric="roles" @title={{t "iam-ui.s.roles"}} @icon="user-tag" @accent="blue" @footnote={{t "iam-ui.s.organization-managed-2"}} ...attributes />
 diff --git a/addon/components/widget/kpi-verified-users.hbs b/addon/components/widget/kpi-verified-users.hbs
-index 8a5b0e85f17ca8a2c1e2c0dd4d132a98246bcdb6..f9e6fac92c2f45ace7c3923f6f09b766ad4e3949 100644
+index 8a5b0e85f17ca8a2c1e2c0dd4d132a98246bcdb6..e955671200f5652443dc913fa98684d9dde2fe76 100644
 --- a/addon/components/widget/kpi-verified-users.hbs
 +++ b/addon/components/widget/kpi-verified-users.hbs
 @@ -1 +1 @@
 -<Widget::IamKpiTile @metric="verified_users" @title="Verified Users" @icon="circle-check" @accent="blue" @footnote="Identity verified" ...attributes />
-+<Widget::IamKpiTile @metric="verified_users" @title={{t "iam-ui.s.verified-users"}} @icon="circle-check" @accent="blue" @footnote="Identity verified" ...attributes />
++<Widget::IamKpiTile @metric="verified_users" @title={{t "iam-ui.s.verified-users"}} @icon="circle-check" @accent="blue" @footnote={{t "iam-ui.s.identity-verified"}} ...attributes />
 diff --git a/addon/components/widget/policy-surface.hbs b/addon/components/widget/policy-surface.hbs
 index 4abb7b866461d31abc9049c50a27c24b5080414c..c560e6ec656e5f89cd2b353449a0fa034a7f1c33 100644
 --- a/addon/components/widget/policy-surface.hbs
@@ -525,3 +525,27 @@ index 55904b87c2c85d436f17b621573ffcae618fd98a..e31e4733e5d68ecb404d7b3aeae5c09c
                  }
  
                  if (this.abilities.cannot(formPermission)) {
+diff --git a/addon/templates/application.hbs b/addon/templates/application.hbs
+index 492f6bd3af336ecd51766ea9b530eb36d0229256..66b72024ac6e82d72174863a9264fd2dae4f362d 100644
+--- a/addon/templates/application.hbs
++++ b/addon/templates/application.hbs
+@@ -1,5 +1,5 @@
+ <EmberWormhole @to="sidebar-menu-items">
+-    <Layout::Sidebar::Navigator @items={{this.navigationItems}} @searchPlaceholder="Search IAM..." @searchProvider={{this.searchNavigation}} />
++    <Layout::Sidebar::Navigator @items={{this.navigationItems}} @searchPlaceholder={{t "iam-ui.s.search-iam"}} @searchProvider={{this.searchNavigation}} />
+ </EmberWormhole>
+ 
+ <Layout::Section::Container>
+diff --git a/addon/templates/home.hbs b/addon/templates/home.hbs
+index ed0c56569da5ab85cd2cf7d67f62f207dfd69c64..7af17020ce268c78e09552540a56a4eb6049c573 100644
+--- a/addon/templates/home.hbs
++++ b/addon/templates/home.hbs
+@@ -1,7 +1,7 @@
+ <Layout::Section::Body class="overflow-y-scroll h-full">
+     <Dashboard
+         @defaultDashboardId="iam"
+-        @defaultDashboardName="IAM Dashboard"
++        @defaultDashboardName={{t "iam-ui.s.iam-dashboard"}}
+         @extension="iam"
+         @leftHeaderWrapperClass="iam-dashboard-title"
+         @rightHeaderWrapperClass="iam-dashboard-actions"

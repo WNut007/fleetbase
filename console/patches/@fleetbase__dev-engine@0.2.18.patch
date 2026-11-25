@@ -170,3 +170,14 @@ index 0099311f7e838e8be79b74f491338f6fbe93a669..b899ead23d4c2f1e2cba462ca4edfc4f
                          <option selected disabled>
                              {{t "developers.api-keys.index.select-key"}}
                          </option>
+diff --git a/addon/templates/application.hbs b/addon/templates/application.hbs
+index c4cc71f88ff19dceb285c139631abfb763c08ec8..6fd37ac336d237099f054f20231528ae835aa40e 100644
+--- a/addon/templates/application.hbs
++++ b/addon/templates/application.hbs
+@@ -1,5 +1,5 @@
+ <EmberWormhole @to="sidebar-menu-items">
+-    <Layout::Sidebar::Navigator @items={{this.navigationItems}} @searchPlaceholder="Search Dev..." @searchProvider={{this.searchNavigation}} />
++    <Layout::Sidebar::Navigator @items={{this.navigationItems}} @searchPlaceholder={{t "dev-ui.s.search-dev"}} @searchProvider={{this.searchNavigation}} />
+ </EmberWormhole>
+ 
+ <Layout::Section::Container>

@@ -1,6 +1,9 @@
 app:
   name: Fleetbase
 common:
+  reload-data: โหลดข้อมูลใหม่
+  permissions-required-for-changes: ต้องมีสิทธิ์จึงจะแก้ไขได้
+  unauthorized-access: ไม่มีสิทธิ์เข้าถึง
   search-input: ช่องค้นหา
   new: ใหม่
   create: สร้าง
@@ -218,11 +221,11 @@ common:
   end-date: วันที่สิ้นสุด
   time-zone: เขตเวลา
   system: ระบบ
-  dashboard: Dashboard
+  dashboard: แดชบอร์ด
   home: หน้าแรก
   analytics: การวิเคราะห์
   reports: รายงาน
-  logs: Log
+  logs: บันทึก
   help: ช่วยเหลือ
   support: ฝ่ายสนับสนุน
   contact: ติดต่อ
@@ -330,8 +333,8 @@ common:
   config: การตั้งค่า
   select-field: เลือก{field}
   columns: คอลัมน์
-  metadata: Metadata
-  meta: Meta
+  metadata: เมตาดาต้า
+  meta: เมตา
   resource-created-success: สร้าง{resource}ใหม่แล้ว
   resource-created-success-name: สร้าง{resource}ใหม่ ({resourceName}) แล้ว
   resource-updated-success: อัปเดต{resource} ({resourceName}) แล้ว
@@ -373,8 +376,8 @@ resource:
   custom-fields: ฟิลด์กำหนดเอง
   dashboard-widget: Widget ของ Dashboard
   dashboard-widgets: Widget ของ Dashboard
-  dashboard: Dashboard
-  dashboards: Dashboard
+  dashboard: แดชบอร์ด
+  dashboards: แดชบอร์ด
   extension: ส่วนขยาย
   extensions: ส่วนขยาย
   file: ไฟล์
@@ -408,10 +411,10 @@ resource:
   invoice-templates: แม่แบบใบแจ้งหนี้
   journal: รายการบันทึกบัญชี
   journal-entries: รายการบันทึกบัญชี
-  wallet: Wallet
-  wallets: Wallet
-  gateway: Payment Gateway
-  gateways: Payment Gateway
+  wallet: กระเป๋าเงิน
+  wallets: กระเป๋าเงิน
+  gateway: ช่องทางชำระเงิน
+  gateways: ช่องทางชำระเงิน
   wallet-transaction: ธุรกรรม Wallet
   wallet-transactions: ธุรกรรม Wallet
 dropzone:
@@ -708,11 +711,11 @@ console:
       services: บริการ
       mail: อีเมล
       filesystem: ระบบไฟล์
-      queue: Queue
+      queue: คิว
       socket: Socket
       oauth: เข้าสู่ระบบด้วย OAuth
       oauth-apps: แอป OAuth
-      push-notifications: Push Notification
+      push-notifications: การแจ้งเตือนแบบพุช
     schedule-monitor:
       schedule-monitor: ตรวจสอบงานตามกำหนด
       task-logs-for: 'Log ของงาน: '
@@ -922,7 +925,7 @@ layout:
 ai:
   extension-name: AI
 customer-portal:
-  extension-name: Customer Portal
+  extension-name: พอร์ทัลลูกค้า
 portal:
   account-type:
     company: บัญชีบริษัท
@@ -935,7 +938,7 @@ portal:
     documents: เอกสาร
   nav:
     workspace: พื้นที่ทำงาน
-    dashboard: Dashboard
+    dashboard: แดชบอร์ด
     orders: ออเดอร์
     billing: การเรียกเก็บเงิน
     support: ช่วยเหลือ
@@ -999,7 +1002,7 @@ portal:
       activity: ความเคลื่อนไหว
       no-activity: ยังไม่มีความเคลื่อนไหว
       details: รายละเอียด
-      order-id: Order ID
+      order-id: รหัสออเดอร์
       tracking-number: เลขติดตามพัสดุ
       scheduled: นัดหมาย
       created: สร้างเมื่อ
@@ -1140,7 +1143,7 @@ portal:
         label: สินค้าขนส่ง
         description: สินค้าแยกชิ้นหรือหน่วยขนส่งขนาดใหญ่
       cargo:
-        label: Cargo
+        label: สินค้า
         description: สินค้าทั่วไปที่ไม่ได้จัดประเภทเจาะจง
       equipment:
         label: อุปกรณ์
@@ -1500,13 +1503,13 @@ developers:
     date: วันที่
     description: คำอธิบาย
     email: อีเมล
-    event-id: Event ID
+    event-id: รหัสเหตุการณ์
     event-type: ประเภท Event
-    event: Event
+    event: เหตุการณ์
     export: ส่งออก
     failed: ล้มเหลว
     id: ID
-    key: Key
+    key: คีย์
     mode: โหมด
     name: ชื่อ
     new: ใหม่
@@ -1526,10 +1529,10 @@ developers:
         title: ข้อมูล Event
         no-data: ไม่มีข้อมูล Event
       details:
-        prefixTitle: Event
+        prefixTitle: เหตุการณ์
     api-request-log:
       details:
-        prefixTitle: Request
+        prefixTitle: คำขอ
         duration: ระยะเวลา
         ip-address: IP Address
       query-params:
@@ -1539,11 +1542,11 @@ developers:
         title: Header ของ Request
         no-headers: ไม่มี Header
       request-body:
-        title: Request
-        title-second-part: body
+        title: คำขอ
+        title-second-part: เนื้อหา
         no-request-body: ไม่มี body ของ {method} request
       response-body:
-        title: Response body
+        title: เนื้อหาการตอบกลับ
         no-response-body: ไม่มี Response body
     modals:
       api-key-form:
@@ -1557,12 +1560,12 @@ developers:
         enter-domain-placeholder: ใส่โดเมน
         allowed-browser-label: Browser Origin ที่อนุญาต
         allowed-browser-help-text: ใส่โดเมนที่ใช้กำหนด CORS policy สำหรับ request จาก browser ที่ใช้ API Key นี้
-        test-key: Test Key
+        test-key: คีย์ทดสอบ
         testing-environments: คุณกำลังสร้าง Key สำหรับ test environment ใช้สำหรับการทดสอบ
-        live-key: Live Key
+        live-key: คีย์ใช้งานจริง
         production-environments: คุณกำลังสร้าง Key สำหรับ live environment ใช้กับระบบ production
       listen-custom-channel:
-        name: Event channel ID
+        name: รหัสช่องเหตุการณ์
         name-help-text: ใส่รหัส socket channel ที่ต้องการติดตาม
       rename-api-key-form:
         api-key-label: ชื่อ API Key
@@ -1580,14 +1583,14 @@ developers:
         user-password: รหัสผ่านผู้ใช้
         user-password-placeholder: ยืนยัน request ด้วยรหัสผ่านของคุณ
       webhook-form:
-        endpoint-url: Endpoint URL
+        endpoint-url: URL ปลายทาง
         endpoint-url-help-text: URL ที่ Fleetbase จะส่ง event callback ไป
         endpoint-url-placeholder: https://
         description-label: คำอธิบาย
         description-help-text: เพิ่มคำอธิบายของ Webhook endpoint (ไม่บังคับ)
         description-aria-label: คำอธิบาย Webhook
         description-placeholder: คำอธิบายว่า Webhook endpoint นี้ใช้ทำอะไร (ไม่บังคับ)
-        api-credential-label: API Credential
+        api-credential-label: API key ที่ใช้
         api-credential-help-text: จำกัดให้ Webhook endpoint รับ callback จาก API Key ที่กำหนดเท่านั้น
         api-credential-message: รับจากทุก API Credential...
         api-credential-infoblock: เลือก API Credential ที่จะใช้ trigger callback มาที่ Webhook endpoint นี้ หรือเลือก “ทุก API Credential” เพื่อให้รับ callback ไม่ว่าจะใช้ API Credential ใด
@@ -1608,11 +1611,11 @@ developers:
         info-message: คัดลอก Event ID แล้ว
         webhook-header: การส่ง Webhook
         webhook-message: การส่ง Event ไปยัง endpoint ของคุณในช่วง 15 วันที่ผ่านมา
-        http-code: HTTP status code
+        http-code: รหัสสถานะ HTTP
         response-time: เวลาตอบกลับ
         request-endpoint: Request ไปยัง endpoint ของคุณ
         no-request-body: ไม่มี Request body
-        response: Response
+        response: การตอบกลับ
         no-response-body: ไม่มี Response body
       details:
         webhook-details: รายละเอียด Webhook
@@ -1620,7 +1623,7 @@ developers:
         event-types: ประเภท Event
         help-text: คุณจะได้รับ Webhook ของ Event ประเภทใหม่เมื่อมีการเพิ่ม ยกเว้นประเภทที่ต้องเลือกเอง โดยทั่วไปไม่จำเป็นต้องรับทุก Event และอาจเพิ่มภาระให้เซิร์ฟเวอร์
         all-events: ทุก Event
-        api-credential: API Credential
+        api-credential: API key ที่ใช้
         help-text-event: คุณจะได้รับ Webhook callback ไม่ว่า Event จะถูก trigger ด้วย API Credential ใด
         api-credentials: รับจากทุก API Credential
       metrics:
@@ -1631,7 +1634,7 @@ developers:
         period: 30 วัน
         empty: ไม่มีข้อมูล
         kpi:
-          api-requests: API Request
+          api-requests: คำขอ API
           api-error-rate: อัตรา Error ของ API
           api-latency: Latency เฉลี่ยของ API
           webhook-success: Webhook สำเร็จ
@@ -1649,7 +1652,7 @@ developers:
           title: สุขภาพ Endpoint
           subtitle: ความเสถียรของ Webhook endpoint ล่าสุด
         event-stream:
-          title: Event Stream
+          title: สตรีมเหตุการณ์
           subtitle: ประเภท Event และแหล่งที่มาที่มากที่สุด
           types: ประเภท Event
           sources: แหล่งที่มา
@@ -1661,7 +1664,7 @@ developers:
           subtitle: ไปยังเครื่องมือนักพัฒนา
       api-metrics:
         title: การติดตาม
-        api-requests: API Request
+        api-requests: คำขอ API
         api-error: การกระจายของ API Error
         webhooks: Webhook
         webhooks-response: เวลาตอบกลับของ Webhook
@@ -1674,9 +1677,9 @@ developers:
         duration-ms: ระยะเวลา (ms)
   api-keys:
     index:
-      public-key: Public Key
-      secret-key: Secret Key
-      enviroment: Environment
+      public-key: คีย์สาธารณะ
+      secret-key: คีย์ลับ
+      enviroment: สภาพแวดล้อม
       expiry: หมดอายุ
       last-used: ใช้ล่าสุด
       edit-key: แก้ไข Key...
@@ -1710,16 +1713,16 @@ developers:
       delete-api: ลบ API Credential
   events:
     index:
-      title: Event
+      title: เหตุการณ์
   logs:
     index:
-      api-credential: API Credential
+      api-credential: API key ที่ใช้
       http-method: HTTP Method
-      title: Log
+      title: บันทึก
   sockets:
     index:
       link-text: ติดตาม Channel
-      channel: Channel
+      channel: ช่อง
       listen-channel-title: ติดตาม Channel ที่กำหนดเอง
       listen-channel-button-text: ติดตาม
       title: Channel ที่รับ Event จากบัญชีของคุณ
@@ -1766,14 +1769,14 @@ developers:
       delete-button-text: ลบ...
   application:
     sidebar:
-      title: Developers Console
+      title: คอนโซลนักพัฒนา
       items:
-        home: Dashboard
+        home: แดชบอร์ด
         api-keys: API Key
         webhooks: Webhook
         websockets: WebSocket
-        logs: Log
-        events: Event
+        logs: บันทึก
+        events: เหตุการณ์
 iam:
   extension-name: IAM
   common:
@@ -1781,7 +1784,7 @@ iam:
     bulk-action: ดำเนินการหลายรายการ
     country: ประเทศ
     create: สร้างเมื่อ
-    dashboard: Dashboard
+    dashboard: แดชบอร์ด
     description: คำอธิบาย
     email: อีเมล
     export: ส่งออก
@@ -1995,7 +1998,7 @@ column:
   fee: ค่าธรรมเนียม
   tax: ภาษี
   currency: สกุลเงิน
-  gateway: Gateway
+  gateway: ช่องทางชำระเงิน
   payment-method: วิธีชำระเงิน
   reference: อ้างอิง
   memo: บันทึก
@@ -2018,12 +2021,12 @@ column:
   frozen: ระงับ
   orientation: แนว
 menu:
-  dashboard: Dashboard
+  dashboard: แดชบอร์ด
   billing: การเรียกเก็บเงิน
   invoices: ใบแจ้งหนี้
   payments: การชำระเงิน
-  wallets: Wallet
-  gateways: Payment Gateway
+  wallets: กระเป๋าเงิน
+  gateways: ช่องทางชำระเงิน
   accounting: บัญชี
   chart-of-accounts: ผังบัญชี
   journal-entries: รายการบันทึกบัญชี
@@ -2075,7 +2078,7 @@ registry-bridge:
       version: เวอร์ชัน
       updated: อัปเดตเมื่อ
       website: เว็บไซต์
-      self-managed: Self Managed
+      self-managed: ดูแลเอง
       self-managed-help-text: ส่วนขยายแบบ Self Managed สำหรับผู้ที่ติดตั้ง Fleetbase บนเซิร์ฟเวอร์ของตัวเอง นอกระบบคลาวด์/SaaS ต้องติดตั้งและตั้งค่าเอง ถ้าคุณใช้ Fleetbase แบบ Self-hosted ใช้ส่วนขยายเหล่านี้เพิ่มฟีเจอร์ได้ แต่ผู้ใช้คลาวด์/SaaS ใช้ไม่ได้
       self-hosted-install: ติดตั้งแบบ Self-hosted
       self-hosted-install-help-text: ดูวิธีติดตั้งแบบ Self-hosted
@@ -2121,7 +2124,7 @@ registry-bridge:
       extension: ส่วนขยาย
       submission: การส่งตรวจ
       details: รายละเอียด
-      bundles: Bundle
+      bundles: ชุด
       monetize: สร้างรายได้
       explore:
         explore-extensions: สำรวจส่วนขยาย
@@ -2196,9 +2199,9 @@ registry-bridge:
         bundle-id-help-text: รหัสของ Bundle ที่เผยแพร่อยู่
         extension-id: Extension ID
         extension-id-help-text: รหัสเฉพาะของส่วนขยายนี้
-        bundles: Bundle
+        bundles: ชุด
         upload-new-bundle: อัปโหลด Bundle ใหม่
-        self-managed: Self Managed
+        self-managed: ดูแลเอง
         self-managed-help-text: เปิดตัวเลือกนี้ถ้าโมดูลใช้กับระบบ Self-hosted เท่านั้น โมดูลจะไม่มีให้ติดตั้งบน Fleetbase เวอร์ชันคลาวด์/SaaS และผู้ใช้ต้องติดตั้งบนเซิร์ฟเวอร์ของตัวเอง
 storefront:
   extension-name: Storefront
@@ -2288,7 +2291,7 @@ storefront:
     general: ทั่วไป
     location: ตำแหน่ง
     notification: การแจ้งเตือน
-    gateways: Payment Gateway
+    gateways: ช่องทางชำระเงิน
     settings: ตั้งค่า
     new: ใหม่
     facebook: Facebook
@@ -2319,7 +2322,7 @@ storefront:
       settings: รายละเอียดร้าน เวลาเปิด-ปิด สาขา กฎการชำระเงิน Payment Gateway การแจ้งเตือน และ API Key
       launch-app: เผยแพร่ร้านเป็นเว็บและแอปมือถือของคุณเอง
     storefront: Storefront
-    dashboard: Dashboard
+    dashboard: แดชบอร์ด
     products: สินค้า
     catalogs: แคตตาล็อก
     food-trucks: รถขายของ
@@ -2361,9 +2364,9 @@ storefront:
         name-text: ตั้งชื่อ Payment Gateway ใช้ภายในเท่านั้น
         getaway-code: รหัส Gateway
         code-text: รหัสที่ SDK ใช้ระบุ Gateway
-        callback-url: Callback URL
+        callback-url: URL callback
         callback-text: Callback URL (ถ้ามี)
-        return-url: Return URL
+        return-url: URL ปลายทางหลังชำระ
         return-text: Return URL (ถ้ามี)
         sandbox-getaway: เป็น Gateway แบบ Sandbox
       create-network-category:
@@ -2397,12 +2400,12 @@ storefront:
         title-text: เลือกช่องทางแจ้งเตือน
         name: ชื่อช่องทาง
         name-text: ตั้งชื่อช่องทางแจ้งเตือน ใช้ภายในเท่านั้น
-        key: Channel Key
+        key: คีย์ช่อง
         key-text: Key ของช่องทางแจ้งเตือน ใช้ระบุใน SDK config ว่าแอปใดใช้ช่องทางนี้
         environment-help-text: Auto จะลอง production ก่อน แล้วลอง sandbox (development build) ถ้า Apple ปฏิเสธ device token
         android-channel-id-help-text: Notification channel ID ของ Android (ไม่บังคับ) เว้นว่างเพื่อใช้ช่องเริ่มต้นของแอป
       test-notification-channel:
-        token: Device token
+        token: โทเคนอุปกรณ์
         token-text: วาง FCM registration token (Android) หรือ APNs device token (iOS) จากอุปกรณ์ที่รันแอปของคุณ
         environment: APNs environment
         environment-text: เว้นว่างเพื่อลอง environment ที่ตั้งไว้ในช่องทาง
@@ -2506,7 +2509,7 @@ storefront:
         empty: ยังไม่มีออเดอร์ล่าสุด
         recent-count: '{count, plural, =0 {ไม่มีออเดอร์ล่าสุด} one {ออเดอร์ล่าสุด # รายการ} other {ออเดอร์ล่าสุด # รายการ}}'
         widget-title: ออเดอร์ล่าสุด
-        id-column: Order ID
+        id-column: รหัสออเดอร์
         cancel-order: ยกเลิกออเดอร์
         cancel-orders: ยกเลิกออเดอร์
         cancel-order-modal-title: ยกเลิกออเดอร์นี้?
@@ -2895,7 +2898,7 @@ storefront:
       done: เสร็จสิ้น
     sections:
       details: รายละเอียด
-      metadata: Metadata
+      metadata: เมตาดาต้า
       customer-insights: ข้อมูลเชิงลึกลูกค้า
       order: ออเดอร์
       comments: ความเห็น
@@ -3089,9 +3092,9 @@ storefront:
         balance_due: ค้างชำระ
       details-tabs:
         details: รายละเอียด
-        metadata: Metadata
+        metadata: เมตาดาต้า
         files: ไฟล์
-      order-id: Order ID
+      order-id: รหัสออเดอร์
       internal-id: รหัสภายใน
       open: เปิด
       events: '{count, plural, one {# เหตุการณ์} other {# เหตุการณ์}}'
@@ -3656,7 +3659,7 @@ storefront:
             panel-title: API
             panel-header: ตั้งค่า API
             panel-description: Key สำหรับ Storefront API และการเชื่อมต่อ
-            network-key-label: Network Key
+            network-key-label: คีย์เครือข่าย
             network-key-help-text: Key ของเครือข่าย ใช้เปิดใช้งานแอปและการเชื่อมต่อของเครือข่าย
           payment-gateways-panel:
             panel-title: ตั้งค่า Gateway
@@ -3667,9 +3670,9 @@ storefront:
               name-help-text: ตั้งชื่อ Payment Gateway ใช้ภายในเท่านั้น
               code: รหัส Gateway
               code-help-text: รหัสที่ SDK ใช้ระบุ Gateway
-              callback-url: Callback URL
+              callback-url: URL callback
               callback-url-help-text: Callback URL (ถ้ามี)
-              return-url: Return URL
+              return-url: URL ปลายทางหลังชำระ
               return-url-help-text: Return URL (ถ้ามี)
               sandbox-toggle-label: เป็น Gateway แบบ Sandbox
               config-header-label: การตั้งค่า
@@ -3906,7 +3909,7 @@ storefront:
         delete-order: ลบออเดอร์
         activity: กิจกรรม
         unable-load-order-activity: โหลดกิจกรรมออเดอร์ไม่ได้
-        ad-hoc: Ad-Hoc
+        ad-hoc: งานเร่งด่วน (Ad-Hoc)
         customer: ลูกค้า
         facilitator: ผู้ประสานงาน
         driver-assigned: คนขับที่มอบหมาย
@@ -4144,7 +4147,7 @@ storefront:
         remove-group: นำกลุ่มออก
       more: เพิ่มเติม
       more-subtitle: คำแปล ({translations}), Metadata ({metadata} คีย์)
-      metadata: Metadata
+      metadata: เมตาดาต้า
       metadata-subtitle: '{count, plural, =0 {ไม่มีคีย์} one {# คีย์} other {# คีย์}} สำหรับการเชื่อมต่อ'
       translations:
         hint: ชื่อและคำอธิบายในภาษาอื่น แอปจะแสดงภาษาของลูกค้าถ้ามี
@@ -4236,11 +4239,11 @@ storefront:
       copy-store-key: คัดลอก Store Key
       store-key-copied: คัดลอก Store Key แล้ว
     sections:
-      app-review: App Review
+      app-review: การรีวิวแอป
       select-gateway-type: เลือกประเภท Gateway
       hours: เวลาเปิด
       locations: สาขา
-      payment-gateways: Payment Gateway
+      payment-gateways: ช่องทางชำระเงิน
       notification-channels: ช่องทางแจ้งเตือน
       danger: โซนอันตราย
       general: ทั่วไป
@@ -4251,7 +4254,7 @@ storefront:
       messages-lede: ข้อความตอบด่วนเมื่อร้านส่งข้อความหาลูกค้าเรื่องออเดอร์
       alerts: การแจ้งเตือน
       api-keys: API Key
-      store-key: Store Key
+      store-key: คีย์ร้าน
       timezone: เขตเวลา
       timezone-help: เวลาเปิดและออเดอร์นัดหมายจะอ่านตามเขตเวลานี้
       timezone-search: ค้นหาเขตเวลา เช่น Bangkok
@@ -4259,9 +4262,9 @@ storefront:
       default-order-config: Order Config เริ่มต้น
       default-order-config-help: ใช้กับทุกออเดอร์ที่สร้างให้ร้านนี้
       default-order-config-placeholder: เลือก Order Config เริ่มต้น
-      network-key: Network Key
+      network-key: คีย์เครือข่าย
       network-key-help: ใช้โดยแอปและ API เปลี่ยนไม่ได้
-      gateways: Payment Gateway
+      gateways: ช่องทางชำระเงิน
       notifications: ช่องทางแจ้งเตือน
       contact-social: ช่องทางติดต่อและโซเชียล
       network-rules-lede: สิ่งที่แอปอนุญาตสำหรับทุกร้านในเครือข่ายนี้
@@ -4353,7 +4356,7 @@ storefront:
     api:
       api-settings: ตั้งค่า API
       access-key-for-storefront-api-integrations: Key สำหรับ Storefront API และการเชื่อมต่อ
-      store-key: Store Key
+      store-key: คีย์ร้าน
       store-key-help-text: Key ของร้าน ใช้เปิดใช้งานแอปและการเชื่อมต่อของร้าน
     gateways:
       empty: ยังไม่มี Payment Gateway เพิ่มเพื่อให้ลูกค้าชำระเงินในแอปได้
@@ -4364,9 +4367,9 @@ storefront:
       gateway-help-text: ตั้งชื่อ Payment Gateway ใช้ภายในเท่านั้น
       gateway-code: รหัส Gateway
       gateway-code-help-text: รหัสที่ SDK ใช้ระบุ Gateway
-      callback-url: Callback URL
+      callback-url: URL callback
       callback-url-help-text: Callback URL (ถ้ามี)
-      return-url: Return URL
+      return-url: URL ปลายทางหลังชำระ
       return-url-help-text: Return URL (ถ้ามี)
       this-is-a-sandbox-gateway: เป็น Gateway แบบ Sandbox
       delete-payment-gateway: ลบ Payment Gateway
@@ -4549,7 +4552,7 @@ storefront:
       next: 'ถัดไป: {step}'
     title: โปรโมชัน
     push-notifications:
-      tab-title: Push Notification
+      tab-title: การแจ้งเตือนแบบพุช
       header: ส่ง Push Notification
       description: ส่ง Push Notification โปรโมชันถึงลูกค้า
       title-label: หัวข้อการแจ้งเตือน
@@ -4727,7 +4730,7 @@ storefront:
       audience-help: เลือกกลุ่มลูกค้าเพื่อส่งเฉพาะกลุ่ม หรือเว้นว่างเพื่อส่งถึงลูกค้าทั้งหมดในองค์กร
       channels: ช่องทาง
       channels-help: เลือกช่องทางที่ลูกค้าจะได้รับแคมเปญนี้
-      channel-push: Push Notification
+      channel-push: การแจ้งเตือนแบบพุช
       channel-inbox: กล่องข้อความในแอป
       send-at: ส่งเมื่อ
       sent-at: ส่งแล้ว
@@ -5029,7 +5032,7 @@ ember-ui:
             clear-all: ล้างทั้งหมด
             e-g-order-number: เช่น order_number
             filter-keys: กรองคีย์…
-            key: Key
+            key: คีย์
             no-metadata-click: ไม่มี Metadata คลิก
             number: ตัวเลข
             please-fix-invalid-duplicate-keys-above: กรุณาแก้คีย์ที่ไม่ถูกต้อง/ซ้ำด้านบน
@@ -5041,7 +5044,7 @@ ember-ui:
             value: ค่า
         metadata-viewer:
             hide-raw-metadata: ซ่อน Metadata ดิบ
-            key: Key
+            key: คีย์
             no-metadata: ไม่มี Metadata
             no-metadata-to-display: ไม่มี Metadata ให้แสดง
             value: ค่า
@@ -5116,7 +5119,7 @@ ember-ui:
                 display-label: ชื่อที่แสดง
                 e-g-datediff-end-date-start: เช่น DATEDIFF(end_date, start_date) + 1
                 example-expressions: ตัวอย่าง Expression
-                expression: Expression
+                expression: นิพจน์
                 expression-is-valid: Expression ถูกต้อง
                 optional-description-of-what-this-column: คำอธิบายว่าคอลัมน์นี้คำนวณอะไร (ไม่บังคับ)
                 select-data-type: เลือกชนิดข้อมูล
@@ -5182,7 +5185,7 @@ ember-ui:
             actions:
                 actions: การดำเนินการ
                 clear: ล้าง
-                execute: Execute
+                execute: รัน
                 query-operations: คำสั่ง Query
                 save: บันทึก
             column-select:
@@ -5226,7 +5229,7 @@ ember-ui:
                 add-grouping: เพิ่มการจัดกลุ่ม
                 aggregate-functions-calculate-values-for-each: • ฟังก์ชันรวมค่าจะคำนวณแยกตามกลุ่ม
                 calculate: คำนวณ
-                group-by: Group By
+                group-by: จัดกลุ่มตาม
                 group-by-2: จัดกลุ่มตาม {label}
                 group-by-column: คอลัมน์ Group By
                 grouping-rules: 'กฎการจัดกลุ่ม:'
@@ -5290,7 +5293,7 @@ ember-ui:
                 'true': จริง
             configure-the-report-and-press-the: ตั้งค่ารายงานแล้วกดปุ่ม Execute เพื่อดูตัวอย่างผลลัพธ์
             description: คำอธิบาย
-            execute: Execute
+            execute: รัน
             export-options:
                 export: ส่งออก
                 export-format: รูปแบบไฟล์ส่งออก...
@@ -5505,7 +5508,7 @@ ember-ui:
                 1-1-2: '''{''invoice.subtotal''}'' * 1.1'
                 always-available: พร้อมใช้งานเสมอ
                 cancel: ยกเลิก
-                expression: Expression
+                expression: นิพจน์
                 formula: สูตร
                 formula-syntax: ไวยากรณ์สูตร
                 global: ทั่วไป
@@ -5629,7 +5632,7 @@ ember-ui:
                         ctrl-k: Ctrl K
             metadata-editor:
                 done: เสร็จสิ้น
-                metadata: Metadata
+                metadata: เมตาดาต้า
                 preview-metadata: ดูตัวอย่าง Metadata
             modals:
                 query-builder-computed-column-editor:
@@ -5994,15 +5997,18 @@ iam-ui:
     active-users: "ผู้ใช้ที่ใช้งาน"
     admin-roles: "บทบาทผู้ดูแล"
     assignment-coverage-by-user: "ความครอบคลุมการมอบสิทธิ์ตามผู้ใช้"
+    awaiting-access: "รอเข้าใช้งาน"
     create-group: "สร้างกลุ่ม"
     create-policy: "สร้างนโยบาย"
     create-role: "สร้างบทบาท"
     created-pending-and-inactive-users: "ผู้ใช้ที่สร้าง รอยืนยัน และไม่ใช้งาน"
     creating-a-role-with-name-administrator-or-a-rol: "ห้ามสร้างบทบาทชื่อ \"Administrator\" หรือชื่อที่ขึ้นต้นด้วย \"Admin\" เพราะเป็นชื่อที่ระบบสงวนไว้"
+    current-access: "เข้าใช้งานได้"
     days: "วัน"
     define-reusable-permission-bundles: "กำหนดชุดสิทธิ์ที่ใช้ซ้ำได้"
     direct-grants: "สิทธิ์ที่ให้โดยตรง"
     direct-permissions: "สิทธิ์โดยตรง"
+    disabled-access: "ถูกปิดสิทธิ์"
     dormant: "ไม่เคลื่อนไหว"
     dormant-threshold: "เกณฑ์ไม่เคลื่อนไหว"
     dormant-users: "ผู้ใช้ที่ไม่เคลื่อนไหว"
@@ -6011,9 +6017,11 @@ iam-ui:
     group-coverage: "ความครอบคลุมของกลุ่ม"
     groups: "กลุ่ม"
     high-access-exposure: "การเข้าถึงสิทธิ์สูง"
+    iam-dashboard: "แดชบอร์ด IAM"
     iam-quick-actions: "ทางลัด IAM"
     identity-and-access-overview: "ภาพรวมผู้ใช้และสิทธิ์"
     identity-health: "สุขภาพบัญชีผู้ใช้"
+    identity-verified: "ยืนยันตัวตนแล้ว"
     inactive-users: "ผู้ใช้ที่ปิดใช้งาน"
     invite-user: "เชิญผู้ใช้"
     jump-into-common-access-workflows: "ไปยังงานจัดการสิทธิ์ที่ใช้บ่อย"
@@ -6030,9 +6038,12 @@ iam-ui:
     no-privileged-access-risks-detected: "ไม่พบความเสี่ยงด้านสิทธิ์สูง"
     no-privileged-roles-detected: "ไม่พบบทบาทที่มีสิทธิ์สูง"
     no-recent-iam-activity: "ยังไม่มีกิจกรรม IAM ล่าสุด"
+    no-recent-login: "ไม่ได้เข้าสู่ระบบมานาน"
+    org-enforcement-shown: "แสดงตามนโยบายองค์กร"
     org-managed: "องค์กรจัดการ"
     organization-2fa: "2FA ขององค์กร"
     organization-managed: "องค์กรจัดการ"
+    organization-managed-2: "องค์กรจัดการ"
     organize-users-into-access-groups: "จัดผู้ใช้เป็นกลุ่มสิทธิ์"
     pending: "รอดำเนินการ"
     pending-invites: "คำเชิญที่รอตอบรับ"
@@ -6045,6 +6056,7 @@ iam-ui:
     recent-iam-activity: "กิจกรรม IAM ล่าสุด"
     role-name-is-required: "ต้องระบุชื่อบทบาท"
     roles: "บทบาท"
+    search-iam: "ค้นหาใน IAM..."
     send-password-credentials-to-user: "ส่งรหัสผ่านให้ผู้ใช้"
     toggle-selected: "สลับที่เลือก"
     total: "รวม"
@@ -6078,6 +6090,7 @@ dev-ui:
     logs: "บันทึก"
     resend: "ส่งซ้ำ"
     review-api-request-logs: "ดูบันทึกการเรียก API"
+    search-dev: "ค้นหาในส่วนนักพัฒนา..."
     select-api-key: "เลือก API Key"
     sockets: "Sockets"
     unable-to-open-the-selected-api-key: "เปิด API key ที่เลือกไม่ได้"

@@ -2,6 +2,9 @@ app:
   name: Fleetbase
 
 common:
+  reload-data: Reload data
+  permissions-required-for-changes: You need permissions to make changes.
+  unauthorized-access: Unauthorized access
   search-input: Search Input
   new: New
   create: Create
@@ -2160,15 +2163,18 @@ iam-ui:
     active-users: "Active Users"
     admin-roles: "Admin roles"
     assignment-coverage-by-user: "Assignment coverage by user"
+    awaiting-access: "Awaiting access"
     create-group: "Create group"
     create-policy: "Create policy"
     create-role: "Create role"
     created-pending-and-inactive-users: "Created, pending, and inactive users"
     creating-a-role-with-name-administrator-or-a-rol: "Creating a role with name \"Administrator\" or a role name that starts with \"Admin\" is prohibited, as the name is system reserved."
+    current-access: "Current access"
     days: "days"
     define-reusable-permission-bundles: "Define reusable permission bundles."
     direct-grants: "Direct grants"
     direct-permissions: "Direct permissions"
+    disabled-access: "Disabled access"
     dormant: "Dormant"
     dormant-threshold: "Dormant threshold"
     dormant-users: "Dormant Users"
@@ -2177,9 +2183,11 @@ iam-ui:
     group-coverage: "Group Coverage"
     groups: "Groups"
     high-access-exposure: "High access exposure"
+    iam-dashboard: "IAM Dashboard"
     iam-quick-actions: "IAM Quick Actions"
     identity-and-access-overview: "Identity and access overview."
     identity-health: "Identity Health"
+    identity-verified: "Identity verified"
     inactive-users: "Inactive Users"
     invite-user: "Invite user"
     jump-into-common-access-workflows: "Jump into common access workflows"
@@ -2196,9 +2204,12 @@ iam-ui:
     no-privileged-access-risks-detected: "No privileged access risks detected"
     no-privileged-roles-detected: "No privileged roles detected"
     no-recent-iam-activity: "No recent IAM activity"
+    no-recent-login: "No recent login"
+    org-enforcement-shown: "Org enforcement shown"
     org-managed: "Org managed"
     organization-2fa: "Organization 2FA"
     organization-managed: "Organization Managed"
+    organization-managed-2: "Organization managed"
     organize-users-into-access-groups: "Organize users into access groups."
     pending: "Pending"
     pending-invites: "Pending Invites"
@@ -2211,6 +2222,7 @@ iam-ui:
     recent-iam-activity: "Recent IAM Activity"
     role-name-is-required: "Role name is required."
     roles: "Roles"
+    search-iam: "Search IAM..."
     send-password-credentials-to-user: "Send password credentials to user"
     toggle-selected: "Toggle Selected"
     total: "Total"
@@ -2244,6 +2256,7 @@ dev-ui:
     logs: "Logs"
     resend: "Resend"
     review-api-request-logs: "Review API request logs."
+    search-dev: "Search Dev..."
     select-api-key: "Select API Key"
     sockets: "Sockets"
     unable-to-open-the-selected-api-key: "Unable to open the selected API key."
