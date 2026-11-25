@@ -10,7 +10,7 @@
                 @onClick={{fn this.universe.transitionMenuItem "console.settings.virtual" menuItem}}
                 @item={{menuItem}}
                 @icon={{menuItem.icon}}
-            >{{menuItem.title}}</Layout::Sidebar::Item>
+            >{{registry-text menuItem.title}}</Layout::Sidebar::Item>
         {{/each}}
     </Layout::Sidebar::Panel>
     {{#each this.menuService.settingsMenuPanels as |menuPanel|}}
@@ -20,7 +20,7 @@
                     @onClick={{fn this.universe.transitionMenuItem "console.settings.virtual" menuItem}}
                     @item={{menuItem}}
                     @icon={{menuItem.icon}}
-                >{{menuItem.title}}</Layout::Sidebar::Item>
+                >{{registry-text menuItem.title}}</Layout::Sidebar::Item>
             {{/each}}
         </Layout::Sidebar::Panel>
     {{/each}}

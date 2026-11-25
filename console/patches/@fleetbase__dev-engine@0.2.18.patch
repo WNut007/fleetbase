@@ -1,0 +1,172 @@
+diff --git a/addon/components/modals/webhook-form.hbs b/addon/components/modals/webhook-form.hbs
+index 3687c506c0f982c2f4d5e862301cb51d69afc547..91e78219e68a1cb0e914accf8abc894785f69007 100644
+--- a/addon/components/modals/webhook-form.hbs
++++ b/addon/components/modals/webhook-form.hbs
+@@ -9,7 +9,7 @@
+             <Input
+                 @value={{options.webhook.url}}
+                 @type="url"
+-                aria-label="Webhook URL"
++                aria-label={{t "dev-ui.s.webhook-url"}}
+                 class="w-full form-input"
+                 placeholder={{t "developers.component.modals.webhook-form.endpoint-url-placeholder"}}
+             />
+@@ -53,7 +53,7 @@
+         <div class="input-group">
+             <InputLabel @labelText={{t "developers.common.version"}} @helpText={{t "developers.component.modals.webhook-form.version-help-text"}} />
+ 
+-            <select class="w-full form-select" aria-label="API Version" {{on "change" @options.setVersion}}>
++            <select class="w-full form-select" aria-label={{t "dev-ui.s.api-version"}} {{on "change" @options.setVersion}}>
+                 <option selected disabled>
+                     {{t "developers.component.modals.webhook-form.version-message"}}
+                 </option>
+diff --git a/addon/components/webhook/attempts.hbs b/addon/components/webhook/attempts.hbs
+index e656932a37f5eeef17123cb75fcbe347a73c4334..94a2029ccdae020afea54cc073db927e0015749a 100644
+--- a/addon/components/webhook/attempts.hbs
++++ b/addon/components/webhook/attempts.hbs
+@@ -35,10 +35,10 @@
+                 </div>
+                 <div class="rounded-lg border borer-gray-300 dark:border-gray-700 shadow-sm">
+                     <div class="webhook-attempts-date-filter-container">
+-                        <div class="date-filter-label">Filter by date:</div>
+-                        <DatePicker @value={{this.date}} @onSelect={{this.filterByDate}} placeholder="Filter by date" class="form-input-sm" />
++                        <div class="date-filter-label">{{t "dev-ui.s.filter-by-date"}}</div>
++                        <DatePicker @value={{this.date}} @onSelect={{this.filterByDate}} placeholder={{t "dev-ui.s.filter-by-date-2"}} class="form-input-sm" />
+                         {{#if this.date}}
+-                            <Button @type="link" @icon="times" @helpText="Clear date" @onClick={{this.clearDate}} />
++                            <Button @type="link" @icon="times" @helpText={{t "dev-ui.s.clear-date"}} @onClick={{this.clearDate}} />
+                         {{/if}}
+                     </div>
+                 </div>
+diff --git a/addon/components/webhook/attempts.js b/addon/components/webhook/attempts.js
+index e3dde0151b7350ddd099df4c1e33ece6c7b0084e..ea33d10b7ac5bfdab3743ad2a75f579350b3784c 100644
+--- a/addon/components/webhook/attempts.js
++++ b/addon/components/webhook/attempts.js
+@@ -56,7 +56,7 @@ export default class WebhookAttemptsComponent extends Component {
+             width: '10%',
+             align: 'right',
+             actions: [
+-                // { label: 'Resend', action: this.viewWebhookRequestEvent },
++                // { label: this.intl.t('dev-ui.s.resend'), action: this.viewWebhookRequestEvent },
+                 {
+                     label: this.intl.t('developers.component.webhook.attempts.copy-event-id'),
+                     fn: this.copyEventIdToClipboard,
+diff --git a/addon/components/widget/endpoint-health.hbs b/addon/components/widget/endpoint-health.hbs
+index 4db9ccd11c6acec1b5692ac6f77a7181d654e8bd..61cc3339d6f1a99b0786cc5e1eac4d94f2b2a07a 100644
+--- a/addon/components/widget/endpoint-health.hbs
++++ b/addon/components/widget/endpoint-health.hbs
+@@ -18,7 +18,7 @@
+                 <div class="developers-list-row">
+                     <div class="min-w-0">
+                         <div class="developers-list-title">{{item.url}}</div>
+-                        <div class="developers-list-subtitle">{{item.status}} / {{item.mode}} / {{item.deliveries}} deliveries</div>
++                        <div class="developers-list-subtitle">{{item.status}} / {{item.mode}} / {{item.deliveries}} {{t "dev-ui.s.deliveries"}}</div>
+                     </div>
+                     <div class="developers-list-metric {{this.statusClass item}}">{{item.success_rate}}%</div>
+                 </div>
+diff --git a/addon/components/widget/quick-resources.js b/addon/components/widget/quick-resources.js
+index 6d75b8bfe5571f22f3a6c6588ddb49e7c96c831c..6b3267aee7101d7fd0447fb3fb0a6a123524ce8f 100644
+--- a/addon/components/widget/quick-resources.js
++++ b/addon/components/widget/quick-resources.js
+@@ -1,11 +1,13 @@
++import { inject as service } from '@ember/service';
+ import Component from '@glimmer/component';
+ 
+ export default class WidgetQuickResourcesComponent extends Component {
++    @service intl;
+     resources = [
+-        { label: 'API Keys', route: 'api-keys.index', icon: 'key' },
+-        { label: 'Webhooks', route: 'webhooks.index', icon: 'globe' },
+-        { label: 'Logs', route: 'logs.index', icon: 'terminal' },
+-        { label: 'Events', route: 'events.index', icon: 'bolt' },
+-        { label: 'Sockets', route: 'sockets.index', icon: 'plug' },
++        { label: this.intl.t('dev-ui.s.api-keys'), route: 'api-keys.index', icon: 'key' },
++        { label: this.intl.t('dev-ui.s.webhooks'), route: 'webhooks.index', icon: 'globe' },
++        { label: this.intl.t('dev-ui.s.logs'), route: 'logs.index', icon: 'terminal' },
++        { label: this.intl.t('dev-ui.s.events'), route: 'events.index', icon: 'bolt' },
++        { label: this.intl.t('dev-ui.s.sockets'), route: 'sockets.index', icon: 'plug' },
+     ];
+ }
+diff --git a/addon/controllers/api-keys/index.js b/addon/controllers/api-keys/index.js
+index c8e6cf2fad162645d3f31382469260ec4e6e1b4a..4cef06ef416de0a84e8e1f91dd9a28f1b25b7e6a 100644
+--- a/addon/controllers/api-keys/index.js
++++ b/addon/controllers/api-keys/index.js
+@@ -518,7 +518,7 @@ export default class ApiKeysIndexController extends Controller {
+                 onFinish: this.clearDeepLinkedApiKey,
+             });
+         } catch (_) {
+-            this.notifications.warning('Unable to open the selected API key.');
++            this.notifications.warning(this.intl.t('dev-ui.s.unable-to-open-the-selected-api-key'));
+             this.clearDeepLinkedApiKey();
+         }
+     }
+diff --git a/addon/controllers/application.js b/addon/controllers/application.js
+index b4a16cc07fb0ffbd09f8cf011494b5075bbec19c..1deec94106b04a7df36c585e5a5fdced107ffdef 100644
+--- a/addon/controllers/application.js
++++ b/addon/controllers/application.js
+@@ -11,14 +11,14 @@ export default class ApplicationController extends Controller {
+         return [
+             {
+                 label: this.intl.t('developers.application.sidebar.items.home'),
+-                description: 'Developer dashboard and API health overview.',
++                description: this.intl.t('dev-ui.s.developer-dashboard-and-api-health-overview'),
+                 icon: 'home',
+                 route: 'console.developers.home',
+                 keywords: ['dashboard', 'overview', 'metrics'],
+             },
+             {
+                 label: this.intl.t('developers.application.sidebar.items.api-keys'),
+-                description: 'Create and manage API credentials.',
++                description: this.intl.t('dev-ui.s.create-and-manage-api-credentials'),
+                 icon: 'key',
+                 route: 'console.developers.api-keys',
+                 permission: 'developers list api-key',
+@@ -27,7 +27,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('developers.application.sidebar.items.webhooks'),
+-                description: 'Configure webhook endpoints.',
++                description: this.intl.t('dev-ui.s.configure-webhook-endpoints'),
+                 icon: 'globe-asia',
+                 route: 'console.developers.webhooks',
+                 permission: 'developers list webhook',
+@@ -36,7 +36,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('developers.application.sidebar.items.websockets'),
+-                description: 'Inspect websocket channels.',
++                description: this.intl.t('dev-ui.s.inspect-websocket-channels'),
+                 icon: 'plug',
+                 route: 'console.developers.sockets',
+                 permission: 'developers list socket',
+@@ -45,7 +45,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('developers.application.sidebar.items.logs'),
+-                description: 'Review API request logs.',
++                description: this.intl.t('dev-ui.s.review-api-request-logs'),
+                 icon: 'file-lines',
+                 route: 'console.developers.logs',
+                 permission: 'developers list log',
+@@ -54,7 +54,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('developers.application.sidebar.items.events'),
+-                description: 'Browse platform events.',
++                description: this.intl.t('dev-ui.s.browse-platform-events'),
+                 icon: 'calendar-day',
+                 route: 'console.developers.events',
+                 permission: 'developers list event',
+diff --git a/addon/templates/api-keys/index.hbs b/addon/templates/api-keys/index.hbs
+index 0099311f7e838e8be79b74f491338f6fbe93a669..b899ead23d4c2f1e2cba462ca4edfc4f80ce2740 100644
+--- a/addon/templates/api-keys/index.hbs
++++ b/addon/templates/api-keys/index.hbs
+@@ -25,7 +25,7 @@
+             />
+             {{#if this.isTestMode}}
+                 <span class="mx-2">
+-                    <select class="form-select form-input-sm" aria-label="Select API Key" {{on "change" this.toggleTestKey}}>
++                    <select class="form-select form-input-sm" aria-label={{t "dev-ui.s.select-api-key"}} {{on "change" this.toggleTestKey}}>
+                         <option selected disabled>
+                             {{t "developers.api-keys.index.select-key"}}
+                         </option>

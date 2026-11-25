@@ -30,7 +30,9 @@ minimumReleaseAgeExclude:
   - '@fleetbase/ai-engine@0.1.0'
 blockExoticSubdeps: false
 patchedDependencies:
+  '@fleetbase/dev-engine@0.2.18': patches/@fleetbase__dev-engine@0.2.18.patch
   '@fleetbase/ember-core@0.3.27': patches/@fleetbase__ember-core@0.3.27.patch
   '@fleetbase/fleetops-data@0.2.4': patches/@fleetbase__fleetops-data@0.2.4.patch
+  '@fleetbase/iam-engine@0.1.13': patches/@fleetbase__iam-engine@0.1.13.patch
   '@fleetbase/valhalla-engine@0.1.0': patches/@fleetbase__valhalla-engine@0.1.0.patch
   '@fortawesome/ember-fontawesome@2.0.0': patches/@fortawesome__ember-fontawesome@2.0.0.patch

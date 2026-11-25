@@ -2576,12 +2576,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/WNut007/ledger.git",
-                "reference": "9cf3819a62b5f2052bc7fdf4a7730f33c7d6b428"
+                "reference": "615c1264177764e93b820454a59cb9b22e1d3c81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WNut007/ledger/zipball/9cf3819a62b5f2052bc7fdf4a7730f33c7d6b428",
-                "reference": "9cf3819a62b5f2052bc7fdf4a7730f33c7d6b428",
+                "url": "https://api.github.com/repos/WNut007/ledger/zipball/615c1264177764e93b820454a59cb9b22e1d3c81",
+                "reference": "615c1264177764e93b820454a59cb9b22e1d3c81",
                 "shasum": ""
             },
             "require": {

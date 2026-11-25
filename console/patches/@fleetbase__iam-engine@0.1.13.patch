@@ -1,0 +1,527 @@
+diff --git a/addon/components/modals/change-user-password.hbs b/addon/components/modals/change-user-password.hbs
+index 35cd4b238ac2f60860c815cc982e5644eb769491..b018302c43f0c2574458e6fdad9adcd886cef2f2 100644
+--- a/addon/components/modals/change-user-password.hbs
++++ b/addon/components/modals/change-user-password.hbs
+@@ -1,10 +1,10 @@
+ <Modal::Default @modalIsOpened={{@modalIsOpened}} @options={{@options}} @confirm={{@onConfirm}} @decline={{@onDecline}}>
+     <div class="px-4 text-gray-900 dark:text-gray-50">
+         <div class="mb-1 text-base font-semibold">
+-            You are about to reset the password for
++            {{t "iam-ui.s.you-are-about-to-reset-the-password-for"}}
+             {{this.user.name}}
+         </div>
+-        <div class="text-sm mb-4">Please enter the new password and confirm it below. You have the option to send the new credentials to the user via email by selecting the checkbox.</div>
++        <div class="text-sm mb-4">{{t "iam-ui.s.please-enter-the-new-password-and-confirm-it-bel"}}</div>
+         <InputGroup>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                 <InputGroup @name="New Password" @type="password" @value={{this.password}} @wrapperClass="mb-0i" />
+@@ -12,7 +12,7 @@
+             </div>
+         </InputGroup>
+         <InputGroup>
+-            <Checkbox @value={{this.sendCredentials}} @label="Send password credentials to user" @onToggle={{fn (mut this.sendCredentials)}} @alignItems="center" @labelClass="mb-0i" />
++            <Checkbox @value={{this.sendCredentials}} @label={{t "iam-ui.s.send-password-credentials-to-user"}} @onToggle={{fn (mut this.sendCredentials)}} @alignItems="center" @labelClass="mb-0i" />
+         </InputGroup>
+     </div>
+ </Modal::Default>
+\ No newline at end of file
+diff --git a/addon/components/modals/change-user-password.js b/addon/components/modals/change-user-password.js
+index ec96a578b9c11bf47d4712abab6aee3b9adaa488..a72c298c62e6026a499d1aaaf7256f02fb88d7ea 100644
+--- a/addon/components/modals/change-user-password.js
++++ b/addon/components/modals/change-user-password.js
+@@ -3,6 +3,7 @@ import { tracked } from '@glimmer/tracking';
+ import { inject as service } from '@ember/service';
+ 
+ export default class ModalsChangeUserPasswordComponent extends Component {
++    @service intl;
+     @service fetch;
+     @service notifications;
+     @tracked options = {};
+@@ -33,7 +34,7 @@ export default class ModalsChangeUserPasswordComponent extends Component {
+                     send_credentials: this.sendCredentials,
+                 });
+ 
+-                this.notifications.success('User password reset.');
++                this.notifications.success(this.intl.t('iam-ui.s.user-password-reset'));
+ 
+                 if (typeof this.options.onPasswordResetComplete === 'function') {
+                     this.options.onPasswordResetComplete();
+diff --git a/addon/components/permission-picker.hbs b/addon/components/permission-picker.hbs
+index c0860ee3d0995293be05174929564093bbd85ac2..bb0ec2e0fa89ed071133c761543224d2207ac45b 100644
+--- a/addon/components/permission-picker.hbs
++++ b/addon/components/permission-picker.hbs
+@@ -18,7 +18,7 @@
+                 {{/if}}
+             </div>
+             <div>
+-                <a href="javascript:;" class="ml-2 text-xs text-blue-500 hover:opacity-50" {{on "click" this.toggleSelected}}>Toggle Selected</a>
++                <a href="javascript:;" class="ml-2 text-xs text-blue-500 hover:opacity-50" {{on "click" this.toggleSelected}}>{{t "iam-ui.s.toggle-selected"}}</a>
+             </div>
+         </div>
+         <div class="text-xs dark:text-gray-100">
+diff --git a/addon/components/widget/access-coverage.hbs b/addon/components/widget/access-coverage.hbs
+index 175fc0dbcc1e9c4f800faf0947d444f71b1f037a..07248f6f6383b1007ee9e8eea53075ead9b77143 100644
+--- a/addon/components/widget/access-coverage.hbs
++++ b/addon/components/widget/access-coverage.hbs
+@@ -1,13 +1,13 @@
+-<Widget::IamDashboardWidget @endpoint="access-coverage" @title="Access Coverage" @subtitle="Assignment coverage by user" @icon="shield-user" as |data|>
++<Widget::IamDashboardWidget @endpoint="access-coverage" @title={{t "iam-ui.s.access-coverage"}} @subtitle={{t "iam-ui.s.assignment-coverage-by-user"}} @icon="shield-user" as |data|>
+     <div class="iam-coverage-hero">
+         <span>{{data.coverage}}%</span>
+-        <small>Users with access assignments</small>
++        <small>{{t "iam-ui.s.users-with-access-assignments"}}</small>
+     </div>
+     <div class="iam-row-list mt-3">
+-        <div class="iam-row"><span>With roles</span><strong>{{data.with_roles}}</strong></div>
+-        <div class="iam-row"><span>With groups</span><strong>{{data.with_groups}}</strong></div>
+-        <div class="iam-row"><span>With policies</span><strong>{{data.with_policies}}</strong></div>
+-        <div class="iam-row"><span>Direct permissions</span><strong>{{data.with_direct_permissions}}</strong></div>
+-        <div class="iam-row iam-row-warning"><span>No assignments</span><strong>{{data.without_assignments}}</strong></div>
++        <div class="iam-row"><span>{{t "iam-ui.s.with-roles"}}</span><strong>{{data.with_roles}}</strong></div>
++        <div class="iam-row"><span>{{t "iam-ui.s.with-groups"}}</span><strong>{{data.with_groups}}</strong></div>
++        <div class="iam-row"><span>{{t "iam-ui.s.with-policies"}}</span><strong>{{data.with_policies}}</strong></div>
++        <div class="iam-row"><span>{{t "iam-ui.s.direct-permissions"}}</span><strong>{{data.with_direct_permissions}}</strong></div>
++        <div class="iam-row iam-row-warning"><span>{{t "iam-ui.s.no-assignments"}}</span><strong>{{data.without_assignments}}</strong></div>
+     </div>
+ </Widget::IamDashboardWidget>
+diff --git a/addon/components/widget/access-risk.hbs b/addon/components/widget/access-risk.hbs
+index 51228acb779d39d5600c41f1683834fb3c87af3c..26ac71c73acca5e2aa4e0299de1cf5aef7b63795 100644
+--- a/addon/components/widget/access-risk.hbs
++++ b/addon/components/widget/access-risk.hbs
+@@ -1,8 +1,8 @@
+-<Widget::IamDashboardWidget @endpoint="privileged-access" @title="Access Risk" @subtitle="Privileged exposure requiring review" @icon="user-lock" as |data|>
++<Widget::IamDashboardWidget @endpoint="privileged-access" @title={{t "iam-ui.s.access-risk"}} @subtitle={{t "iam-ui.s.privileged-exposure-requiring-review"}} @icon="user-lock" as |data|>
+     <div class="iam-stat-grid iam-stat-grid-3 iam-risk-summary">
+-        <div class="iam-stat-card"><span>{{data.privileged_roles_count}}</span><small>Admin roles</small></div>
+-        <div class="iam-stat-card"><span>{{data.wildcard_policies_count}}</span><small>Wildcard policies</small></div>
+-        <div class="iam-stat-card"><span>{{data.direct_privileged_grants}}</span><small>Direct grants</small></div>
++        <div class="iam-stat-card"><span>{{data.privileged_roles_count}}</span><small>{{t "iam-ui.s.admin-roles"}}</small></div>
++        <div class="iam-stat-card"><span>{{data.wildcard_policies_count}}</span><small>{{t "iam-ui.s.wildcard-policies"}}</small></div>
++        <div class="iam-stat-card"><span>{{data.direct_privileged_grants}}</span><small>{{t "iam-ui.s.direct-grants"}}</small></div>
+     </div>
+     <div class="iam-scroll-list mt-3">
+         {{#each data.roles as |role|}}
+@@ -14,7 +14,7 @@
+                 <strong>{{role.permissions_count}}</strong>
+             </div>
+         {{else}}
+-            <div class="iam-widget-empty">No privileged access risks detected</div>
++            <div class="iam-widget-empty">{{t "iam-ui.s.no-privileged-access-risks-detected"}}</div>
+         {{/each}}
+     </div>
+ </Widget::IamDashboardWidget>
+diff --git a/addon/components/widget/group-coverage.hbs b/addon/components/widget/group-coverage.hbs
+index cc534e9eaff3a22d94ebbcf141efc3423f9f5e19..45b25a503afff2e879a949f5fda0485f7c41633f 100644
+--- a/addon/components/widget/group-coverage.hbs
++++ b/addon/components/widget/group-coverage.hbs
+@@ -1,8 +1,8 @@
+-<Widget::IamDashboardWidget @endpoint="group-coverage" @title="Group Coverage" @subtitle="Membership distribution" @icon="people-group" as |data|>
++<Widget::IamDashboardWidget @endpoint="group-coverage" @title={{t "iam-ui.s.group-coverage"}} @subtitle={{t "iam-ui.s.membership-distribution"}} @icon="people-group" as |data|>
+     <div class="iam-stat-grid iam-stat-grid-3">
+-        <div class="iam-stat-card"><span>{{data.total_groups}}</span><small>Groups</small></div>
+-        <div class="iam-stat-card"><span>{{data.total_memberships}}</span><small>Memberships</small></div>
+-        <div class="iam-stat-card"><span>{{data.empty_groups}}</span><small>Empty</small></div>
++        <div class="iam-stat-card"><span>{{data.total_groups}}</span><small>{{t "iam-ui.s.groups"}}</small></div>
++        <div class="iam-stat-card"><span>{{data.total_memberships}}</span><small>{{t "iam-ui.s.memberships"}}</small></div>
++        <div class="iam-stat-card"><span>{{data.empty_groups}}</span><small>{{t "iam-ui.s.empty"}}</small></div>
+     </div>
+     <div class="iam-row-list mt-3">
+         {{#each data.buckets as |bucket|}}
+diff --git a/addon/components/widget/identity-health.hbs b/addon/components/widget/identity-health.hbs
+index 8218c1131ca552b267610a685ea2314e10eb539f..b94e40842b71317a474c49f7d5df028b45d6ff22 100644
+--- a/addon/components/widget/identity-health.hbs
++++ b/addon/components/widget/identity-health.hbs
+@@ -1,34 +1,34 @@
+-<Widget::IamDashboardWidget @endpoint="identity-health" @title="Identity Health" @subtitle="Access posture snapshot" @icon="heart-pulse" as |data|>
++<Widget::IamDashboardWidget @endpoint="identity-health" @title={{t "iam-ui.s.identity-health"}} @subtitle={{t "iam-ui.s.access-posture-snapshot"}} @icon="heart-pulse" as |data|>
+     <div class="iam-stat-grid">
+         <div class="iam-stat-card">
+             <span>{{data.status.active}}</span>
+-            <small>Active</small>
++            <small>{{t "iam-ui.s.active"}}</small>
+         </div>
+         <div class="iam-stat-card">
+             <span>{{data.status.pending}}</span>
+-            <small>Pending</small>
++            <small>{{t "iam-ui.s.pending"}}</small>
+         </div>
+         <div class="iam-stat-card">
+             <span>{{data.verification.unverified}}</span>
+-            <small>Unverified</small>
++            <small>{{t "iam-ui.s.unverified"}}</small>
+         </div>
+         <div class="iam-stat-card">
+             <span>{{data.dormant.count}}</span>
+-            <small>Dormant</small>
++            <small>{{t "iam-ui.s.dormant"}}</small>
+         </div>
+     </div>
+     <div class="iam-row-list mt-3">
+         <div class="iam-row">
+-            <span>MFA coverage</span>
++            <span>{{t "iam-ui.s.mfa-coverage"}}</span>
+             <strong>{{if data.mfa.available (concat data.mfa.value "%") "Unavailable"}}</strong>
+         </div>
+         <div class="iam-row">
+-            <span>Organization 2FA</span>
++            <span>{{t "iam-ui.s.organization-2fa"}}</span>
+             <strong>{{if data.mfa.company_enforced "Enforced" (if data.mfa.company_enabled "Enabled" "Off")}}</strong>
+         </div>
+         <div class="iam-row">
+-            <span>Dormant threshold</span>
+-            <strong>{{data.dormant.threshold_days}} days</strong>
++            <span>{{t "iam-ui.s.dormant-threshold"}}</span>
++            <strong>{{data.dormant.threshold_days}} {{t "iam-ui.s.days"}}</strong>
+         </div>
+     </div>
+ </Widget::IamDashboardWidget>
+diff --git a/addon/components/widget/kpi-active-users.hbs b/addon/components/widget/kpi-active-users.hbs
+index 2511e6231981ddf0ddc79ed08f5feb8edee24c07..a634b8b04cb867356e0b2e91796e8ef86d3e0dce 100644
+--- a/addon/components/widget/kpi-active-users.hbs
++++ b/addon/components/widget/kpi-active-users.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="active_users" @title="Active Users" @icon="user-check" @accent="green" @footnote="Current access" ...attributes />
++<Widget::IamKpiTile @metric="active_users" @title={{t "iam-ui.s.active-users"}} @icon="user-check" @accent="green" @footnote="Current access" ...attributes />
+diff --git a/addon/components/widget/kpi-dormant-users.hbs b/addon/components/widget/kpi-dormant-users.hbs
+index 2774117563480b89270d50a42f341ac81881001a..36c18a201b48ac6403c50ce1402bf21cf28f2002 100644
+--- a/addon/components/widget/kpi-dormant-users.hbs
++++ b/addon/components/widget/kpi-dormant-users.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="dormant_users" @title="Dormant Users" @icon="bed" @accent="rose" @footnote="No recent login" ...attributes />
++<Widget::IamKpiTile @metric="dormant_users" @title={{t "iam-ui.s.dormant-users"}} @icon="bed" @accent="rose" @footnote="No recent login" ...attributes />
+diff --git a/addon/components/widget/kpi-inactive-users.hbs b/addon/components/widget/kpi-inactive-users.hbs
+index 05cf8aab3381068d345c8c59af9e50d83a8b8bc2..52d23a74c99edf4d8c4daffaf13bb81476d50efc 100644
+--- a/addon/components/widget/kpi-inactive-users.hbs
++++ b/addon/components/widget/kpi-inactive-users.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="inactive_users" @title="Inactive Users" @icon="user-slash" @accent="slate" @footnote="Disabled access" ...attributes />
++<Widget::IamKpiTile @metric="inactive_users" @title={{t "iam-ui.s.inactive-users"}} @icon="user-slash" @accent="slate" @footnote="Disabled access" ...attributes />
+diff --git a/addon/components/widget/kpi-mfa-coverage.hbs b/addon/components/widget/kpi-mfa-coverage.hbs
+index 06c2d0b2fbfcd801661158333eea4c4a6f3eae93..af0342e36c8d626b1bf1b85e25744981c26a6d72 100644
+--- a/addon/components/widget/kpi-mfa-coverage.hbs
++++ b/addon/components/widget/kpi-mfa-coverage.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="mfa_coverage" @title="MFA Coverage" @icon="lock" @accent="violet" @unavailableText="Org enforcement shown" ...attributes />
++<Widget::IamKpiTile @metric="mfa_coverage" @title={{t "iam-ui.s.mfa-coverage-2"}} @icon="lock" @accent="violet" @unavailableText="Org enforcement shown" ...attributes />
+diff --git a/addon/components/widget/kpi-pending-invites.hbs b/addon/components/widget/kpi-pending-invites.hbs
+index 7706f2a06d211da6d1daef36c731834a416617af..b85a53cd94d28a4f32fd36ca3a147eeaaa335cbb 100644
+--- a/addon/components/widget/kpi-pending-invites.hbs
++++ b/addon/components/widget/kpi-pending-invites.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="pending_invites" @title="Pending Invites" @icon="envelope-open-text" @accent="amber" @footnote="Awaiting access" ...attributes />
++<Widget::IamKpiTile @metric="pending_invites" @title={{t "iam-ui.s.pending-invites"}} @icon="envelope-open-text" @accent="amber" @footnote="Awaiting access" ...attributes />
+diff --git a/addon/components/widget/kpi-policies.hbs b/addon/components/widget/kpi-policies.hbs
+index 4de68843a50ee1474e585294ff61b6443d07c700..ea11693a47248b59a905a7d73b2de377cc5f037e 100644
+--- a/addon/components/widget/kpi-policies.hbs
++++ b/addon/components/widget/kpi-policies.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="policies" @title="Policies" @icon="file-shield" @accent="green" @footnote="Organization managed" ...attributes />
++<Widget::IamKpiTile @metric="policies" @title={{t "iam-ui.s.policies"}} @icon="file-shield" @accent="green" @footnote="Organization managed" ...attributes />
+diff --git a/addon/components/widget/kpi-roles.hbs b/addon/components/widget/kpi-roles.hbs
+index a4b5d75f09b511d54d6e12e8d0397023e8c74d92..2c59f172788a2e03f5d9dfc5c4e3c6cb7d782b06 100644
+--- a/addon/components/widget/kpi-roles.hbs
++++ b/addon/components/widget/kpi-roles.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="roles" @title="Roles" @icon="user-tag" @accent="blue" @footnote="Organization managed" ...attributes />
++<Widget::IamKpiTile @metric="roles" @title={{t "iam-ui.s.roles"}} @icon="user-tag" @accent="blue" @footnote="Organization managed" ...attributes />
+diff --git a/addon/components/widget/kpi-verified-users.hbs b/addon/components/widget/kpi-verified-users.hbs
+index 8a5b0e85f17ca8a2c1e2c0dd4d132a98246bcdb6..f9e6fac92c2f45ace7c3923f6f09b766ad4e3949 100644
+--- a/addon/components/widget/kpi-verified-users.hbs
++++ b/addon/components/widget/kpi-verified-users.hbs
+@@ -1 +1 @@
+-<Widget::IamKpiTile @metric="verified_users" @title="Verified Users" @icon="circle-check" @accent="blue" @footnote="Identity verified" ...attributes />
++<Widget::IamKpiTile @metric="verified_users" @title={{t "iam-ui.s.verified-users"}} @icon="circle-check" @accent="blue" @footnote="Identity verified" ...attributes />
+diff --git a/addon/components/widget/policy-surface.hbs b/addon/components/widget/policy-surface.hbs
+index 4abb7b866461d31abc9049c50a27c24b5080414c..c560e6ec656e5f89cd2b353449a0fa034a7f1c33 100644
+--- a/addon/components/widget/policy-surface.hbs
++++ b/addon/components/widget/policy-surface.hbs
+@@ -1,7 +1,7 @@
+-<Widget::IamDashboardWidget @endpoint="policy-surface" @title="Policy Surface" @subtitle="Policies by service" @icon="diagram-project" as |data|>
++<Widget::IamDashboardWidget @endpoint="policy-surface" @title={{t "iam-ui.s.policy-surface"}} @subtitle={{t "iam-ui.s.policies-by-service"}} @icon="diagram-project" as |data|>
+     <div class="iam-stat-grid iam-stat-grid-3">
+-        <div class="iam-stat-card"><span>{{data.total}}</span><small>Total</small></div>
+-        <div class="iam-stat-card"><span>{{data.organization_managed}}</span><small>Org managed</small></div>
++        <div class="iam-stat-card"><span>{{data.total}}</span><small>{{t "iam-ui.s.total"}}</small></div>
++        <div class="iam-stat-card"><span>{{data.organization_managed}}</span><small>{{t "iam-ui.s.org-managed"}}</small></div>
+         <div class="iam-stat-card"><span>{{data.fleetbase_managed}}</span><small>Fleetbase</small></div>
+     </div>
+     <div class="iam-scroll-list mt-3">
+@@ -11,7 +11,7 @@
+                 <strong>{{service.value}}</strong>
+             </div>
+         {{else}}
+-            <div class="iam-widget-empty">No policies available</div>
++            <div class="iam-widget-empty">{{t "iam-ui.s.no-policies-available"}}</div>
+         {{/each}}
+     </div>
+ </Widget::IamDashboardWidget>
+diff --git a/addon/components/widget/privileged-access.hbs b/addon/components/widget/privileged-access.hbs
+index 226bb1a73e6cd77f269fea9f798539dd85779128..de413449114705f7bde8954dcb4ac6a03a851ad6 100644
+--- a/addon/components/widget/privileged-access.hbs
++++ b/addon/components/widget/privileged-access.hbs
+@@ -1,8 +1,8 @@
+-<Widget::IamDashboardWidget @endpoint="privileged-access" @title="Privileged Access" @subtitle="High access exposure" @icon="user-lock" as |data|>
++<Widget::IamDashboardWidget @endpoint="privileged-access" @title={{t "iam-ui.s.privileged-access"}} @subtitle={{t "iam-ui.s.high-access-exposure"}} @icon="user-lock" as |data|>
+     <div class="iam-stat-grid iam-stat-grid-3">
+-        <div class="iam-stat-card"><span>{{data.privileged_roles_count}}</span><small>Admin roles</small></div>
+-        <div class="iam-stat-card"><span>{{data.wildcard_policies_count}}</span><small>Wildcard policies</small></div>
+-        <div class="iam-stat-card"><span>{{data.direct_privileged_grants}}</span><small>Direct grants</small></div>
++        <div class="iam-stat-card"><span>{{data.privileged_roles_count}}</span><small>{{t "iam-ui.s.admin-roles"}}</small></div>
++        <div class="iam-stat-card"><span>{{data.wildcard_policies_count}}</span><small>{{t "iam-ui.s.wildcard-policies"}}</small></div>
++        <div class="iam-stat-card"><span>{{data.direct_privileged_grants}}</span><small>{{t "iam-ui.s.direct-grants"}}</small></div>
+     </div>
+     <div class="iam-scroll-list mt-3">
+         {{#each data.roles as |role|}}
+@@ -14,7 +14,7 @@
+                 <strong>{{role.permissions_count}}</strong>
+             </div>
+         {{else}}
+-            <div class="iam-widget-empty">No privileged roles detected</div>
++            <div class="iam-widget-empty">{{t "iam-ui.s.no-privileged-roles-detected"}}</div>
+         {{/each}}
+     </div>
+ </Widget::IamDashboardWidget>
+diff --git a/addon/components/widget/quick-actions.hbs b/addon/components/widget/quick-actions.hbs
+index 33d1c620e48caedcacaf2c8dbf9d1288f3533da2..f842a62bb5d71385eae12ae8b0c73c620a1be192 100644
+--- a/addon/components/widget/quick-actions.hbs
++++ b/addon/components/widget/quick-actions.hbs
+@@ -1,17 +1,17 @@
+ <div class="iam-dashboard-widget flex h-full min-h-0 flex-col overflow-hidden rounded-md border shadow-sm" ...attributes>
+     <div class="iam-widget-header">
+         <div class="min-w-0">
+-            <div class="iam-widget-title">IAM Quick Actions</div>
+-            <div class="iam-widget-subtitle">Jump into common access workflows</div>
++            <div class="iam-widget-title">{{t "iam-ui.s.iam-quick-actions"}}</div>
++            <div class="iam-widget-subtitle">{{t "iam-ui.s.jump-into-common-access-workflows"}}</div>
+         </div>
+         <div class="iam-widget-icon"><FaIcon @icon="bolt" /></div>
+     </div>
+     <div class="iam-widget-body iam-report-body">
+         <div class="iam-action-grid">
+-            <LinkTo @route="users" class="iam-action-link"><FaIcon @icon="user-plus" /><span>Invite user</span></LinkTo>
+-            <LinkTo @route="groups" class="iam-action-link"><FaIcon @icon="people-group" /><span>Create group</span></LinkTo>
+-            <LinkTo @route="roles" class="iam-action-link"><FaIcon @icon="user-tag" /><span>Create role</span></LinkTo>
+-            <LinkTo @route="policies" class="iam-action-link"><FaIcon @icon="file-shield" /><span>Create policy</span></LinkTo>
++            <LinkTo @route="users" class="iam-action-link"><FaIcon @icon="user-plus" /><span>{{t "iam-ui.s.invite-user"}}</span></LinkTo>
++            <LinkTo @route="groups" class="iam-action-link"><FaIcon @icon="people-group" /><span>{{t "iam-ui.s.create-group"}}</span></LinkTo>
++            <LinkTo @route="roles" class="iam-action-link"><FaIcon @icon="user-tag" /><span>{{t "iam-ui.s.create-role"}}</span></LinkTo>
++            <LinkTo @route="policies" class="iam-action-link"><FaIcon @icon="file-shield" /><span>{{t "iam-ui.s.create-policy"}}</span></LinkTo>
+         </div>
+     </div>
+ </div>
+diff --git a/addon/components/widget/recent-activity.hbs b/addon/components/widget/recent-activity.hbs
+index 44330de5faab0fa9b8b083d58d6e74881f2ca637..2aad98d7677761873359f002038b7d1781bb71f4 100644
+--- a/addon/components/widget/recent-activity.hbs
++++ b/addon/components/widget/recent-activity.hbs
+@@ -1,4 +1,4 @@
+-<Widget::IamDashboardWidget @endpoint="activity" @title="Recent IAM Activity" @subtitle="Latest identity and access changes" @icon="clock-rotate-left" as |data|>
++<Widget::IamDashboardWidget @endpoint="activity" @title={{t "iam-ui.s.recent-iam-activity"}} @subtitle={{t "iam-ui.s.latest-identity-and-access-changes"}} @icon="clock-rotate-left" as |data|>
+     <div class="iam-scroll-list">
+         {{#each data.items as |activity|}}
+             <div class="iam-list-row">
+@@ -9,7 +9,7 @@
+                 <span class="iam-list-subtitle">{{n-a activity.created_at}}</span>
+             </div>
+         {{else}}
+-            <div class="iam-widget-empty">No recent IAM activity</div>
++            <div class="iam-widget-empty">{{t "iam-ui.s.no-recent-iam-activity"}}</div>
+         {{/each}}
+     </div>
+ </Widget::IamDashboardWidget>
+diff --git a/addon/components/widget/user-lifecycle-trend.hbs b/addon/components/widget/user-lifecycle-trend.hbs
+index be937441183ce4b547e935300d7699ce3e5ba37b..001093724ea5345cce55026cbc75daa7dca5b654 100644
+--- a/addon/components/widget/user-lifecycle-trend.hbs
++++ b/addon/components/widget/user-lifecycle-trend.hbs
+@@ -1,4 +1,4 @@
+-<Widget::IamDashboardWidget @endpoint="user-lifecycle" @title="User Lifecycle Trend" @subtitle="Created, pending, and inactive users" @icon="chart-line" as |data|>
++<Widget::IamDashboardWidget @endpoint="user-lifecycle" @title={{t "iam-ui.s.user-lifecycle-trend"}} @subtitle={{t "iam-ui.s.created-pending-and-inactive-users"}} @icon="chart-line" as |data|>
+     <div class="iam-chart-frame">
+         <Chart
+             @type="line"
+diff --git a/addon/components/widget/user-type-creation-trend.hbs b/addon/components/widget/user-type-creation-trend.hbs
+index d8ba7d6bae6b376c24710a8397fc420730dea6f0..f49b77d4d8dfa2e4dd9d632c3ec5962e2b1414f7 100644
+--- a/addon/components/widget/user-type-creation-trend.hbs
++++ b/addon/components/widget/user-type-creation-trend.hbs
+@@ -1,7 +1,7 @@
+ <Widget::IamDashboardWidget
+     @endpoint="users-by-type-created"
+-    @title="Users by Type Created Over Time"
+-    @subtitle="New identities grouped by user type"
++    @title={{t "iam-ui.s.users-by-type-created-over-time"}}
++    @subtitle={{t "iam-ui.s.new-identities-grouped-by-user-type"}}
+     @icon="chart-column"
+     as |data|
+ >
+diff --git a/addon/controllers/application.js b/addon/controllers/application.js
+index 361216ba805ad238b9648e99cacb2f11462be2e9..ba3b2d7303864ed9972579aa775bb413056c3113 100644
+--- a/addon/controllers/application.js
++++ b/addon/controllers/application.js
+@@ -11,7 +11,7 @@ export default class ApplicationController extends Controller {
+         return [
+             {
+                 label: this.intl.t('iam.common.dashboard'),
+-                description: 'Identity and access overview.',
++                description: this.intl.t('iam-ui.s.identity-and-access-overview'),
+                 tooltip: true,
+                 icon: 'home',
+                 route: 'console.iam.home',
+@@ -19,7 +19,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('iam.common.user'),
+-                description: 'Manage team member accounts.',
++                description: this.intl.t('iam-ui.s.manage-team-member-accounts'),
+                 icon: 'id-card',
+                 route: 'console.iam.users',
+                 permission: 'iam list user',
+@@ -28,7 +28,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('iam.common.group'),
+-                description: 'Organize users into access groups.',
++                description: this.intl.t('iam-ui.s.organize-users-into-access-groups'),
+                 icon: 'building',
+                 route: 'console.iam.groups',
+                 permission: 'iam list group',
+@@ -37,7 +37,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('iam.common.roles'),
+-                description: 'Define reusable permission bundles.',
++                description: this.intl.t('iam-ui.s.define-reusable-permission-bundles'),
+                 icon: 'tag',
+                 route: 'console.iam.roles',
+                 permission: 'iam list role',
+@@ -46,7 +46,7 @@ export default class ApplicationController extends Controller {
+             },
+             {
+                 label: this.intl.t('iam.common.policies'),
+-                description: 'Manage fine-grained access policies.',
++                description: this.intl.t('iam-ui.s.manage-fine-grained-access-policies'),
+                 icon: 'shield',
+                 route: 'console.iam.policies',
+                 permission: 'iam list policy',
+diff --git a/addon/controllers/groups/index.js b/addon/controllers/groups/index.js
+index 95e5df111de0daf494773a7679039e6998307539..37044884f895a918f31ba8834d4804f27bf2599c 100644
+--- a/addon/controllers/groups/index.js
++++ b/addon/controllers/groups/index.js
+@@ -248,7 +248,7 @@ export default class GroupsIndexController extends Controller {
+                 onFinish: this.clearDeepLinkedResource,
+             });
+         } catch (_) {
+-            this.notifications.warning('Unable to open the selected IAM resource.');
++            this.notifications.warning(this.intl.t('iam-ui.s.unable-to-open-the-selected-iam-resource'));
+             this.clearDeepLinkedResource();
+         }
+     }
+diff --git a/addon/controllers/policies/index.js b/addon/controllers/policies/index.js
+index a70e90256a06a0509db3f7357d34c4106cfb1aba..9e0a050b43b57fd9e59d3981b6c7349f5210fa90 100644
+--- a/addon/controllers/policies/index.js
++++ b/addon/controllers/policies/index.js
+@@ -290,7 +290,7 @@ export default class PoliciesIndexController extends Controller {
+                 onFinish: this.clearDeepLinkedResource,
+             });
+         } catch (_) {
+-            this.notifications.warning('Unable to open the selected IAM resource.');
++            this.notifications.warning(this.intl.t('iam-ui.s.unable-to-open-the-selected-iam-resource'));
+             this.clearDeepLinkedResource();
+         }
+     }
+diff --git a/addon/controllers/roles/index.js b/addon/controllers/roles/index.js
+index 212313d822ddf23a6bea67db0b800ad6e5401ff9..8f16e6b230fb740d2a8c7615c33afc84e8488ba1 100644
+--- a/addon/controllers/roles/index.js
++++ b/addon/controllers/roles/index.js
+@@ -290,7 +290,7 @@ export default class RolesIndexController extends Controller {
+                 onFinish: this.clearDeepLinkedResource,
+             });
+         } catch (_) {
+-            this.notifications.warning('Unable to open the selected IAM resource.');
++            this.notifications.warning(this.intl.t('iam-ui.s.unable-to-open-the-selected-iam-resource'));
+             this.clearDeepLinkedResource();
+         }
+     }
+diff --git a/addon/controllers/users/index.js b/addon/controllers/users/index.js
+index e75e060d41caa6d3dad23ccc7c335970b0ac73c9..8b644a7cbf53f311c240cf778ed439e990ac5b0b 100644
+--- a/addon/controllers/users/index.js
++++ b/addon/controllers/users/index.js
+@@ -521,7 +521,7 @@ export default class UsersIndexController extends Controller {
+                 onFinish: this.clearDeepLinkedResource,
+             });
+         } catch (_) {
+-            this.notifications.warning('Unable to open the selected IAM resource.');
++            this.notifications.warning(this.intl.t('iam-ui.s.unable-to-open-the-selected-iam-resource'));
+             this.clearDeepLinkedResource();
+         }
+     }
+diff --git a/addon/services/iam.js b/addon/services/iam.js
+index 9086fb16a50b4e3beb003adf0ae765cc822715ca..a5552eab8582df9d48d2a845eaa11edb5127683e 100644
+--- a/addon/services/iam.js
++++ b/addon/services/iam.js
+@@ -3,15 +3,16 @@ import { inject as service } from '@ember/service';
+ import { task } from 'ember-concurrency';
+ 
+ export default class IamService extends Service {
++    @service intl;
+     @service fetch;
+     @service notifications;
+     schemeTypes = [
+         {
+-            name: 'FLB Managed',
++            name: this.intl.t('iam-ui.s.flb-managed'),
+             id: 'flb-managed',
+         },
+         {
+-            name: 'Organization Managed',
++            name: this.intl.t('iam-ui.s.organization-managed'),
+             id: 'org-managed',
+         },
+     ];
+diff --git a/addon/services/role-actions.js b/addon/services/role-actions.js
+index 55904b87c2c85d436f17b621573ffcae618fd98a..e31e4733e5d68ecb404d7b3aeae5c09ce97d683d 100644
+--- a/addon/services/role-actions.js
++++ b/addon/services/role-actions.js
+@@ -1,3 +1,4 @@
++import { inject as service } from '@ember/service';
+ import ResourceActionService from '@fleetbase/ember-core/services/resource-action';
+ import { mergeHeaderButtons } from '@fleetbase/ember-ui/utils/resource-view';
+ import { action } from '@ember/object';
+@@ -7,6 +8,7 @@ import { action } from '@ember/object';
+  * same dialogs open from anywhere in the console.
+  */
+ export default class RoleActionsService extends ResourceActionService {
++    @service intl;
+     constructor() {
+         super(...arguments);
+         this.initialize('role', { permissionPrefix: 'iam', mountPrefix: 'console.iam' });
+@@ -44,13 +46,13 @@ export default class RoleActionsService extends ResourceActionService {
+ 
+                 if (!role.name || typeof role.name !== 'string') {
+                     modal.stopLoading();
+-                    return this.notifications.warning('Role name is required.');
++                    return this.notifications.warning(this.intl.t('iam-ui.s.role-name-is-required'));
+                 }
+ 
+                 const roleName = role.name.toLowerCase();
+                 if (roleName === 'administrator' || roleName.startsWith('admin')) {
+                     modal.stopLoading();
+-                    return this.notifications.error('Creating a role with name "Administrator" or a role name that starts with "Admin" is prohibited, as the name is system reserved.');
++                    return this.notifications.error(this.intl.t('iam-ui.s.creating-a-role-with-name-administrator-or-a-rol'));
+                 }
+ 
+                 if (this.abilities.cannot(formPermission)) {
+@@ -101,13 +103,13 @@ export default class RoleActionsService extends ResourceActionService {
+ 
+                 if (!role.name || typeof role.name !== 'string') {
+                     modal.stopLoading();
+-                    return this.notifications.warning('Role name is required.');
++                    return this.notifications.warning(this.intl.t('iam-ui.s.role-name-is-required'));
+                 }
+ 
+                 const roleName = role.name.toLowerCase();
+                 if (roleName === 'administrator' || roleName.startsWith('admin')) {
+                     modal.stopLoading();
+-                    return this.notifications.error('Creating a role with name "Administrator" or a role name that starts with "Admin" is prohibited, as the name is system reserved.');
++                    return this.notifications.error(this.intl.t('iam-ui.s.creating-a-role-with-name-administrator-or-a-rol'));
+                 }
+ 
+                 if (this.abilities.cannot(formPermission)) {
