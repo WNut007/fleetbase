@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3604c23bbcf827556a686a82632d1501",
+    "content-hash": "175a7e015bca60ddd7901db2612c5e32",
     "packages": [
         {
             "name": "aaronfrancis/fast-paginate",
@@ -2572,16 +2572,16 @@
         },
         {
             "name": "fleetbase/ledger-api",
-            "version": "0.1.0",
+            "version": "dev-feat/thai-labels",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fleetbase/ledger.git",
-                "reference": "70c75c68010dfe64d4d2f91bfe3ace4a6491743e"
+                "url": "https://github.com/WNut007/ledger.git",
+                "reference": "060f7cb41108b73b79248883eeacdebb317b6bb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fleetbase/ledger/zipball/70c75c68010dfe64d4d2f91bfe3ace4a6491743e",
-                "reference": "70c75c68010dfe64d4d2f91bfe3ace4a6491743e",
+                "url": "https://api.github.com/repos/WNut007/ledger/zipball/060f7cb41108b73b79248883eeacdebb317b6bb4",
+                "reference": "060f7cb41108b73b79248883eeacdebb317b6bb4",
                 "shasum": ""
             },
             "require": {
@@ -2617,7 +2617,6 @@
                     "Fleetbase\\Ledger\\Seeders\\": "server/seeders/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "AGPL-3.0-or-later"
             ],
@@ -19745,11 +19744,18 @@
             "version": "dev-feat/thai-labels",
             "alias": "0.7.1",
             "alias_normalized": "0.7.1.0"
+        },
+        {
+            "package": "fleetbase/ledger-api",
+            "version": "dev-feat/thai-labels",
+            "alias": "0.1.0",
+            "alias_normalized": "0.1.0.0"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "fleetbase/fleetops-api": 20
+        "fleetbase/fleetops-api": 20,
+        "fleetbase/ledger-api": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -50,8 +50,8 @@ importers:
         specifier: ^3.2.17
         version: 3.2.17
       '@fleetbase/ledger-engine':
-        specifier: ^0.1.0
-        version: 0.1.0(bffd95f1ee8fa5c6dc085f568b2e0221)
+        specifier: github:WNut007/ledger#feat/thai-labels
+        version: https://codeload.github.com/WNut007/ledger/tar.gz/060f7cb41108b73b79248883eeacdebb317b6bb4(bffd95f1ee8fa5c6dc085f568b2e0221)
       '@fleetbase/registry-bridge-engine':
         specifier: ^0.2.0
         version: 0.2.0(bffd95f1ee8fa5c6dc085f568b2e0221)
@@ -1613,8 +1613,9 @@ packages:
   '@fleetbase/leaflet-routing-machine@3.2.17':
     resolution: {integrity: sha512-2S/XLPzf25ZKV7cFJwfeu4voYQboF9JiDfpRUTrif4XCfgdrQ2Zim7O5iTpoNv2l8Ne8D+Ed7BGJsKWjJFLcsw==}
 
-  '@fleetbase/ledger-engine@0.1.0':
-    resolution: {integrity: sha512-9FmhrGKi2ja3bfdlC8TC1v+XdFv9wyEoNnfxNbZwZBt3KRCB4yp/04TsDuaS5k7K+5hwVCPRRCL8EcUP5U9k3g==}
+  '@fleetbase/ledger-engine@https://codeload.github.com/WNut007/ledger/tar.gz/060f7cb41108b73b79248883eeacdebb317b6bb4':
+    resolution: {gitHosted: true, integrity: sha512-oFitzE4/YiL8EXDHhzqTfjT4x9ZLasUdeuk5UwO3I3cqylbZLl4lFDaw6Dxk31X32fSKKI4/FX66VSwStWm+eA==, tarball: https://codeload.github.com/WNut007/ledger/tar.gz/060f7cb41108b73b79248883eeacdebb317b6bb4}
+    version: 0.1.0
     engines: {node: '>= 18'}
     peerDependencies:
       ember-engines: ^0.9.0
@@ -11404,7 +11405,7 @@ snapshots:
       '@mapbox/polyline': 0.2.0
       osrm-text-instructions: 0.13.4
 
-  '@fleetbase/ledger-engine@0.1.0(bffd95f1ee8fa5c6dc085f568b2e0221)':
+  '@fleetbase/ledger-engine@https://codeload.github.com/WNut007/ledger/tar.gz/060f7cb41108b73b79248883eeacdebb317b6bb4(bffd95f1ee8fa5c6dc085f568b2e0221)':
     dependencies:
       '@babel/core': 7.29.7
       '@fleetbase/ember-core': 0.3.27(patch_hash=7d26a2db1e73ed8e5e153c82b00bf92a1b234b1d607e2aa68d2e86094daee268)(@ember/string@3.1.1)(@ember/test-helpers@3.3.1(@babel/core@7.29.7)(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26)))(webpack@5.109.2(postcss@8.5.26)))(ember-resolver@11.0.1(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26))))(ember-source@5.4.1(@babel/core@7.29.7)(@glimmer/component@1.1.2(@babel/core@7.29.7))(rsvp@4.8.5)(webpack@5.109.2(postcss@8.5.26)))(eslint@8.57.1)(webpack@5.109.2(postcss@8.5.26))
