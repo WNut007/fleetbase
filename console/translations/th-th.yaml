@@ -516,6 +516,7 @@ component:
     comment-min-length-notification: ความเห็นต้องมีอย่างน้อย 2 ตัวอักษร
   dashboard:
     select-dashboard: เลือก Dashboard
+    default-dashboard: แดชบอร์ดหลัก
     create-new-dashboard: สร้าง Dashboard ใหม่
     create-a-new-dashboard: สร้าง Dashboard ใหม่
     confirm-create-dashboard: สร้าง Dashboard!

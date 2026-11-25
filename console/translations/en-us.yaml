@@ -533,6 +533,7 @@ component:
 
   dashboard:
     select-dashboard: Select Dashboard
+    default-dashboard: Default Dashboard
     create-new-dashboard: Create new Dashboard
     create-a-new-dashboard: Create a new Dashboard
     confirm-create-dashboard: Create Dashboard!
