@@ -98,6 +98,8 @@ return [
 
         'stdout' => [
             'driver' => 'monolog',
+            // Same level as the file log; without it the queue/scheduler stdout logged at debug
+            'level' => env('LOG_LEVEL', 'debug'),
             'handler' => StreamHandler::class,
             'formatter' => JsonFormatter::class,
             'with' => [
